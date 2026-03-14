@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {object} props - Component properties.
  * @param {CompanyCertifiedExpertsProps['title']} title - The title for the certified experts section.
  * @param {CompanyCertifiedExpertsProps['description']} description - The description text for the certified experts section.
- * @param {CompanyCertifiedExpertsProps['license'][number]['text']} license.text - The text for the license information to be displayed.
+ * @param {CompanyCertifiedExpertsProps['license'][number]['text']} license.text - The text for the license information.
  * @param {CompanyCertifiedExpertsProps['license'][number]['id']} license.id - The unique identifier for the license information item.
  * @param {CompanyCertifiedExpertsProps['license']} license - The license information in the certified experts section.
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['url']} imagesUrl.url - The URL for the certificate.
@@ -34,7 +34,13 @@ export const CompanyCertifiedExperts = (props: CompanyCertifiedExpertsProps) => 
       <div className={clsx('horizontal w-full')}>
         <iframe
           src={mapsUrl}
-          className={clsx('h-50 w-full rounded-2xl border-0')}
+          className={clsx(
+            'h-55 w-full rounded-3xl border-none',
+            'm1x:h-60',
+            'm2x:h-65',
+            'm3x:h-70',
+            'm4x:h-75'
+          )}
           allowFullScreen
           loading={'lazy'}
           referrerPolicy={'no-referrer-when-downgrade'}

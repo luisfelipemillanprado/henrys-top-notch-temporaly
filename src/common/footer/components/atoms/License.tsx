@@ -14,13 +14,13 @@ import clsx from 'clsx'
 export const License = (props: LicenseProps) => {
   const { license } = props
   return (
-    <div className={clsx('vertical mt-4 w-full items-center gap-y-2')}>
+    <div className={clsx('vertical mt-4 w-full items-center gap-y-2', 'm1x:mt4.5')}>
       {license.map((item) => (
         <span
           key={item.id}
           className={clsx(
-            'text-primary text-[0.9375rem] font-medium',
-            'm1x:text-base',
+            'text-primary text-[1.0625rem] font-medium',
+            'm1x:text-lg',
             'md:text-[1.1875rem]',
             '3xl:text-xl',
             '5xl:text-[1.375rem]'

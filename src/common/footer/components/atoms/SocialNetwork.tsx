@@ -31,7 +31,7 @@ const iconSwitch = (icon: string) => {
         <SiFacebook
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-warmgray size-5', 'md:size-5.5')}
+          className={clsx('fill-warmgray size-5', 'm1x:size-5.5', 'md:size-5.5')}
         />
       )
     case SocialIcon.YOUTUBE:
@@ -39,7 +39,7 @@ const iconSwitch = (icon: string) => {
         <SiYoutube
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-warmgray size-5', 'md:size-5.5')}
+          className={clsx('fill-warmgray size-5', 'm1x:size-5.5', 'md:size-5.5')}
         />
       )
     case SocialIcon.INSTAGRAM:
@@ -47,11 +47,17 @@ const iconSwitch = (icon: string) => {
         <SiInstagram
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-warmgray size-5', 'md:size-5.5')}
+          className={clsx('fill-warmgray size-5', 'm1x:size-5.5', 'md:size-5.5')}
         />
       )
     case SocialIcon.TWITTER:
-      return <SiX aria-hidden={'true'} role={'img'} className={clsx('fill-warmgray size-5', 'md:size-5.5')} />
+      return (
+        <SiX
+          aria-hidden={'true'}
+          role={'img'}
+          className={clsx('fill-warmgray size-5', 'm1x:size-5.5', 'md:size-5.5')}
+        />
+      )
     default:
       return <span aria-label={'icon-none'}>?</span>
   }

@@ -15,7 +15,18 @@ import Link from 'next/link'
 export const MainLink = (props: MainLinkProps) => {
   const { text, href, highlight } = props
   return (
-    <Link className={clsx('horizontal w-32.75 justify-center', '2xl:w-full')} href={href} title={text}>
+    <Link
+      className={clsx(
+        'horizontal w-39 justify-center',
+        'm1x:w-42',
+        'm2x:w-45',
+        'm3x:w-46',
+        'm4x:w-47',
+        '2xl:w-full'
+      )}
+      href={href}
+      title={text}
+    >
       <span
         className={clsx(
           highlight.includes(text)

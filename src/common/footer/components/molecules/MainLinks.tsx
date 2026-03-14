@@ -7,9 +7,9 @@ import clsx from 'clsx'
  * @public
  * @interface MainLinksProps
  * @param {object} props - Component properties.
- * @param {MainLinksProps['links'][number]['text']} text - The display text for the footer link.
- * @param {MainLinksProps['links'][number]['href']} href - The URL the footer link points to.
- * @param {MainLinksProps['links'][number]['id']} id - The unique identifier for the footer link item.
+ * @param {MainLinksProps['links'][number]['text']} links.text - The display text for the footer link.
+ * @param {MainLinksProps['links'][number]['href']} links.href - The URL the footer link points to.
+ * @param {MainLinksProps['links'][number]['id']} links.id - The unique identifier for the footer link item.
  * @param {MainLinksProps['links']} links - An array of footer link items to be displayed.
  * @param {MainLinksProps['highlight']} highlight - An array of strings representing links that should be highlighted.
  * @returns {JSX.Element} The rendered main links section.

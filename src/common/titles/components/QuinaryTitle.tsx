@@ -11,13 +11,14 @@ import clsx from 'clsx'
  * @returns {JSX.Element} The rendered quinary title component.
  */
 export const QuinaryTitle = (props: MainTitleProps) => {
-  const { title, firstChangeTextPosition } = props
+  const { title } = props
   return (
     <div className={clsx('horizontal w-full justify-center')}>
       <h5
         className={clsx(
           'text-primary text-center text-[1.375rem] font-semibold',
-          'm4x:text-[1.4375rem]',
+          'm1x:text-[1.4375rem]',
+          'm4x:text-2xl',
           'md:text-lg',
           'lg:text-[1.1875rem]',
           '1xl:text-xl',

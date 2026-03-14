@@ -18,11 +18,10 @@ export const Certified = (props: CertifiedProps) => {
   return (
     <div
       className={clsx(
-        'horizontal mt-2 w-full justify-center gap-x-8',
-        'm1x:gap-x-9',
-        'm3x:gap-x-9.5',
-        'm2x:gap-x-10',
-        'm4x:gap-x-11'
+        'horizontal mt-4 w-full justify-center gap-x-7',
+        'm1x:gap-x-8 m1x:mt4.5',
+        'm2x:gap-x-8.5',
+        'm4x:gap-x-10'
       )}
     >
       {imagesUrl.map((item) => (
@@ -31,9 +30,8 @@ export const Certified = (props: CertifiedProps) => {
           className={clsx(
             'horizontal relative size-21 items-center',
             'm1x:size-22',
-            'm3x:size-22.5',
             'm2x:size-23',
-            'm4x:size-24'
+            'm4x:size-23.25'
           )}
         >
           <Image

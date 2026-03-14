@@ -25,7 +25,7 @@ export const Footer = (props: FooterProps) => {
     <footer
       className={clsx(
         'bg-midnightgreen vertical w-full px-6 pt-12',
-        'm3x:px-8',
+        'm3x:px-7',
         'md:px-13',
         '1xl:px-27.5',
         '2xl:px-28',

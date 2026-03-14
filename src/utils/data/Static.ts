@@ -138,13 +138,13 @@ export const staticData = {
     links: [
       // Quick Links
       { text: 'Quick Links', href: '#', id: 23 },
+      { text: 'All About Us', href: '/', id: 29 },
       { text: 'Home', href: '/', id: 24 },
-      { text: 'About Us', href: '/', id: 25 },
-      { text: 'All Areas', href: '/', id: 26 },
-      { text: 'Our Process', href: '/', id: 27 },
-      { text: 'Reviews', href: '/', id: 28 },
-      { text: 'Special Offers', href: '/', id: 29 },
-      { text: 'Blogs', href: '/', id: 30 },
+      { text: 'All Areas', href: '/', id: 25 },
+      { text: 'Our Blogs', href: '/', id: 26 },
+      { text: 'All Reviews', href: '/', id: 27 },
+      { text: 'Our Process', href: '/', id: 28 },
+      { text: 'Special Offers', href: '/', id: 30 },
       // Our Services
       { text: 'Our Services', href: '#', id: 31 },
       { text: 'HVAC System Maintenance', href: '/', id: 32 },
@@ -165,6 +165,7 @@ export const staticData = {
       ],
       imagesUrl: [
         { url: '/images/home/trusted-certified/trusted-certified4.webp', id: 66 },
+        { url: '/images/home/trusted-certified/trusted-certified8.webp', id: 68 },
         { url: '/images/home/trusted-certified/trusted-certified6.webp', id: 67 },
       ],
       mapsUrl:

@@ -15,8 +15,8 @@ export const Copyright = (props: CopyrightProps) => {
     <div className={clsx('horizontal w-full', 'lg:justify-start')}>
       <p
         className={clsx(
-          'text-primary text-center text-[0.9375rem] leading-7',
-          'm1x:text-base',
+          'text-primary text-center text-[1.0625rem] leading-7.5',
+          'm1x:text-lg leading-8',
           '1xl:text-[1.0625rem]',
           '3xl:text-lg',
           '5xl:text-[1.3125rem]'

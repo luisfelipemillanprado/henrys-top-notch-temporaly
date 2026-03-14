@@ -21,7 +21,7 @@ export const CompanyContactInformation = (props: CompanyContactInformationProps)
   const { url, contactInformation } = props
   return (
     <div
-      className={clsx('vertical bg-secondary w-full items-center gap-y-10 rounded-4xl p-7', 'm3x:gap-y-12')}
+      className={clsx('vertical bg-secondary w-full items-center gap-y-10 rounded-4xl p-6.5', 'm3x:gap-y-12')}
     >
       <LogoCompany url={url} footer />
       <div className={clsx('vertical w-full items-start gap-y-7.5')}>

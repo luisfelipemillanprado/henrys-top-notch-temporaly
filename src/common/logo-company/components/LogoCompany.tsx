@@ -18,10 +18,11 @@ export const LogoCompany = (props: LogocompanyProps) => {
       className={clsx(
         'horizontal relative',
         footer
-          ? ['h-10 w-48', 'm2x:h-10.25 m2x:w-49', 'm3x:h-10.75 m3x:w-50']
+          ? ['h-10 w-50', 'm1x:h-10.25', 'm2x:h-10.5', 'm3x:h-10.75']
           : [
               'h-10 w-50',
-              'm2x:h-10.25',
+              'm1x:h-10.25',
+              'm2x:h-10.5',
               'm3x:h-10.75',
               'md:h-11',
               'lg:h-11.5',

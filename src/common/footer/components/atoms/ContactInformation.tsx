@@ -32,8 +32,9 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6',
-            'm1x:size-6.25',
+            'fill-mintgreen size-6.25',
+            'm1x:size-6.5',
+            'm3x:size-6.75',
             'md:size-7.75',
             '1xl:size-8.5',
             '2xl:size-8.75',
@@ -48,8 +49,9 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6',
-            'm1x:size-6.25',
+            'fill-mintgreen size-6.25',
+            'm1x:size-6.5',
+            'm3x:size-6.75',
             'md:size-7.75',
             '1xl:size-8.5',
             '2xl:size-8.75',
@@ -64,8 +66,9 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6',
-            'm1x:size-6.25',
+            'fill-mintgreen size-6.25',
+            'm1x:size-6.5',
+            'm3x:size-6.75',
             'md:size-7.75',
             '1xl:size-8.5',
             '2xl:size-8.75',
@@ -80,8 +83,9 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6',
-            'm1x:size-6.25',
+            'fill-mintgreen size-6.25',
+            'm1x:size-6.5',
+            'm3x:size-6.75',
             'md:size-7.75',
             '1xl:size-8.5',
             '2xl:size-8.75',
@@ -121,8 +125,8 @@ export const ContactInformation = (props: ContactInformationItem) => {
       <div className={clsx('vertical gap-y-0.5')}>
         <span
           className={clsx(
-            'text-primary text-base font-medium',
-            'm1x:text-[1.0625rem]',
+            'text-primary text-[1.0625rem] font-medium',
+            'm1x:text-lg',
             'md:text-[1.1875rem]',
             '3xl:text-xl',
             '5xl:text-[1.375rem]'
@@ -132,9 +136,7 @@ export const ContactInformation = (props: ContactInformationItem) => {
         </span>
         <span
           className={clsx(
-            'text-warmgray truncate text-sm',
-            'm1x:text-[0.9375rem]',
-            '1xl:text-[1.0625rem]',
+            'text-warmgray truncate text-[0.9375rem]',
             '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
             '3xl:text-lg',
             '5xl:text-[1.3125rem]'
@@ -150,8 +152,8 @@ export const ContactInformation = (props: ContactInformationItem) => {
       <div className={clsx('vertical gap-y-0.5')}>
         <span
           className={clsx(
-            'text-primary text-base font-medium',
-            'm1x:text-[1.0625rem]',
+            'text-primary text-[1.0625rem] font-medium',
+            'm1x:text-lg',
             'md:text-[1.1875rem]',
             '3xl:text-xl',
             '5xl:text-[1.375rem]'
@@ -161,9 +163,7 @@ export const ContactInformation = (props: ContactInformationItem) => {
         </span>
         <span
           className={clsx(
-            'text-warmgray truncate text-sm',
-            'm1x:text-[0.9375rem]',
-            '1xl:text-[1.0625rem]',
+            'text-warmgray truncate text-[0.9375rem]',
             '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
             '3xl:text-lg',
             '5xl:text-[1.3125rem]'
