@@ -1,0 +1,34 @@
+import type { LicenseProps } from '@/common/footer/types'
+import clsx from 'clsx'
+
+/**
+ * @description Renders the license information in the footer.
+ * @public
+ * @interface LicenseProps
+ * @param {object} props - Component properties.
+ * @param {LicenseProps['license'][number]['text']} license.text - The text for the license information to be displayed.
+ * @param {LicenseProps['license'][number]['id']} license.id - The unique identifier for the license information item.
+ * @param {LicenseProps['license']} license - An array of objects containing the text and ID for the licenses.
+ * @returns {JSX.Element} The rendered license information section in the footer.
+ */
+export const License = (props: LicenseProps) => {
+  const { license } = props
+  return (
+    <div className={clsx('vertical mt-4 w-full items-center gap-y-2')}>
+      {license.map((item) => (
+        <span
+          key={item.id}
+          className={clsx(
+            'text-primary text-[0.9375rem] font-medium',
+            'm1x:text-base',
+            'md:text-[1.1875rem]',
+            '3xl:text-xl',
+            '5xl:text-[1.375rem]'
+          )}
+        >
+          {item.text}
+        </span>
+      ))}
+    </div>
+  )
+}
