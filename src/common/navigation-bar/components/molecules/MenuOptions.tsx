@@ -12,16 +12,15 @@ const ANIMATION_MS = 500
  * @public
  * @interface MenuOptionsProps
  * @param {object} props - Component properties.
- * @param {MenuOptionsProps['links'][number]['text']} text - The display text for the navigation link.
- * @param {MenuOptionsProps['links'][number]['href']} href - The URL the navigation link points to.
- * @param {MenuOptionsProps['links'][number]['icon']} icon - The icon associated with the navigation link.
- * @param {MenuOptionsProps['links'][number]['id']} id - The unique identifier for the navigation link item.
- * @param {MenuOptionsProps['links'][number]['handleCloseOptions']} [handleCloseOptions] - Optional function to handle closing.
- * @param {MenuOptionsProps['links']} links - An array of navigation link items with optional close handlers.
+ * @param {MenuOptionsProps['links'][number]['text']} props.text - The display text for the navigation link.
+ * @param {MenuOptionsProps['links'][number]['href']} props.href - The URL the navigation link points to.
+ * @param {MenuOptionsProps['links'][number]['icon']} props.icon - The icon associated with the navigation link.
+ * @param {MenuOptionsProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
+ * @param {MenuOptionsProps['links'][number]['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
+ * @param {MenuOptionsProps['links']} props.links - An array of navigation link items with optional close handlers.
  * @returns {JSX.Element} The rendered menu options component with responsive behavior and animations.
  */
-export const MenuOptions = (props: MenuOptionsProps) => {
-  const { links } = props
+export const MenuOptions = ({ links }: MenuOptionsProps) => {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -98,7 +97,7 @@ export const MenuOptions = (props: MenuOptionsProps) => {
             id={'options-menu'}
             onClick={handlePropagateOptions}
             className={clsx(
-              'bg-midnightgreen w-full transform transition-all duration-500 ease-in-out',
+              'bg-secondary w-full transform transition-all duration-500 ease-in-out',
               'will-change-transform contain-paint',
               isOpen ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
             )}

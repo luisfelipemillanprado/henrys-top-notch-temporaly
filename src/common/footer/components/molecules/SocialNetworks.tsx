@@ -7,15 +7,14 @@ import clsx from 'clsx'
  * @public
  * @interface SocialNetworksProps
  * @param {object} props - Component properties.
- * @param {SocialNetworksProps['socialNetworks'][number]['href']} href - The URL the social network item points to.
- * @param {SocialNetworksProps['socialNetworks'][number]['icon']} icon - The icon associated with the social network item.
- * @param {SocialNetworksProps['socialNetworks'][number]['name']} name - The name of the social network.
- * @param {SocialNetworksProps['socialNetworks'][number]['id']} id - The unique identifier for the social network item.
- * @param {SocialNetworksProps['socialNetworks']} socialNetworks - Array of social network items to be displayed.
+ * @param {SocialNetworksProps['socialNetworks'][number]['href']} props.href - The URL the social network item points to.
+ * @param {SocialNetworksProps['socialNetworks'][number]['icon']} props.icon - The icon associated with the social network item.
+ * @param {SocialNetworksProps['socialNetworks'][number]['name']} props.name - The name of the social network.
+ * @param {SocialNetworksProps['socialNetworks'][number]['id']} props.id - The unique identifier for the social network item.
+ * @param {SocialNetworksProps['socialNetworks']} props.socialNetworks - Array of social network items to be displayed.
  * @returns {JSX.Element} The rendered social networks section.
  */
-export const SocialNetworks = (props: SocialNetworksProps) => {
-  const { socialNetworks } = props
+export const SocialNetworks = ({ socialNetworks }: SocialNetworksProps) => {
   return (
     <div
       className={clsx(

@@ -81,7 +81,6 @@ export default function RootLayout({
           <NavigationBar navigationBar={staticData.navigationBar} />
           {children}
           <Footer footer={staticData.footer} />
-          {/* <FloatingWhatsAppButton href={staticData.contactUs.href} /> */}
           <Toast.Provider placement={'bottom end'} />
         </Providers>
       </body>

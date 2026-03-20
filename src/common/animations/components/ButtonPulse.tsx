@@ -69,7 +69,7 @@ export const ButtonPulse = ({
           className={clsx(
             noAnimation && 'hidden',
             `${animationSwitch(type).type} absolute z-10 opacity-60`,
-            colorChange ? 'bg-transparent' : 'bg-mintgreen',
+            colorChange ? 'bg-strong-blue' : 'bg-electric-blue',
             rounded ? 'rounded-full' : 'rounded-2xl',
             overlayMore ? '-inset-0.75' : '-inset-0.5'
           )}

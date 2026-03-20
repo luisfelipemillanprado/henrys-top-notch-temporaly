@@ -2,19 +2,14 @@ import type { MainTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a main title component with customizable properties such as color, text position, and truncation.
+ * @description Renders a main title component with responsive styling.
  * @public
  * @interface MainTitleProps
  * @param {object} props - Component properties.
- * @param {MainTitleProps['title']} title - The text content rendered as the main heading.
- * @param {MainTitleProps['changeColor']} [changeColor] - Optional flag to indicate if the title color should change.
- * @param {MainTitleProps['firstChangeTextPosition']} [firstChangeTextPosition] - Optional flag to adjust text position.
- * @param {MainTitleProps['secondChangeTextPosition']} [secondChangeTextPosition] - Optional flag to further adjust text position.
- * @param {MainTitleProps['truncateText']} [truncateText] - Optional flag to enable text truncation with ellipsis for long titles.
+ * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
  * @returns {JSX.Element} The rendered main title component.
  */
-export const MainTitle = (props: MainTitleProps) => {
-  const { title } = props
+export const MainTitle = ({ title }: MainTitleProps) => {
   return (
     <div className={clsx('horizontal w-full px-4')}>
       <h1

@@ -1,12 +1,12 @@
 import type { NavigationBarLinkItem } from '@/common/navigation-bar/types'
 import {
-  CheckBadgeIcon,
   ClipboardDocumentListIcon,
-  FireIcon,
+  GiftIcon,
   HomeIcon,
   InformationCircleIcon,
   MapIcon,
   NewspaperIcon,
+  StarIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
@@ -48,7 +48,7 @@ const iconSwitch = (icon: string) => {
         <HomeIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.ABOUT_US:
@@ -56,7 +56,7 @@ const iconSwitch = (icon: string) => {
         <InformationCircleIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.SERVICES:
@@ -64,7 +64,7 @@ const iconSwitch = (icon: string) => {
         <WrenchScrewdriverIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.PROCESS:
@@ -72,7 +72,7 @@ const iconSwitch = (icon: string) => {
         <ClipboardDocumentListIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.AREAS:
@@ -80,23 +80,23 @@ const iconSwitch = (icon: string) => {
         <MapIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.REVIEWS:
       return (
-        <CheckBadgeIcon
+        <StarIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.OFFERS:
       return (
-        <FireIcon
+        <GiftIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.BLOGS:
@@ -104,7 +104,7 @@ const iconSwitch = (icon: string) => {
         <NewspaperIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-mintgreen size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-vivid-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     default:
@@ -117,15 +117,14 @@ const iconSwitch = (icon: string) => {
  * @public
  * @interface NavigationBarLinkItem
  * @param {object} props Component properties.
- * @param {NavigationBarLinkItem['text']} text - The display text for the navigation link.
- * @param {NavigationBarLinkItem['href']} href - The URL the navigation link points to.
- * @param {NavigationBarLinkItem['icon']} icon - The icon associated with the navigation link.
- * @param {NavigationBarLinkItem['id']} id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinkItem['handleCloseOptions']} [handleCloseOptions] - Optional function to handle closing.
+ * @param {NavigationBarLinkItem['text']} props.text - The display text for the navigation link.
+ * @param {NavigationBarLinkItem['href']} props.href - The URL the navigation link points to.
+ * @param {NavigationBarLinkItem['icon']} props.icon - The icon associated with the navigation link.
+ * @param {NavigationBarLinkItem['id']} props.id - The unique identifier for the navigation link item.
+ * @param {NavigationBarLinkItem['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
  * @returns {JSX.Element} The rendered navigation link component.
  */
-export const NavigationLink = (props: NavigationBarLinkItem) => {
-  const { text, href, icon, handleCloseOptions } = props
+export const NavigationLink = ({ text, href, icon, handleCloseOptions }: NavigationBarLinkItem) => {
   return (
     <li className={clsx('horizontal w-full', 'lg:w-auto')}>
       <Link

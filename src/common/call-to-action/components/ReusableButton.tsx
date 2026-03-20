@@ -1,6 +1,6 @@
 import { ButtonPulse } from '@/common/animations/components/ButtonPulse'
 import type { ReusableButtonProps } from '@/common/call-to-action/types'
-import { PlayCircleIcon } from '@heroicons/react/24/solid'
+import { ArrowRightCircleIcon, PlayCircleIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import Link from 'next/link'
 
@@ -9,23 +9,31 @@ import Link from 'next/link'
  * @public
  * @interface ReusableButtonProps
  * @param {object} props - Component properties.
- * @param {ReusableButtonProps['text']} text - Button label text, also used to generate the aria-label.
- * @param {ReusableButtonProps['href']} href - Destination URL or route.
- * @param {ReusableButtonProps['icon']} icon - Optional icon identifier rendered before the text.
- * @param {ReusableButtonProps['float']} float - Enables floating behavior via the ButtonPulse wrapper.
- * @param {ReusableButtonProps['colorChange']} colorChange - Enables the alternate color variant.
- * @param {ReusableButtonProps['noAnimation']} noAnimation - Disables the pulse animation when set to true.
+ * @param {ReusableButtonProps['text']} props.text - Button label text, also used to generate the aria-label.
+ * @param {ReusableButtonProps['href']} props.href - Destination URL or route.
+ * @param {ReusableButtonProps['startIcon']} props.startIcon - Optional icon identifier rendered before the text.
+ * @param {ReusableButtonProps['endIcon']} props.endIcon - Optional icon identifier rendered after the text.
+ * @param {ReusableButtonProps['float']} props.float - Enables floating behavior via the ButtonPulse wrapper.
+ * @param {ReusableButtonProps['colorChange']} props.colorChange - Enables the alternate color variant.
+ * @param {ReusableButtonProps['noAnimation']} props.noAnimation - Disables the pulse animation when set to true.
  * @returns {JSX.Element} A rendering a styled, accessible call-to-action link.
  */
-export const ReusableButton = (props: ReusableButtonProps) => {
-  const { text, href, icon, float, colorChange, noAnimation } = props
+export const ReusableButton = ({
+  text,
+  href,
+  startIcon = false,
+  endIcon = false,
+  float = true,
+  colorChange = true,
+  noAnimation = false,
+}: ReusableButtonProps) => {
   return (
-    <ButtonPulse type={'soft'} rounded float={float} noAnimation={noAnimation}>
+    <ButtonPulse type={'soft'} rounded float={float} colorChange={colorChange} noAnimation={noAnimation}>
       <Link
         className={clsx(
           'horizontal z-30 h-9.5 rounded-full shadow-lg',
-          icon ? 'pr-4 pl-3' : 'px-4',
-          colorChange ? 'bg-mintgreen' : 'bg-irongray',
+          startIcon ? 'pr-4 pl-3' : 'px-4',
+          colorChange ? 'bg-strong-blue' : 'bg-irongray',
           'm1x:h-10',
           'm3x:h-10.5',
           'md:h-11',
@@ -38,13 +46,13 @@ export const ReusableButton = (props: ReusableButtonProps) => {
         aria-label={`${text} button`}
       >
         <div className={clsx('horizontal gap-x-2')}>
-          {icon && (
+          {startIcon && (
             <span className={clsx('horizontal')}>
               <PlayCircleIcon
                 aria-hidden={'true'}
                 role={'img'}
                 className={clsx(
-                  'fill-mintgreen size-6',
+                  'fill-electric-blue size-6',
                   '1xl:size-6.25',
                   '2xl:size-6.75',
                   '3xl:size-7.25',
@@ -55,8 +63,7 @@ export const ReusableButton = (props: ReusableButtonProps) => {
           )}
           <span
             className={clsx(
-              'text-base',
-              colorChange ? 'text-secondary' : 'text-primary',
+              'text-primary text-base',
               'm1x:text-[1.0625rem]',
               '1xl:text-lg',
               '3xl:text-[1.1875rem]',
@@ -65,6 +72,21 @@ export const ReusableButton = (props: ReusableButtonProps) => {
           >
             {text}
           </span>
+          {endIcon && (
+            <span className={clsx('horizontal')}>
+              <ArrowRightCircleIcon
+                aria-hidden={'true'}
+                role={'img'}
+                className={clsx(
+                  'fill-primary size-6',
+                  '1xl:size-6.25',
+                  '2xl:size-6.75',
+                  '3xl:size-7.25',
+                  '5xl:size-7.5'
+                )}
+              />
+            </span>
+          )}
         </div>
       </Link>
     </ButtonPulse>

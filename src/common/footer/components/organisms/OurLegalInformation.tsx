@@ -8,16 +8,15 @@ import clsx from 'clsx'
  * @public
  * @interface LegalInformationProps
  * @param {object} props - Component properties.
- * @param {LegalInformationProps['copyright']} copyright - The copyright information to be displayed.
- * @param {SocialNetworksProps['socialNetworks'][number]['href']} socialNetworks.href - The URL the social network item points to.
- * @param {SocialNetworksProps['socialNetworks'][number]['icon']} socialNetworks.icon - The icon associated with the social network item.
- * @param {SocialNetworksProps['socialNetworks'][number]['name']} socialNetworks.name - The name of the social network.
- * @param {SocialNetworksProps['socialNetworks'][number]['id']} socialNetworks.id - The unique identifier for the social network item.
- * @param {LegalInformationProps['socialNetworks']} socialNetworks - Array of social network items to be displayed.
+ * @param {LegalInformationProps['copyright']} props.copyright - The copyright information to be displayed in the footer.
+ * @param {LegalInformationProps['socialNetworks']} props.socialNetworks - An array of social network items to be displayed in the footer.
+ * @param {LegalInformationProps['socialNetworks'][number]['href']} props.socialNetworks.href - The URL the social network item points to.
+ * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the social network item.
+ * @param {LegalInformationProps['socialNetworks'][number]['name']} props.socialNetworks.name - The name of the social network.
+ * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social network item.
  * @returns {JSX.Element} The rendered legal information section.
  */
-export const OurLegalInformation = (props: LegalInformationProps) => {
-  const { copyright, socialNetworks } = props
+export const OurLegalInformation = ({ copyright, socialNetworks }: LegalInformationProps) => {
   return (
     <div
       className={clsx(

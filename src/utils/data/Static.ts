@@ -55,6 +55,73 @@ export const staticData = {
         id: 14,
       },
     ],
+    whoWeAre: {
+      url: '/images/home/about-company/about-company.webp',
+      keyBenefits: [
+        { text: 'Right On Time.', id: 20 },
+        { text: '24-7 Support.', id: 21 },
+        { text: 'Affordable HVAC Solutions.', id: 22 },
+        { text: 'Energy-Efficient Systems.', id: 23 },
+        { text: 'Expert Installation & Repair.', id: 24 },
+        { text: 'Comfort for Homes & Businesses.', id: 25 },
+      ],
+    },
+    bookingProcess: {
+      url: '/images/home/booking-process/booking-process.webp',
+      characteristics: [
+        {
+          icon: 'emergency',
+          title: 'Energy-Efficient Systems.',
+          description:
+            'Energy-efficient HVAC systems designed to reduce energy consumption while maintaining consistent indoor comfort levels effectively.',
+          id: 26,
+        },
+        {
+          icon: 'experts',
+          title: 'Expert Installation & Repair.',
+          description:
+            'Certified HVAC technicians specializing in precise installation and repair processes for optimal system performance and efficiency.',
+          id: 27,
+        },
+        {
+          icon: 'comfort',
+          title: 'Comfort for Homes & Businesses.',
+          description:
+            'Consistent indoor comfort for residential and commercial spaces through advanced, reliable climate control systems year-round.',
+          id: 28,
+        },
+      ],
+      steps: [
+        {
+          icon: 'booking',
+          title: 'Book Your Service.',
+          description:
+            'Choose a date and time that fits your schedule best, supported by our flexible scheduling options.',
+          id: 26,
+        },
+        {
+          icon: 'on-time',
+          title: 'We Arrive On Time.',
+          description:
+            'Our technicians arrive on time, respecting your schedule and delivering reliable, professional HVAC service.',
+          id: 27,
+        },
+        {
+          icon: 'scheduling',
+          title: 'Flexible Scheduling.',
+          description:
+            'Choose from flexible scheduling options, including same-day and next-day HVAC service appointments available.',
+          id: 28,
+        },
+        {
+          icon: 'guarantee',
+          title: 'Satisfaction Guaranteed.',
+          description:
+            'We guarantee your satisfaction by ensuring every HVAC service is completed correctly and efficiently every time.',
+          id: 29,
+        },
+      ],
+    },
   },
   navigationBar: {
     logo: { url: '/images/home/logo-company/logo-company.webp' },
@@ -70,33 +137,29 @@ export const staticData = {
       { text: 'Blogs', href: '#blogs', icon: 'blogs', id: 22 },
     ],
   },
+  overLine: [
+    'ABOUT COMPANY',
+    'BOOKING PROCESS',
+    'OUR AREAS',
+    'OUR PROCESS',
+    'REVIEWS',
+    'SPECIAL OFFERS',
+    'BLOGS',
+  ],
   titles: {
     main: 'Enjoy All Your Premium Heating System Services',
-    secondary: [
-      'Explore Our Professional Services.',
-      'Crafting Excellence Through Process.',
-      'We Work For Clients Around The World.',
-      'Shaping Success Through Every Project.',
-      'Customer Experiences & Testimonials.',
-      'Customer Frequently Asked Questions.',
-      'Ready To Elevate Your Firm? Take The Next Step With Us!',
-    ],
+    secondary: ['Efficient Heating And Cooling Systems.', 'Our Simple and Fast Booking Process.'],
   },
   sectionDescription: {
     main: 'We offer advanced heating and cooling solutions that improve indoor comfort increase efficiency enhance air quality ensure reliable performance and maintain consistent climate control. From expert HVAC installations to repairs maintenance and system upgrades our expertise helps homes and businesses stay comfortable.',
     secondary: [
-      'Our solutions optimize operations, strengthen collaboration, and consistently deliver measurable results. Each implementation is carefully designed to reduce complexity, increase impact, and effectively support your evolving strategic business objectives while ensuring long-term sustainability and measurable organizational performance.',
-      'Our process streamlines workflows, enhances collaboration, and consistently achieves measurable outcomes. Each stage is meticulously designed to reduce complexity, strengthen efficiency, and fully align with your strategic business objectives while driving sustainable performance, operational clarity, and lasting enterprise growth.',
-      'Our global expansion reflects our unwavering commitment to delivering innovative, high-quality solutions and services that enable businesses worldwide to grow, collaborate, and prosper beyond diverse geographical boundaries across international markets sustainably.',
-      'Our portfolio highlights solutions that elevate performance, enhance collaboration, and deliver measurable impact. Each project is carefully crafted to simplify challenges, increase efficiency, and effectively support your strategic business goals while strengthening operational alignment and driving sustainable long-term enterprise growth.',
-      'Our customers share their genuine experiences, highlighting our unwavering commitment to exceptional service, reliable solutions, and measurable results. Their testimonials offer meaningful insight into the quality and trust that define our work while reinforcing credibility, strengthening reputation, and demonstrating satisfaction.',
-      'Do you have questions or require further information about our services? Review our extensive FAQs for prompt clarification or communicate directly with our expert support team. We remain consistently accessible to deliver detailed technical guidance and confidently support you throughout the entire engagement process comprehensively.',
-      'Innovative software for startups, optimizing processes, improving productivity, and facilitating management with reliable and scalable tools that drive success.',
+      'At Henry’s Top Notch Air Conditioning & Heating Co, we are a family-owned and operated business dedicated to keeping homes and businesses comfortable. With 21 years of HVAC experience, our trusted team delivers reliable heating and cooling solutions with honest service, quality workmanship, and dependable results year-round.',
+      'At Henry’s Top Notch Air Conditioning & Heating Co, our simple booking process is designed to make getting started easy and stress-free. We focus on convenience, flexibility, and reliability, ensuring every step feels smooth. Our goal is to provide a seamless experience that helps you quickly connect with trusted HVAC professionals.',
     ],
   },
   callToAction: {
     reusableButton: {
-      text: ['Our Services', 'More Details', 'More Projects', 'All Comments', 'Ask Us Now'],
+      text: ['Learn More', 'More Details', 'More Projects', 'All Comments', 'Ask Us Now'],
       href: ['/services', '/process', '/projects', '/reviews', '/frequently-asked-questions'],
     },
     getStartedButton: { text: ['Get Started'], href: ['#contactus'] },
@@ -157,7 +220,7 @@ export const staticData = {
     ],
     highlight: ['Quick Links', 'Our Services'],
     certifiedExperts: {
-      title: 'Licensed & Certified HVAC Experts',
+      title: 'Licensed & Certified HVAC Experts.',
       description: `At Henry's Top Notch A/C & Heating Company, we take pride in having a team of highly trained HVAC professionals.`,
       license: [
         { text: 'CONTRACTOR LICENSE:', id: 68 },

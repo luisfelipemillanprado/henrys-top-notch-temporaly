@@ -1,4 +1,4 @@
-import { blurDataUrlGallery } from '@/utils/data/BlurDataUrl'
+import { blurDataUrlGallery } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
 
@@ -30,10 +30,10 @@ export const MainGallery = (props: { gallery: { url: string; id: number }[] }) =
     base: 'size-full rounded-3xl object-cover',
     breakPoints: [
       'opacity-40 md:opacity-15 lg:opacity-40',
-      'opacity-60 md:opacity-100',
+      'opacity-100',
       null,
       'opacity-50 md:opacity-15 lg:opacity-40',
-      'opacity-50 md:opacity-100',
+      'opacity-70 md:opacity-100',
       null,
     ],
   }

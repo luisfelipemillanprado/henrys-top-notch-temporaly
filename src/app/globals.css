@@ -24,19 +24,22 @@
   --color-secondary: oklch(0.2308 0 0); /* nearblack */
   --color-midnightgreen: oklch(0.252 0 0); /* midnightgreen */
   --color-irongray: oklch(0.3171 0 0); /* irongray */
+  --color-dimgray: oklch(0.5322 0.0012 17.2); /* dimgray */
   --color-warmgray: oklch(0.6132 0.0092 91.54); /* warmgray */
-  --color-cream: oklch(0.9467 0.0168 88); /* cream */
-  --color-linen: oklch(0.958 0.0083 91.48); /* linen */
-  --color-mintgreen: oklch(0.8969 0.1554 154.46); /* mintgreen */
+  --color-bright-orange: oklch(0.6884 0.2089 41.7); /* bright orange */
+  --color-vivid-orange: oklch(0.7426 0.1817 56.01); /* vivid orange */
+  --color-electric-blue: oklch(0.7647 0.125269 249.7656); /* electric blue */
+  --color-strong-blue: oklch(0.4974 0.1649 255.19); /* strong blue */
   --color-primary: oklch(100% 0 0); /* white */
+  --color-off-White: oklch(0.9759 0.0029 264.54); /* off-white */
   --color-warm-red: oklch(0.6192 0.2419 11.33); /* warmred */
 
   /* --- HEROUI COMPATIBILITY --- */
   /* HeroUI v3 looks for these exact variables for its internal components */
   --white: var(--color-primary); /* white */
   --black: var(--color-secondary); /* nearblack */
-  --accent: var(--color-mintgreen); /* mintgreen */
-  --success: var(--color-mintgreen); /* mintgreen */
+  --accent: var(--color-bright-orange); /* bright orange */
+  --success: var(--color-bright-orange); /* bright orange */
   --danger: var(--color-warm-red); /* warmred */
   --snow: var(--color-linen); /* linen */
   --border: var(--color-cream); /* cream */

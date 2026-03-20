@@ -1,4 +1,4 @@
-import { blurDataUrlCertified } from '@/utils/data/BlurDataUrl'
+import { blurDataUrlCertified } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'

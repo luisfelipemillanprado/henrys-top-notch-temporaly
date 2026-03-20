@@ -7,15 +7,14 @@ import clsx from 'clsx'
  * @public
  * @interface NavigationBarLinksProps
  * @param {object} props - Component properties.
- * @param {NavigationBarLinksProps['links'][number]['text']} text - The display text for the navigation link.
- * @param {NavigationBarLinksProps['links'][number]['href']} href - The URL the navigation link points to.
- * @param {NavigationBarLinksProps['links'][number]['icon']} icon - The icon associated with the navigation link.
- * @param {NavigationBarLinksProps['links'][number]['id']} id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinksProps['links']} links - An array of navigation link items without the close handler..
+ * @param {NavigationBarLinksProps['links'][number]['text']} props.text - The display text for the navigation link.
+ * @param {NavigationBarLinksProps['links'][number]['href']} props.href - The URL the navigation link points to.
+ * @param {NavigationBarLinksProps['links'][number]['icon']} props.icon - The icon associated with the navigation link.
+ * @param {NavigationBarLinksProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
+ * @param {NavigationBarLinksProps['links']} props.links - An array of navigation link items without the close handler..
  * @returns {JSX.Element} The rendered list of navigation links.
  */
-export const NavigationLinks = (props: NavigationBarLinksProps) => {
-  const { links } = props
+export const NavigationLinks = ({ links }: NavigationBarLinksProps) => {
   return (
     <ul
       className={clsx(
@@ -26,7 +25,14 @@ export const NavigationLinks = (props: NavigationBarLinksProps) => {
       )}
     >
       {links.map((item) => (
-        <NavigationLink {...item} key={item.id} />
+        <NavigationLink
+          key={item.id}
+          text={item.text}
+          href={item.href}
+          icon={item.icon}
+          id={item.id}
+          handleCloseOptions={item.handleCloseOptions}
+        />
       ))}
     </ul>
   )

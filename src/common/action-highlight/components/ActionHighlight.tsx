@@ -7,13 +7,12 @@ import clsx from 'clsx'
  * @public
  * @interface ActionHighlightProps
  * @param {object} props - Component properties.
- * @param {ActionHighlightProps['firstText']} firstText - The primary (first) text line to display.
- * @param {ActionHighlightProps['secondText']} secondText - The secondary (second) text line to display.
- * @param {ActionHighlightProps['firstChangePosition']} [firstChangePosition] - Applies styles for the first positioning.
+ * @param {ActionHighlightProps['firstText']} props.firstText - The primary (first) text line to display.
+ * @param {ActionHighlightProps['secondText']} props.secondText - The secondary (second) text line to display.
+ * @param {ActionHighlightProps['firstChangePosition']} [props.firstChangePosition] - Applies styles for the first positioning.
  * @returns {JSX.Element} A container with an arrow icon and two text lines positioned absolutely.
  */
-export const ActionHighlight = (props: ActionHighlightProps) => {
-  const { firstText, secondText, firstChangePosition } = props
+export const ActionHighlight = ({ firstText, secondText, firstChangePosition }: ActionHighlightProps) => {
   return (
     <div
       className={clsx(

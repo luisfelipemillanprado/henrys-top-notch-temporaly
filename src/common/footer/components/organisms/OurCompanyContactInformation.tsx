@@ -9,25 +9,37 @@ import clsx from 'clsx'
  * @public
  * @interface OurCompanyContactInformationProps
  * @param {object} props - Component properties.
- * @param {OurCompanyContactInformationProps['logo']} logo - The properties for the company logo displayed in the footer.
- * @param {OurCompanyContactInformationProps['logo']['url']} logo.url - The URL for the company logo image.
- * @param {OurCompanyContactInformationProps['contactInformation']} contactInformation - An array of contact information items.
- * @param {OurCompanyContactInformationProps['links']} links - An array of footer link items to be displayed in the footer.
- * @param {OurCompanyContactInformationProps['highlight']} highlight - An array of strings representing highlighted text.
- * @param {OurCompanyContactInformationProps['title']} title - The title for the certified experts section.
- * @param {OurCompanyContactInformationProps['description']} description - The description text for the certified experts section.
- * @param {OurCompanyContactInformationProps['license'][number]['text']} license.text - The text for the license information.
- * @param {OurCompanyContactInformationProps['license'][number]['id']} license.id - The unique identifier for the license information.
- * @param {OurCompanyContactInformationProps['license']} license - The license information in the certified experts section.
- * @param {OurCompanyContactInformationProps['imagesUrl'][number]['url']} imagesUrl.url - The URL for the certificate.
- * @param {OurCompanyContactInformationProps['imagesUrl'][number]['id']} imagesUrl.id - The unique identifier for the certificate.
- * @param {OurCompanyContactInformationProps['imagesUrl']} imagesUrl - The URL for the license image or link in the certified experts.
- * @param {OurCompanyContactInformationProps['certifiedExperts']} certifiedExperts - The properties for the certified experts.
- * @param {OurCompanyContactInformationProps['mapsUrl']} mapsUrl - The URL for the embedded Google Maps location to be displayed.
+ * @param {OurCompanyContactInformationProps['logo']} props.logo - The properties for the company logo displayed in the footer.
+ * @param {OurCompanyContactInformationProps['logo']['url']} props.logo.url - The URL for the company logo image.
+ * @param {OurCompanyContactInformationProps['contactInformation']} props.contactInformation - An array of contact information items to be displayed.
+ * @param {OurCompanyContactInformationProps['contactInformation']['text']} props.contactInformation.text - The display text for the company contact information.
+ * @param {OurCompanyContactInformationProps['contactInformation']['type']} props.contactInformation.type - The type of contact information (e.g., 'email', 'phone').
+ * @param {OurCompanyContactInformationProps['contactInformation']['icon']} props.contactInformation.icon - The icon associated with the company contact.
+ * @param {OurCompanyContactInformationProps['contactInformation']['id']} props.contactInformation.id - The unique identifier for the company contact information item.
+ * @param {OurCompanyContactInformationProps['links']} props.links - An array of footer link items to be displayed in the footer.
+ * @param {OurCompanyContactInformationProps['links']['text']} props.links.text - The display text for the footer link.
+ * @param {OurCompanyContactInformationProps['links']['href']} props.links.href - The URL the footer link points to.
+ * @param {OurCompanyContactInformationProps['links']['id']} props.links.id - The unique identifier for the footer link item.
+ * @param {OurCompanyContactInformationProps['highlight']} props.highlight - An array of strings representing links that should be highlighted.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']} props.certifiedExperts - The properties for the certified experts section in the footer.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['title']} props.certifiedExperts.title - The title for the certified experts section.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['description']} props.certifiedExperts.description - A brief description of the certified experts.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['license']} props.certifiedExperts.license - An array of objects containing the text and ID for the licenses.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['license']['text']} props.certifiedExperts.license.text - The text representing the license information.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['license']['id']} props.certifiedExperts.license.id - The unique identifier for the license information.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']} props.certifiedExperts.imagesUrl - An array of objects containing the URL and ID for the images.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']['url']} props.certifiedExperts.imagesUrl.url - The URL for the image to be displayed in the certified.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']['id']} props.certifiedExperts.imagesUrl.id - The unique identifier for the image in the certified.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['mapsUrl']} props.certifiedExperts.mapsUrl - The URL for the embedded Google Maps location to be displayed.
  * @returns {JSX.Element} A section element containing the company's footer information.
  */
-export const OurCompanyContactInformation = (props: OurCompanyContactInformationProps) => {
-  const { logo, contactInformation, links, highlight, certifiedExperts } = props
+export const OurCompanyContactInformation = ({
+  logo,
+  contactInformation,
+  links,
+  highlight,
+  certifiedExperts,
+}: OurCompanyContactInformationProps) => {
   return (
     <section
       aria-label={'company-about-information'}

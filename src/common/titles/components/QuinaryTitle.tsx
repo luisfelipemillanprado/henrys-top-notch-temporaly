@@ -2,16 +2,14 @@ import type { MainTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a quinary title component with customizable properties such as color and text position.
+ * @description Renders a quinary title component with responsive styling.
  * @public
  * @interface MainTitleProps
  * @param {object} props - Component properties.
- * @param {MainTitleProps['title']} title - The text content rendered as the main heading.
- * @param {MainTitleProps['firstChangeTextPosition']} [firstChangeTextPosition] - Optional flag to adjust text position.
+ * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
  * @returns {JSX.Element} The rendered quinary title component.
  */
-export const QuinaryTitle = (props: MainTitleProps) => {
-  const { title } = props
+export const QuinaryTitle = ({ title }: MainTitleProps) => {
   return (
     <div className={clsx('horizontal w-full justify-center')}>
       <h5

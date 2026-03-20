@@ -32,7 +32,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6.25',
+            'fill-vivid-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -49,7 +49,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6.25',
+            'fill-vivid-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -66,7 +66,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6.25',
+            'fill-vivid-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -83,7 +83,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-mintgreen size-6.25',
+            'fill-vivid-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -104,15 +104,42 @@ const iconSwitch = (icon: string) => {
  * @public
  * @interface ContactInformationItem
  * @param {object} props - Component properties.
- * @param {ContactInformationItem['text']} text - The text to display for the contact information.
- * @param {ContactInformationItem['href']} href - The URL to link to when the contact information is clicked.
- * @param {ContactInformationItem['type']} type - The type of contact information (e.g., "email", "phone").
- * @param {ContactInformationItem['icon']} icon - The icon identifier for the contact information.
- * @param {ContactInformationItem['id']} id - The unique identifier for the contact information item.
+ * @param {ContactInformationItem['text']} props.text - The text to display for the contact information.
+ * @param {ContactInformationItem['href']} props.href - The URL to link to when the contact information is clicked.
+ * @param {ContactInformationItem['type']} props.type - The type of contact information (e.g., "email", "phone").
+ * @param {ContactInformationItem['icon']} props.icon - The icon identifier for the contact information.
+ * @param {ContactInformationItem['id']} props.id - The unique identifier for the contact information item.
  * @returns {JSX.Element} A link element containing the contact information.
  */
-export const ContactInformation = (props: ContactInformationItem) => {
-  const { text, href, type, icon } = props
+export const ContactInformation = ({ text, href, type, icon }: ContactInformationItem) => {
+  const content = (
+    <>
+      <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
+      <div className={clsx('vertical gap-y-0.5')}>
+        <span
+          className={clsx(
+            'text-primary text-[1.0625rem] font-medium',
+            'm1x:text-lg',
+            'md:text-[1.1875rem]',
+            '3xl:text-xl',
+            '5xl:text-[1.375rem]'
+          )}
+        >
+          {text}
+        </span>
+        <span
+          className={clsx(
+            'text-warmgray truncate text-[0.9375rem]',
+            '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
+            '3xl:text-lg',
+            '5xl:text-[1.3125rem]'
+          )}
+        >
+          {type}
+        </span>
+      </div>
+    </>
+  )
   return href !== '#' ? (
     <Link
       href={href}
@@ -121,57 +148,9 @@ export const ContactInformation = (props: ContactInformationItem) => {
       className={clsx('horizontal justify-center gap-x-3')}
       aria-label={`contact information ${type.toLowerCase()}`}
     >
-      <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
-      <div className={clsx('vertical gap-y-0.5')}>
-        <span
-          className={clsx(
-            'text-primary text-[1.0625rem] font-medium',
-            'm1x:text-lg',
-            'md:text-[1.1875rem]',
-            '3xl:text-xl',
-            '5xl:text-[1.375rem]'
-          )}
-        >
-          {text}
-        </span>
-        <span
-          className={clsx(
-            'text-warmgray truncate text-[0.9375rem]',
-            '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
-            '3xl:text-lg',
-            '5xl:text-[1.3125rem]'
-          )}
-        >
-          {type}
-        </span>
-      </div>
+      {content}
     </Link>
   ) : (
-    <div className={clsx('horizontal justify-center gap-x-3')}>
-      <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
-      <div className={clsx('vertical gap-y-0.5')}>
-        <span
-          className={clsx(
-            'text-primary text-[1.0625rem] font-medium',
-            'm1x:text-lg',
-            'md:text-[1.1875rem]',
-            '3xl:text-xl',
-            '5xl:text-[1.375rem]'
-          )}
-        >
-          {text}
-        </span>
-        <span
-          className={clsx(
-            'text-warmgray truncate text-[0.9375rem]',
-            '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
-            '3xl:text-lg',
-            '5xl:text-[1.3125rem]'
-          )}
-        >
-          {type}
-        </span>
-      </div>
-    </div>
+    <div className={clsx('horizontal justify-center gap-x-3')}>{content}</div>
   )
 }

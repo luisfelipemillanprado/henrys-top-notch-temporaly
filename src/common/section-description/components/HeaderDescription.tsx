@@ -1,18 +1,16 @@
-import type { HeaderDescriptionProps } from '@/common/section-description/types'
+import type { SectionDescriptionProps } from '@/common/section-description/types'
 import clsx from 'clsx'
 
 /**
  * @description Renders a responsive header description with customizable text.
  * @public
- * @interface HeaderDescriptionProps
+ * @interface SectionDescriptionProps
  * @param {object} props - Component properties.
- * @param {HeaderDescriptionProps['description']} description - The text content to be displayed in the header description.
- * @param {HeaderDescriptionProps['firstChangeTextPosition']} [firstChangeTextPosition] - Optional flag to change text position.
- * @param {HeaderDescriptionProps['secondChangeTextPosition']} [secondChangeTextPosition] - Optional flag to change text position.
+ * @param {SectionDescriptionProps['description']} props.description - The text content to be displayed in the header description.
+ * @param {SectionDescriptionProps['changeWidth']} [props.changeWidth] - Optional flag to change text position.
  * @returns {JSX.Element} A rendering the responsive header description.
  */
-export const HeaderDescription = (props: HeaderDescriptionProps) => {
-  const { description } = props
+export const HeaderDescription = ({ description }: SectionDescriptionProps) => {
   return (
     <div
       className={clsx(

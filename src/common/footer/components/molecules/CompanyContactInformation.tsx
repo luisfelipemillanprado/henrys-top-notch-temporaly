@@ -8,20 +8,22 @@ import clsx from 'clsx'
  * @public
  * @interface CompanyContactInformationProps
  * @param {object} props - Component properties.
- * @param {CompanyContactInformationProps['url']}url - The URL for the company logo image.
- * @param {CompanyContactInformationProps['contactInformation'][number]['text']} text - The display text for the contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['href']} href - The URL the contact information item points to.
- * @param {CompanyContactInformationProps['contactInformation'][number]['type']} type - The type of contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} icon - The icon associated with the contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['id']} id - The unique identifier for the contact information.
- * @param {CompanyContactInformationProps['contactInformation']} contactInformation - An array of contact information items.
+ * @param {CompanyContactInformationProps['url']} props.url - The URL for the company logo image.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['text']} props.text - The display text for the contact information.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['href']} props.href - The URL the contact information item points to.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['type']} props.type - The type of contact information.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} props.icon - The icon associated with the contact information.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['id']} props.id - The unique identifier for the contact information.
+ * @param {CompanyContactInformationProps['contactInformation']} props.contactInformation - An array of contact information items.
  * @returns {JSX.Element} The rendered company contact information section.
  */
-export const CompanyContactInformation = (props: CompanyContactInformationProps) => {
-  const { url, contactInformation } = props
+export const CompanyContactInformation = ({ url, contactInformation }: CompanyContactInformationProps) => {
   return (
     <div
-      className={clsx('vertical bg-secondary w-full items-center gap-y-10 rounded-4xl p-6.5', 'm3x:gap-y-12')}
+      className={clsx(
+        'vertical bg-midnightgreen w-full items-center gap-y-10 rounded-4xl p-6.5',
+        'm3x:gap-y-12'
+      )}
     >
       <LogoCompany url={url} footer />
       <div className={clsx('vertical w-full items-start gap-y-7.5')}>

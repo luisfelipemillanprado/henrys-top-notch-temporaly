@@ -1,15 +1,11 @@
 /**
- * @description Represents the properties for the header description components.
+ * @description Represents the properties for the section description components.
  * @export
- * @interface HeaderDescriptionProps
- * @property {string} description - The text content to be displayed in the header description.
- * @property {boolean} [firstChangeTextPosition] - Optional flag to change text position for the first breakpoint.
- * @property {boolean} [secondChangeTextPosition] - Optional flag to change text position for the second breakpoint.
- * @property {boolean} [widthAuto] - Optional flag to set width to auto for medium breakpoint.
+ * @interface SectionDescriptionProps
+ * @property {string} description - The text content to be displayed in the section description.
+ * @property {boolean} [changeWidth] - Optional flag to indicate if the width of the description should be changed.
  */
-export interface HeaderDescriptionProps {
+export interface SectionDescriptionProps {
   description: string
-  firstChangeTextPosition?: boolean
-  secondChangeTextPosition?: boolean
-  widthAuto?: boolean
+  changeWidth?: boolean
 }

@@ -20,7 +20,8 @@ export interface GetStartedButtonProps {
  * @interface ReusableButtonProps
  * @property {string} text - The display text for the button.
  * @property {string} href - The URL the button points to.
- * @property {boolean} icon - Indicates whether an icon should be displayed on the button.
+ * @property {boolean} startIcon - Optional icon identifier rendered before the text.
+ * @property {boolean} endIcon - Optional icon identifier rendered after the text.
  * @property {boolean} [float] - Optional flag to render the button as a floating element.
  * @property {boolean} [colorChange] - Optional flag to change the button color on interaction.
  * @property {boolean} [noAnimation] - Optional flag to disable button animation.
@@ -28,7 +29,8 @@ export interface GetStartedButtonProps {
 export interface ReusableButtonProps {
   text: string
   href: string
-  icon: boolean
+  startIcon?: boolean
+  endIcon?: boolean
   float?: boolean
   colorChange?: boolean
   noAnimation?: boolean

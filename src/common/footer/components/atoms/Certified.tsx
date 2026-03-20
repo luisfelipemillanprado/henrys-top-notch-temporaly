@@ -1,5 +1,5 @@
 import type { CertifiedProps } from '@/common/footer/types'
-import { blurDataUrlCertified } from '@/utils/data/BlurDataUrl'
+import { blurDataUrlCertified } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
 
@@ -8,30 +8,22 @@ import Image from 'next/image'
  * @public
  * @interface CertifiedProps
  * @param {object} props - Component properties.
- * @param {CertifiedProps['imagesUrl'][number]['url']} imagesUrl.url - The URL for the certificate.
- * @param {CertifiedProps['imagesUrl'][number]['id']} imagesUrl.id - The unique identifier for the certificate.
- * @param {CertifiedProps['imagesUrl']} imagesUrl - An array of objects containing the URL and ID for the images.
+ * @param {CertifiedProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
+ * @param {CertifiedProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
+ * @param {CertifiedProps['imagesUrl']} props.imagesUrl - An array of objects containing the URL and ID for the images.
  * @returns {JSX.Element} The rendered license certification image.
  */
-export const Certified = (props: CertifiedProps) => {
-  const { imagesUrl } = props
+export const Certified = ({ imagesUrl }: CertifiedProps) => {
   return (
-    <div
-      className={clsx(
-        'horizontal mt-4 w-full justify-center gap-x-7',
-        'm1x:gap-x-8 m1x:mt4.5',
-        'm2x:gap-x-8.5',
-        'm4x:gap-x-10'
-      )}
-    >
+    <div className={clsx('horizontal mt-4 w-full justify-center gap-x-7', 'm1x:mt-4.5', 'm4x:gap-x-8')}>
       {imagesUrl.map((item) => (
         <div
           key={item.id}
           className={clsx(
             'horizontal relative size-21 items-center',
-            'm1x:size-22',
-            'm2x:size-23',
-            'm4x:size-23.25'
+            'm1x:size-21.5',
+            'm2x:size-22',
+            'm4x:size-22.5'
           )}
         >
           <Image

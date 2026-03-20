@@ -1,18 +1,16 @@
-import type { HeaderDescriptionProps } from '@/common/section-description/types'
+import type { SectionDescriptionProps } from '@/common/section-description/types'
 import clsx from 'clsx'
 
 /**
  * @description Renders a footer description component.
  * @public
- * @interface HeaderDescriptionProps
+ * @interface SectionDescriptionProps
  * @param {object} props - Component properties.
- * @param {HeaderDescriptionProps['description']} description - The text content to be displayed in the header description.
- * @param {HeaderDescriptionProps['firstChangeTextPosition']} [firstChangeTextPosition] - Optional flag to change text position.
- * @param {HeaderDescriptionProps['secondChangeTextPosition']} [secondChangeTextPosition] - Optional flag to change text position.
+ * @param {SectionDescriptionProps['description']} props.description - The text content to be displayed in the section description.
+ * @param {SectionDescriptionProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
  * @returns {JSX.Element} A rendering the responsive footer description.
  */
-export const FooterDescription = (props: HeaderDescriptionProps) => {
-  const { description } = props
+export const FooterDescription = ({ description }: SectionDescriptionProps) => {
   return (
     <div className={clsx('horizontal w-full justify-center', '1xl:justify-start')}>
       <p

@@ -10,17 +10,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @description Renders a responsive carousel component that displays a rotating hub of trusted and certified items.
  * @public
  * @param {object} props - Component properties.
- * @param {Array} trustedAndCertified - Array of trusted and certified item objects.
- * @param {string} trustedAndCertified[].url - URL of the icon or image for each item.
- * @param {string} trustedAndCertified[].href - The URL that the trusted and certified item points to when clicked.
- * @param {number} trustedAndCertified[].id - Unique numeric key for React list rendering.
+ * @param {Array} props.trusted - Array of trusted and certified item objects.
+ * @param {string} props.trusted[].url - URL of the icon or image for each item.
+ * @param {string} props.trusted[].href - The URL that the trusted and certified item points to when clicked.
+ * @param {number} props.trusted[].id - Unique numeric key for React list rendering.
  * @returns {JSX.Element} A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
  */
 
-export const TrustedAndCertified = (props: {
-  trustedAndCertified: { url: string; href: string; id: number }[]
-}) => {
-  const { trustedAndCertified } = props
+export const TrustedAndCertified = (props: { trusted: { url: string; href: string; id: number }[] }) => {
+  const { trusted } = props
   return (
     <Swiper
       aria-label={'Trusted and Certified Carousel'}
@@ -42,7 +40,7 @@ export const TrustedAndCertified = (props: {
         '5xl:w-39/100'
       )}
     >
-      {trustedAndCertified.map((item) => (
+      {trusted.map((item) => (
         <SwiperSlide
           key={item.id}
           className={clsx('mr-5.75 size-auto!', 'm1x:mr-6', 'm2x:mr-6.25', 'm3x:mr-6.5', 'm4x:mr-6.75')}

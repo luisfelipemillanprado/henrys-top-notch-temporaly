@@ -4,28 +4,30 @@ import { ReusableButton } from '@/common/call-to-action/components/ReusableButto
 import clsx from 'clsx'
 
 /**
- * @description Renders the main call-to-action section featuring a primary "Get Started" button.
+ * @description Renders the main action buttons and highlight for the hero section of the home page.
  * @public
  * @param {object} props - Component properties.
- * @param {object} callToAction.reusableButton - Config for the reusable button.
- * @param {string[]} callToAction.reusableButton.text - Array of texts; first element used.
- * @param {string[]} callToAction.reusableButton.href - Array of URLs; first element used.
- * @param {object} callToAction.getStartedButton - Config for the "Get Started" button.
- * @param {string[]} callToAction.getStartedButton.text - Array of texts; first element used.
- * @param {string[]} callToAction.getStartedButton.href - Array of URLs; first element used.
- * @param {object} callToAction.actionHighlight - Config for the highlighted action text.
- * @param {string} callToAction.actionHighlight.firstText - The first part of the highlighted text.
- * @param {string} callToAction.actionHighlight.secondText - The second part of the highlighted text.
+ * @param {object} props.primaryCta - Configuration for the primary call-to-action button with text and href.
+ * @param {string} props.primaryCta.text - Text for the primary call-to-action button.
+ * @param {string} props.primaryCta.href - URL for the primary call-to-action button.
+ * @param {object} props.secondaryCta - Configuration for the secondary call-to-action button with text and href.
+ * @param {string} props.secondaryCta.text - Text for the secondary call-to-action button.
+ * @param {string} props.secondaryCta.href - URL for the secondary call-to-action button.
+ * @param {string[]} props.highlight - Array of strings for the highlighted action text.
  * @returns {JSX.Element} Rendering the call-to-action buttons and highlight.
  */
 export const MainActions = (props: {
-  callToAction: {
-    reusableButton: { text: string[]; href: string[] }
-    getStartedButton: { text: string[]; href: string[] }
-    actionHighlight: { firstText: string; secondText: string }
+  primaryCta: {
+    text: string
+    href: string
   }
+  secondaryCta: {
+    text: string
+    href: string
+  }
+  highlight: string[]
 }) => {
-  const { callToAction } = props
+  const { primaryCta, secondaryCta, highlight } = props
   return (
     <div
       className={clsx(
@@ -34,23 +36,16 @@ export const MainActions = (props: {
         'md:ml-7 md:justify-start'
       )}
     >
-      <GetStartedButton
-        text={callToAction.getStartedButton.text[0]}
-        href={callToAction.getStartedButton.href[0]}
-        hidden={false}
-      />
+      <GetStartedButton text={primaryCta.text} href={primaryCta.href} hidden={false} />
       <ReusableButton
-        text={callToAction.reusableButton.text[0]}
-        href={callToAction.reusableButton.href[0]}
-        icon={true}
+        text={secondaryCta.text}
+        href={secondaryCta.href}
+        startIcon={true}
         colorChange={false}
         noAnimation={true}
+        float={false}
       />
-      <ActionHighlight
-        firstText={callToAction.actionHighlight.firstText}
-        secondText={callToAction.actionHighlight.secondText}
-        firstChangePosition
-      />
+      <ActionHighlight firstText={highlight[0]} secondText={highlight[1]} firstChangePosition />
     </div>
   )
 }
