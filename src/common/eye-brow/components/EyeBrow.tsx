@@ -29,7 +29,7 @@ export const EyeBrow = ({ text, hidden = false }: EyeBrowProps) => {
       {decorationLine}
       <span
         className={clsx(
-          'text-bright-orange text-[0.9375rem] leading-6.75 font-semibold',
+          'text-bright-orange text-[0.9375rem] leading-6.75 font-bold',
           'm1x:text-base m1x:leading-7',
           'm3x:text-[1.0625rem]'
         )}

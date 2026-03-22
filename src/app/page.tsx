@@ -1,5 +1,5 @@
 import { Hero } from '@/features/home/components/organisms/Hero'
-import { OurSimpleBookinProcess } from '@/features/home/components/organisms/OurSimpleBookinProcess'
+import { OurSimpleBookingProcess } from '@/features/home/components/organisms/OurSimpleBookingProcess'
 import { OurSummaryOfWhoWeAre } from '@/features/home/components/organisms/OurSummaryOfWhoWeAre'
 import { OurTrustedAndCertified } from '@/features/home/components/organisms/OurTrustedAndCertified'
 import { homeData } from '@/utils/data/static/en-US/home'
@@ -34,10 +34,13 @@ export default function Home() {
           image={homeData.whoWeAre.image}
           benefits={homeData.whoWeAre.benefits}
         />
-        <OurSimpleBookinProcess
+        <OurSimpleBookingProcess
           title={homeData.bookingProcess.title}
           description={homeData.bookingProcess.description}
           eyebrow={homeData.bookingProcess.eyebrow}
+          image={homeData.bookingProcess.image}
+          features={homeData.bookingProcess.features}
+          steps={homeData.bookingProcess.steps}
         />
       </main>
     </>

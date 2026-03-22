@@ -23,7 +23,14 @@ import clsx from 'clsx'
  * @param {object[]} props.gallery - Array of gallery image objects.
  * @returns {JSX.Element} A responsive hero section with circular decoration, main content, and gallery.
  */
-export const Hero = (props: {
+export const Hero = ({
+  title,
+  description,
+  primaryCta,
+  secondaryCta,
+  highlight,
+  gallery,
+}: {
   title: string
   description: string
   primaryCta: { text: string; href: string }
@@ -31,7 +38,6 @@ export const Hero = (props: {
   highlight: string[]
   gallery: { url: string; id: number }[]
 }) => {
-  const { title, description, primaryCta, secondaryCta, highlight, gallery } = props
   return (
     <section
       aria-labelledby={title}

@@ -17,7 +17,14 @@ import clsx from 'clsx'
  * @param {number} props.benefits[].id - Unique identifier for the key benefit item.
  * @returns {JSX.Element} A semantic element rendering the summary of who the company is.
  */
-export const OurSummaryOfWhoWeAre = (props: {
+export const OurSummaryOfWhoWeAre = ({
+  title,
+  description,
+  eyebrow,
+  primaryCta,
+  image,
+  benefits,
+}: {
   title: string
   description: string
   eyebrow: string
@@ -28,7 +35,6 @@ export const OurSummaryOfWhoWeAre = (props: {
   image: string
   benefits: { text: string; id: number }[]
 }) => {
-  const { title, description, eyebrow, primaryCta, image, benefits } = props
   return (
     <section
       id={'who-we-are'}
@@ -36,7 +42,8 @@ export const OurSummaryOfWhoWeAre = (props: {
       role={'region'}
       className={clsx(
         'vertical bg-off-White w-full gap-y-7 px-5.5 pt-11 pb-15 shadow-2xs',
-        'm3x:pb-16.5',
+        'm3x:pb-16.5 m3x:px-5.75',
+        'm4x:px-6',
         'md:px-13 md:pt-24 md:pb-24',
         'lg:px-18 lg:pt-28 lg:pb-28',
         '1xl:px-29.5 1xl:pt-34 1xl:pb-34',

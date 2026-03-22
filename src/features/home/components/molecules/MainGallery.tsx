@@ -33,7 +33,7 @@ export const MainGallery = (props: { gallery: { url: string; id: number }[] }) =
       'opacity-100',
       null,
       'opacity-50 md:opacity-15 lg:opacity-40',
-      'opacity-70 md:opacity-100',
+      'opacity-80 md:opacity-100',
       null,
     ],
   }

@@ -7,8 +7,8 @@ import Link from 'next/link'
  * @description Renders a trusted certification icon that links to a specified URL.
  * @public
  * @param {object} props - Component properties.
- * @param {string} url - A string identifier that determines which icon is rendered.
- * @param {string} href - The URL that the trusted and certified item points to when clicked.
+ * @param {string} props.url - A string identifier that determines which icon is rendered.
+ * @param {string} props.href - The URL that the trusted and certified item points to when clicked.
  * @returns {JSX.Element} A centered icon element wrapped in semantic containers.
  */
 export const TrustedCertification = (props: { url: string; href: string }) => {
@@ -17,11 +17,11 @@ export const TrustedCertification = (props: { url: string; href: string }) => {
     <Link
       href={href}
       className={clsx(
-        'horizontal relative size-16 items-center',
-        'm1x:size-17',
-        'm2x:size-18',
-        'm3x:size-18.75',
-        'm4x:size-19.25'
+        'horizontal relative size-16.5 items-center',
+        'm1x:size-17.5',
+        'm2x:size-18.5',
+        'm3x:size-19.25',
+        'm4x:size-20'
       )}
       target={'_blank'}
       rel={'noopener noreferrer'}

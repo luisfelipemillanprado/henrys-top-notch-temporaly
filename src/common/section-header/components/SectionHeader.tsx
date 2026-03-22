@@ -16,7 +16,13 @@ import clsx from 'clsx'
  * @param {SectionHeaderProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the section header component.
  * @returns {JSX.Element} A rendering the composed section header.
  */
-export const SectionHeader = ({ title, description, eyebrow, changeWidth, hidden }: SectionHeaderProps) => {
+export const SectionHeader = ({
+  title,
+  description,
+  eyebrow,
+  changeWidth = false,
+  hidden,
+}: SectionHeaderProps) => {
   return (
     <div
       className={clsx(

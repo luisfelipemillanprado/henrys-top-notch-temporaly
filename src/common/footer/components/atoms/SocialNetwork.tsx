@@ -68,14 +68,13 @@ const iconSwitch = (icon: string) => {
  * @public
  * @interface SocialNetworkItem
  * @param {object} props - Component properties.
- * @param {SocialNetworkItem['href']} href - The URL to navigate to when the icon is clicked.
- * @param {SocialNetworkItem['icon']} icon - The social network name, must match a value from the `SocialIcon` enum.
- * @param {SocialNetworkItem['name']} name - The name of the social network, used for accessibility.
- * @param {SocialNetworkItem['id']} id - A unique identifier for the social network item.
+ * @param {SocialNetworkItem['href']} props.href - The URL to navigate to when the icon is clicked.
+ * @param {SocialNetworkItem['icon']} props.icon - The social network name, must match a value from the `SocialIcon` enum.
+ * @param {SocialNetworkItem['name']} props.name - The name of the social network, used for accessibility.
+ * @param {SocialNetworkItem['id']} props.id - A unique identifier for the social network item.
  * @returns {JSX.Element} A styled link wrapping the social network icon.
  */
-export const SocialNetwork = (props: SocialNetworkItem) => {
-  const { icon, href } = props
+export const SocialNetwork = ({ href, icon }: SocialNetworkItem) => {
   return (
     <Link
       className={clsx(

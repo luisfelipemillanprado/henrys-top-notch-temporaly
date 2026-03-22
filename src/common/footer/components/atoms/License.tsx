@@ -6,13 +6,12 @@ import clsx from 'clsx'
  * @public
  * @interface LicenseProps
  * @param {object} props - Component properties.
- * @param {LicenseProps['license'][number]['text']} license.text - The text for the license information to be displayed.
- * @param {LicenseProps['license'][number]['id']} license.id - The unique identifier for the license information item.
- * @param {LicenseProps['license']} license - An array of objects containing the text and ID for the licenses.
+ * @param {LicenseProps['license'][number]['text']} props.license.text - The text for the license information to be displayed.
+ * @param {LicenseProps['license'][number]['id']} props.license.id - The unique identifier for the license information item.
+ * @param {LicenseProps['license']} props.license - An array of objects containing the text and ID for the licenses.
  * @returns {JSX.Element} The rendered license information section in the footer.
  */
-export const License = (props: LicenseProps) => {
-  const { license } = props
+export const License = ({ license }: LicenseProps) => {
   return (
     <div className={clsx('vertical mt-4 w-full items-center gap-y-2', 'm1x:mt4.5')}>
       {license.map((item) => (

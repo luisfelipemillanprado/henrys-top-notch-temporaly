@@ -17,8 +17,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @returns {JSX.Element} A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
  */
 
-export const TrustedAndCertified = (props: { trusted: { url: string; href: string; id: number }[] }) => {
-  const { trusted } = props
+export const TrustedAndCertified = ({
+  trusted,
+}: {
+  trusted: { url: string; href: string; id: number }[]
+}) => {
   return (
     <Swiper
       aria-label={'Trusted and Certified Carousel'}
@@ -26,12 +29,12 @@ export const TrustedAndCertified = (props: { trusted: { url: string; href: strin
       slidesPerView={'auto'}
       loop={true}
       autoplay={{
-        delay: 8000,
+        delay: 6000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
       className={clsx(
-        'mx-6! h-auto w-full',
+        'mx-5.5! h-auto w-full',
         'md:mr-15! md:ml-12.5! md:w-27/50',
         'lg:ml-17! lg:w-12/25',
         '1xl:w-21/50 1xl:ml-29!',
@@ -43,7 +46,7 @@ export const TrustedAndCertified = (props: { trusted: { url: string; href: strin
       {trusted.map((item) => (
         <SwiperSlide
           key={item.id}
-          className={clsx('mr-5.75 size-auto!', 'm1x:mr-6', 'm2x:mr-6.25', 'm3x:mr-6.5', 'm4x:mr-6.75')}
+          className={clsx('mr-5.5 size-auto!', 'm1x:mr-5.75', 'm2x:mr-6', 'm3x:mr-6.25', 'm4x:mr-6')}
         >
           <TrustedCertification url={item.url} href={item.href} />
         </SwiperSlide>

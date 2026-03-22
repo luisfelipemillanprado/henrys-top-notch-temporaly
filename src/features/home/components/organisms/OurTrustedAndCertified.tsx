@@ -11,8 +11,11 @@ import clsx from 'clsx'
  * @param {number} props.trusted[].id - A unique numeric identifier for each item.
  * @returns {JSX.Element} A section element containing the TrustedAndCertified component.
  */
-export const OurTrustedAndCertified = (props: { trusted: { url: string; href: string; id: number }[] }) => {
-  const { trusted } = props
+export const OurTrustedAndCertified = ({
+  trusted,
+}: {
+  trusted: { url: string; href: string; id: number }[]
+}) => {
   return (
     <section
       id={'trusted-and-certified'}

@@ -7,13 +7,12 @@ import Link from 'next/link'
  * @public
  * @interface MainLinkProps
  * @param {object} props Component properties.
- * @param {MainLinkProps['text']} text Visible text for the link.
- * @param {MainLinkProps['href']} href URL the link points to.
- * @param {MainLinkProps['highlight']} highlight Array of text strings to determine if the link text should be highlighted.
+ * @param {MainLinkProps['text']} props.text - Visible text for the link.
+ * @param {MainLinkProps['href']} props.href - URL the link points to.
+ * @param {MainLinkProps['highlight']} props.highlight - Array of text strings to determine if the link text should be highlighted.
  * @returns {JSX.Element} Link component styled according to whether it is highlighted and its column position.
  */
-export const MainLink = (props: MainLinkProps) => {
-  const { text, href, highlight } = props
+export const MainLink = ({ text, href, highlight }: MainLinkProps) => {
   return (
     <Link
       className={clsx(
