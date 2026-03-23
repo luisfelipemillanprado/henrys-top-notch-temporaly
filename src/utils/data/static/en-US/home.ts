@@ -186,7 +186,7 @@ export const homeData = {
         url: '/images/home/booking-process/booking-process5.webp',
         title: 'Satisfaction Guaranteed.',
         description:
-          'Experience superior service where technical precision meets efficiency, guaranteeing that every HVAC solution is executed perfectly to ensure your total satisfaction.',
+          'Your satisfaction is guaranteed through reliable service and consistent results that meet your expectations perfectly every time without stress or delays always.',
         id: 27,
       },
     ],

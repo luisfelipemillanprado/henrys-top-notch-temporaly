@@ -42,8 +42,8 @@ export const BookingSteps = ({
           <div className={clsx('vertical w-full items-center gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
             <div
               className={clsx(
-                'bg-off-white border-warmgray/30 relative size-12.5 rounded-full border shadow-md',
-                'm1x:size-13'
+                'bg-off-white border-warmgray/30 relative size-11 rounded-full border shadow-sm',
+                'm1x:size-12'
               )}
             >
               <Image

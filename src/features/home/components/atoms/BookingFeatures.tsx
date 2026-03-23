@@ -119,7 +119,11 @@ export const BookingFeatures = ({
           )}
         >
           <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
-            <span className={clsx('horizontal')}>{iconSwitch(item.icon)}</span>
+            <span
+              className={clsx('horizontal bg-primary border-warmgray/30 rounded-full border p-1 shadow-sm')}
+            >
+              {iconSwitch(item.icon)}
+            </span>
             <TertiaryTitle title={item.title} />
           </div>
           <div className={clsx('horizontal w-full justify-start')}>
