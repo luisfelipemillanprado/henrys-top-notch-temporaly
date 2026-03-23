@@ -149,7 +149,7 @@ export const homeData = {
         icon: 'experts',
         title: 'Expert Installation & Repair.',
         description:
-          'Certified HVAC technicians provide precise installations and reliable repairs, ensuring that superior optimal system performance continues.',
+          'Our HVAC technicians perform precise installations and reliable repairs, ensuring optimal system performance always consistently.',
         id: 22,
       },
       {
@@ -162,31 +162,31 @@ export const homeData = {
     ],
     steps: [
       {
-        url: '/images/home/booking-process/booking-process3.webp',
+        url: '/images/home/booking-process/booking-process2.webp',
         title: 'Book Your Service.',
         description:
-          'Choose a date and time that fits your schedule best, supported by our flexible scheduling options.',
+          'Schedule your service easily by choosing a convenient date and time that fits your availability perfectly every time without hassle or delays quickly and efficiently',
         id: 24,
       },
       {
-        url: '/images/home/booking-process/booking-process2.webp',
+        url: '/images/home/booking-process/booking-process3.webp',
         title: 'We Arrive On Time.',
         description:
-          'Our technicians arrive on time, respecting your schedule and delivering reliable, professional HVAC service.',
+          'Receive punctual service from our technicians who respect your schedule and deliver reliable HVAC solutions every visit consistently and always professionally.',
         id: 25,
       },
       {
-        url: '/images/home/booking-process/booking-process5.webp',
-        title: 'Flexible Scheduling.',
+        url: '/images/home/booking-process/booking-process4.webp',
+        title: 'Affordable Pricing.',
         description:
-          'Choose from flexible scheduling options, including same-day and next-day HVAC service appointments available.',
+          'Enjoy transparent and affordable pricing with no hidden fees, giving you complete confidence and clear expectations before any service begins smoothly today.',
         id: 26,
       },
       {
-        url: '/images/home/booking-process/booking-process4.webp',
+        url: '/images/home/booking-process/booking-process5.webp',
         title: 'Satisfaction Guaranteed.',
         description:
-          'We guarantee your satisfaction by ensuring every HVAC service is completed correctly and efficiently every time.',
+          'Experience superior service where technical precision meets efficiency, guaranteeing that every HVAC solution is executed perfectly to ensure your total satisfaction.',
         id: 27,
       },
     ],

@@ -41,7 +41,7 @@ export const OurSummaryOfWhoWeAre = ({
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'vertical bg-off-White w-full gap-y-7 px-5.5 pt-11 pb-15 shadow-2xs',
+        'vertical bg-off-white w-full gap-y-7 px-5.5 pt-11 pb-15 shadow-2xs',
         'm3x:pb-16.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:pt-24 md:pb-24',

@@ -22,7 +22,7 @@ export const OurTrustedAndCertified = ({
       aria-label={'our-trusted-and-certified'}
       role={'region'}
       className={clsx(
-        'horizontal bg-off-White relative w-full justify-center pt-36',
+        'horizontal bg-off-white relative w-full justify-center pt-36',
         'md:justify-start md:pt-8',
         '1xl:pt-8.5',
         '3xl:pt-12'

@@ -40,10 +40,14 @@ export const BookingSteps = ({
     >
       {steps.map((item) => (
         <div key={item.id} className={clsx('vertical w-full gap-y-3.5 rounded-3xl')}>
-          <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
-            <div className={clsx('relative h-20 w-20')}>
+          <div className={clsx('vertical w-full items-center gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
+            <div
+              className={clsx(
+                'bg-off-white border-warmgray/30 relative size-12.5 rounded-full border shadow-md'
+              )}
+            >
               <Image
-                className={clsx('h-full w-full object-contain')}
+                className={clsx('h-full w-full object-cover')}
                 fill
                 sizes={''}
                 src={item.url}
@@ -52,10 +56,10 @@ export const BookingSteps = ({
                 blurDataURL={blurDataUrlSteps}
               />
             </div>
-            <TertiaryTitle title={item.title} />
+            <TertiaryTitle title={item.title} changePosition={true} />
           </div>
           <div className={clsx('horizontal w-full justify-start')}>
-            <CardDescription description={item.description} />
+            <CardDescription description={item.description} changePosition={true} changeWidth={true} />
           </div>
         </div>
       ))}

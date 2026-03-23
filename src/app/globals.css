@@ -31,7 +31,7 @@
   --color-electric-blue: oklch(0.7647 0.125269 249.7656); /* electric blue */
   --color-strong-blue: oklch(0.4974 0.1649 255.19); /* strong blue */
   --color-primary: oklch(100% 0 0); /* white */
-  --color-off-White: oklch(0.9759 0.0029 264.54); /* off-white */
+  --color-off-white: oklch(0.9759 0.0029 264.54); /* off-white */
   --color-warm-red: oklch(0.6192 0.2419 11.33); /* warmred */
 
   /* --- HEROUI COMPATIBILITY --- */

@@ -5,16 +5,26 @@ import clsx from 'clsx'
  * @public
  * @param {object} props - Component properties.
  * @param {string} props.description - Text content rendered inside the description.
- * @param {boolean} [props.changeMargin] - Applies a small top margin when enabled.
+ * @param {boolean} [props.changePosition] - An optional boolean that, when true, changes the text alignment to center.
+ * @param {boolean} [props.changeWidth] - An optional boolean that, when true, adjusts the width of the description.
  * @returns {JSX.Element} A rendering a responsive description paragraph.
  */
-export const CardDescription = (props: { description: string; changeMargin?: boolean }) => {
-  const { description, changeMargin } = props
+export const CardDescription = ({
+  description,
+  changePosition = false,
+  changeWidth = false,
+}: {
+  description: string
+  changePosition?: boolean
+  changeWidth?: boolean
+}) => {
   return (
-    <div className={clsx('horizontal w-full justify-start', changeMargin && 'mt-0.5')}>
+    <div className={clsx('horizontal w-full justify-start')}>
       <p
         className={clsx(
           'text-dimgray text-[0.9375rem] leading-6.75',
+          changePosition && 'text-center',
+          changeWidth && ['w-74', 'm1x:w-79'],
           'm1x:text-base m1x:leading-7',
           'md:leading-7.5',
           '1xl:text-[1.0625rem] 1xl:leading-7.5',
