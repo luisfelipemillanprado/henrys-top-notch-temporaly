@@ -1,5 +1,7 @@
+import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
+import { SectionHeader } from '@/common/section-header/components/SectionHeader'
+import { KeyBenefit } from '@/features/home/components/atoms/KeyBenefit'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
-import { WhoWeAre } from '@/features/home/components/atoms/WhoWeAre'
 import clsx from 'clsx'
 
 /**
@@ -39,13 +41,17 @@ export const SummaryOfWhoWeAre = ({
   return (
     <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
       <LeadVisual image={image} />
-      <WhoWeAre
-        title={title}
-        description={description}
-        eyebrow={eyebrow}
-        primaryCta={primaryCta}
-        benefits={benefits}
-      />
+      <div
+        className={clsx(
+          'vertical bg-primary border-warmgray/30 w-full items-center gap-y-7 rounded-3xl border px-5 py-6 shadow-md',
+          'm1x:gap-y-7.75',
+          'm3x:gap-y-8.5'
+        )}
+      >
+        <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
+        <KeyBenefit benefits={benefits} />
+        <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
+      </div>
     </div>
   )
 }

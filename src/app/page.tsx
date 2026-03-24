@@ -1,5 +1,6 @@
 import { Hero } from '@/features/home/components/organisms/Hero'
-import { OurSimpleBookingProcess } from '@/features/home/components/organisms/OurSimpleBookingProcess'
+import { OurBookingProcess } from '@/features/home/components/organisms/OurBookingProcess'
+import { OurProfessionalServices } from '@/features/home/components/organisms/OurProfessionalServices'
 import { OurSummaryOfWhoWeAre } from '@/features/home/components/organisms/OurSummaryOfWhoWeAre'
 import { OurTrustedAndCertified } from '@/features/home/components/organisms/OurTrustedAndCertified'
 import { homeData } from '@/utils/data/static/en-US/home'
@@ -25,7 +26,7 @@ export default function Home() {
         />
       </header>
       <main className={clsx('vertical w-full')}>
-        <OurTrustedAndCertified trusted={homeData.trusted} />
+        <OurTrustedAndCertified trustedAndCertified={homeData.trustedAndCertified} />
         <OurSummaryOfWhoWeAre
           title={homeData.whoWeAre.title}
           description={homeData.whoWeAre.description}
@@ -34,13 +35,18 @@ export default function Home() {
           image={homeData.whoWeAre.image}
           benefits={homeData.whoWeAre.benefits}
         />
-        <OurSimpleBookingProcess
+        <OurBookingProcess
           title={homeData.bookingProcess.title}
           description={homeData.bookingProcess.description}
           eyebrow={homeData.bookingProcess.eyebrow}
           image={homeData.bookingProcess.image}
           features={homeData.bookingProcess.features}
           steps={homeData.bookingProcess.steps}
+        />
+        <OurProfessionalServices
+          title={homeData.professionalServices.title}
+          description={homeData.professionalServices.description}
+          eyebrow={homeData.professionalServices.eyebrow}
         />
       </main>
     </>

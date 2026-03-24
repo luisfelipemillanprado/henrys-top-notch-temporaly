@@ -5,16 +5,16 @@ import clsx from 'clsx'
  * @description Renders a section displaying a carousel of trusted and certified items with their images.
  * @public
  * @param {object} props - Component properties.
- * @param {object[]} props.trusted - An array of trusted and certified item objects.
- * @param {string} props.trusted[].url - The URL of the icon or image for each item.
- * @param {string} props.trusted[].href - The URL that the trusted and certified item points to when clicked.
- * @param {number} props.trusted[].id - A unique numeric identifier for each item.
+ * @param {object[]} props.trustedAndCertified - An array of trusted and certified item objects.
+ * @param {string} props.trustedAndCertified[].url - The URL of the icon or image for each item.
+ * @param {string} props.trustedAndCertified[].href - The URL that the trusted and certified item points to when clicked.
+ * @param {number} props.trustedAndCertified[].id - A unique numeric identifier for each item.
  * @returns {JSX.Element} A section element containing the TrustedAndCertified component.
  */
 export const OurTrustedAndCertified = ({
-  trusted,
+  trustedAndCertified,
 }: {
-  trusted: { url: string; href: string; id: number }[]
+  trustedAndCertified: { url: string; href: string; id: number }[]
 }) => {
   return (
     <section
@@ -28,7 +28,7 @@ export const OurTrustedAndCertified = ({
         '3xl:pt-12'
       )}
     >
-      <TrustedAndCertified trusted={trusted} />
+      <TrustedAndCertified trustedAndCertified={trustedAndCertified} />
     </section>
   )
 }

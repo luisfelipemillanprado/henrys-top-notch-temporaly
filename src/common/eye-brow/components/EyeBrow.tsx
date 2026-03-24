@@ -10,7 +10,7 @@ const decorationLine = (
   <MinusIcon
     aria-hidden={'true'}
     role={'img'}
-    className={clsx('fill-bright-orange size-6', 'm1x:size-6.75', 'm3x:size-7.5')}
+    className={clsx('fill-bright-orange size-6', 'm1x:size-6.75', 'm3x:size-7.25')}
   />
 )
 

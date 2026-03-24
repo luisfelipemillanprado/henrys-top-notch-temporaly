@@ -31,7 +31,7 @@ export const KeyBenefit = ({ benefits }: { benefits: { text: string; id: number 
           )}
         >
           <span
-            className={clsx('horizontal bg-off-white border-warmgray/30 rounded-full border p-1 shadow-sm')}
+            className={clsx('horizontal bg-off-white border-warmgray/50 rounded-full border p-1 shadow-sm')}
           >
             <CheckIcon
               aria-hidden={'true'}

@@ -88,7 +88,7 @@ const iconSwitch = (icon: string) => {
  * @param {Array} props.features.id - A unique identifier for the feature.
  * @returns {JSX.Element} A JSX element representing the booking features.
  */
-export const BookingFeatures = ({
+export const Features = ({
   features,
 }: {
   features: { icon: string; title: string; description: string; id: number }[]
@@ -96,8 +96,8 @@ export const BookingFeatures = ({
   return (
     <div
       className={clsx(
-        'grid grid-cols-1 grid-rows-3 gap-y-7',
-        'm3x:gap-y-7',
+        'grid grid-cols-1 grid-rows-3 gap-y-7.5',
+        'm3x:gap-y-7.75',
         'md:grid-cols-2 md:grid-rows-3 md:gap-7',
         'lg:gap-7.5',
         '1xl:grid-cols-3 1xl:grid-rows-2',
@@ -119,11 +119,7 @@ export const BookingFeatures = ({
           )}
         >
           <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
-            <span
-              className={clsx('horizontal bg-primary border-warmgray/30 rounded-full border p-1 shadow-sm')}
-            >
-              {iconSwitch(item.icon)}
-            </span>
+            <span className={clsx('horizontal')}>{iconSwitch(item.icon)}</span>
             <TertiaryTitle title={item.title} />
           </div>
           <div className={clsx('horizontal w-full justify-start')}>

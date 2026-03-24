@@ -1,4 +1,4 @@
-import { SimpleBookingProcess } from '@/features/home/components/molecules/SimpleBookingProcess'
+import { BookingProcess } from '@/features/home/components/molecules/BookingProcess'
 import clsx from 'clsx'
 
 /**
@@ -21,7 +21,7 @@ import clsx from 'clsx'
  * @param {Array} props.steps.id - A unique identifier for the step.
  * @returns {JSX.Element} A semantic element rendering the simple booking process content.
  */
-export const OurSimpleBookingProcess = ({
+export const OurBookingProcess = ({
   title,
   description,
   eyebrow,
@@ -52,7 +52,7 @@ export const OurSimpleBookingProcess = ({
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'vertical w-full items-center gap-y-7 px-5.5 pt-12 pb-15',
+        'vertical w-full px-5.5 pt-12 pb-15 shadow-2xs',
         'm3x:pb-16.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:pt-24 md:pb-24',
@@ -61,7 +61,7 @@ export const OurSimpleBookingProcess = ({
         '2xl:px-32 2xl:pt-36 2xl:pb-36'
       )}
     >
-      <SimpleBookingProcess
+      <BookingProcess
         title={title}
         description={description}
         eyebrow={eyebrow}

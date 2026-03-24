@@ -1,6 +1,7 @@
-import { BookingFeatures } from '@/features/home/components/atoms/BookingFeatures'
-import { BookingProcess } from '@/features/home/components/atoms/BookingProcess'
-import { BookingSteps } from '@/features/home/components/atoms/BookingSteps'
+import { SectionHeader } from '@/common/section-header/components/SectionHeader'
+import { Features } from '@/features/home/components/atoms/Features'
+import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
+import { Steps } from '@/features/home/components/atoms/Steps'
 import clsx from 'clsx'
 
 /**
@@ -23,7 +24,7 @@ import clsx from 'clsx'
  * @param {Array} props.steps.id - A unique identifier for the step.
  * @returns {JSX.Element} A semantic element rendering the simple booking process content.
  */
-export const SimpleBookingProcess = ({
+export const BookingProcess = ({
   title,
   description,
   eyebrow,
@@ -49,12 +50,15 @@ export const SimpleBookingProcess = ({
   }[]
 }) => {
   return (
-    <div className={clsx('vertical w-full items-center gap-y-9')}>
-      <div className={clsx('vertical w-full gap-y-9')}>
-        <BookingProcess image={image} title={title} description={description} eyebrow={eyebrow} />
-        <BookingFeatures features={features} />
+    <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9')}>
+      <div className={clsx('vertical w-full gap-y-8.5', 'm1x:gap-y-9')}>
+        <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
+          <LeadVisual image={image} />
+          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+        </div>
+        <Features features={features} />
       </div>
-      <BookingSteps steps={steps} />
+      <Steps steps={steps} />
     </div>
   )
 }

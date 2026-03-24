@@ -15,10 +15,10 @@
  * @property {array} hero.gallery - An array of objects representing images in the hero gallery, each with a URL and ID.
  * @property {string} hero.gallery.url - The URL of the gallery image.
  * @property {number} hero.gallery.id - The unique identifier for the gallery image.
- * @property {array} trusted - An array of objects representing trusted certifications, each with a URL, href, and ID.
- * @property {string} trusted.url - The URL of the trusted certification image.
- * @property {string} trusted.href - The URL that the trusted certification image links to.
- * @property {number} trusted.id - The unique identifier for the trusted certification.
+ * @property {array} trustedAndCertified - An array of objects representing trusted certifications, each with a URL, href, and ID.
+ * @property {string} trustedAndCertified.url - The URL of the trusted certification image.
+ * @property {string} trustedAndCertified.href - The URL that the trusted certification image links to.
+ * @property {number} trustedAndCertified.id - The unique identifier for the trusted certification.
  * @property {object} whoWeAre - Contains data for the "Who We Are" section.
  * @property {string} whoWeAre.eyebrow - The eyebrow text for the "Who We Are" section.
  * @property {string} whoWeAre.title - The main title for the "Who We Are" section.
@@ -70,7 +70,7 @@ export const homeData = {
       { url: '/images/home/main-galleries/main-gallery6.webp', id: 6 },
     ],
   },
-  trusted: [
+  trustedAndCertified: [
     {
       url: '/images/home/trusted-certified/trusted-certified7.webp',
       href: 'https://bcert.me/syfzztge',
@@ -133,7 +133,7 @@ export const homeData = {
   },
   bookingProcess: {
     eyebrow: 'BOOKING PROCESS',
-    title: 'Our Simple and Fast Booking Process.',
+    title: 'Our Simple And Fast Booking Process.',
     description:
       'At Henry’s Top Notch Air Conditioning & Heating Co, our simple booking process is designed to make getting started easy and stress-free. We focus on convenience, flexibility, and reliability, ensuring every step feels smooth. Our goal is to provide a seamless experience that helps you quickly connect with trusted HVAC professionals.',
     image: '/images/home/booking-process/booking-process1.webp',
@@ -189,6 +189,69 @@ export const homeData = {
           'Your satisfaction is guaranteed through reliable service and consistent results that meet your expectations perfectly every time without stress or delays always.',
         id: 27,
       },
+    ],
+  },
+  professionalServices: {
+    eyebrow: 'All OUR SERVICES',
+    title: 'Access Expert HVAC Services Today.',
+    description:
+      'Explore our full range of HVAC services designed to meet your comfort needs year-round. Our experienced team provides reliable heating and cooling solutions, focusing on efficiency, performance, and long-term results, ensuring your home or business stays comfortable, safe, and operating smoothly in every season with consistent quality.',
+    primaryCta: {
+      text: 'Learn More',
+      href: '/about-us',
+    },
+    services: [
+      {
+        url: '/images/home/booking-process/booking-process5.webp',
+        title: 'AC Installation.',
+        description: '',
+        secondaryCta: {
+          text: 'BOOK NOW',
+          href: '/services',
+        },
+        id: 28,
+      },
+      {
+        url: '/images/home/booking-process/booking-process5.webp',
+        title: 'HVAC System Maintenance.',
+        description: '',
+        secondaryCta: {
+          text: 'BOOK NOW',
+          href: '/services',
+        },
+        id: 29,
+      },
+      {
+        url: '/images/home/booking-process/booking-process5.webp',
+        title: 'HVAC System Installation.',
+        description: '',
+        secondaryCta: {
+          text: 'BOOK NOW',
+          href: '/services',
+        },
+        id: 30,
+      },
+      {
+        url: '/images/home/booking-process/booking-process5.webp',
+        title: 'HVAC System Repair.',
+        description: '',
+        secondaryCta: {
+          text: 'BOOK NOW',
+          href: '/services',
+        },
+        id: 31,
+      },
+      {
+        url: '/images/home/booking-process/booking-process5.webp',
+        title: 'Air Quality Solutions.',
+        description: '',
+        secondaryCta: {
+          text: 'BOOK NOW',
+          href: '/services',
+        },
+        id: 32,
+      },
+      {},
     ],
   },
 }

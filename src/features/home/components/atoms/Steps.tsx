@@ -15,7 +15,7 @@ import Image from 'next/image'
  * @param {Array} props.steps.id - A unique identifier for the step in the booking process section.
  * @returns {JSX.Element} A semantic element rendering the booking steps content.
  */
-export const BookingSteps = ({
+export const Steps = ({
   steps,
 }: {
   steps: {
@@ -28,7 +28,9 @@ export const BookingSteps = ({
   return (
     <div
       className={clsx(
-        'grid grid-cols-1 grid-rows-3 gap-y-10',
+        'mt-2 grid grid-cols-1 grid-rows-3 gap-y-8.5',
+        'm1x:gap-y-9',
+        'm3x:gap-y-9.5',
         'md:grid-cols-2 md:grid-rows-3 md:gap-7',
         'lg:gap-7.5',
         '1xl:grid-cols-3 1xl:grid-rows-2',
@@ -42,12 +44,13 @@ export const BookingSteps = ({
           <div className={clsx('vertical w-full items-center gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
             <div
               className={clsx(
-                'bg-off-white border-warmgray/30 relative size-11 rounded-full border shadow-sm',
-                'm1x:size-12'
+                'bg-off-white border-warmgray/30 relative size-11 overflow-hidden rounded-full border shadow-sm',
+                'm1x:size-12',
+                'm3x:size-12.5'
               )}
             >
               <Image
-                className={clsx('h-full w-full object-cover')}
+                className={clsx('size-full object-cover')}
                 fill
                 sizes={''}
                 src={item.url}

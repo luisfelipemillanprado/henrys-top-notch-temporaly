@@ -11,7 +11,7 @@ import Link from 'next/link'
  * @param {string} props.href - The URL that the trusted and certified item points to when clicked.
  * @returns {JSX.Element} A centered icon element wrapped in semantic containers.
  */
-export const TrustedCertification = (props: { url: string; href: string }) => {
+export const TrustedAndCertification = (props: { url: string; href: string }) => {
   const { url, href } = props
   return (
     <Link
@@ -20,8 +20,8 @@ export const TrustedCertification = (props: { url: string; href: string }) => {
         'horizontal relative size-16.5 items-center',
         'm1x:size-17.5',
         'm2x:size-18.5',
-        'm3x:size-19.25',
-        'm4x:size-20'
+        'm3x:size-19',
+        'm4x:size-19.5'
       )}
       target={'_blank'}
       rel={'noopener noreferrer'}

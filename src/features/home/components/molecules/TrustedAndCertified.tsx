@@ -1,5 +1,5 @@
 'use client'
-import { TrustedCertification } from '@/features/home/components/atoms/TrustedCertification'
+import { TrustedAndCertification } from '@/features/home/components/atoms/TrustedAndCertification'
 import clsx from 'clsx'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -10,17 +10,17 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @description Renders a responsive carousel component that displays a rotating hub of trusted and certified items.
  * @public
  * @param {object} props - Component properties.
- * @param {Array} props.trusted - Array of trusted and certified item objects.
- * @param {string} props.trusted[].url - URL of the icon or image for each item.
- * @param {string} props.trusted[].href - The URL that the trusted and certified item points to when clicked.
- * @param {number} props.trusted[].id - Unique numeric key for React list rendering.
+ * @param {Array} props.trustedAndCertified - Array of trusted and certified item objects.
+ * @param {string} props.trustedAndCertified[].url - URL of the icon or image for each item.
+ * @param {string} props.trustedAndCertified[].href - The URL that the trusted and certified item points to when clicked.
+ * @param {number} props.trustedAndCertified[].id - Unique numeric key for React list rendering.
  * @returns {JSX.Element} A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
  */
 
 export const TrustedAndCertified = ({
-  trusted,
+  trustedAndCertified,
 }: {
-  trusted: { url: string; href: string; id: number }[]
+  trustedAndCertified: { url: string; href: string; id: number }[]
 }) => {
   return (
     <Swiper
@@ -43,12 +43,12 @@ export const TrustedAndCertified = ({
         '5xl:w-39/100'
       )}
     >
-      {trusted.map((item) => (
+      {trustedAndCertified.map((item) => (
         <SwiperSlide
           key={item.id}
           className={clsx('mr-5.5 size-auto!', 'm1x:mr-5.75', 'm2x:mr-6', 'm3x:mr-6.25', 'm4x:mr-6')}
         >
-          <TrustedCertification url={item.url} href={item.href} />
+          <TrustedAndCertification url={item.url} href={item.href} />
         </SwiperSlide>
       ))}
     </Swiper>
