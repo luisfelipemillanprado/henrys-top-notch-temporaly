@@ -14,7 +14,7 @@ import Link from 'next/link'
  * @param {ReusableButtonProps['startIcon']} props.startIcon - Optional icon identifier rendered before the text.
  * @param {ReusableButtonProps['endIcon']} props.endIcon - Optional icon identifier rendered after the text.
  * @param {ReusableButtonProps['float']} props.float - Enables floating behavior via the ButtonPulse wrapper.
- * @param {ReusableButtonProps['colorChange']} props.colorChange - Enables the alternate color variant.
+ * @param {ReusableButtonProps['secondColor']} props.secondColor - Optional flag to change the button color on interaction.
  * @param {ReusableButtonProps['noAnimation']} props.noAnimation - Disables the pulse animation when set to true.
  * @returns {JSX.Element} A rendering a styled, accessible call-to-action link.
  */
@@ -24,16 +24,16 @@ export const ReusableButton = ({
   startIcon = false,
   endIcon = false,
   float = true,
-  colorChange = true,
+  secondColor = true,
   noAnimation = false,
 }: ReusableButtonProps) => {
   return (
-    <ButtonPulse type={'soft'} rounded float={float} colorChange={colorChange} noAnimation={noAnimation}>
+    <ButtonPulse type={'soft'} rounded float={float} secondColor={secondColor} noAnimation={noAnimation}>
       <Link
         className={clsx(
           'horizontal z-30 h-9.5 rounded-full shadow-lg',
           startIcon ? 'pr-4 pl-3' : 'px-4',
-          colorChange ? 'bg-strong-blue' : 'bg-irongray',
+          secondColor ? 'bg-strong-blue' : 'bg-irongray',
           'm1x:h-10',
           'm3x:h-10.5',
           'md:h-11',
@@ -77,13 +77,7 @@ export const ReusableButton = ({
               <ArrowRightCircleIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx(
-                  'fill-primary size-6',
-                  '1xl:size-6.25',
-                  '2xl:size-6.75',
-                  '3xl:size-7.25',
-                  '5xl:size-7.5'
-                )}
+                className={clsx('fill-primary size-6.5', '2xl:size-6.75', '3xl:size-7.25', '5xl:size-7.5')}
               />
             </span>
           )}

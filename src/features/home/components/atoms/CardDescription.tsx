@@ -19,7 +19,7 @@ export const CardDescription = ({
   changeWidth?: boolean
 }) => {
   return (
-    <div className={clsx('horizontal w-full justify-start')}>
+    <div className={clsx('horizontal w-full', changePosition ? 'justify-center' : 'justify-start')}>
       <p
         className={clsx(
           'text-dimgray text-[0.9375rem] leading-6.75',

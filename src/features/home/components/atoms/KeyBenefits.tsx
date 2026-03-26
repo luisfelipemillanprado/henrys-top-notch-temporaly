@@ -10,11 +10,11 @@ import clsx from 'clsx'
  * @param {number} props.benefits[].id - A unique identifier for each key benefit item.
  * @returns {JSX.Element} The rendered key benefits component.
  */
-export const KeyBenefit = ({ benefits }: { benefits: { text: string; id: number }[] }) => {
+export const KeyBenefits = ({ benefits }: { benefits: { text: string; id: number }[] }) => {
   return (
     <div
       className={clsx(
-        'mb-3 grid grid-cols-2 grid-rows-2 items-center gap-x-2.5 gap-y-5',
+        'mb-2 grid grid-cols-2 grid-rows-2 items-center gap-x-2.5 gap-y-5',
         'm1x:gap-x-3 m1x:gap-y-5.5',
         'm2x:gap-x-4 m2x:gap-y-5.75',
         'm3x:gap-x-4.5 m3x:gap-y-6',

@@ -23,7 +23,9 @@ export interface AvatarPulseAnimationProps {
  * @property {React.ReactNode} children - The content to render centered above the pulse layers (usually a button or icon).
  * @property {string} type - Animation type key, should be one of `AnimationType` enum values.
  * @property {boolean} [float] - Enables vertical floating animation if true.
- * @property {boolean} [colorChange] - Uses transparent backgrounds for pulses if true, mint green otherwise.
+ * @property {boolean} [firstColor] - Uses the first color for the pulse if true.
+ * @property {boolean} [secondColor] - Uses the second color for the pulse if true.
+ * @property {boolean} [thirdColor] - Uses the third color for the pulse if true.
  * @property {boolean} [rounded] - Applies fully rounded corners if true; otherwise uses rounded-2xl.
  * @property {boolean} [overlayMore] - Enlarges pulse overlay area if true.
  * @property {boolean} [hidden] - Hides the entire component if true.
@@ -33,7 +35,9 @@ export interface ButtonPulseAnimationProps {
   children: React.ReactNode
   type: string
   float?: boolean
-  colorChange?: boolean
+  firstColor?: boolean
+  secondColor?: boolean
+  thirdColor?: boolean
   rounded?: boolean
   overlayMore?: boolean
   hidden?: boolean

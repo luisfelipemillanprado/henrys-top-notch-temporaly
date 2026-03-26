@@ -47,6 +47,8 @@ export default function Home() {
           title={homeData.professionalServices.title}
           description={homeData.professionalServices.description}
           eyebrow={homeData.professionalServices.eyebrow}
+          primaryCta={homeData.professionalServices.primaryCta}
+          services={homeData.professionalServices.services}
         />
       </main>
     </>

@@ -16,7 +16,7 @@ import Link from 'next/link'
  */
 export const GetStartedButton = ({ text, href, hidden = true, float }: GetStartedButtonProps) => {
   return (
-    <ButtonPulse type={'soft'} rounded hidden={hidden} float={float}>
+    <ButtonPulse type={'soft'} rounded hidden={hidden} firstColor={true} float={float}>
       <Link
         className={clsx(
           'horizontal bg-electric-blue z-40 h-9.25 rounded-full px-4 font-normal shadow-lg',

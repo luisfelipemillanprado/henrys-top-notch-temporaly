@@ -118,7 +118,7 @@ export const homeData = {
     description:
       'At Henry’s Top Notch Air Conditioning & Heating Co, we are a family-owned and operated business dedicated to keeping homes and businesses comfortable. With 21 years of HVAC experience, our trusted team delivers reliable heating and cooling solutions with honest service, quality workmanship, and dependable results year-round.',
     primaryCta: {
-      text: 'Learn More',
+      text: 'LEARN MORE',
       href: '/about-us',
     },
     image: '/images/home/about-company/about-company.webp',
@@ -192,19 +192,20 @@ export const homeData = {
     ],
   },
   professionalServices: {
-    eyebrow: 'All OUR SERVICES',
+    eyebrow: 'ALL OUR SERVICES',
     title: 'Access Expert HVAC Services Today.',
     description:
       'Explore our full range of HVAC services designed to meet your comfort needs year-round. Our experienced team provides reliable heating and cooling solutions, focusing on efficiency, performance, and long-term results, ensuring your home or business stays comfortable, safe, and operating smoothly in every season with consistent quality.',
     primaryCta: {
-      text: 'Learn More',
-      href: '/about-us',
+      text: 'ALL SERVICES',
+      href: '/services',
     },
     services: [
       {
-        url: '/images/home/booking-process/booking-process5.webp',
-        title: 'AC Installation.',
-        description: '',
+        url: '/images/home/professional-services/professional-services1.webp',
+        title: 'HVAC System Maintenance.',
+        description:
+          'Keep your HVAC system running efficiently with expert maintenance that lowers energy costs and prevents unexpected breakdowns year-round consistently.',
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
@@ -212,9 +213,10 @@ export const homeData = {
         id: 28,
       },
       {
-        url: '/images/home/booking-process/booking-process5.webp',
-        title: 'HVAC System Maintenance.',
-        description: '',
+        url: '/images/home/professional-services/professional-services2.webp',
+        title: 'HVAC System Repair.',
+        description:
+          'Reliable HVAC repair services designed to resolve issues quickly, restore efficiency, and keep your system performing smoothly year-round consistently.',
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
@@ -222,9 +224,10 @@ export const homeData = {
         id: 29,
       },
       {
-        url: '/images/home/booking-process/booking-process5.webp',
+        url: '/images/home/professional-services/professional-services3.webp',
         title: 'HVAC System Installation.',
-        description: '',
+        description:
+          'Boost your comfort with expert HVAC installation engineered for efficiency, consistent performance, and long-term system durability year-round reliably.',
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
@@ -232,26 +235,16 @@ export const homeData = {
         id: 30,
       },
       {
-        url: '/images/home/booking-process/booking-process5.webp',
-        title: 'HVAC System Repair.',
-        description: '',
+        url: '/images/home/professional-services/professional-services4.webp',
+        title: 'AC System Installation.',
+        description:
+          'Get top-quality AC installation that maximizes efficiency, cuts energy costs, and delivers reliable comfort every single day consistently without compromise.',
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
         },
         id: 31,
       },
-      {
-        url: '/images/home/booking-process/booking-process5.webp',
-        title: 'Air Quality Solutions.',
-        description: '',
-        secondaryCta: {
-          text: 'BOOK NOW',
-          href: '/services',
-        },
-        id: 32,
-      },
-      {},
     ],
   },
 }

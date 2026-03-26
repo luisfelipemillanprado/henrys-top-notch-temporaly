@@ -23,7 +23,7 @@ export interface GetStartedButtonProps {
  * @property {boolean} startIcon - Optional icon identifier rendered before the text.
  * @property {boolean} endIcon - Optional icon identifier rendered after the text.
  * @property {boolean} [float] - Optional flag to render the button as a floating element.
- * @property {boolean} [colorChange] - Optional flag to change the button color on interaction.
+ * @property {boolean} [secondColor] - Optional flag to change the button color on interaction.
  * @property {boolean} [noAnimation] - Optional flag to disable button animation.
  */
 export interface ReusableButtonProps {
@@ -32,6 +32,6 @@ export interface ReusableButtonProps {
   startIcon?: boolean
   endIcon?: boolean
   float?: boolean
-  colorChange?: boolean
+  secondColor?: boolean
   noAnimation?: boolean
 }

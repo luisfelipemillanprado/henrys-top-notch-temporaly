@@ -1,6 +1,6 @@
 import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
-import { KeyBenefit } from '@/features/home/components/atoms/KeyBenefit'
+import { KeyBenefits } from '@/features/home/components/atoms/KeyBenefits'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
 import clsx from 'clsx'
 
@@ -49,7 +49,7 @@ export const SummaryOfWhoWeAre = ({
         )}
       >
         <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
-        <KeyBenefit benefits={benefits} />
+        <KeyBenefits benefits={benefits} />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
       </div>
     </div>

@@ -41,7 +41,7 @@ export const MainActions = (props: {
         text={secondaryCta.text}
         href={secondaryCta.href}
         startIcon={true}
-        colorChange={false}
+        secondColor={false}
         noAnimation={true}
         float={false}
       />
