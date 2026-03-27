@@ -9,7 +9,7 @@ import clsx from 'clsx'
  */
 export const CardDescription = ({ description }: { description: string }) => {
   return (
-    <div className={clsx('horizontal mb-2.5 w-full justify-center', '')}>
+    <div className={clsx('horizontal w-full justify-center', 'm1x:mb-3')}>
       <p
         className={clsx(
           'text-dimgray w-67 text-center text-[0.9375rem] leading-6.75',

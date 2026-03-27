@@ -2,49 +2,6 @@
  * @description This module exports an object containing static data for various sections of the home page.
  * @private
  * @function homeData
- * @property {object} hero - Contains data for the hero section, including title, description, CTAs, and others.
- * @property {object} hero.title - The main heading text displayed in the hero section.
- * @property {object} hero.description - A brief description supporting the hero title.
- * @property {object} hero.primaryCta - Contains text and href for the primary call-to-action button in the hero section.
- * @property {object} hero.primaryCta.text - The text displayed on the primary call-to-action button.
- * @property {object} hero.primaryCta.href - The URL that the primary call-to-action button links to.
- * @property {object} hero.secondaryCta - Contains text and href for the secondary call-to-action button in the hero section.
- * @property {object} hero.secondaryCta.text - The text displayed on the secondary call-to-action button.
- * @property {object} hero.secondaryCta.href - The URL that the secondary call-to-action button links to.
- * @property {array} hero.highlight - An array of strings representing highlighted text in the hero section.
- * @property {array} hero.gallery - An array of objects representing images in the hero gallery, each with a URL and ID.
- * @property {string} hero.gallery.url - The URL of the gallery image.
- * @property {number} hero.gallery.id - The unique identifier for the gallery image.
- * @property {array} trustedAndCertified - An array of objects representing trusted certifications, each with a URL, href, and ID.
- * @property {string} trustedAndCertified.url - The URL of the trusted certification image.
- * @property {string} trustedAndCertified.href - The URL that the trusted certification image links to.
- * @property {number} trustedAndCertified.id - The unique identifier for the trusted certification.
- * @property {object} whoWeAre - Contains data for the "Who We Are" section.
- * @property {string} whoWeAre.eyebrow - The eyebrow text for the "Who We Are" section.
- * @property {string} whoWeAre.title - The main title for the "Who We Are" section.
- * @property {string} whoWeAre.description - A brief description for the "Who We Are" section.
- * @property {object} whoWeAre.primaryCta - Contains text and href for the primary call-to-action button in the "Who We Are" section.
- * @property {string} whoWeAre.primaryCta.text - The text displayed on the primary call-to-action button in the "Who We Are" section.
- * @property {string} whoWeAre.primaryCta.href - The URL that the primary call-to-action button in the "Who We Are" section links to.
- * @property {string} whoWeAre.image - The URL of the image displayed in the "Who We Are" section.
- * @property {array} whoWeAre.benefits - An array of objects representing benefits listed in the "Who We Are" section.
- * @property {string} whoWeAre.benefits.text - The text describing a specific benefit in the "Who We Are" section.
- * @property {number} whoWeAre.benefits.id - The unique identifier for the benefit in the "Who We Are" section.
- * @property {object} bookingProcess - Contains data for the booking process section, including features and steps.
- * @property {string} bookingProcess.eyebrow - The eyebrow text for the booking process section.
- * @property {string} bookingProcess.title - The main title for the booking process section.
- * @property {string} bookingProcess.description - A brief description for the booking process section.
- * @property {string} bookingProcess.image - The URL of the image displayed in the booking process section.
- * @property {array} bookingProcess.features - An array of objects representing features listed in the booking process section.
- * @property {string} bookingProcess.features.icon - The name of the icon representing a specific feature in the booking process section.
- * @property {string} bookingProcess.features.title - The title describing a specific feature in the booking process section.
- * @property {string} bookingProcess.features.description - A brief description of a specific feature in the booking process section.
- * @property {number} bookingProcess.features.id - The unique identifier for the feature in the booking process section.
- * @property {array} bookingProcess.steps - An array of objects representing steps listed in the booking process section.
- * @property {string} bookingProcess.steps.url - The URL of the image representing a specific step in the booking process section.
- * @property {string} bookingProcess.steps.title - The title describing a specific step in the booking process section.
- * @property {string} bookingProcess.steps.description - A brief description of a specific step in the booking process section.
- * @property {number} bookingProcess.steps.id - The unique identifier for the step in the booking process section.
  * @return {object} An object containing static data for various sections of the home page.
  */
 export const homeData = {
@@ -192,7 +149,7 @@ export const homeData = {
     ],
   },
   professionalServices: {
-    eyebrow: 'ALL OUR SERVICES',
+    eyebrow: 'SERVICES WE OFFER',
     title: 'Access Expert HVAC Services Today.',
     description:
       'Explore our full range of HVAC services designed to meet your comfort needs year-round. Our experienced team provides reliable heating and cooling solutions, focusing on efficiency, performance, and long-term results, ensuring your home or business stays comfortable, safe, and operating smoothly in every season with consistent quality.',
@@ -204,46 +161,78 @@ export const homeData = {
       {
         url: '/images/home/professional-services/professional-services1.webp',
         title: 'HVAC System Maintenance.',
+        stars: [{ id: 28 }, { id: 29 }, { id: 30 }, { id: 31 }, { id: 32 }],
         description:
-          'Keep your HVAC system running efficiently with expert maintenance that lowers energy costs and prevents unexpected breakdowns year-round consistently.',
+          'Keep your HVAC system efficient with expert maintenance that reduces energy costs and prevents breakdowns.',
+        benefits: [
+          { text: 'Free Estimate.', id: 33 },
+          { text: 'Warranty Backed.', id: 34 },
+          { text: 'Seasonal Tune-Up.', id: 35 },
+          { text: 'Filter Change.', id: 36 },
+          { text: 'Energy Savings.', id: 37 },
+        ],
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
         },
-        id: 28,
+        id: 38,
       },
       {
         url: '/images/home/professional-services/professional-services2.webp',
         title: 'HVAC System Repair.',
+        stars: [{ id: 39 }, { id: 40 }, { id: 41 }, { id: 42 }, { id: 43 }],
         description:
-          'Reliable HVAC repair services designed to resolve issues quickly, restore efficiency, and keep your system performing smoothly year-round consistently.',
+          'HVAC repair services you can trust resolve issues quickly, restore reliability, and ensure consistent performance.',
+        benefits: [
+          { text: 'Free Estimate.', id: 44 },
+          { text: 'Warranty Backed.', id: 45 },
+          { text: 'Same-Day Repair.', id: 46 },
+          { text: 'Emergency Service.', id: 47 },
+          { text: 'Quick Diagnosis.', id: 48 },
+        ],
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
         },
-        id: 29,
+        id: 49,
       },
       {
         url: '/images/home/professional-services/professional-services3.webp',
         title: 'HVAC System Installation.',
+        stars: [{ id: 50 }, { id: 51 }, { id: 52 }, { id: 53 }, { id: 54 }],
         description:
-          'Boost your comfort with expert HVAC installation engineered for efficiency, consistent performance, and long-term system durability year-round reliably.',
+          'Transform your comfort with HVAC installation services built for optimization, reliable performance, and durability.',
+        benefits: [
+          { text: 'Free Estimate.', id: 55 },
+          { text: 'Warranty Backed.', id: 56 },
+          { text: 'Proper Sizing.', id: 57 },
+          { text: 'Efficient Units.', id: 58 },
+          { text: 'Expert Install.', id: 59 },
+        ],
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
         },
-        id: 30,
+        id: 60,
       },
       {
         url: '/images/home/professional-services/professional-services4.webp',
         title: 'AC System Installation.',
+        stars: [{ id: 61 }, { id: 62 }, { id: 63 }, { id: 64 }, { id: 65 }],
         description:
-          'Get top-quality AC installation that maximizes efficiency, cuts energy costs, and delivers reliable comfort every single day consistently without compromise.',
+          'Get top-quality AC installation that maximizes efficiency, reduces energy costs, and delivers reliable comfort daily.',
+        benefits: [
+          { text: 'Free Estimate.', id: 66 },
+          { text: 'Warranty Backed.', id: 67 },
+          { text: 'High Efficiency.', id: 68 },
+          { text: 'Smart Setup.', id: 69 },
+          { text: 'Better Airflow.', id: 70 },
+        ],
         secondaryCta: {
           text: 'BOOK NOW',
           href: '/services',
         },
-        id: 31,
+        id: 71,
       },
     ],
   },

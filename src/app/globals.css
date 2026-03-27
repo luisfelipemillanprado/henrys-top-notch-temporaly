@@ -28,6 +28,7 @@
   --color-warmgray: oklch(0.6132 0.0092 91.54); /* warmgray */
   --color-bright-orange: oklch(0.6884 0.2089 41.7); /* bright orange */
   --color-vivid-orange: oklch(0.7426 0.1817 56.01); /* vivid orange */
+  --color-golden: oklch(0.7819 0.1585 72.33); /* golden */
   --color-electric-blue: oklch(0.7647 0.125269 249.7656); /* electric blue */
   --color-strong-blue: oklch(0.4974 0.1649 255.19); /* strong blue */
   --color-primary: oklch(100% 0 0); /* white */

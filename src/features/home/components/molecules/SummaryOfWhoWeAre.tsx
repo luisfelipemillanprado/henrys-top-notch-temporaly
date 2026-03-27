@@ -1,7 +1,7 @@
 import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
-import { KeyBenefits } from '@/features/home/components/atoms/KeyBenefits'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
+import { Benefits } from '@/features/home/components/molecules/Benefits'
 import clsx from 'clsx'
 
 /**
@@ -43,13 +43,13 @@ export const SummaryOfWhoWeAre = ({
       <LeadVisual image={image} />
       <div
         className={clsx(
-          'vertical bg-primary border-warmgray/30 w-full items-center gap-y-7 rounded-3xl border px-5 py-6 shadow-md',
-          'm1x:gap-y-7.75',
-          'm3x:gap-y-8.5'
+          'vertical bg-primary border-warmgray/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
+          'm1x:gap-y-6.75',
+          'm3x:gap-y-7.5'
         )}
       >
         <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
-        <KeyBenefits benefits={benefits} />
+        <Benefits benefits={benefits} />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
       </div>
     </div>

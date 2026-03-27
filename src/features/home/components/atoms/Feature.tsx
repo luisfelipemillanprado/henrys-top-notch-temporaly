@@ -78,55 +78,41 @@ const iconSwitch = (icon: string) => {
 }
 
 /**
- * @description Renders a component that displays a list of booking features.
+ * @description Renders a component that displays a single booking feature.
  * @public
  * @param {object} props - Component properties.
- * @param {Array} props.features - An array of feature objects, each containing an icon, title, description, and id.
- * @param {Array} props.features.icon - The URL of the feature icon.
- * @param {Array} props.features.title - The title of the feature.
- * @param {Array} props.features.description - A brief description of the feature.
- * @param {Array} props.features.id - A unique identifier for the feature.
- * @returns {JSX.Element} A JSX element representing the booking features.
+ * @param {string} props.icon - The URL of the feature icon.
+ * @param {string} props.title - The title of the feature.
+ * @param {string} props.description - A brief description of the feature.
+ * @returns {JSX.Element} A JSX element representing the booking feature.
  */
-export const Features = ({
-  features,
+export const Feature = ({
+  icon,
+  title,
+  description,
 }: {
-  features: { icon: string; title: string; description: string; id: number }[]
+  icon: string
+  title: string
+  description: string
 }) => {
   return (
     <div
       className={clsx(
-        'grid grid-cols-1 grid-rows-3 gap-y-7.5',
-        'm3x:gap-y-7.75',
-        'md:grid-cols-2 md:grid-rows-3 md:gap-7',
-        'lg:gap-7.5',
-        '1xl:grid-cols-3 1xl:grid-rows-2',
-        '2xl:gap-8',
-        '3xl:gap-8.75',
-        '5xl:gap-9.5'
+        'bg-off-white border-warmgray/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
+        'm1x:p-5.25',
+        'm4x:p-5.5',
+        'lg:px-6',
+        '2xl:px-6.5',
+        '3xl:px-6.75'
       )}
     >
-      {features.map((item) => (
-        <div
-          key={item.id}
-          className={clsx(
-            'bg-off-white border-warmgray/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
-            'm1x:p-5.25',
-            'm4x:p-5.5',
-            'lg:px-6',
-            '2xl:px-6.5',
-            '3xl:px-6.75'
-          )}
-        >
-          <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
-            <span className={clsx('horizontal')}>{iconSwitch(item.icon)}</span>
-            <TertiaryTitle title={item.title} />
-          </div>
-          <div className={clsx('horizontal w-full justify-start')}>
-            <CardDescription description={item.description} />
-          </div>
-        </div>
-      ))}
+      <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
+        <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
+        <TertiaryTitle title={title} />
+      </div>
+      <div className={clsx('horizontal w-full justify-start')}>
+        <CardDescription description={description} />
+      </div>
     </div>
   )
 }

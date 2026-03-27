@@ -11,10 +11,15 @@ import clsx from 'clsx'
  * @param {object} props.primaryCta - The primary call-to-action button properties.
  * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
  * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
- * @param {Array} props.services - An array of service objects, each containing a url, title, description, secondaryCta, and id.
+ * @param {Array} props.services - An array of service objects, each containing a url, title, stars, description, secondaryCta, and id.
  * @param {string} props.services.url - The URL of the image representing a specific service in the professional services section.
  * @param {string} props.services.title - The title describing a specific service in the professional services section.
+ * @param {{ id: number }[]} props.services.stars - An array of objects representing the star rating for a specific service.
+ * @param {number} props.services.stars.id - A unique identifier for each star in the star rating of a specific service.
  * @param {string} props.services.description - A brief description of a specific service in the professional services section.
+ * @param {Array} props.services.benefits - An array of benefit objects, each containing text and id, representing the key benefits.
+ * @param {string} props.services.benefits.text - The text description of a key benefit item for a specific service.
+ * @param {number} props.services.benefits.id - A unique identifier for each key benefit item for a specific service.
  * @param {object} props.services.secondaryCta - An object containing the text and href for the secondary call-to-action button.
  * @param {string} props.services.secondaryCta.text - The text of the secondary call-to-action button related to a specific service.
  * @param {string} props.services.secondaryCta.href - The URL of the secondary call-to-action button related to a specific service.
@@ -38,7 +43,9 @@ export const OurProfessionalServices = ({
   services: {
     url: string
     title: string
+    stars: { id: number }[]
     description: string
+    benefits: { text: string; id: number }[]
     secondaryCta: {
       text: string
       href: string

@@ -1,7 +1,7 @@
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
-import { Features } from '@/features/home/components/atoms/Features'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
-import { Steps } from '@/features/home/components/atoms/Steps'
+import { Features } from '@/features/home/components/molecules/Features'
+import { Steps } from '@/features/home/components/molecules/Steps'
 import clsx from 'clsx'
 
 /**
