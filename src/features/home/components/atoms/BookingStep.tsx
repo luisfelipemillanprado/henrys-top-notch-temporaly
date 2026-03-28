@@ -13,7 +13,15 @@ import Image from 'next/image'
  * @param {string} props.description - A brief description of a specific step in the booking process section.
  * @returns {JSX.Element} A semantic element rendering the single booking step content.
  */
-export const Step = ({ url, title, description }: { url: string; title: string; description: string }) => {
+export const BookingStep = ({
+  url,
+  title,
+  description,
+}: {
+  url: string
+  title: string
+  description: string
+}) => {
   return (
     <div className={clsx('vertical w-full gap-y-3.5 rounded-3xl')}>
       <div className={clsx('vertical w-full items-center gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>

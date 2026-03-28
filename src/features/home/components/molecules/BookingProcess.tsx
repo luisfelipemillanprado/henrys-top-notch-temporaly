@@ -1,7 +1,7 @@
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
-import { Features } from '@/features/home/components/molecules/Features'
-import { Steps } from '@/features/home/components/molecules/Steps'
+import { BookingFeatures } from '@/features/home/components/molecules/BookingFeatures'
+import { BookingSteps } from '@/features/home/components/molecules/BookingSteps'
 import clsx from 'clsx'
 
 /**
@@ -56,9 +56,9 @@ export const BookingProcess = ({
           <LeadVisual image={image} />
           <SectionHeader title={title} description={description} eyebrow={eyebrow} />
         </div>
-        <Features features={features} />
+        <BookingFeatures features={features} />
       </div>
-      <Steps steps={steps} />
+      <BookingSteps steps={steps} />
     </div>
   )
 }

@@ -1,3 +1,5 @@
+/* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
+
 /**
  * @description Defines the properties for the ActionHighlight component.
  * @export

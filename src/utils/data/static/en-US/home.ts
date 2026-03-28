@@ -166,7 +166,7 @@ export const homeData = {
           'Keep your HVAC system efficient with expert maintenance that reduces energy costs and prevents breakdowns.',
         benefits: [
           { text: 'Free Estimate.', id: 33 },
-          { text: 'Warranty Backed.', id: 34 },
+          { text: 'All Warranty.', id: 34 },
           { text: 'Seasonal Tune-Up.', id: 35 },
           { text: 'Filter Change.', id: 36 },
           { text: 'Energy Savings.', id: 37 },
@@ -185,7 +185,7 @@ export const homeData = {
           'HVAC repair services you can trust resolve issues quickly, restore reliability, and ensure consistent performance.',
         benefits: [
           { text: 'Free Estimate.', id: 44 },
-          { text: 'Warranty Backed.', id: 45 },
+          { text: 'All Warranty.', id: 45 },
           { text: 'Same-Day Repair.', id: 46 },
           { text: 'Emergency Service.', id: 47 },
           { text: 'Quick Diagnosis.', id: 48 },
@@ -204,7 +204,7 @@ export const homeData = {
           'Transform your comfort with HVAC installation services built for optimization, reliable performance, and durability.',
         benefits: [
           { text: 'Free Estimate.', id: 55 },
-          { text: 'Warranty Backed.', id: 56 },
+          { text: 'All Warranty.', id: 56 },
           { text: 'Proper Sizing.', id: 57 },
           { text: 'Efficient Units.', id: 58 },
           { text: 'Expert Install.', id: 59 },
@@ -223,7 +223,7 @@ export const homeData = {
           'Get top-quality AC installation that maximizes efficiency, reduces energy costs, and delivers reliable comfort daily.',
         benefits: [
           { text: 'Free Estimate.', id: 66 },
-          { text: 'Warranty Backed.', id: 67 },
+          { text: 'All Warranty.', id: 67 },
           { text: 'High Efficiency.', id: 68 },
           { text: 'Smart Setup.', id: 69 },
           { text: 'Better Airflow.', id: 70 },

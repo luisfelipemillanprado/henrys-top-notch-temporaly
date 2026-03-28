@@ -1,4 +1,4 @@
-import { Feature } from '@/features/home/components/atoms/Feature'
+import { BookingFeature } from '@/features/home/components/atoms/BookingFeature'
 import clsx from 'clsx'
 
 /**
@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {Array} props.features[].id - A unique identifier for the feature.
  * @returns {JSX.Element} A JSX element representing the booking features.
  */
-export const Features = ({
+export const BookingFeatures = ({
   features,
 }: {
   features: { icon: string; title: string; description: string; id: number }[]
@@ -31,7 +31,7 @@ export const Features = ({
       )}
     >
       {features.map((item) => (
-        <Feature key={item.id} icon={item.icon} title={item.title} description={item.description} />
+        <BookingFeature key={item.id} icon={item.icon} title={item.title} description={item.description} />
       ))}
     </div>
   )

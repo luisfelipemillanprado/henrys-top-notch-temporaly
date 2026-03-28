@@ -1,3 +1,5 @@
+/* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
+
 /**
  * @description Represents the properties for the eye brow components.
  * @export

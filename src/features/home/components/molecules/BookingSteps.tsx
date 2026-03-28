@@ -1,4 +1,4 @@
-import { Step } from '@/features/home/components/atoms/Step'
+import { BookingStep } from '@/features/home/components/atoms/BookingStep'
 import clsx from 'clsx'
 
 /**
@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {Array} props.steps[].id - A unique identifier for the step in the booking process section.
  * @returns {JSX.Element} A semantic element rendering the booking steps content.
  */
-export const Steps = ({
+export const BookingSteps = ({
   steps,
 }: {
   steps: {
@@ -25,7 +25,7 @@ export const Steps = ({
   return (
     <div
       className={clsx(
-        'mt-2 grid grid-cols-1 grid-rows-3 gap-y-8.5',
+        'mt-2 grid grid-cols-1 grid-rows-4 gap-y-8.5',
         'm1x:gap-y-9',
         'm3x:gap-y-9.5',
         'md:grid-cols-2 md:grid-rows-3 md:gap-7',
@@ -37,7 +37,7 @@ export const Steps = ({
       )}
     >
       {steps.map((item) => (
-        <Step key={item.id} url={item.url} title={item.title} description={item.description} />
+        <BookingStep key={item.id} url={item.url} title={item.title} description={item.description} />
       ))}
     </div>
   )

@@ -1,4 +1,4 @@
-import type { LogocompanyProps } from '@/common/logo-company/types'
+import type { LogoCompanyProps } from '@/common/logo-company/types'
 import { blurDataUrlLogo } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -6,13 +6,13 @@ import Image from 'next/image'
 /**
  * @description Renders the company logo composed of an icon image and a textual brand name.
  * @public
- * @interface LogocompanyProps
+ * @interface LogoCompanyProps
  * @param {object} props - Component properties.
- * @param {LogocompanyProps['url']} props.url - The URL of the company logo image.
- * @param {LogocompanyProps['footer']} [props.footer] - Optional flag to indicate if the logo is in the footer.
+ * @param {LogoCompanyProps['url']} props.url - The URL of the company logo image.
+ * @param {LogoCompanyProps['footer']} [props.footer] - Optional flag to indicate if the logo is in the footer.
  * @returns {JSX.Element} A responsive logo composed of an optimized image and brand text.
  */
-export const LogoCompany = ({ url, footer }: LogocompanyProps) => {
+export const LogoCompany = ({ url, footer }: LogoCompanyProps) => {
   return (
     <div
       className={clsx(

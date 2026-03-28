@@ -63,7 +63,7 @@ export const ProfessionalServices = ({
       </div>
       <div
         className={clsx(
-          'grid w-full grid-cols-1 grid-rows-3 gap-y-7.5',
+          'grid w-full grid-cols-1 grid-rows-4 gap-y-7.5',
           'm3x:gap-y-7.75',
           'md:grid-cols-2 md:grid-rows-3 md:gap-7',
           'lg:gap-7.5',

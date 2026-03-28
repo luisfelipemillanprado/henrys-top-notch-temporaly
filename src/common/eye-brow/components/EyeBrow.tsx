@@ -1,4 +1,4 @@
-import { EyeBrowProps } from '@/common/eye-brow/types'
+import type { EyeBrowProps } from '@/common/eye-brow/types'
 import { MinusIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
@@ -19,8 +19,8 @@ const decorationLine = (
  * @public
  * @interface EyeBrowProps
  * @param {object} props - Component properties.
- * @param {string} props.text - The text content to be displayed in the eye brow.
- * @param {boolean} [props.hidden] - An optional boolean that, when true, hides the eye brow component.
+ * @param {EyeBrowProps['text']} props.text - The text content to be displayed in the eye brow.
+ * @param {EyeBrowProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the eye brow component.
  * @returns {JSX.Element} A JSX element representing the eye brow component.
  */
 export const EyeBrow = ({ text, hidden = false }: EyeBrowProps) => {

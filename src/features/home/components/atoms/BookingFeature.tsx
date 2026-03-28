@@ -6,9 +6,9 @@ import clsx from 'clsx'
 /**
  * @description Enum representing the different service icons used in the booking features section.
  * @private
- * @property {string} EMERGENCY   -Icon for emergency services, such as urgent repairs or critical issues.
- * @property {string} EXPERTS     -Icon for expert services, indicating professional and specialized assistance.
- * @property {string} COMFORT     -Icon for comfort services, providing convenience and ease for users.
+ * @property {string} EMERGENCY  -Icon for emergency services, such as urgent repairs or critical issues.
+ * @property {string} EXPERTS    -Icon for expert services, indicating professional and specialized assistance.
+ * @property {string} COMFORT    -Icon for comfort services, providing convenience and ease for users.
  */
 enum BookingFeaturesIcon {
   EMERGENCY = 'emergency',
@@ -86,7 +86,7 @@ const iconSwitch = (icon: string) => {
  * @param {string} props.description - A brief description of the feature.
  * @returns {JSX.Element} A JSX element representing the booking feature.
  */
-export const Feature = ({
+export const BookingFeature = ({
   icon,
   title,
   description,

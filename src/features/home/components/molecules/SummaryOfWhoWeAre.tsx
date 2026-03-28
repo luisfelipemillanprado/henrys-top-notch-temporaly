@@ -1,7 +1,7 @@
 import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
-import { Benefits } from '@/features/home/components/molecules/Benefits'
+import { BookingBenefits } from '@/features/home/components/molecules/BookingBenefits'
 import clsx from 'clsx'
 
 /**
@@ -49,7 +49,7 @@ export const SummaryOfWhoWeAre = ({
         )}
       >
         <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
-        <Benefits benefits={benefits} />
+        <BookingBenefits benefits={benefits} />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
       </div>
     </div>
