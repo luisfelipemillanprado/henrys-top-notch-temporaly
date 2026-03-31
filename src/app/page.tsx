@@ -3,6 +3,7 @@ import { OurBookingProcess } from '@/features/home/components/organisms/OurBooki
 import { OurProfessionalServices } from '@/features/home/components/organisms/OurProfessionalServices'
 import { OurSummaryOfWhoWeAre } from '@/features/home/components/organisms/OurSummaryOfWhoWeAre'
 import { OurTrustedAndCertified } from '@/features/home/components/organisms/OurTrustedAndCertified'
+import { OurWhyChooseUs } from '@/features/home/components/organisms/OurWhyChooseUs'
 import { homeData } from '@/utils/data/static/en-US/home'
 import clsx from 'clsx'
 
@@ -49,6 +50,14 @@ export default function Home() {
           eyebrow={homeData.professionalServices.eyebrow}
           primaryCta={homeData.professionalServices.primaryCta}
           services={homeData.professionalServices.services}
+        />
+        <OurWhyChooseUs
+          title={homeData.whyChooseUs.title}
+          description={homeData.whyChooseUs.description}
+          eyebrow={homeData.whyChooseUs.eyebrow}
+          image={homeData.whyChooseUs.image}
+          primaryCta={homeData.whyChooseUs.primaryCta}
+          reasons={homeData.whyChooseUs.reasons}
         />
       </main>
     </>

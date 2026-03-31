@@ -18,10 +18,10 @@ export const ServiceBenefits = ({ benefits }: ServiceBenefitsProps) => {
       className={clsx(
         'mb-2.5 grid w-full grid-cols-2 grid-rows-1 gap-x-2.5',
         '[&>*:nth-child(n+3)]:hidden',
-        'm1x:gap-x-3 m1x:mb-3',
-        'm2x:gap-x-4',
-        'm3x:gap-x-4.5',
-        'm4x:gap-x-5'
+        'm1x:gap-x-3 m1x:mb-3.25',
+        'm2x:gap-x-3.5',
+        'm3x:gap-x-4',
+        'm4x:gap-x-4.5'
       )}
     >
       {benefits.map((item) => (

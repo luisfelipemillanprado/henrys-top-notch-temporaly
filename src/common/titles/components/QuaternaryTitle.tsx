@@ -2,19 +2,19 @@ import type { MainTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a tertiary title component with customizable properties.
+ * @description Renders a quaternary title component with customizable properties such as text position, and truncation.
  * @public
  * @interface MainTitleProps
  * @param {object} props - Component properties.
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
- * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional boolean to indicate if the position should be changed.
- * @param {MainTitleProps['truncate']} [props.truncate] - An optional boolean to indicate if the title text should be truncated.
- * @returns {JSX.Element} The rendered tertiary title component.
+ * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional flag to indicate if the title position should change.
+ * @param {MainTitleProps['truncate']} [props.truncate] - Optional flag to enable text truncation with ellipsis for long titles.
+ * @returns {JSX.Element} The rendered quaternary title component.
  */
-export const TertiaryTitle = ({ title, changePosition = false, truncate = true }: MainTitleProps) => {
+export const QuaternaryTitle = ({ title, changePosition = false, truncate = true }: MainTitleProps) => {
   return (
     <div className={clsx('horizontal w-full', changePosition ? 'justify-center' : 'justify-start')}>
-      <h3
+      <h4
         id={title}
         className={clsx(
           'text-secondary text-[1.0625rem] font-semibold',
@@ -27,7 +27,7 @@ export const TertiaryTitle = ({ title, changePosition = false, truncate = true }
         )}
       >
         {title}
-      </h3>
+      </h4>
     </div>
   )
 }

@@ -236,4 +236,41 @@ export const homeData = {
       },
     ],
   },
+  whyChooseUs: {
+    eyebrow: 'WHY CHOOSE US',
+    title: 'Comfort You Can Trust Every Day.',
+    description:
+      'Choosing the right heating and cooling provider delivers improved comfort, greater efficiency, and long lasting results. We provide dependable service, honest advice, and customized solutions tailored to your needs. Our goal is to keep your home or business comfortable, efficient, and operating smoothly without interruptions or unexpected problems.',
+    image: '/images/home/why-choose-us/why-choose-us.webp',
+    primaryCta: {
+      text: 'LEARN MORE',
+      href: '/about',
+    },
+    reasons: [
+      {
+        affirmation: 'Trusted Industry Experts.',
+        resume:
+          'Our skilled team is fully trained to handle installations, repairs, and maintenance with precision, ensuring reliable and long lasting results for every project.',
+        id: 72,
+      },
+      {
+        affirmation: 'Fast & Reliable Service.',
+        resume:
+          'We respect your time by arriving on schedule and completing every job efficiently, minimizing disruptions while keeping your system running smoothly.',
+        id: 73,
+      },
+      {
+        affirmation: 'Fair & Transparent Pricing.',
+        resume:
+          'No hidden fees or surprises. We provide clear, upfront estimates so you always know exactly what to expect before any work begins.',
+        id: 74,
+      },
+      {
+        affirmation: 'Satisfaction You Can Trust.',
+        resume:
+          'Your comfort is our priority. We stand behind our work and ensure every service meets the highest standards of quality and reliability.',
+        id: 75,
+      },
+    ],
+  },
 }
