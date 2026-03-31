@@ -15,7 +15,7 @@ export const Reasons = ({
   return (
     <Accordion>
       {reasons.map((item, index) => (
-        <Accordion.Item key={index} className={clsx(index !== reasons.length - 1 && 'after:bottom-px')}>
+        <Accordion.Item key={index}>
           <Accordion.Heading>
             <Accordion.Trigger>
               <span className={'horizontal'}>
@@ -23,7 +23,7 @@ export const Reasons = ({
                   aria-hidden={true}
                   role={'img'}
                   className={clsx(
-                    'fill-warmgray size-6.25',
+                    'fill-bright-orange size-6.25',
                     'm1x:size-6.5',
                     'md:size-6.75',
                     '2xl:size-7',
@@ -39,7 +39,7 @@ export const Reasons = ({
                     aria-hidden={true}
                     role={'img'}
                     className={clsx(
-                      'fill-warmgray size-4.5',
+                      'fill-bright-orange size-4.5',
                       'm1x:size-5',
                       '1xl:size-5.25',
                       '2xl:size-5.5',
@@ -55,7 +55,7 @@ export const Reasons = ({
             <Accordion.Body>
               <p
                 className={clsx(
-                  'text-warmgray text-[0.9375rem] leading-7',
+                  'text-dimgray text-[0.9375rem] leading-7',
                   'm1x:text-base m1x:leading-7.5',
                   '1xl:text-[1.0625rem] 1xl:leading-7.75',
                   '2xl:leading-8',

@@ -158,17 +158,17 @@
   .accordion {
     @apply w-full;
   }
+  .accordion__item:after {
+    @apply bg-warmgray/15;
+  }
   .accordion__trigger {
-    @apply horizontal 1xl:py-6.5 3xl:py-7.5 5xl:py-8.5 gap-x-3.5 py-5.5 pl-0 lg:py-6 2xl:py-7;
+    @apply horizontal 1xl:py-6.5 3xl:py-7.5 5xl:py-8.5 gap-x-3 py-5.5 pl-0 lg:py-6 2xl:py-7;
   }
   .accordion__indicator {
     @apply m4x:ml-2.5 ml-2;
   }
-  .accordion__body {
-    @apply 3xl:pr-24 md:pr-13 md:pl-10.25 lg:pr-17;
-  }
-  .accordion__item:after {
-    @apply bg-warmgray/15;
+  .accordion__body-inner {
+    @apply px-5.5;
   }
 }
 
