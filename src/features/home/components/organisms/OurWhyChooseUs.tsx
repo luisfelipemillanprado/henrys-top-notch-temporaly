@@ -1,6 +1,23 @@
 import { WhyChooseUs } from '@/features/home/components/molecules/WhyChooseUs'
 import clsx from 'clsx'
 
+/**
+ * @description Renders the "Why Choose Us" section of the homepage.
+ * @public
+ * @param {object} props - Component properties.
+ * @param {string} props.title - The title of the section.
+ * @param {string} props.description - The description of the section.
+ * @param {string} props.eyebrow - The eyebrow text of the section.
+ * @param {string} props.image - The image URL of the section.
+ * @param {object} props.primaryCta - The primary call-to-action button properties.
+ * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
+ * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
+ * @param {Array} props.reasons - The reasons for choosing us.
+ * @param {string} props.reasons.affirmation - The affirmation text of the reason.
+ * @param {string} props.reasons.resume - The resume text of the reason.
+ * @param {number} props.reasons.id - The unique identifier of the reason.
+ * @returns {JSX.Element} The rendered "Why Choose Us" section.
+ */
 export const OurWhyChooseUs = ({
   title,
   description,

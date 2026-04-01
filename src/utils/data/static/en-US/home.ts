@@ -93,6 +93,10 @@ export const homeData = {
     title: 'Our Simple And Fast Booking Process.',
     description:
       'At Henry’s Top Notch Air Conditioning & Heating Co, our simple booking process is designed to make getting started easy and stress-free. We focus on convenience, flexibility, and reliability, ensuring every step feels smooth. Our goal is to provide a seamless experience that helps you quickly connect with trusted HVAC professionals.',
+    primaryCta: {
+      text: 'LEARN MORE',
+      href: '/about-us',
+    },
     image: '/images/home/booking-process/booking-process1.webp',
     features: [
       {
@@ -240,12 +244,12 @@ export const homeData = {
     eyebrow: 'WHY CHOOSE US',
     title: 'Comfort You Can Trust Every Day.',
     description:
-      'Choosing the right heating and cooling provider delivers improved comfort, greater efficiency, and long lasting results. We provide dependable service, honest advice, and customized solutions tailored to your needs. Our goal is to keep your home or business comfortable, efficient, and operating smoothly without interruptions or unexpected problems.',
-    image: '/images/home/why-choose-us/why-choose-us.webp',
+      'Choosing our company for heating and cooling services ensures comfort, efficiency, and long lasting reliability. We provide expert service, honest advice, and customized solutions tailored to your needs. Our mission is to keep your home or business comfortable, efficient, and running smoothly without interruptions or unexpected setbacks.',
     primaryCta: {
       text: 'LEARN MORE',
-      href: '/about',
+      href: '/about-us',
     },
+    image: '/images/home/why-choose-us/why-choose-us.webp',
     reasons: [
       {
         affirmation: 'Trusted Industry Experts.',
@@ -256,20 +260,81 @@ export const homeData = {
       {
         affirmation: 'Fast & Reliable Service.',
         resume:
-          'We respect your time by arriving on schedule and completing every job efficiently, minimizing disruptions while keeping your system running smoothly.',
+          'We respect your time by arriving on schedule and completing each job efficiently, minimizing disruptions while keeping system running smoothly and reliably daily.',
         id: 73,
       },
       {
         affirmation: 'Fair & Transparent Pricing.',
         resume:
-          'No hidden fees or surprises. We provide clear, upfront estimates so you always know exactly what to expect before any work begins.',
+          'No hidden fees or surprises. We provide clear, upfront estimates so you always know exactly what to expect before any work begins today.',
         id: 74,
       },
       {
         affirmation: 'Satisfaction You Can Trust.',
         resume:
-          'Your comfort is our priority. We stand behind our work and ensure every service meets the highest standards of quality and reliability.',
+          'Your comfort is our priority. We stand behind our work and ensure every service meets the highest standards of quality and reliability always.',
         id: 75,
+      },
+    ],
+  },
+  customerTestimonials: {
+    eyebrow: 'CUSTOMER TESTIMONIALS',
+    title: 'Hear From Our Happy Customers.',
+    description:
+      'Our clients trust us to deliver exceptional service and reliable solutions. Read their testimonials to learn how we have helped them achieve comfort, efficiency, and peace of mind.',
+    primaryCta: {
+      text: 'LEARN MORE',
+      href: '/about-us',
+    },
+    image: '/images/home/why-choose-us/why-choose-us.webp',
+    testimonials: [
+      {
+        name: 'Eliecer Alejandro,',
+        position: 'Chief Software Engineer.',
+        comment:
+          'The process was clear and efficient. They analyzed our needs precisely and developed a customized solution that significantly improved productivity, internal stability, and operational performance from the first days of implementation.',
+        url: '/images/home/global-customers/global-customer1.webp',
+        id: 40,
+      },
+      {
+        name: 'Michael Thompson,',
+        position: 'Senior Software Director.',
+        comment:
+          'From the first meeting, they demonstrated professionalism and expertise. They created a customized, user-friendly, and well-integrated system, optimizing processes, reducing lead times, and improving the overall efficiency of the business.',
+        url: '/images/home/global-customers/global-customer2.webp',
+        id: 41,
+      },
+      {
+        name: 'Laura Bennett,',
+        position: 'Digital Transformation Manager.',
+        comment:
+          'They provided clear guidance throughout the planning, development, and integration. The final product exceeded expectations, strengthened our capabilities, and generated improvements in performance, stability, and oversight.',
+        url: '/images/home/global-customers/global-customer3.webp',
+        id: 42,
+      },
+      {
+        name: 'Jonathan Reyes,',
+        position: 'VP Engineering Operations.',
+        comment:
+          'Their approach was very organized, transparent, and results-oriented. We obtained a scalable and aligned solution, as well as a smooth and efficient implementation that increased productivity and simplified several internal operational tasks.',
+        url: '/images/home/global-customers/global-customer4.webp',
+        id: 43,
+      },
+      {
+        name: 'Olivia Martínez,',
+        position: 'Chief Innovation Officer.',
+        comment:
+          'Hiring their services was a strategic decision. They provided us with expert advice, development, and stable software. The transition was truly seamless, and our team achieved increased productivity, process control, and sustained efficiency.',
+        url: '/images/home/global-customers/global-customer5.webp',
+        id: 44,
+      },
+      {
+        name: 'Daniel Herrera,',
+        position: 'Director Systems Architecture.',
+        comment:
+          'The service exceeded our initials expectations at every stage. They delivered a robust product, tailored to our operations, with excellent attention to detail. Rapid and agile deployments, efficient training, and clearly visible results from day one.',
+        url: '/images/home/global-customers/global-customer6.webp',
+        id: 45,
       },
     ],
   },

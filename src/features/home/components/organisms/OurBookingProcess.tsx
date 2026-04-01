@@ -28,6 +28,7 @@ export const OurBookingProcess = ({
   image,
   features,
   steps,
+  primaryCta,
 }: {
   title: string
   description: string
@@ -45,6 +46,10 @@ export const OurBookingProcess = ({
     description: string
     id: number
   }[]
+  primaryCta: {
+    text: string
+    href: string
+  }
 }) => {
   return (
     <section
@@ -68,6 +73,7 @@ export const OurBookingProcess = ({
         image={image}
         features={features}
         steps={steps}
+        primaryCta={primaryCta}
       />
     </section>
   )

@@ -1,3 +1,4 @@
+import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
 import { BookingFeatures } from '@/features/home/components/molecules/BookingFeatures'
@@ -22,6 +23,9 @@ import clsx from 'clsx'
  * @param {Array} props.steps.title - The title of the step.
  * @param {Array} props.steps.description - A brief description of the step.
  * @param {Array} props.steps.id - A unique identifier for the step.
+ * @param {object} props.primaryCta - An object containing the text and href for the primary call-to-action button.
+ * @param {string} props.primaryCta.text - The text to display on the primary call-to-action button.
+ * @param {string} props.primaryCta.href - The URL to navigate to when the primary call-to-action button is clicked.
  * @returns {JSX.Element} A semantic element rendering the simple booking process content.
  */
 export const BookingProcess = ({
@@ -31,9 +35,11 @@ export const BookingProcess = ({
   image,
   features,
   steps,
+  primaryCta,
 }: {
   title: string
   description: string
+
   eyebrow: string
   image: string
   features: {
@@ -48,13 +54,20 @@ export const BookingProcess = ({
     description: string
     id: number
   }[]
+  primaryCta: {
+    text: string
+    href: string
+  }
 }) => {
   return (
     <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9')}>
       <div className={clsx('vertical w-full gap-y-8.5', 'm1x:gap-y-9')}>
         <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
           <LeadVisual image={image} />
-          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+          <div className={clsx('vertical w-full items-center gap-y-8', 'm1x:gap-y-8.75', 'm3x:gap-y-9.5')}>
+            <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+            <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
+          </div>
         </div>
         <BookingFeatures features={features} />
       </div>

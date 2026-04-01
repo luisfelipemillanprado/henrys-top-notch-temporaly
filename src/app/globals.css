@@ -168,7 +168,7 @@
     @apply m4x:ml-2.5 ml-2;
   }
   .accordion__body-inner {
-    @apply px-5.5;
+    @apply m1x:px-7.5 m3x:px-8.5 px-6.5;
   }
 }
 

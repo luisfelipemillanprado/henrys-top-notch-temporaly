@@ -3,6 +3,16 @@ import { ChevronDownIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid
 import { Accordion } from '@heroui/react'
 import clsx from 'clsx'
 
+/**
+ * @description Renders the "Reasons" component, which displays a list of reasons.
+ * @public
+ * @param {object} props - Component properties.
+ * @param {Array} props.reasons - The reasons for choosing us.
+ * @param {string} props.reasons.affirmation - The affirmation text of the reason.
+ * @param {string} props.reasons.resume - The resume text of the reason.
+ * @param {number} props.reasons.id - The unique identifier of the reason.
+ * @returns {JSX.Element} The rendered Reasons component.
+ */
 export const Reasons = ({
   reasons,
 }: {
@@ -15,16 +25,17 @@ export const Reasons = ({
   return (
     <Accordion>
       {reasons.map((item, index) => (
-        <Accordion.Item key={index}>
+        <Accordion.Item key={index} className={clsx(index === reasons.length - 1 && 'after:bottom-px')}>
           <Accordion.Heading>
-            <Accordion.Trigger>
+            <Accordion.Trigger className={clsx(index === 0 && 'pt-1')}>
               <span className={'horizontal'}>
                 <EllipsisVerticalIcon
                   aria-hidden={true}
                   role={'img'}
                   className={clsx(
                     'fill-bright-orange size-6.25',
-                    'm1x:size-6.5',
+                    'm1x:size-6.75',
+                    'm3x:size-7',
                     'md:size-6.75',
                     '2xl:size-7',
                     '3xl:size-7.5',

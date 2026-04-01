@@ -1,5 +1,6 @@
 import { Hero } from '@/features/home/components/organisms/Hero'
 import { OurBookingProcess } from '@/features/home/components/organisms/OurBookingProcess'
+import { OurCustomerTestimonials } from '@/features/home/components/organisms/OurCustomerTestimonials'
 import { OurProfessionalServices } from '@/features/home/components/organisms/OurProfessionalServices'
 import { OurSummaryOfWhoWeAre } from '@/features/home/components/organisms/OurSummaryOfWhoWeAre'
 import { OurTrustedAndCertified } from '@/features/home/components/organisms/OurTrustedAndCertified'
@@ -43,6 +44,7 @@ export default function Home() {
           image={homeData.bookingProcess.image}
           features={homeData.bookingProcess.features}
           steps={homeData.bookingProcess.steps}
+          primaryCta={homeData.bookingProcess.primaryCta}
         />
         <OurProfessionalServices
           title={homeData.professionalServices.title}
@@ -58,6 +60,12 @@ export default function Home() {
           image={homeData.whyChooseUs.image}
           primaryCta={homeData.whyChooseUs.primaryCta}
           reasons={homeData.whyChooseUs.reasons}
+        />
+        <OurCustomerTestimonials
+          title={homeData.customerTestimonials.title}
+          description={homeData.customerTestimonials.description}
+          eyebrow={homeData.customerTestimonials.eyebrow}
+          primaryCta={homeData.customerTestimonials.primaryCta}
         />
       </main>
     </>
