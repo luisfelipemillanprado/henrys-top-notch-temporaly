@@ -65,9 +65,9 @@ export const ProfessionalServices = ({
         className={clsx(
           'grid w-full grid-cols-1 grid-rows-4 gap-y-7.5',
           'm3x:gap-y-7.75',
-          'md:grid-cols-2 md:grid-rows-3 md:gap-7',
+          'md:grid-cols-2 md:grid-rows-2 md:gap-7',
           'lg:gap-7.5',
-          '1xl:grid-cols-3 1xl:grid-rows-2',
+          '1xl:grid-cols-2 1xl:grid-rows-2',
           '2xl:gap-8',
           '3xl:gap-8.75',
           '5xl:gap-9.5'

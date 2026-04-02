@@ -27,6 +27,7 @@ export interface GetStartedButtonProps {
  * @property {boolean} [float] - Optional flag to render the button as a floating element.
  * @property {boolean} [secondColor] - Optional flag to change the button color on interaction.
  * @property {boolean} [noAnimation] - Optional flag to disable button animation.
+ * @property {boolean} [newTab] - Optional flag to open the link in a new tab when true.
  */
 export interface ReusableButtonProps {
   text: string
@@ -36,6 +37,7 @@ export interface ReusableButtonProps {
   float?: boolean
   secondColor?: boolean
   noAnimation?: boolean
+  newTab?: boolean
 }
 
 /**

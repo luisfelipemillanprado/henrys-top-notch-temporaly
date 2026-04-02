@@ -281,12 +281,12 @@ export const homeData = {
     eyebrow: 'CUSTOMER TESTIMONIALS',
     title: 'Hear From Our Happy Customers.',
     description:
-      'Our clients trust us to deliver exceptional service and reliable solutions. Read their testimonials to learn how we have helped them achieve comfort, efficiency, and peace of mind.',
+      'We value every customer experience and proudly share their feedback. Read testimonials to learn how our team enhances comfort, improves efficiency, and provides dependable results. Through expert service, attention to detail, and ongoing support, we consistently deliver solutions that create confidence, satisfaction, and long-term peace of mind.',
     primaryCta: {
-      text: 'LEARN MORE',
-      href: '/about-us',
+      text: 'All REVIEWS',
+      href: 'https://maps.app.goo.gl/PJM12ME267TwtviD7',
     },
-    image: '/images/home/why-choose-us/why-choose-us.webp',
+    image: '/images/home/customer-testimonials/customer-testimonials.webp',
     testimonials: [
       {
         name: 'Eliecer Alejandro,',

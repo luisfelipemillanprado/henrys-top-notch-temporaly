@@ -16,6 +16,7 @@ import Link from 'next/link'
  * @param {ReusableButtonProps['float']} props.float - Enables floating behavior via the ButtonPulse wrapper.
  * @param {ReusableButtonProps['secondColor']} props.secondColor - Optional flag to change the button color on interaction.
  * @param {ReusableButtonProps['noAnimation']} props.noAnimation - Disables the pulse animation when set to true.
+ * @param {ReusableButtonProps['newTab']} props.newTab - Optional flag to open the link in a new tab when true.
  * @returns {JSX.Element} A rendering a styled, accessible call-to-action link.
  */
 export const ReusableButton = ({
@@ -26,6 +27,7 @@ export const ReusableButton = ({
   float = true,
   secondColor = true,
   noAnimation = false,
+  newTab = false,
 }: ReusableButtonProps) => {
   return (
     <ButtonPulse type={'soft'} rounded float={float} secondColor={secondColor} noAnimation={noAnimation}>
@@ -43,6 +45,7 @@ export const ReusableButton = ({
           '5xl:h-13'
         )}
         href={href}
+        {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         aria-label={`${text} button`}
       >
         <div className={clsx('horizontal gap-x-2')}>
