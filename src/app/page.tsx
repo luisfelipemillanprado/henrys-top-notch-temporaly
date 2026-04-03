@@ -67,6 +67,7 @@ export default function Home() {
           eyebrow={homeData.customerTestimonials.eyebrow}
           primaryCta={homeData.customerTestimonials.primaryCta}
           image={homeData.customerTestimonials.image}
+          testimonials={homeData.customerTestimonials.testimonials}
         />
       </main>
     </>

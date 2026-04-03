@@ -1,6 +1,7 @@
 import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
 import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
+import { Testimonials } from '@/features/home/components/molecules/Testimonials'
 import clsx from 'clsx'
 
 /**
@@ -14,6 +15,14 @@ import clsx from 'clsx'
  * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
  * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
  * @param {string} props.image - The URL of the image representing the customer testimonials section.
+ * @param {object[]} props.testimonials - An array of testimonial objects.
+ * @param {string} props.testimonials[].name - The full name of the person providing the testimonial.
+ * @param {string} props.testimonials[].position - The role or position of the person (displayed below the name).
+ * @param {string} props.testimonials[].comment - The testimonial text content.
+ * @param {string} props.testimonials[].url - The URL of the avatar image.
+ * @param {object[]} props.testimonials[].stars - An array of star objects representing the rating.
+ * @param {number} props.testimonials[].stars[].id - The unique identifier of each star.
+ * @param {number} props.testimonials[].id - The unique identifier of each testimonial.
  * @returns {JSX.Element} The rendered CustomerTestimonials component.
  */
 export const CustomerTestimonials = ({
@@ -22,12 +31,21 @@ export const CustomerTestimonials = ({
   eyebrow,
   primaryCta,
   image,
+  testimonials,
 }: {
   title: string
   description: string
   eyebrow: string
   primaryCta: { text: string; href: string }
   image: string
+  testimonials: {
+    name: string
+    position: string
+    comment: string
+    url: string
+    stars: { id: number }[]
+    id: number
+  }[]
 }) => {
   return (
     <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
@@ -37,6 +55,7 @@ export const CustomerTestimonials = ({
           <SectionHeader title={title} description={description} eyebrow={eyebrow} />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} newTab={true} />
         </div>
+        <Testimonials testimonials={testimonials} />
       </div>
     </div>
   )

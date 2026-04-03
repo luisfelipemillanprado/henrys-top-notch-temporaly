@@ -1,24 +1,13 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the CardDescription component.
+ * @description Represents the properties for the ServiceImage component.
  * @export
- * @interface CardDescriptionProps
- * @property {string} description - A brief description of a specific service in the professional services section.
+ * @interface ServiceImageProps
+ * @property {string} url - The URL of the image representing a specific service.
  */
-export interface CardDescriptionProps {
-  description: string
-}
-
-/**
- * @description Represents the properties for the ServiceStars component.
- * @export
- * @interface ServiceStarsProps
- * @property {{ id: number }[]} stars - An array of objects representing the star rating for a specific service.
- * @property {number} stars.id - A unique identifier for each star in the star rating of a specific service.
- */
-export interface ServiceStarsProps {
-  stars: { id: number }[]
+export interface ServiceImageProps {
+  url: string
 }
 
 /**

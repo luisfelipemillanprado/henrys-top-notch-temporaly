@@ -1,12 +1,11 @@
 import { CardActionButton } from '@/common/call-to-action/components/CardActionButton'
-import { CardDescription } from '@/common/professional-service/components/atoms/CardDescription'
+import { CardDescription } from '@/common/card-description/components/CardDescription'
+import { ServiceImage } from '@/common/professional-service/components/atoms/ServiceImage'
 import { ServiceBenefits } from '@/common/professional-service/components/molecules/ServiceBenefits'
-import { ServiceStars } from '@/common/professional-service/components/molecules/ServiceStars'
 import type { ProfessionalServiceProps } from '@/common/professional-service/types'
+import { RatingStars } from '@/common/rating-stars/components/RatingStars'
 import { TertiaryTitle } from '@/common/titles/components/TertiaryTitle'
-import { blurDataUrlGallery } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
-import Image from 'next/image'
 
 /**
  * @description Render a professional service component.
@@ -16,6 +15,7 @@ import Image from 'next/image'
  * @param {ProfessionalServiceProps['url']} props.url - The URL of the image representing a specific service.
  * @param {ProfessionalServiceProps['title']} props.title - The title describing a specific service.
  * @param {ProfessionalServiceProps['stars']} props.stars - An array of objects representing the star rating.
+ * @param {ProfessionalServiceProps['stars'][number]['id']} props.stars.id - A unique identifier for each star in the star rating.
  * @param {ProfessionalServiceProps['description']} props.description - A brief description of a specific service.
  * @param {ProfessionalServiceProps['benefits']} props.benefits - An array of benefit objects, each containing text.
  * @param {ProfessionalServiceProps['benefits'][number]['text']} props.services.benefits.text - The text description of a key benefit.
@@ -41,29 +41,17 @@ export const ProfessionalService = ({
         'm3x:pb-6.5 m3x:px-3.25 m3x:pt-3.25'
       )}
     >
-      <div
-        className={clsx(
-          'relative h-63 w-full overflow-hidden rounded-3xl shadow-lg',
-          'm1x:h-72',
-          'm3x:h-78',
-          'm4x:h-80'
-        )}
-      >
-        <Image
-          className={clsx('size-full object-cover')}
-          fill
-          sizes={''}
-          src={url}
-          alt={title}
-          placeholder={'blur'}
-          blurDataURL={blurDataUrlGallery}
-        />
-      </div>
+      <ServiceImage url={url} />
       <div className={clsx('vertical items-center gap-y-4.25', 'm1x:gap-y-4.5')}>
-        <ServiceStars stars={stars} />
+        <RatingStars stars={stars} />
         <div className={clsx('vertical items-center gap-y-3', 'm1x:gap-y-3.25', 'm3x:gap-y-3.5')}>
           <TertiaryTitle title={title} changePosition={true} />
-          <CardDescription description={description} />
+          <CardDescription
+            description={description}
+            changePosition={true}
+            changeMargin={true}
+            changeWidth={true}
+          />
           <ServiceBenefits benefits={benefits} />
           <CardActionButton text={secondaryCta.text} href={secondaryCta.href} float={false} />
         </div>
