@@ -1,6 +1,6 @@
 import { ReusableButton } from '@/common/call-to-action/components/ReusableButton'
+import { LeadVisual } from '@/common/lead-visual/components/LeadVisual'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
-import { LeadVisual } from '@/features/home/components/atoms/LeadVisual'
 import { BookingBenefits } from '@/features/home/components/molecules/BookingBenefits'
 import clsx from 'clsx'
 

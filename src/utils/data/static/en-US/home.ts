@@ -298,46 +298,46 @@ export const homeData = {
         id: 81,
       },
       {
-        name: 'Gin Cowan',
+        name: 'GIN COWAN',
         position: 'Homeowner, Houston, TX.',
         comment:
-          'Henry’s installed 2 A/C units with new furnaces and I have been using them for maintenance since. They always do a through job. When they have to do something in the house they will put down tarp to catch debris. I had a capacitor go out and they came out repaired it immediately.',
+          'Henry’s installed 2 A/C units with new furnaces, and I have relied on them for maintenance ever since. They do a thorough job, protect my home with tarps, and quickly repaired a failed capacitor when it stopped working. Their service is reliable, professional, and fairly priced.',
         url: '/images/home/customer-testimonials/customer/customer2.webp',
         stars: [{ id: 82 }, { id: 83 }, { id: 84 }, { id: 85 }, { id: 86 }],
         id: 87,
       },
       {
-        name: 'Judy Barbour',
-        position: 'Property Manager, Houston, TX.',
+        name: 'JUDY BARBOUR',
+        position: 'Manager, Houston, TX.',
         comment:
-          'I have been using this company for several years. Henry explains everything about his repairs. Thankfully, he corrected mistakes made by a previous contractor. I would highly recommend this company. Very professional and knowledgeable.',
+          'I have always called Henry Top Notch Company to handle all our air conditioning and heating needs. Over the years, they have been reliable, professional, and fairly priced. I would recommend them to anyone without hesitation for excellent, dependable service every time.',
         url: '/images/home/customer-testimonials/customer/customer3.webp',
         stars: [{ id: 88 }, { id: 89 }, { id: 90 }, { id: 91 }, { id: 92 }],
         id: 93,
       },
       {
-        name: 'Rosie Contreras',
+        name: 'ROSIE CONTRERAS',
         position: 'Homeowner, Houston, TX.',
         comment:
-          'Awesome customer service ! Very self explanatory business but very confirming with any questions you may have!!',
+          'Awesome customer service! They are very clear about their work and always take the time to explain everything in detail. The team is friendly, professional, and quick to respond. They make sure to answer any questions you may have and leave you feeling confident overall.',
         url: '/images/home/customer-testimonials/customer/customer4.webp',
         stars: [{ id: 94 }, { id: 95 }, { id: 96 }, { id: 97 }, { id: 98 }],
         id: 99,
       },
       {
-        name: 'Donna White',
+        name: 'DONNA WHITE',
         position: 'Executive Officer, Houston, TX.',
         comment:
-          'This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always friendly and on time. I would highly recommend them.',
+          'This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always friendly, punctual, and professional during every visit. I would highly recommend them for their consistent service, attention, and reliability.',
         url: '/images/home/customer-testimonials/customer/customer5.webp',
         stars: [{ id: 100 }, { id: 101 }, { id: 102 }, { id: 103 }, { id: 104 }],
         id: 105,
       },
       {
-        name: 'Daniel Herrera',
-        position: 'Director Systems Architecture.',
+        name: 'MARVIN REYNA',
+        position: 'CEO Company, Houston, TX.',
         comment:
-          'The service exceeded our initials expectations at every stage. They delivered a robust product, tailored to our operations, with excellent attention to detail. Rapid and agile deployments, efficient training, and clearly visible results from day one.',
+          'Henry has serviced my AC multiple times and has also been there quickly to help me out in the hot summer when my unit stopped working. He is honest, reliable and provides great service at a great value. He is my go to AC guy and I highly recommend him to everyone I know.',
         url: '/images/home/customer-testimonials/customer/customer6.webp',
         stars: [{ id: 106 }, { id: 107 }, { id: 108 }, { id: 109 }, { id: 110 }],
         id: 111,

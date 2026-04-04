@@ -1,3 +1,4 @@
+import type { LeadVisualProps } from '@/common/lead-visual/types'
 import { blurDataUrlGallery } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
@@ -5,11 +6,12 @@ import Image from 'next/image'
 /**
  * @description Renders a lead visual component that displays a prominent image.
  * @public
+ * @interface LeadVisualProps
  * @param {object} props - Component properties.
- * @param {string} props.image - The URL of the image to display.
+ * @param {LeadVisualProps['image']} props.image - The URL of the image to display.
  * @returns {JSX.Element} The rendered lead visual component.
  */
-export const LeadVisual = ({ image }: { image: string }) => {
+export const LeadVisual = ({ image }: LeadVisualProps) => {
   return (
     <div
       className={clsx(
