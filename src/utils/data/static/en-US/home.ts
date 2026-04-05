@@ -2,13 +2,20 @@
  * @description This module exports an object containing static data for various sections of the home page.
  * @private
  * @function homeData
+ * @property {object} hero - Contains data for the hero section.
+ * @property {array} trustedAndCertified - An array of objects representing trusted and certified logos with URLs and IDs.
+ * @property {object} whoWeAre - Contains data for the "Who We Are" section.
+ * @property {object} bookingProcess - Contains data for the booking process section.
+ * @property {object} professionalServices - Contains data for the professional services section.
+ * @property {object} whyChooseUs - Contains data for the "Why Choose Us" section.
+ * @property {object} customerTestimonials - Contains data for the customer testimonials section.
  * @return {object} An object containing static data for various sections of the home page.
  */
 export const homeData = {
   hero: {
-    title: 'Enjoy All Your Premium Heating System Services',
+    title: 'Enjoy Reliable Heating & Cooling Services Today.',
     description:
-      'We offer advanced heating and cooling solutions that improve indoor comfort increase efficiency enhance air quality ensure reliable performance and maintain consistent climate control. From expert HVAC installations to repairs maintenance and system upgrades our expertise helps homes and businesses stay comfortable.',
+      'We offer advanced heating and cooling solutions that improve indoor comfort, increase efficiency, enhance air quality, ensure reliable performance, and maintain consistent climate control. From expert HVAC installations to repairs, maintenance, and system upgrades, our expertise helps homes and businesses stay comfortable.',
     primaryCta: {
       text: 'Get Started',
       href: '#contact-us',
@@ -289,58 +296,85 @@ export const homeData = {
     image: '/images/home/customer-testimonials/customer-testimonials.webp',
     testimonials: [
       {
-        name: 'WILL BURNETT',
+        name: 'WILL BURNETT.',
         position: 'Architect, Houston, TX.',
         comment:
-          'Henry’s Top Notch replaced my condenser/compressor. I’m very satisfied. He worked after hours at the time. Put a cover for the Freon lines. Made a self made slab tall enough to avoid the water flooding. I really appreciate the time and effort. Thank you so much Mr. Henry.',
+          'The Henry’s Top Notch team replaced my condenser/compressor. I am very satisfied. Mr. Henry worked late, installed a cover for the Freon lines, and built a custom slab high enough to prevent flooding. I truly appreciate all the time and effort. Thank you so much, Mr. Henry and team! Great!',
         url: '/images/home/customer-testimonials/customer/customer1.webp',
         stars: [{ id: 76 }, { id: 77 }, { id: 78 }, { id: 79 }, { id: 80 }],
         id: 81,
       },
       {
-        name: 'GIN COWAN',
+        name: 'GIN COWAN.',
         position: 'Homeowner, Houston, TX.',
         comment:
-          'Henry’s installed 2 A/C units with new furnaces, and I have relied on them for maintenance ever since. They do a thorough job, protect my home with tarps, and quickly repaired a failed capacitor when it stopped working. Their service is reliable, professional, and fairly priced.',
+          'Henry’s Top Notch team installed 2 A/C units with new furnaces, and I have relied on them for maintenance ever since. They do a thorough job, protected my home with tarps, and quickly they repaired a failed unit when it stopped working. Their service is reliable, efficient, and fairly priced.',
         url: '/images/home/customer-testimonials/customer/customer2.webp',
         stars: [{ id: 82 }, { id: 83 }, { id: 84 }, { id: 85 }, { id: 86 }],
         id: 87,
       },
       {
-        name: 'JUDY BARBOUR',
-        position: 'Manager, Houston, TX.',
+        name: 'JUDY BARBOUR.',
+        position: 'Office Manager, Houston, TX.',
         comment:
-          'I have always called Henry Top Notch Company to handle all our air conditioning and heating needs. Over the years, they have been reliable, professional, and fairly priced. I would recommend them to anyone without hesitation for excellent, dependable service every time.',
+          'I have always called the Henry’s Top Notch team to handle absolutely all our air conditioning and heating needs. Over the years, they have been reliable, professional, and fairly priced. I would recommend them to anyone without hesitation for always excellent, dependable service.',
         url: '/images/home/customer-testimonials/customer/customer3.webp',
         stars: [{ id: 88 }, { id: 89 }, { id: 90 }, { id: 91 }, { id: 92 }],
         id: 93,
       },
       {
-        name: 'ROSIE CONTRERAS',
+        name: 'ROSIE CONTRERAS.',
         position: 'Homeowner, Houston, TX.',
         comment:
-          'Awesome customer service! They are very clear about their work and always take the time to explain everything in detail. The team is friendly, professional, and quick to respond. They make sure to answer any questions you may have and leave you feeling confident overall.',
+          'Awesome customer service! They are very clear about their work and consistently take the time to explain everything in detail. The team is very friendly, professional, and incredibly quick to respond. They make sure to answer any questions you may have and leave you feeling very confident.',
         url: '/images/home/customer-testimonials/customer/customer4.webp',
         stars: [{ id: 94 }, { id: 95 }, { id: 96 }, { id: 97 }, { id: 98 }],
         id: 99,
       },
       {
-        name: 'DONNA WHITE',
-        position: 'Executive Officer, Houston, TX.',
+        name: 'DONNA WHITE.',
+        position: 'Facility Manager, Houston, TX.',
         comment:
-          'This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always friendly, punctual, and professional during every visit. I would highly recommend them for their consistent service, attention, and reliability.',
+          'This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always so friendly, punctual, and professional during every visit. I would highly recommend them for their consistent service, attention, and reliability.',
         url: '/images/home/customer-testimonials/customer/customer5.webp',
         stars: [{ id: 100 }, { id: 101 }, { id: 102 }, { id: 103 }, { id: 104 }],
         id: 105,
       },
       {
-        name: 'MARVIN REYNA',
-        position: 'CEO Company, Houston, TX.',
+        name: 'MARVIN REYNA.',
+        position: 'Business Owner, Houston, TX.',
         comment:
-          'Henry has serviced my AC multiple times and has also been there quickly to help me out in the hot summer when my unit stopped working. He is honest, reliable and provides great service at a great value. He is my go to AC guy and I highly recommend him to everyone I know.',
+          'Henry has serviced my AC multiple times and has also been there quickly to help me out in the hot summer when my unit stopped working. He is always honest, reliable and provides great service at a great value. He is my go to AC guy and I highly recommend him to everyone I know.',
         url: '/images/home/customer-testimonials/customer/customer6.webp',
         stars: [{ id: 106 }, { id: 107 }, { id: 108 }, { id: 109 }, { id: 110 }],
         id: 111,
+      },
+      {
+        name: 'ABBY MARCOTTE.',
+        position: 'Business Owner, Houston, TX.',
+        comment:
+          'Five-star service. The technicians were highly professional and competent. They worked perfectly as a team, they found the problem, fixed it quickly, and gave us helpful tips to improve our AC’s efficiency. We’ll be hiring them for all annual maintenance and future A/C services.',
+        url: '/images/home/customer-testimonials/customer/customer7.webp',
+        stars: [{ id: 112 }, { id: 113 }, { id: 114 }, { id: 115 }, { id: 116 }],
+        id: 117,
+      },
+      {
+        name: 'VIKKI CRUZ.',
+        position: 'Business Owner, Houston, TX.',
+        comment:
+          'Always reliable and honest. Fast, professional service every time. As a female homeowner, I have seen many unnecessary repairs and extra service charges that contractors often try to sell. Not Henry; he is reasonable, transparent, and keeps costs within budget while delivering.',
+        url: '/images/home/customer-testimonials/customer/customer8.webp',
+        stars: [{ id: 118 }, { id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }],
+        id: 123,
+      },
+      {
+        name: 'SARAH ALVAREZ.',
+        position: 'Homeowner, Houston, TX.',
+        comment:
+          'Henry did a complete install for my HVAC system. He is professional, organized, honest, and reliable. I highly recommend his service for any HVAC needs. The entire process was smooth, efficient, and completed on time with careful attention to every detail throughout the entire job.',
+        url: '/images/home/customer-testimonials/customer/customer9.webp',
+        stars: [{ id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }, { id: 123 }],
+        id: 124,
       },
     ],
   },

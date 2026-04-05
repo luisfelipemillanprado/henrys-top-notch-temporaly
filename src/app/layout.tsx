@@ -2,6 +2,7 @@ import { Providers } from '@/app/providers'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
 import { staticData } from '@/utils/data/Static'
+import { layoutData } from '@/utils/data/static/en-US/layout'
 import { Toast } from '@heroui/react'
 import clsx from 'clsx'
 import { Metadata } from 'next'
@@ -46,10 +47,7 @@ const reenieBeanie = Reenie_Beanie({
  * @property {string} title - The title of the application, displayed in the browser tab and search engine results.
  * @property {string} description - A brief description of the application, used for SEO and search engine snippets.
  */
-export const metadata: Metadata = {
-  title: 'Remiux Company - Transform Your Business with Custom Software.',
-  description: 'Customized solutions for your business. Contact us!',
-}
+export const metadata: Metadata = layoutData.metadata
 
 /**
  * @description RootLayout component that wraps the entire application with global providers,

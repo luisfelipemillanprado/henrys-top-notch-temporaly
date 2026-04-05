@@ -11,6 +11,7 @@ import clsx from 'clsx'
  * @param {CardDescriptionProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
  * @param {CardDescriptionProps['changeMargin']} [props.changeMargin] - An optional boolean that, when true, adds a bottom margin.
  * @param {CardDescriptionProps['changeColor']} [props.changeColor] - An optional boolean that, when true, changes the text color.
+ * @param {CardDescriptionProps['addPadding']} [props.addPadding] - An optional boolean that, when true, adds padding to the description.
  * @returns {JSX.Element} A rendering a responsive description paragraph.
  */
 export const CardDescription = ({
@@ -19,6 +20,7 @@ export const CardDescription = ({
   changeWidth = false,
   changeMargin = false,
   changeColor = false,
+  addPadding = false,
 }: CardDescriptionProps) => {
   return (
     <div
@@ -34,6 +36,7 @@ export const CardDescription = ({
           changeColor ? 'text-warmgray' : 'text-dimgray',
           changePosition && 'text-center',
           changeWidth && ['w-67', 'm1x:w-71'],
+          addPadding && ['m3x:pr-5.5', 'm4x:pr-7.5'],
           'm1x:text-base m1x:leading-7',
           'md:leading-7.5',
           '1xl:text-[1.0625rem] 1xl:leading-7.5',

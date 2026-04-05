@@ -38,10 +38,10 @@ export const Testimonials = ({
       aria-roledescription={'carousel'}
       slidesPerView={'auto'}
       loop={true}
-      autoplay={{
+      /* autoplay={{
         delay: 6000,
         disableOnInteraction: false,
-      }}
+      }} */
       modules={[Autoplay]}
       className={clsx('h-auto w-full')}
     >

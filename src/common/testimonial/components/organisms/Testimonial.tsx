@@ -30,12 +30,12 @@ export const Testimonial = ({ name, position, comment, url, stars }: Testimonial
     >
       <div className={clsx('horizontal w-full justify-start gap-x-3')}>
         <LeadAvatar url={url} />
-        <div className={clsx('vertical items-start gap-y-0.5')}>
+        <div className={clsx('vertical items-start')}>
           <TestimonialName name={name} />
           <CardDescription description={position} changeColor={true} />
         </div>
       </div>
-      <CardDescription description={comment} />
+      <CardDescription description={comment} addPadding={true} />
       <RatingStars stars={stars} changePosition={true} changeSize={true} />
     </div>
   )
