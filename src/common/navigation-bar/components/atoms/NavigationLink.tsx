@@ -39,7 +39,7 @@ enum NavigationLinkIcon {
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
  * @param {NavigationBarLinkItem['icon']} icon - A string identifier, icon enum.
- * @returns {JSX.Element} The resolved icon component or a fallback placeholder.
+ * @returns The resolved icon component or a fallback placeholder.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -122,7 +122,7 @@ const iconSwitch = (icon: string) => {
  * @param {NavigationBarLinkItem['icon']} props.icon - The icon associated with the navigation link.
  * @param {NavigationBarLinkItem['id']} props.id - The unique identifier for the navigation link item.
  * @param {NavigationBarLinkItem['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
- * @returns {JSX.Element} The rendered navigation link component.
+ * @returns The rendered navigation link component.
  */
 export const NavigationLink = ({ text, href, icon, handleCloseOptions }: NavigationBarLinkItem) => {
   return (

@@ -13,7 +13,7 @@ import Link from 'next/link'
  * @param {CardActionButtonProps['float']} [props.float] - Optional flag to render the button as a floating element.
  * @param {CardActionButtonProps['thirdColor']} [props.thirdColor] - Optional flag to change the button color on interaction.
  * @param {CardActionButtonProps['noAnimation']} [props.noAnimation] - Optional flag to disable button animation.
- * @returns {JSX.Element} The rendered card action button component.
+ * @returns The rendered card action button component.
  */
 export const CardActionButton = ({
   text,

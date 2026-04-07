@@ -22,7 +22,7 @@ enum SocialIcon {
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
  * @param {SocialNetworkItem['icon']} icon - A string identifier, icon enum.
- * @returns {JSX.Element} The resolved icon component or a fallback placeholder.
+ * @returns The resolved icon component or a fallback placeholder.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -72,7 +72,7 @@ const iconSwitch = (icon: string) => {
  * @param {SocialNetworkItem['icon']} props.icon - The social network name, must match a value from the `SocialIcon` enum.
  * @param {SocialNetworkItem['name']} props.name - The name of the social network, used for accessibility.
  * @param {SocialNetworkItem['id']} props.id - A unique identifier for the social network item.
- * @returns {JSX.Element} A styled link wrapping the social network icon.
+ * @returns A styled link wrapping the social network icon.
  */
 export const SocialNetwork = ({ href, icon }: SocialNetworkItem) => {
   return (

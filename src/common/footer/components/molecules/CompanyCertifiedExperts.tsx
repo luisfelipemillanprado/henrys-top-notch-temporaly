@@ -19,7 +19,7 @@ import clsx from 'clsx'
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
  * @param {CompanyCertifiedExpertsProps['imagesUrl']} props.imagesUrl - The URL for the license image or link in the certified experts.
  * @param {CompanyCertifiedExpertsProps['mapsUrl']} props.mapsUrl - The URL for the embedded Google Maps location to be displayed.
- * @returns {JSX.Element} The rendered company certified experts section.
+ * @returns The rendered company certified experts section.
  */
 export const CompanyCertifiedExperts = ({
   title,

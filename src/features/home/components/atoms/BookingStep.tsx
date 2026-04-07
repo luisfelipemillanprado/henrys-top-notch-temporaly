@@ -10,7 +10,7 @@ import clsx from 'clsx'
  * @param {string} props.url - The URL of the image representing a specific step in the booking process section.
  * @param {string} props.title - The title describing a specific step in the booking process section.
  * @param {string} props.description - A brief description of a specific step in the booking process section.
- * @returns {JSX.Element} A semantic element rendering the single booking step content.
+ * @returns A semantic element rendering the single booking step content.
  */
 export const BookingStep = ({
   url,

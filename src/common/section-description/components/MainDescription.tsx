@@ -8,7 +8,7 @@ import clsx from 'clsx'
  * @param {object} props - Component properties.
  * @param {SectionDescriptionProps['description']} props.description - The text content to be displayed in the section description.
  * @param {SectionDescriptionProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
- * @returns {JSX.Element} A rendering the responsive description.
+ * @returns A rendering the responsive description.
  */
 export const MainDescription = ({ description, changeWidth }: SectionDescriptionProps) => {
   return (

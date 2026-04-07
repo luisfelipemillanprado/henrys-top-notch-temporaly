@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @param {string} props.trustedAndCertified[].url - URL of the icon or image for each item.
  * @param {string} props.trustedAndCertified[].href - The URL that the trusted and certified item points to when clicked.
  * @param {number} props.trustedAndCertified[].id - Unique numeric key for React list rendering.
- * @returns {JSX.Element} A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
+ * @returns A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
  */
 
 export const TrustedAndCertified = ({

@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @interface MainTitleProps
  * @param {object} props - Component properties.
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
- * @returns {JSX.Element} The rendered main title component.
+ * @returns The rendered main title component.
  */
 export const MainTitle = ({ title }: MainTitleProps) => {
   return (

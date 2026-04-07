@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @interface CopyrightProps
  * @param {object} props - Component properties.
  * @param {CopyrightProps['copyright']} props.copyright - Text representing the copyright information.
- * @returns {JSX.Element} A container with responsive and aligned copyright text.
+ * @returns A container with responsive and aligned copyright text.
  */
 export const Copyright = ({ copyright }: CopyrightProps) => {
   return (

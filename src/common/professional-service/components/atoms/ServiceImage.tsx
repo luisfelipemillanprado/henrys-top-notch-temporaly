@@ -9,7 +9,7 @@ import Image from 'next/image'
  * @interface ServiceImageProps
  * @param {object} props - Component properties.
  * @param {ServiceImageProps['url']} props.url - The URL of the image representing a specific service.
- * @returns {JSX.Element} A React component that renders the professional service image.
+ * @returns A React component that renders the professional service image.
  */
 export const ServiceImage = ({ url }: ServiceImageProps) => {
   return (

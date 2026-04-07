@@ -26,7 +26,7 @@ import clsx from 'clsx'
  * @param {object} props.primaryCta - An object containing the text and href for the primary call-to-action button.
  * @param {string} props.primaryCta.text - The text to display on the primary call-to-action button.
  * @param {string} props.primaryCta.href - The URL to navigate to when the primary call-to-action button is clicked.
- * @returns {JSX.Element} A semantic element rendering the simple booking process content.
+ * @returns A semantic element rendering the simple booking process content.
  */
 export const BookingProcess = ({
   title,

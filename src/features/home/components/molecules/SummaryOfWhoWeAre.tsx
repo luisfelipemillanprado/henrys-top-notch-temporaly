@@ -18,7 +18,7 @@ import clsx from 'clsx'
  * @param {object[]} props.benefits - An array of key benefits associated with who we are.
  * @param {string} props.benefits[].text - Text describing an individual key benefit.
  * @param {number} props.benefits[].id - Unique identifier for the key benefit item.
- * @returns {JSX.Element} The rendered summary of who we are component.
+ * @returns The rendered summary of who we are component.
  */
 export const SummaryOfWhoWeAre = ({
   title,

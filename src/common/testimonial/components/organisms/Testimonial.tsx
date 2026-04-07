@@ -17,7 +17,7 @@ import clsx from 'clsx'
  * @param {TestimonialProps['stars']} props.stars - An array of star objects representing the rating.
  * @param {TestimonialProps['stars'][number]['id']} props.stars[].id - The unique identifier of each star.
  * @param {TestimonialProps['id']} props.id - The unique identifier of the testimonial.
- * @returns {JSX.Element} A testimonial card with avatar, comment, name, and role.
+ * @returns A testimonial card with avatar, comment, name, and role.
  */
 export const Testimonial = ({ name, position, comment, url, stars }: TestimonialProps) => {
   return (

@@ -10,7 +10,7 @@ import Image from 'next/image'
  * @param {object} props - Component properties.
  * @param {LogoCompanyProps['url']} props.url - The URL of the company logo image.
  * @param {LogoCompanyProps['footer']} [props.footer] - Optional flag to indicate if the logo is in the footer.
- * @returns {JSX.Element} A responsive logo composed of an optimized image and brand text.
+ * @returns A responsive logo composed of an optimized image and brand text.
  */
 export const LogoCompany = ({ url, footer }: LogoCompanyProps) => {
   return (

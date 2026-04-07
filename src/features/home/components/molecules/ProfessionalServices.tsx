@@ -26,7 +26,7 @@ import clsx from 'clsx'
  * @param {string} props.services.secondaryCta.text - The text of the secondary call-to-action button related to a specific service.
  * @param {string} props.services.secondaryCta.href - The URL of the secondary call-to-action button related to a specific service.
  * @param {number} props.services.id - A unique identifier for the service in the professional services section.
- * @returns {JSX.Element} The ProfessionalServices component JSX tree.
+ * @returns The ProfessionalServices component JSX tree.
  */
 export const ProfessionalServices = ({
   title,

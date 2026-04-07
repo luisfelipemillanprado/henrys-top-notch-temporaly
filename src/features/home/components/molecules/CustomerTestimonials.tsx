@@ -22,8 +22,6 @@ import clsx from 'clsx'
  * @param {string} props.testimonials[].url - The URL of the avatar image.
  * @param {object[]} props.testimonials[].stars - An array of star objects representing the rating.
  * @param {number} props.testimonials[].stars[].id - The unique identifier of each star.
- * @param {number} props.testimonials[].id - The unique identifier of each testimonial.
- * @returns {JSX.Element} The rendered CustomerTestimonials component.
  */
 export const CustomerTestimonials = ({
   title,

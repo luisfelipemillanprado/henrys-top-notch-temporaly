@@ -31,7 +31,7 @@ import clsx from 'clsx'
  * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']['url']} props.certifiedExperts.imagesUrl.url - The URL for the image to be displayed in the certified.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']['id']} props.certifiedExperts.imagesUrl.id - The unique identifier for the image in the certified.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['mapsUrl']} props.certifiedExperts.mapsUrl - The URL for the embedded Google Maps location to be displayed.
- * @returns {JSX.Element} A section element containing the company's footer information.
+ * @returns A section element containing the company's footer information.
  */
 export const OurCompanyContactInformation = ({
   logo,

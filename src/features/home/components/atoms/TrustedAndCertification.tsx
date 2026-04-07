@@ -9,7 +9,7 @@ import Link from 'next/link'
  * @param {object} props - Component properties.
  * @param {string} props.url - A string identifier that determines which icon is rendered.
  * @param {string} props.href - The URL that the trusted and certified item points to when clicked.
- * @returns {JSX.Element} A centered icon element wrapped in semantic containers.
+ * @returns A centered icon element wrapped in semantic containers.
  */
 export const TrustedAndCertification = (props: { url: string; href: string }) => {
   const { url, href } = props

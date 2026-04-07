@@ -9,7 +9,7 @@ import clsx from 'clsx'
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
  * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional flag to indicate if the title position should change.
  * @param {MainTitleProps['truncate']} [props.truncate] - Optional flag to enable text truncation with ellipsis for long titles.
- * @returns {JSX.Element} The rendered quaternary title component.
+ * @returns The rendered quaternary title component.
  */
 export const QuaternaryTitle = ({ title, changePosition = false, truncate = true }: MainTitleProps) => {
   return (

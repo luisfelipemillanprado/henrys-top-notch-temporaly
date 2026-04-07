@@ -8,7 +8,7 @@ import clsx from 'clsx'
  * @param {object[]} props.benefits - An array of key benefit objects to be displayed.
  * @param {string} props.benefits[].text - The text description of the key benefit item.
  * @param {number} props.benefits[].id - A unique identifier for each key benefit item.
- * @returns {JSX.Element} The rendered key benefits component.
+ * @returns The rendered key benefits component.
  */
 export const BookingBenefits = ({ benefits }: { benefits: { text: string; id: number }[] }) => {
   return (

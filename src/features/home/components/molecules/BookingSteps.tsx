@@ -10,7 +10,7 @@ import clsx from 'clsx'
  * @param {Array} props.steps[].title - The title describing a specific step in the booking process section.
  * @param {Array} props.steps[].description - A brief description of a specific step in the booking process section.
  * @param {Array} props.steps[].id - A unique identifier for the step in the booking process section.
- * @returns {JSX.Element} A semantic element rendering the booking steps content.
+ * @returns A semantic element rendering the booking steps content.
  */
 export const BookingSteps = ({
   steps,

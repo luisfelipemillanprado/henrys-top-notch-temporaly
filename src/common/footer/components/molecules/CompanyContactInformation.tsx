@@ -15,7 +15,7 @@ import clsx from 'clsx'
  * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} props.icon - The icon associated with the contact information.
  * @param {CompanyContactInformationProps['contactInformation'][number]['id']} props.id - The unique identifier for the contact information.
  * @param {CompanyContactInformationProps['contactInformation']} props.contactInformation - An array of contact information items.
- * @returns {JSX.Element} The rendered company contact information section.
+ * @returns The rendered company contact information section.
  */
 export const CompanyContactInformation = ({ url, contactInformation }: CompanyContactInformationProps) => {
   return (

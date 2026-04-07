@@ -20,7 +20,7 @@ enum BookingFeaturesIcon {
  * @description Maps a given icon identifier to its corresponding icon component for each booking feature.
  * @private
  * @param {string} icon - The BookingFeaturesIcon string identifier, icon enum.
- * @returns {JSX.Element} A rendering the icon, or a fallback span if unknown.
+ * @returns A rendering the icon, or a fallback span if unknown.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -84,7 +84,7 @@ const iconSwitch = (icon: string) => {
  * @param {string} props.icon - The URL of the feature icon.
  * @param {string} props.title - The title of the feature.
  * @param {string} props.description - A brief description of the feature.
- * @returns {JSX.Element} A JSX element representing the booking feature.
+ * @returns A JSX element representing the booking feature.
  */
 export const BookingFeature = ({
   icon,

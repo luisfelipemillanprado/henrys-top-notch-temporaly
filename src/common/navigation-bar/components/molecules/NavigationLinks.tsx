@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {NavigationBarLinksProps['links'][number]['icon']} props.icon - The icon associated with the navigation link.
  * @param {NavigationBarLinksProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
  * @param {NavigationBarLinksProps['links']} props.links - An array of navigation link items without the close handler..
- * @returns {JSX.Element} The rendered list of navigation links.
+ * @returns The rendered list of navigation links.
  */
 export const NavigationLinks = ({ links }: NavigationBarLinksProps) => {
   return (

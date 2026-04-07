@@ -37,7 +37,7 @@ import clsx from 'clsx'
  * @param {FooterProps['footer']['socialNetworks'][number]['icon']} props.footer.socialNetworks.icon - The icon associated with the social network item.
  * @param {FooterProps['footer']['socialNetworks'][number]['name']} props.footer.socialNetworks.name - The name of the social network.
  * @param {FooterProps['footer']['socialNetworks'][number]['id']} props.footer.socialNetworks.id - The unique identifier for the social network item.
- * @returns {JSX.Element} A footer element with company about info and legal info sections.
+ * @returns A footer element with company about info and legal info sections.
  */
 export const Footer = ({ footer }: FooterProps) => {
   return (

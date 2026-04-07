@@ -19,7 +19,7 @@ import clsx from 'clsx'
  * @param {string} props.reasons.affirmation - The affirmation text of the reason.
  * @param {string} props.reasons.resume - The resume text of the reason.
  * @param {number} props.reasons.id - The unique identifier of the reason.
- * @returns {JSX.Element} The rendered "Why Choose Us" component.
+ * @returns The rendered "Why Choose Us" component.
  */
 export const WhyChooseUs = ({
   title,

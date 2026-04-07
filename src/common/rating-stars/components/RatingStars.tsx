@@ -11,7 +11,7 @@ import clsx from 'clsx'
  * @param {RatingStarsProps['stars'][number]['id']} props.stars.id - A unique identifier for each star in the star rating.
  * @param {RatingStarsProps['changePosition']} [props.changePosition] - An optional boolean to indicate if the position of the stars.
  * @param {RatingStarsProps['changeSize']} [props.changeSize] - An optional boolean to indicate if the size of the stars.
- * @returns {JSX.Element} Renders the star rating.
+ * @returns Renders the star rating.
  */
 export const RatingStars = ({ stars, changePosition = false, changeSize = false }: RatingStarsProps) => {
   return (

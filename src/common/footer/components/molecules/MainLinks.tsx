@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {MainLinksProps['links'][number]['id']} props.links.id - The unique identifier for the footer link item.
  * @param {MainLinksProps['links']} props.links - An array of footer link items to be displayed.
  * @param {MainLinksProps['highlight']} props.highlight - An array of strings representing links that should be highlighted.
- * @returns {JSX.Element} The rendered main links section.
+ * @returns The rendered main links section.
  */
 export const MainLinks = ({ links, highlight }: MainLinksProps) => {
   const LINKS_PER_COLUMN = 8

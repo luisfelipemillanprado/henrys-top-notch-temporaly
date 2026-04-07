@@ -10,7 +10,7 @@ import clsx from 'clsx'
  * @param {Array} props.features[].title - The title of the feature.
  * @param {Array} props.features[].description - A brief description of the feature.
  * @param {Array} props.features[].id - A unique identifier for the feature.
- * @returns {JSX.Element} A JSX element representing the booking features.
+ * @returns A JSX element representing the booking features.
  */
 export const BookingFeatures = ({
   features,

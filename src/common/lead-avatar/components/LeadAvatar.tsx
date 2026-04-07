@@ -10,7 +10,7 @@ import Image from 'next/image'
  * @param {object} props - Component properties.
  * @param {LeadAvatarProps['url']} props.url - The URL of the lead avatar image to be displayed.
  * @param {LeadAvatarProps['background']} [props.background=false] - Optional flag to determine if a background color.
- * @returns {JSX.Element} The rendered LeadAvatar component.
+ * @returns The rendered LeadAvatar component.
  */
 export const LeadAvatar = ({ url, background = false }: LeadAvatarProps) => {
   return (

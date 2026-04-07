@@ -18,7 +18,7 @@ const ANIMATION_MS = 500
  * @param {MenuOptionsProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
  * @param {MenuOptionsProps['links'][number]['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
  * @param {MenuOptionsProps['links']} props.links - An array of navigation link items with optional close handlers.
- * @returns {JSX.Element} The rendered menu options component with responsive behavior and animations.
+ * @returns The rendered menu options component with responsive behavior and animations.
  */
 export const MenuOptions = ({ links }: MenuOptionsProps) => {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)

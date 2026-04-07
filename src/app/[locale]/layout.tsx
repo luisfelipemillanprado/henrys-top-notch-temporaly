@@ -55,7 +55,6 @@ export const metadata: Metadata = layoutData.metadata
  * @public
  * @param {object} props - The props object containing the children to be rendered within the layout.
  * @param {React.ReactNode} children - The React node(s) to be rendered within the layout.
- * @returns {JSX.Element} The rendered RootLayout component.
  */
 export default function RootLayout({
   children,

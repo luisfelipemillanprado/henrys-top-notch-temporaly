@@ -43,7 +43,7 @@ const animationSwitch = (type: string) => {
  * @param {ButtonPulseAnimationProps['overlayMore']} [props.overlayMore] - Enlarges pulse overlay area if true.
  * @param {ButtonPulseAnimationProps['hidden']} [props.hidden] - Hides the entire component if true.
  * @param {ButtonPulseAnimationProps['noAnimation']} [props.noAnimation] - Hides pulse layers (disables animation) if true.
- * @returns {JSX.Element} A container with animated pulse layers and centered children content.
+ * @returns A container with animated pulse layers and centered children content.
  */
 export const ButtonPulse = ({
   children,

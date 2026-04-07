@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @param {string} props.description - Text content rendered inside the description.
  * @param {boolean} [props.changePosition] - An optional boolean that, when true, changes the text alignment to center.
  * @param {boolean} [props.changeWidth] - An optional boolean that, when true, adjusts the width of the description.
- * @returns {JSX.Element} A rendering a responsive description paragraph.
+ * @returns A rendering a responsive description paragraph.
  */
 export const CardDescription = ({
   description,

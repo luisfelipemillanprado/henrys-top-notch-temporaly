@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @interface MainTitleProps
  * @param {object} props - Component properties.
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
- * @returns {JSX.Element} The rendered quinary title component.
+ * @returns The rendered quinary title component.
  */
 export const QuinaryTitle = ({ title }: MainTitleProps) => {
   return (

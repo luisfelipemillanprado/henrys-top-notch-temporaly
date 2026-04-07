@@ -10,7 +10,7 @@ import clsx from 'clsx'
  * @param {AvatarPulseAnimationProps['colorChange']} [colorChange] - If true, uses neutral 'bg-irongray' pulse colors.
  * @param {AvatarPulseAnimationProps['hidden']} [hidden] - If true, hides the entire component.
  * @param {AvatarPulseAnimationProps['noAnimation']} [noAnimation] - If true, disables the pulse animation by hiding.
- * @returns {JSX.Element} A container with animated pulse layers and centered children content.
+ * @returns A container with animated pulse layers and centered children content.
  */
 export const AvatarPulse = ({
   children,

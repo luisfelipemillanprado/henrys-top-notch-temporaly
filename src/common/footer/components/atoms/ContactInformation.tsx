@@ -22,7 +22,7 @@ enum ContactInformationIcon {
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
  * @param {ContactInformationItem['icon']} icon - A string identifier, icon enum.
- * @returns {JSX.Element} The resolved icon component or a fallback placeholder.
+ * @returns The resolved icon component or a fallback placeholder.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -109,7 +109,7 @@ const iconSwitch = (icon: string) => {
  * @param {ContactInformationItem['type']} props.type - The type of contact information (e.g., "email", "phone").
  * @param {ContactInformationItem['icon']} props.icon - The icon identifier for the contact information.
  * @param {ContactInformationItem['id']} props.id - The unique identifier for the contact information item.
- * @returns {JSX.Element} A link element containing the contact information.
+ * @returns A link element containing the contact information.
  */
 export const ContactInformation = ({ text, href, type, icon }: ContactInformationItem) => {
   const content = (

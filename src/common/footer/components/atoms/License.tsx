@@ -9,7 +9,7 @@ import clsx from 'clsx'
  * @param {LicenseProps['license'][number]['text']} props.license.text - The text for the license information to be displayed.
  * @param {LicenseProps['license'][number]['id']} props.license.id - The unique identifier for the license information item.
  * @param {LicenseProps['license']} props.license - An array of objects containing the text and ID for the licenses.
- * @returns {JSX.Element} The rendered license information section in the footer.
+ * @returns The rendered license information section in the footer.
  */
 export const License = ({ license }: LicenseProps) => {
   return (

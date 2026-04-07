@@ -9,7 +9,7 @@ import Image from 'next/image'
  * @param {Array} gallery - Array of exactly 6 image objects.
  * @param {string} gallery[].url - URL string of the image.
  * @param {number} gallery[].id - Unique id for rendering list items.
- * @returns {JSX.Element} Rendering the styled responsive image gallery.
+ * @returns Rendering the styled responsive image gallery.
  */
 export const MainGallery = (props: { gallery: { url: string; id: number }[] }) => {
   const { gallery } = props

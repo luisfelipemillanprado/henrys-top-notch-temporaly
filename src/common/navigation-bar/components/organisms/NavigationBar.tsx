@@ -14,7 +14,7 @@ import clsx from 'clsx'
  * @param {NavigationbarProps['navigationBar']['getStartedButton']} props.getStartedButton - The properties for the "Get Started" button.
  * @param {NavigationbarProps['navigationBar']['links']} props.links - An array of navigation link items to be displayed.
  * @param {NavigationbarProps['navigationBar']} props.navigationBar - The configuration for the navigation bar.
- * @returns {JSX.Element} The rendered navigation bar component.
+ * @returns The rendered navigation bar component.
  */
 export const NavigationBar = ({ navigationBar }: NavigationbarProps) => {
   return (

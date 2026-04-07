@@ -14,7 +14,7 @@ import clsx from 'clsx'
  * @param {SectionHeaderProps['eyebrow']} props.eyebrow - A brief text displayed above the title, often used to categorize the section.
  * @param {SectionHeaderProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
  * @param {SectionHeaderProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the section header component.
- * @returns {JSX.Element} A rendering the composed section header.
+ * @returns A rendering the composed section header.
  */
 export const SectionHeader = ({
   title,

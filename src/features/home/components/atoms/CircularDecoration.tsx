@@ -47,7 +47,7 @@ const CONFIG = {
  * @public
  * @param {object} props - Component properties.
  * @param {2 | 3} [props.rings=2] - Number of rings to display (default is 2).
- * @returns {JSX.Element} Containing the absolute-positioned rings.
+ * @returns Containing the absolute-positioned rings.
  */
 export const CircularDecoration = ({ rings = 2 }: { rings?: 2 | 3 }) => {
   const config = CONFIG[rings]

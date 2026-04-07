@@ -12,7 +12,7 @@ import clsx from 'clsx'
  * @param {SocialNetworksProps['socialNetworks'][number]['name']} props.name - The name of the social network.
  * @param {SocialNetworksProps['socialNetworks'][number]['id']} props.id - The unique identifier for the social network item.
  * @param {SocialNetworksProps['socialNetworks']} props.socialNetworks - Array of social network items to be displayed.
- * @returns {JSX.Element} The rendered social networks section.
+ * @returns The rendered social networks section.
  */
 export const SocialNetworks = ({ socialNetworks }: SocialNetworksProps) => {
   return (

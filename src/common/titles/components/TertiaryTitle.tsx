@@ -9,7 +9,7 @@ import clsx from 'clsx'
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
  * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional boolean to indicate if the position should be changed.
  * @param {MainTitleProps['truncate']} [props.truncate] - An optional boolean to indicate if the title text should be truncated.
- * @returns {JSX.Element} The rendered tertiary title component.
+ * @returns The rendered tertiary title component.
  */
 export const TertiaryTitle = ({ title, changePosition = false, truncate = true }: MainTitleProps) => {
   return (

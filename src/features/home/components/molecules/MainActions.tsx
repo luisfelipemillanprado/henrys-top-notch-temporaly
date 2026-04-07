@@ -14,7 +14,7 @@ import clsx from 'clsx'
  * @param {string} props.secondaryCta.text - Text for the secondary call-to-action button.
  * @param {string} props.secondaryCta.href - URL for the secondary call-to-action button.
  * @param {string[]} props.highlight - Array of strings for the highlighted action text.
- * @returns {JSX.Element} Rendering the call-to-action buttons and highlight.
+ * @returns Rendering the call-to-action buttons and highlight.
  */
 export const MainActions = (props: {
   primaryCta: {

@@ -14,7 +14,7 @@ import clsx from 'clsx'
  * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the social network item.
  * @param {LegalInformationProps['socialNetworks'][number]['name']} props.socialNetworks.name - The name of the social network.
  * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social network item.
- * @returns {JSX.Element} The rendered legal information section.
+ * @returns The rendered legal information section.
  */
 export const OurLegalInformation = ({ copyright, socialNetworks }: LegalInformationProps) => {
   return (

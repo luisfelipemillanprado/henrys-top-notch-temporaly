@@ -8,7 +8,7 @@ import clsx from 'clsx'
  * @param {object} props - Component properties.
  * @param {SectionDescriptionProps['description']} props.description - The text content to be displayed in the header description.
  * @param {SectionDescriptionProps['changeWidth']} [props.changeWidth] - Optional flag to change text position.
- * @returns {JSX.Element} A rendering the responsive header description.
+ * @returns A rendering the responsive header description.
  */
 export const HeaderDescription = ({ description }: SectionDescriptionProps) => {
   return (

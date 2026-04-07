@@ -21,7 +21,7 @@ const decorationLine = (
  * @param {object} props - Component properties.
  * @param {EyeBrowProps['text']} props.text - The text content to be displayed in the eye brow.
  * @param {EyeBrowProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the eye brow component.
- * @returns {JSX.Element} A JSX element representing the eye brow component.
+ * @returns A JSX element representing the eye brow component.
  */
 export const EyeBrow = ({ text, hidden = false }: EyeBrowProps) => {
   return (

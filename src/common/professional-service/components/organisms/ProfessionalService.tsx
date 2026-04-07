@@ -23,7 +23,7 @@ import clsx from 'clsx'
  * @param {ProfessionalServiceProps['secondaryCta']} props.secondaryCta - An object containing the text and href.
  * @param {ProfessionalServiceProps['secondaryCta']['text']} props.secondaryCta.text - The text of the secondary call-to-action button.
  * @param {ProfessionalServiceProps['secondaryCta']['href']} props.secondaryCta.href - The URL of the secondary call-to-action button.
- * @returns {JSX.Element} A React component that renders the professional service.
+ * @returns A React component that renders the professional service.
  */
 export const ProfessionalService = ({
   url,

@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @interface TestimonialNameProps
  * @param {object} props - Component properties.
  * @param {TestimonialNameProps['name']} props.name - The full name of the person providing the testimonial.
- * @returns {JSX.Element} The rendered TestimonialName component.
+ * @returns The rendered TestimonialName component.
  */
 export const TestimonialName = ({ name }: TestimonialNameProps) => {
   return (

@@ -9,7 +9,7 @@ import Image from 'next/image'
  * @interface LeadVisualProps
  * @param {object} props - Component properties.
  * @param {LeadVisualProps['image']} props.image - The URL of the image to display.
- * @returns {JSX.Element} The rendered lead visual component.
+ * @returns The rendered lead visual component.
  */
 export const LeadVisual = ({ image }: LeadVisualProps) => {
   return (

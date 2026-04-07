@@ -12,7 +12,7 @@ import Link from 'next/link'
  * @param {GetStartedButtonProps['href']} props.href - The URL to navigate to on button click.
  * @param {GetStartedButtonProps['hidden']} props.hidden - Whether to hide the button.
  * @param {GetStartedButtonProps['float']} [props.float] - Optional flag to render the button as a floating element.
- * @returns {JSX.Element} A pulsing animated button linking to the provided URL.
+ * @returns A pulsing animated button linking to the provided URL.
  */
 export const GetStartedButton = ({ text, href, hidden = true, float }: GetStartedButtonProps) => {
   return (

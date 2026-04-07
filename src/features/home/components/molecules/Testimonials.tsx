@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @param {object[]} props.testimonials[].stars - An array of star objects representing the rating.
  * @param {number} props.testimonials[].stars[].id - The unique identifier of each star.
  * @param {number} props.testimonials[].id - The unique identifier of each testimonial.
- * @returns {JSX.Element} The rendered Testimonials component.
+ * @returns The rendered Testimonials component.
  */
 export const Testimonials = ({
   testimonials,

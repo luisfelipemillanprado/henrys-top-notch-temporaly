@@ -11,7 +11,7 @@ import Image from 'next/image'
  * @param {CertifiedProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
  * @param {CertifiedProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
  * @param {CertifiedProps['imagesUrl']} props.imagesUrl - An array of objects containing the URL and ID for the images.
- * @returns {JSX.Element} The rendered license certification image.
+ * @returns The rendered license certification image.
  */
 export const Certified = ({ imagesUrl }: CertifiedProps) => {
   return (
