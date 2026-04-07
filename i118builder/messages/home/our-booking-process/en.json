@@ -1,0 +1,40 @@
+{
+  "eyebrow": "BOOKING PROCESS",
+  "title": "Our Simple And Fast Booking Process.",
+  "description": "At Henry’s Top Notch Air Conditioning & Heating Co, our simple booking process is designed to make getting started easy and stress-free. We focus on convenience, flexibility, and reliability, ensuring every step feels smooth. Our goal is to provide a seamless experience that helps you quickly connect with trusted HVAC professionals.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "features": {
+    "energyEfficientSystems": {
+      "title": "Energy-Efficient Systems.",
+      "description": "High-efficiency HVAC systems reduce energy consumption while maintaining stable, optimal, and consistent indoor comfort levels."
+    },
+    "expertInstallationRepair": {
+      "title": "Expert Installation & Repair.",
+      "description": "Our HVAC technicians perform precise installations and reliable repairs, ensuring optimal system performance consistently."
+    },
+    "comfortForHomesBusinesses": {
+      "title": "Comfort For Homes & Businesses.",
+      "description": "Advanced climate-control solutions keep residential and commercial spaces comfortable throughout every season of the year."
+    }
+  },
+  "steps": {
+    "bookYourService": {
+      "title": "Book Your Service.",
+      "description": "Schedule your service easily by choosing a convenient date and time that fits your availability without hassle."
+    },
+    "weArriveOnTime": {
+      "title": "We Arrive On Time.",
+      "description": "Receive punctual service from technicians who respect your schedule and deliver dependable HVAC solutions professionally."
+    },
+    "affordablePricing": {
+      "title": "Affordable Pricing.",
+      "description": "Enjoy transparent and affordable pricing with no hidden fees, giving you complete confidence before any service begins."
+    },
+    "satisfactionGuaranteed": {
+      "title": "Satisfaction Guaranteed.",
+      "description": "Your satisfaction is backed by reliable service and consistent results that meet your expectations every time."
+    }
+  }
+}

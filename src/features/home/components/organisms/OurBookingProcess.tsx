@@ -1,56 +1,66 @@
 import { BookingProcess } from '@/features/home/components/molecules/BookingProcess'
+import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders a component that presents the simple booking process.
- * @public
- * @param {object} props - Component properties.
- * @param {string} props.title - The title of the simple booking process section.
- * @param {string} props.description - A brief description of the simple booking process.
- * @param {string} props.eyebrow - An eyebrow text to provide additional context or emphasis.
- * @param {string} props.image - The URL of the image to be displayed in the section.
- * @param {Array} props.features - An array of feature objects, each containing an icon, title, description, and id.
- * @param {Array} props.features.icon - The URL of the feature icon.
- * @param {Array} props.features.title - The title of the feature.
- * @param {Array} props.features.description - A brief description of the feature.
- * @param {Array} props.features.id - A unique identifier for the feature.
- * @param {Array} props.steps - An array of step objects, each containing an icon, title, description, and id.
- * @param {Array} props.steps.url - The URL of the step icon.
- * @param {Array} props.steps.title - The title of the step.
- * @param {Array} props.steps.description - A brief description of the step.
- * @param {Array} props.steps.id - A unique identifier for the step.
- * @returns {JSX.Element} A semantic element rendering the simple booking process content.
- */
-export const OurBookingProcess = ({
-  title,
-  description,
-  eyebrow,
-  image,
-  features,
-  steps,
-  primaryCta,
-}: {
-  title: string
-  description: string
-  eyebrow: string
-  image: string
-  features: {
-    icon: string
-    title: string
-    description: string
-    id: number
-  }[]
-  steps: {
-    url: string
-    title: string
-    description: string
-    id: number
-  }[]
-  primaryCta: {
-    text: string
-    href: string
+export const OurBookingProcess = () => {
+  const t = useTranslations('home.our-booking-process')
+  const { features: featureAssets, image, primaryCtaHref, steps: stepAssets } = homeAssets.bookingProcess
+
+  const title = t('title')
+  const description = t('description')
+  const eyebrow = t('eyebrow')
+  const primaryCta = {
+    text: t('primaryCta.text'),
+    href: primaryCtaHref,
   }
-}) => {
+  const features = [
+    {
+      icon: featureAssets[0].icon,
+      title: t('features.energyEfficientSystems.title'),
+      description: t('features.energyEfficientSystems.description'),
+      id: featureAssets[0].id,
+    },
+    {
+      icon: featureAssets[1].icon,
+      title: t('features.expertInstallationRepair.title'),
+      description: t('features.expertInstallationRepair.description'),
+      id: featureAssets[1].id,
+    },
+    {
+      icon: featureAssets[2].icon,
+      title: t('features.comfortForHomesBusinesses.title'),
+      description: t('features.comfortForHomesBusinesses.description'),
+      id: featureAssets[2].id,
+    },
+  ]
+  const steps = [
+    {
+      url: stepAssets[0].url,
+      title: t('steps.bookYourService.title'),
+      description: t('steps.bookYourService.description'),
+      id: stepAssets[0].id,
+    },
+    {
+      url: stepAssets[1].url,
+      title: t('steps.weArriveOnTime.title'),
+      description: t('steps.weArriveOnTime.description'),
+      id: stepAssets[1].id,
+    },
+    {
+      url: stepAssets[2].url,
+      title: t('steps.affordablePricing.title'),
+      description: t('steps.affordablePricing.description'),
+      id: stepAssets[2].id,
+    },
+    {
+      url: stepAssets[3].url,
+      title: t('steps.satisfactionGuaranteed.title'),
+      description: t('steps.satisfactionGuaranteed.description'),
+      id: stepAssets[3].id,
+    },
+  ]
+
   return (
     <section
       id={'booking-process'}

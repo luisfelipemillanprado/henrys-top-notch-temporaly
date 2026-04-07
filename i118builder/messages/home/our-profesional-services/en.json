@@ -1,0 +1,66 @@
+{
+  "eyebrow": "SERVICES WE OFFER",
+  "title": "Access Expert HVAC Services Today.",
+  "description": "Explore our full range of HVAC services designed to meet your comfort needs year-round. Our experienced team provides reliable heating and cooling solutions, focusing on efficiency, performance, and long-term results so your home or business stays comfortable, safe, and running smoothly every season.",
+  "primaryCta": {
+    "text": "ALL SERVICES"
+  },
+  "services": {
+    "maintenance": {
+      "title": "HVAC System Maintenance.",
+      "description": "Keep your HVAC system efficient with expert maintenance that reduces energy costs and helps prevent breakdowns.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "allWarranty": "All Warranty.",
+        "seasonalTuneUp": "Seasonal Tune-Up.",
+        "filterChange": "Filter Change.",
+        "energySavings": "Energy Savings."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "repair": {
+      "title": "HVAC System Repair.",
+      "description": "HVAC repair services you can trust resolve issues quickly, restore reliability, and ensure consistent performance.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "allWarranty": "All Warranty.",
+        "sameDayRepair": "Same-Day Repair.",
+        "emergencyService": "Emergency Service.",
+        "quickDiagnosis": "Quick Diagnosis."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "installation": {
+      "title": "HVAC System Installation.",
+      "description": "Transform your comfort with HVAC installation services built for performance, reliability, and long-term durability.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "allWarranty": "All Warranty.",
+        "properSizing": "Proper Sizing.",
+        "efficientUnits": "Efficient Units.",
+        "expertInstall": "Expert Install."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    },
+    "acInstallation": {
+      "title": "AC System Installation.",
+      "description": "Get top-quality AC installation that maximizes efficiency, reduces energy costs, and delivers reliable daily comfort.",
+      "benefits": {
+        "freeEstimate": "Free Estimate.",
+        "allWarranty": "All Warranty.",
+        "highEfficiency": "High Efficiency.",
+        "smartSetup": "Smart Setup.",
+        "betterAirflow": "Better Airflow."
+      },
+      "secondaryCta": {
+        "text": "BOOK NOW"
+      }
+    }
+  }
+}

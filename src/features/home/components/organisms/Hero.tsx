@@ -3,41 +3,21 @@ import { MainTitle } from '@/common/titles/components/MainTitle'
 import { CircularDecoration } from '@/features/home/components/atoms/CircularDecoration'
 import { MainActions } from '@/features/home/components/molecules/MainActions'
 import { MainGallery } from '@/features/home/components/molecules/MainGallery'
+import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders the hero section of the home page.
- * @public
- * @param {object} props - Component properties.
- * @param {string} props.title - The main heading text displayed in the hero section.
- * @param {string} props.description - A description text displayed below the main title.
- * @param {object} props.primaryCta - Configuration for the primary call-to-action button with text and href.
- * @param {string} props.primaryCta.text - Text for the primary call-to-action button.
- * @param {string} props.primaryCta.href - URL for the primary call-to-action button.
- * @param {object} props.secondaryCta - Configuration for the secondary call-to-action button with text and href.
- * @param {string} props.secondaryCta.text - Text for the secondary call-to-action button.
- * @param {string} props.secondaryCta.href - URL for the secondary call-to-action button.
- * @param {string[]} props.highlight - Array of strings for the highlighted action text.
- * @param {string} props.gallery[].url - URL of the gallery image.
- * @param {number} props.gallery[].id - Unique identifier for the gallery image.
- * @param {object[]} props.gallery - Array of gallery image objects.
- * @returns {JSX.Element} A responsive hero section with circular decoration, main content, and gallery.
- */
-export const Hero = ({
-  title,
-  description,
-  primaryCta,
-  secondaryCta,
-  highlight,
-  gallery,
-}: {
-  title: string
-  description: string
-  primaryCta: { text: string; href: string }
-  secondaryCta: { text: string; href: string }
-  highlight: string[]
-  gallery: { url: string; id: number }[]
-}) => {
+export const Hero = () => {
+  const t = useTranslations('home.hero')
+  const { gallery: galleryAssets, primaryCtaHref, secondaryCtaHref } = homeAssets.hero
+
+  const title = t('title')
+  const description = t('description')
+  const primaryCta = { text: t('primaryCta.text'), href: primaryCtaHref }
+  const secondaryCta = { text: t('secondaryCta.text'), href: secondaryCtaHref }
+  const highlight = [t('highlight.first'), t('highlight.second')]
+  const gallery = galleryAssets.map((item) => ({ ...item }))
+
   return (
     <section
       aria-labelledby={title}

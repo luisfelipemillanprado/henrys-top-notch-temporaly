@@ -1,40 +1,28 @@
 import { SummaryOfWhoWeAre } from '@/features/home/components/molecules/SummaryOfWhoWeAre'
+import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders a component that presents a summary of who the company.
- * @public
- * @param {object} props - Component properties.
- * @param {string} props.title - Title displayed in the section header.
- * @param {string} props.description - Supporting description for the section.
- * @param {string} props.eyebrow - A brief text displayed above the title, often used to categorize the section.
- * @param {object} props.primaryCta - An object containing the text and href for the primary call-to-action button.
- * @param {string} props.primaryCta.text - The text to display on the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL to navigate to when the primary call-to-action button is clicked.
- * @param {string} props.image - The URL of the image representing who we are.
- * @param {object[]} props.benefits - An array of key benefits associated with who we are.
- * @param {string} props.benefits[].text - Text describing an individual key benefit.
- * @param {number} props.benefits[].id - Unique identifier for the key benefit item.
- * @returns {JSX.Element} A semantic element rendering the summary of who the company is.
- */
-export const OurSummaryOfWhoWeAre = ({
-  title,
-  description,
-  eyebrow,
-  primaryCta,
-  image,
-  benefits,
-}: {
-  title: string
-  description: string
-  eyebrow: string
-  primaryCta: {
-    text: string
-    href: string
+export const OurSummaryOfWhoWeAre = () => {
+  const t = useTranslations('home.who-we-are')
+  const { benefits: benefitAssets, image, primaryCtaHref } = homeAssets.whoWeAre
+
+  const title = t('title')
+  const description = t('description')
+  const eyebrow = t('eyebrow')
+  const primaryCta = {
+    text: t('primaryCta.text'),
+    href: primaryCtaHref,
   }
-  image: string
-  benefits: { text: string; id: number }[]
-}) => {
+  const benefits = [
+    { text: t('benefits.justOnTime'), id: benefitAssets[0].id },
+    { text: t('benefits.support247'), id: benefitAssets[1].id },
+    { text: t('benefits.affordableHvacSolutions'), id: benefitAssets[2].id },
+    { text: t('benefits.energyEfficientSystems'), id: benefitAssets[3].id },
+    { text: t('benefits.expertInstallationRepair'), id: benefitAssets[4].id },
+    { text: t('benefits.comfortForHomesBusinesses'), id: benefitAssets[5].id },
+  ]
+
   return (
     <section
       id={'who-we-are'}

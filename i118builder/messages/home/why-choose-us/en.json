@@ -1,0 +1,26 @@
+{
+  "eyebrow": "WHY CHOOSE US",
+  "title": "Comfort You Can Trust Every Day.",
+  "description": "Choosing our company for heating and cooling services ensures comfort, efficiency, and long-lasting reliability. We provide expert service, honest advice, and customized solutions tailored to your needs. Our mission is to keep your home or business comfortable, efficient, and running smoothly without interruptions or unexpected setbacks.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "reasons": {
+    "trustedIndustryExperts": {
+      "affirmation": "Trusted Industry Experts.",
+      "resume": "Our skilled team is fully trained to handle installations, repairs, and maintenance with precision, ensuring reliable and long-lasting results for every project."
+    },
+    "fastReliableService": {
+      "affirmation": "Fast & Reliable Service.",
+      "resume": "We respect your time by arriving on schedule and completing each job efficiently, minimizing disruptions while keeping your system running smoothly."
+    },
+    "fairTransparentPricing": {
+      "affirmation": "Fair & Transparent Pricing.",
+      "resume": "No hidden fees or surprises. We provide clear, upfront estimates so you always know what to expect before any work begins."
+    },
+    "satisfactionYouCanTrust": {
+      "affirmation": "Satisfaction You Can Trust.",
+      "resume": "Your comfort is our priority. We stand behind our work and ensure every service meets the highest standards of quality and reliability."
+    }
+  }
+}

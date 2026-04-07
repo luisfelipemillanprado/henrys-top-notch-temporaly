@@ -1,0 +1,16 @@
+{
+  "eyebrow": "ABOUT COMPANY",
+  "title": "Efficient Heating And Cooling Systems.",
+  "description": "At Henry’s Top Notch Air Conditioning & Heating Co, we are a family-owned and operated business dedicated to keeping homes and businesses comfortable. With 21 years of HVAC experience, our trusted team delivers reliable heating and cooling solutions with honest service, quality workmanship, and dependable results year-round.",
+  "primaryCta": {
+    "text": "LEARN MORE"
+  },
+  "benefits": {
+    "justOnTime": "Just On Time.",
+    "support247": "24-7 Support.",
+    "affordableHvacSolutions": "Affordable HVAC Solutions.",
+    "energyEfficientSystems": "Energy-Efficient Systems.",
+    "expertInstallationRepair": "Expert Installation & Repair.",
+    "comfortForHomesBusinesses": "Comfort for Homes & Businesses."
+  }
+}

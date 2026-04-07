@@ -1,25 +1,16 @@
 import { TrustedAndCertified } from '@/features/home/components/molecules/TrustedAndCertified'
+import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders a section displaying a carousel of trusted and certified items with their images.
- * @public
- * @param {object} props - Component properties.
- * @param {object[]} props.trustedAndCertified - An array of trusted and certified item objects.
- * @param {string} props.trustedAndCertified[].url - The URL of the icon or image for each item.
- * @param {string} props.trustedAndCertified[].href - The URL that the trusted and certified item points to when clicked.
- * @param {number} props.trustedAndCertified[].id - A unique numeric identifier for each item.
- * @returns {JSX.Element} A section element containing the TrustedAndCertified component.
- */
-export const OurTrustedAndCertified = ({
-  trustedAndCertified,
-}: {
-  trustedAndCertified: { url: string; href: string; id: number }[]
-}) => {
+export const OurTrustedAndCertified = () => {
+  const t = useTranslations('home.trusted-and-certified')
+  const trustedAndCertified = homeAssets.trustedAndCertified.map((item) => ({ ...item }))
+
   return (
     <section
       id={'trusted-and-certified'}
-      aria-label={'our-trusted-and-certified'}
+      aria-label={t('ariaLabel')}
       role={'region'}
       className={clsx(
         'horizontal bg-off-white relative w-full justify-center pt-36',

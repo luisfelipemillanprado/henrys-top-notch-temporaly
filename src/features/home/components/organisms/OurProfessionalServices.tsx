@@ -1,58 +1,94 @@
 import { ProfessionalServices } from '@/features/home/components/molecules/ProfessionalServices'
+import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders a component that presents our professional services.
- * @public
- * @param {object} props - Component properties.
- * @param {string} props.title - The title of the section.
- * @param {string} props.description - The description of the section.
- * @param {string} props.eyebrow - The eyebrow text of the section.
- * @param {object} props.primaryCta - The primary call-to-action button properties.
- * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
- * @param {Array} props.services - An array of service objects, each containing a url, title, stars, description, secondaryCta, and id.
- * @param {string} props.services.url - The URL of the image representing a specific service in the professional services section.
- * @param {string} props.services.title - The title describing a specific service in the professional services section.
- * @param {{ id: number }[]} props.services.stars - An array of objects representing the star rating for a specific service.
- * @param {number} props.services.stars.id - A unique identifier for each star in the star rating of a specific service.
- * @param {string} props.services.description - A brief description of a specific service in the professional services section.
- * @param {Array} props.services.benefits - An array of benefit objects, each containing text and id, representing the key benefits.
- * @param {string} props.services.benefits.text - The text description of a key benefit item for a specific service.
- * @param {number} props.services.benefits.id - A unique identifier for each key benefit item for a specific service.
- * @param {object} props.services.secondaryCta - An object containing the text and href for the secondary call-to-action button.
- * @param {string} props.services.secondaryCta.text - The text of the secondary call-to-action button related to a specific service.
- * @param {string} props.services.secondaryCta.href - The URL of the secondary call-to-action button related to a specific service.
- * @param {number} props.services.id - A unique identifier for the service in the professional services section.
- * @returns {JSX.Element} The OurProfessionalServices component JSX tree.
- */
-export const OurProfessionalServices = ({
-  title,
-  description,
-  eyebrow,
-  primaryCta,
-  services,
-}: {
-  title: string
-  description: string
-  eyebrow: string
-  primaryCta: {
-    text: string
-    href: string
+export const OurProfessionalServices = () => {
+  const t = useTranslations('home.our-profesional-services')
+  const { primaryCtaHref, services: serviceAssets } = homeAssets.professionalServices
+
+  const title = t('title')
+  const description = t('description')
+  const eyebrow = t('eyebrow')
+  const primaryCta = {
+    text: t('primaryCta.text'),
+    href: primaryCtaHref,
   }
-  services: {
-    url: string
-    title: string
-    stars: { id: number }[]
-    description: string
-    benefits: { text: string; id: number }[]
-    secondaryCta: {
-      text: string
-      href: string
-    }
-    id: number
-  }[]
-}) => {
+  const services = [
+    {
+      url: serviceAssets[0].url,
+      title: t('services.maintenance.title'),
+      stars: serviceAssets[0].stars.map((star) => ({ ...star })),
+      description: t('services.maintenance.description'),
+      benefits: [
+        { text: t('services.maintenance.benefits.freeEstimate'), id: serviceAssets[0].benefits[0].id },
+        { text: t('services.maintenance.benefits.allWarranty'), id: serviceAssets[0].benefits[1].id },
+        { text: t('services.maintenance.benefits.seasonalTuneUp'), id: serviceAssets[0].benefits[2].id },
+        { text: t('services.maintenance.benefits.filterChange'), id: serviceAssets[0].benefits[3].id },
+        { text: t('services.maintenance.benefits.energySavings'), id: serviceAssets[0].benefits[4].id },
+      ],
+      secondaryCta: {
+        text: t('services.maintenance.secondaryCta.text'),
+        href: serviceAssets[0].secondaryCtaHref,
+      },
+      id: serviceAssets[0].id,
+    },
+    {
+      url: serviceAssets[1].url,
+      title: t('services.repair.title'),
+      stars: serviceAssets[1].stars.map((star) => ({ ...star })),
+      description: t('services.repair.description'),
+      benefits: [
+        { text: t('services.repair.benefits.freeEstimate'), id: serviceAssets[1].benefits[0].id },
+        { text: t('services.repair.benefits.allWarranty'), id: serviceAssets[1].benefits[1].id },
+        { text: t('services.repair.benefits.sameDayRepair'), id: serviceAssets[1].benefits[2].id },
+        { text: t('services.repair.benefits.emergencyService'), id: serviceAssets[1].benefits[3].id },
+        { text: t('services.repair.benefits.quickDiagnosis'), id: serviceAssets[1].benefits[4].id },
+      ],
+      secondaryCta: {
+        text: t('services.repair.secondaryCta.text'),
+        href: serviceAssets[1].secondaryCtaHref,
+      },
+      id: serviceAssets[1].id,
+    },
+    {
+      url: serviceAssets[2].url,
+      title: t('services.installation.title'),
+      stars: serviceAssets[2].stars.map((star) => ({ ...star })),
+      description: t('services.installation.description'),
+      benefits: [
+        { text: t('services.installation.benefits.freeEstimate'), id: serviceAssets[2].benefits[0].id },
+        { text: t('services.installation.benefits.allWarranty'), id: serviceAssets[2].benefits[1].id },
+        { text: t('services.installation.benefits.properSizing'), id: serviceAssets[2].benefits[2].id },
+        { text: t('services.installation.benefits.efficientUnits'), id: serviceAssets[2].benefits[3].id },
+        { text: t('services.installation.benefits.expertInstall'), id: serviceAssets[2].benefits[4].id },
+      ],
+      secondaryCta: {
+        text: t('services.installation.secondaryCta.text'),
+        href: serviceAssets[2].secondaryCtaHref,
+      },
+      id: serviceAssets[2].id,
+    },
+    {
+      url: serviceAssets[3].url,
+      title: t('services.acInstallation.title'),
+      stars: serviceAssets[3].stars.map((star) => ({ ...star })),
+      description: t('services.acInstallation.description'),
+      benefits: [
+        { text: t('services.acInstallation.benefits.freeEstimate'), id: serviceAssets[3].benefits[0].id },
+        { text: t('services.acInstallation.benefits.allWarranty'), id: serviceAssets[3].benefits[1].id },
+        { text: t('services.acInstallation.benefits.highEfficiency'), id: serviceAssets[3].benefits[2].id },
+        { text: t('services.acInstallation.benefits.smartSetup'), id: serviceAssets[3].benefits[3].id },
+        { text: t('services.acInstallation.benefits.betterAirflow'), id: serviceAssets[3].benefits[4].id },
+      ],
+      secondaryCta: {
+        text: t('services.acInstallation.secondaryCta.text'),
+        href: serviceAssets[3].secondaryCtaHref,
+      },
+      id: serviceAssets[3].id,
+    },
+  ]
+
   return (
     <section
       id={'professional-services'}
