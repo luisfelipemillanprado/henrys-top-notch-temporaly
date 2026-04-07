@@ -1,6 +1,15 @@
 import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
 
-const nextConfig: NextConfig = {
+const withNextIntl = createNextIntlPlugin({
+  // Type safety for message arguments
+  experimental: {
+    // Provide the path to the messages that you're using in `AppConfig`
+    createMessagesDeclaration: './messages/en.json',
+  },
+})
+
+const nextConfig: NextConfig = withNextIntl({
   ...(process.env.NODE_ENV === 'production'
     ? {}
     : {
@@ -29,5 +38,6 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   compress: true,
-}
+})
+
 export default nextConfig

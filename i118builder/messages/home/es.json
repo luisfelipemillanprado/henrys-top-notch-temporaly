@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "deploy-btn": "Desplegar ahora",
+    "read-docs-btn": "Leer la documentación",
+    "click-me-btn": "Haz clic en mí"
+  },
+  "Metadata": {
+    "title": "Compañía REMIUX - Transforma tu negocio con software personalizado.",
+    "description": "Soluciones personalizadas para tu negocio. ¡Contáctenos!"
+  }
+}

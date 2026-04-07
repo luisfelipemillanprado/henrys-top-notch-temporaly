@@ -7,20 +7,17 @@ import { OurTrustedAndCertified } from '@/features/home/components/organisms/Our
 import { OurWhyChooseUs } from '@/features/home/components/organisms/OurWhyChooseUs'
 import { homeData } from '@/utils/data/static/en-US/home'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
-/**
- * @description Renders the Home page.
- * @public
- * @param {object} props - Component properties.
- * @returns {JSX.Element} The Home page JSX tree.
- */
 export default function Home() {
+  const t = useTranslations('home')
+
   return (
     <>
       <header className={clsx('bg-secondary horizontal relative w-full', '9xl:justify-center')}>
         <Hero
           title={homeData.hero.title}
-          description={homeData.hero.description}
+          description={t('Metadata.description')}
           primaryCta={homeData.hero.primaryCta}
           secondaryCta={homeData.hero.secondaryCta}
           highlight={homeData.hero.highlight}
