@@ -36,7 +36,7 @@ export const CardDescription = ({
           changeColor ? 'text-warmgray' : 'text-dimgray',
           changePosition && 'text-center',
           changeWidth && ['w-67', 'm1x:w-71'],
-          addPadding && ['m3x:pr-5.5', 'm4x:pr-7.5'],
+          addPadding && ['m3x:pr-3', 'm4x:pr-5'],
           'm1x:text-base m1x:leading-7',
           'md:leading-7.5',
           '1xl:text-[1.0625rem] 1xl:leading-7.5',

@@ -9,28 +9,36 @@ import Image from 'next/image'
  * @interface LeadVisualProps
  * @param {object} props - Component properties.
  * @param {LeadVisualProps['image']} props.image - The URL of the image to display.
- * @returns The rendered lead visual component.
+ * @param {LeadVisualProps['changeBackground']} props.changeBackground - A boolean indicating whether to change the background color.
+ * @returns {JSX.Element} The rendered lead visual component.
  */
-export const LeadVisual = ({ image }: LeadVisualProps) => {
+export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps) => {
   return (
     <div
       className={clsx(
-        'relative h-69 w-full overflow-hidden rounded-3xl shadow-md',
-        'm1x:h-73',
-        'm2x:h-76',
-        'm3x:h-80',
-        'm4x:h-82.5'
+        'horizontal border-warmgray/30 w-full rounded-3xl border p-1 shadow-md',
+        changeBackground ? 'bg-off-white' : 'bg-primary'
       )}
     >
-      <Image
-        className={clsx('size-full object-cover')}
-        src={image}
-        fill
-        sizes={''}
-        alt={'Lead Visual Image'}
-        placeholder={'blur'}
-        blurDataURL={blurDataUrlGallery}
-      />
+      <div
+        className={clsx(
+          'relative h-69 w-full overflow-hidden rounded-3xl shadow-md',
+          'm1x:h-73',
+          'm2x:h-76',
+          'm3x:h-80',
+          'm4x:h-82.5'
+        )}
+      >
+        <Image
+          className={clsx('size-full object-cover')}
+          src={image}
+          fill
+          sizes={''}
+          alt={'Lead Visual Image'}
+          placeholder={'blur'}
+          blurDataURL={blurDataUrlGallery}
+        />
+      </div>
     </div>
   )
 }

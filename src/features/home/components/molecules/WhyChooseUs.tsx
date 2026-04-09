@@ -45,7 +45,7 @@ export const WhyChooseUs = ({
 }) => {
   return (
     <div className={clsx('vertical w-full items-center gap-y-8', 'm3x:gap-y-8.75')}>
-      <LeadVisual image={image} />
+      <LeadVisual image={image} changeBackground />
       <div className={clsx('vertical w-full gap-y-8.5', 'm1x:gap-y-9')}>
         <div className={clsx('vertical w-full items-center gap-y-8', 'm1x:gap-y-8.75', 'm3x:gap-y-9.5')}>
           <SectionHeader title={title} description={description} eyebrow={eyebrow} />

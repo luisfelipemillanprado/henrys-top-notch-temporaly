@@ -1,13 +1,12 @@
-import { Providers } from '@/app/[locale]/providers'
+import { Providers } from '@/app/providers'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
-import { staticData } from '@/utils/data/Static'
 import { layoutData } from '@/utils/data/static/en-US/layout'
 import { Toast } from '@heroui/react'
 import clsx from 'clsx'
 import { Metadata } from 'next'
 import { Poppins, Reenie_Beanie } from 'next/font/google'
-import '../globals.css'
+import './globals.css'
 
 /**
  * @description Loads the Poppins font with specified weights and subsets for use in the application.
@@ -54,7 +53,8 @@ export const metadata: Metadata = layoutData.metadata
  * navigation, footer, and a floating WhatsApp button. It also applies global fonts and styles.
  * @public
  * @param {object} props - The props object containing the children to be rendered within the layout.
- * @param {React.ReactNode} children - The React node(s) to be rendered within the layout.
+ * @param {React.ReactNode} props.children - The React node(s) to be rendered within the layout.
+ * @returns {JSX.Element} The rendered RootLayout component.
  */
 export default function RootLayout({
   children,
@@ -75,9 +75,9 @@ export default function RootLayout({
             themes: ['dark', 'light'],
           }}
         >
-          <NavigationBar navigationBar={staticData.navigationBar} />
+          <NavigationBar navigationBar={layoutData.navigationBar} />
           {children}
-          <Footer footer={staticData.footer} />
+          <Footer footer={layoutData.footer} />
           <Toast.Provider placement={'bottom end'} />
         </Providers>
       </body>
