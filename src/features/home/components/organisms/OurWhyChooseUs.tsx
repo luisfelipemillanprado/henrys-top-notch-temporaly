@@ -3,10 +3,26 @@ import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
+const { image, primaryCtaHref, reasons: reasonAssets } = homeAssets.whyChooseUs
+
+/**
+ * @description Renders the "Why Choose Us" section of the homepage.
+ * @public
+ * @property {string} title - The title of the section.
+ * @property {string} description - The description of the section.
+ * @property {string} eyebrow - The eyebrow text of the section.
+ * @property {string} image - The URL of the image representing the section.
+ * @property {object} primaryCta - Configuration for the primary call-to-action button.
+ * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
+ * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
+ * @property {array} reasons - An array of objects representing reasons to choose us.
+ * @property {number} reasons[].id - The unique identifier for the reason.
+ * @property {string} reasons[].affirmation - The affirmation text for the reason.
+ * @property {string} reasons[].resume - The resume text for the reason.
+ * @returns {JSX.Element} The rendered "OurWhyChooseUs" component.
+ */
 export const OurWhyChooseUs = () => {
   const t = useTranslations('home.why-choose-us')
-  const { image, primaryCtaHref, reasons: reasonAssets } = homeAssets.whyChooseUs
-
   const title = t('title')
   const description = t('description')
   const eyebrow = t('eyebrow')
@@ -40,7 +56,7 @@ export const OurWhyChooseUs = () => {
   return (
     <section
       id={'why-choose-us'}
-      aria-labelledby={'why-choose-us-title'}
+      aria-labelledby={title}
       role={'region'}
       className={clsx(
         'vertical w-full px-5.5 pt-12 pb-11 shadow-2xs',

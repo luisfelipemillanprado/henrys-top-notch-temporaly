@@ -1,40 +1,13 @@
 /**
  * @description This module exports an object containing data for the root layout.
  * @private
- * @function layoutData
- * @property {object} metadata - An object containing metadata for the application.
+ * @function layoutAssets
  * @property {object} navigationBar - An object containing data for the navigation bar.
  * @property {object} contactForm - An object containing data for the contact form.
  * @property {object} footer - An object containing data for the footer.
- * @return {object} An object containing translatable metadata, navigation bar, contact form, and footer data for the root layout.
+ * @return {object} An object containing navigation bar, contact form, and footer data.
  */
 export const layoutData = {
-  metadata: {
-    title: {
-      default: "Henry's Top Notch A/C & Heating | HVAC Services For Homes & Businesses",
-      template: "%s | Henry's Top Notch A/C & Heating",
-    },
-    description:
-      'Professional A/C and heating services for homes and businesses. We specialize in HVAC installation, repair, and maintenance, delivering reliable comfort, energy efficiency, and trusted service you can count on year-round.',
-    keywords: [
-      'HVAC services',
-      'air conditioning repair',
-      'AC installation',
-      'heating services',
-      'furnace repair',
-      'HVAC maintenance',
-      'commercial HVAC',
-      'residential HVAC',
-      'air conditioning service',
-      'heating and cooling',
-      'licensed HVAC contractors',
-      'energy efficient HVAC',
-    ],
-    metadataBase: new URL('https://henrystopnotch.com'),
-    alternates: {
-      canonical: 'https://henrystopnotch.com/',
-    },
-  },
   navigationBar: {
     logo: { url: '/images/logo-company/logo-company.webp' },
     getStartedButton: { text: 'Get Started', href: '#contactus' },
@@ -50,19 +23,12 @@ export const layoutData = {
     ],
   },
   contactForm: {
-    name: { label: 'Full Name', placeholder: 'John Dohe...', type: 'text', icon: 'user' },
-    email: { label: 'Email Address', placeholder: 'you@example.com', type: 'email', icon: 'email' },
-    phone: { label: 'Phone Number', placeholder: '+1 (555) 123-4567', type: 'tel', icon: 'phone' },
-    problemDescription: {
-      label: 'Description (400 characters)',
-      placeholder: 'Tell us your situation...',
-      charactersLimit: 400,
-    },
-    primaryCta: 'GET A CALL',
-    notifications: {
-      success: { description: 'Your contact information was successfully registered.' },
-      error: { description: 'The request could not be submitted. Please try again later.' },
-    },
+    fields: [
+      { key: 'name', type: 'text', icon: 'user' },
+      { key: 'email', type: 'email', icon: 'email' },
+      { key: 'phone', type: 'tel', icon: 'phone' },
+    ],
+    problemDescription: { key: 'problemDescription', charactersLimit: 400 },
   },
   footer: {
     logo: { url: '/images/logo-company/logo-company.webp' },

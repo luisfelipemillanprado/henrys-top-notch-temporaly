@@ -1,4 +1,4 @@
-import { Providers } from '@/app/providers'
+import { Providers } from '@/app/[locale]/providers'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
 import { layoutData } from '@/utils/data/static/en-US/layout'
@@ -6,7 +6,7 @@ import { Toast } from '@heroui/react'
 import clsx from 'clsx'
 import { Metadata } from 'next'
 import { Poppins, Reenie_Beanie } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 
 /**
  * @description Loads the Poppins font with specified weights and subsets for use in the application.

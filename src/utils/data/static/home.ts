@@ -1,60 +1,74 @@
+/**
+ * @description This module exports an object containing assets of the home page.
+ * @private
+ * @function homeAssets
+ * @property {object} hero - Contains data for the hero section.
+ * @property {array} trustedAndCertified - An array of objects representing trusted and certified logos with URLs and IDs.
+ * @property {object} whoWeAre - Contains data for the "Who We Are" section.
+ * @property {object} bookingProcess - Contains data for the booking process section.
+ * @property {object} professionalServices - Contains data for the professional services section.
+ * @property {object} whyChooseUs - Contains data for the "Why Choose Us" section.
+ * @property {object} customerTestimonials - Contains data for the customer testimonials section.
+ * @property {object} contactUs - Contains data for the contact us section, including form configuration and notifications.
+ * @return {object} An object containing static data for various sections of the home page.
+ */
 export const homeAssets = {
   hero: {
     primaryCtaHref: '#contact-us',
     secondaryCtaHref: '/services',
     gallery: [
-      { url: '/images/home/main-galleries/main-gallery1.webp', id: 1 },
-      { url: '/images/home/main-galleries/main-gallery2.webp', id: 2 },
-      { url: '/images/home/main-galleries/main-gallery3.webp', id: 3 },
-      { url: '/images/home/main-galleries/main-gallery4.webp', id: 4 },
-      { url: '/images/home/main-galleries/main-gallery5.webp', id: 5 },
-      { url: '/images/home/main-galleries/main-gallery6.webp', id: 6 },
+      { url: '/images/main-galleries/main-gallery1.webp', id: 1 },
+      { url: '/images/main-galleries/main-gallery2.webp', id: 2 },
+      { url: '/images/main-galleries/main-gallery3.webp', id: 3 },
+      { url: '/images/main-galleries/main-gallery4.webp', id: 4 },
+      { url: '/images/main-galleries/main-gallery5.webp', id: 5 },
+      { url: '/images/main-galleries/main-gallery6.webp', id: 6 },
     ],
   },
   trustedAndCertified: [
     {
-      url: '/images/home/trusted-certified/trusted-certified7.webp',
+      url: '/images/trusted-certified/trusted-certified7.webp',
       href: 'https://bcert.me/syfzztge',
       id: 7,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified6.webp',
+      url: '/images/trusted-certified/trusted-certified6.webp',
       href: '/',
       id: 8,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified8.webp',
+      url: '/images/trusted-certified/trusted-certified8.webp',
       href: 'https://bcert.me/sujfjotr',
       id: 9,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified4.webp',
+      url: '/images/trusted-certified/trusted-certified4.webp',
       href: 'https://www.bbb.org/us/tx/houston/profile/residential-air-conditioning-contractors/ace-comfort-air-conditioning-heating-0915-90044634',
       id: 10,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified1.webp',
+      url: '/images/trusted-certified/trusted-certified1.webp',
       href: 'https://www.facebook.com/HenrysTopNotch?mibextid=ZbWKwL',
       id: 11,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified5.webp',
+      url: '/images/trusted-certified/trusted-certified5.webp',
       href: '/',
       id: 12,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified3.webp',
+      url: '/images/trusted-certified/trusted-certified3.webp',
       href: 'https://maps.app.goo.gl/7U3YQJ93nK9Ms2999',
       id: 13,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified2.webp',
+      url: '/images/trusted-certified/trusted-certified2.webp',
       href: 'https://www.yelp.com/biz/henrys-top-notch-air-conditioning-and-heating-houston-2',
       id: 14,
     },
   ],
   whoWeAre: {
-    image: '/images/home/about-company/about-company.webp',
+    image: '/images/about-company/about-company.webp',
     primaryCtaHref: '/about-us',
     benefits: [
       { key: 'justOnTime', id: 15 },
@@ -66,7 +80,7 @@ export const homeAssets = {
     ],
   },
   bookingProcess: {
-    image: '/images/home/booking-process/booking-process1.webp',
+    image: '/images/booking-process/booking-process1.webp',
     primaryCtaHref: '/about-us',
     features: [
       { key: 'energyEfficientSystems', icon: 'emergency', id: 21 },
@@ -74,10 +88,10 @@ export const homeAssets = {
       { key: 'comfortForHomesBusinesses', icon: 'comfort', id: 23 },
     ],
     steps: [
-      { key: 'bookYourService', url: '/images/home/booking-process/booking-process2.webp', id: 24 },
-      { key: 'weArriveOnTime', url: '/images/home/booking-process/booking-process3.webp', id: 25 },
-      { key: 'affordablePricing', url: '/images/home/booking-process/booking-process4.webp', id: 26 },
-      { key: 'satisfactionGuaranteed', url: '/images/home/booking-process/booking-process5.webp', id: 27 },
+      { key: 'bookYourService', url: '/images/booking-process/booking-process2.webp', id: 24 },
+      { key: 'weArriveOnTime', url: '/images/booking-process/booking-process3.webp', id: 25 },
+      { key: 'affordablePricing', url: '/images/booking-process/booking-process4.webp', id: 26 },
+      { key: 'satisfactionGuaranteed', url: '/images/booking-process/booking-process5.webp', id: 27 },
     ],
   },
   professionalServices: {
@@ -85,7 +99,7 @@ export const homeAssets = {
     services: [
       {
         key: 'maintenance',
-        url: '/images/home/professional-services/professional-services1.webp',
+        url: '/images/professional-services/professional-services1.webp',
         stars: [{ id: 28 }, { id: 29 }, { id: 30 }, { id: 31 }, { id: 32 }],
         benefits: [
           { key: 'freeEstimate', id: 33 },
@@ -99,7 +113,7 @@ export const homeAssets = {
       },
       {
         key: 'repair',
-        url: '/images/home/professional-services/professional-services2.webp',
+        url: '/images/professional-services/professional-services2.webp',
         stars: [{ id: 39 }, { id: 40 }, { id: 41 }, { id: 42 }, { id: 43 }],
         benefits: [
           { key: 'freeEstimate', id: 44 },
@@ -113,7 +127,7 @@ export const homeAssets = {
       },
       {
         key: 'installation',
-        url: '/images/home/professional-services/professional-services3.webp',
+        url: '/images/professional-services/professional-services3.webp',
         stars: [{ id: 50 }, { id: 51 }, { id: 52 }, { id: 53 }, { id: 54 }],
         benefits: [
           { key: 'freeEstimate', id: 55 },
@@ -127,7 +141,7 @@ export const homeAssets = {
       },
       {
         key: 'acInstallation',
-        url: '/images/home/professional-services/professional-services4.webp',
+        url: '/images/professional-services/professional-services4.webp',
         stars: [{ id: 61 }, { id: 62 }, { id: 63 }, { id: 64 }, { id: 65 }],
         benefits: [
           { key: 'freeEstimate', id: 66 },
@@ -142,7 +156,7 @@ export const homeAssets = {
     ],
   },
   whyChooseUs: {
-    image: '/images/home/why-choose-us/why-choose-us.webp',
+    image: '/images/why-choose-us/why-choose-us.webp',
     primaryCtaHref: '/about-us',
     reasons: [
       { key: 'trustedIndustryExperts', id: 72 },
@@ -153,62 +167,65 @@ export const homeAssets = {
   },
   customerTestimonials: {
     primaryCtaHref: 'https://maps.app.goo.gl/PJM12ME267TwtviD7',
-    image: '/images/home/customer-testimonials/customer-testimonials.webp',
+    image: '/images/customer-testimonials/customer-testimonials.webp',
     testimonials: [
       {
         key: 'willBurnett',
-        url: '/images/home/customer-testimonials/customer/customer1.webp',
+        url: '/images/customer-testimonials/customer/customer1.webp',
         stars: [{ id: 76 }, { id: 77 }, { id: 78 }, { id: 79 }, { id: 80 }],
         id: 81,
       },
       {
         key: 'ginCowan',
-        url: '/images/home/customer-testimonials/customer/customer2.webp',
+        url: '/images/customer-testimonials/customer/customer2.webp',
         stars: [{ id: 82 }, { id: 83 }, { id: 84 }, { id: 85 }, { id: 86 }],
         id: 87,
       },
       {
         key: 'judyBarbour',
-        url: '/images/home/customer-testimonials/customer/customer3.webp',
+        url: '/images/customer-testimonials/customer/customer3.webp',
         stars: [{ id: 88 }, { id: 89 }, { id: 90 }, { id: 91 }, { id: 92 }],
         id: 93,
       },
       {
         key: 'rosieContreras',
-        url: '/images/home/customer-testimonials/customer/customer4.webp',
+        url: '/images/customer-testimonials/customer/customer4.webp',
         stars: [{ id: 94 }, { id: 95 }, { id: 96 }, { id: 97 }, { id: 98 }],
         id: 99,
       },
       {
         key: 'donnaWhite',
-        url: '/images/home/customer-testimonials/customer/customer5.webp',
+        url: '/images/customer-testimonials/customer/customer5.webp',
         stars: [{ id: 100 }, { id: 101 }, { id: 102 }, { id: 103 }, { id: 104 }],
         id: 105,
       },
       {
         key: 'marvinReyna',
-        url: '/images/home/customer-testimonials/customer/customer6.webp',
+        url: '/images/customer-testimonials/customer/customer6.webp',
         stars: [{ id: 106 }, { id: 107 }, { id: 108 }, { id: 109 }, { id: 110 }],
         id: 111,
       },
       {
         key: 'abbyMarcotte',
-        url: '/images/home/customer-testimonials/customer/customer7.webp',
+        url: '/images/customer-testimonials/customer/customer7.webp',
         stars: [{ id: 112 }, { id: 113 }, { id: 114 }, { id: 115 }, { id: 116 }],
         id: 117,
       },
       {
         key: 'vikkiCruz',
-        url: '/images/home/customer-testimonials/customer/customer8.webp',
+        url: '/images/customer-testimonials/customer/customer8.webp',
         stars: [{ id: 118 }, { id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }],
         id: 123,
       },
       {
         key: 'sarahAlvarez',
-        url: '/images/home/customer-testimonials/customer/customer9.webp',
+        url: '/images/customer-testimonials/customer/customer9.webp',
         stars: [{ id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }, { id: 123 }],
         id: 124,
       },
     ],
+  },
+  contactUs: {
+    image: '/images/contact-us/contact-us.webp',
   },
 } as const

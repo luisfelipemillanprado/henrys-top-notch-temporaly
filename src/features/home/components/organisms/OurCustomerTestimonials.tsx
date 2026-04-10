@@ -3,10 +3,30 @@ import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
+const { image, primaryCtaHref, testimonials: testimonialAssets } = homeAssets.customerTestimonials
+const stars = testimonialAssets[0].stars.map((star) => ({ ...star }))
+
+/**
+ * @description Renders the "Customer Testimonials" section of the homepage.
+ * @public
+ * @property {string} title - The title of the section.
+ * @property {string} description - The description of the section.
+ * @property {string} eyebrow - The eyebrow text of the section.
+ * @property {string} image - The URL of the image representing the section.
+ * @property {object} primaryCta - Configuration for the primary call-to-action button.
+ * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
+ * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
+ * @property {array} testimonials - An array of objects representing customer testimonials.
+ * @property {number} testimonials[].id - The unique identifier for the testimonial.
+ * @property {string} testimonials[].name - The name of the customer.
+ * @property {string} testimonials[].position - The position or title of the customer.
+ * @property {string} testimonials[].comment - The comment or feedback from the customer.
+ * @property {string} testimonials[].url - The URL of the customer's image.
+ * @property {array} testimonials[].stars - An array of objects representing the star ratings for the testimonial.
+ * @returns {JSX.Element} The rendered "OurCustomerTestimonials" component.
+ */
 export const OurCustomerTestimonials = () => {
   const t = useTranslations('home.our-customer-testimonials')
-  const { image, primaryCtaHref, testimonials: testimonialAssets } = homeAssets.customerTestimonials
-
   const title = t('title')
   const description = t('description')
   const eyebrow = t('eyebrow')
@@ -20,7 +40,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.willBurnett.position'),
       comment: t('testimonials.willBurnett.comment'),
       url: testimonialAssets[0].url,
-      stars: testimonialAssets[0].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[0].id,
     },
     {
@@ -28,7 +48,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.ginCowan.position'),
       comment: t('testimonials.ginCowan.comment'),
       url: testimonialAssets[1].url,
-      stars: testimonialAssets[1].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[1].id,
     },
     {
@@ -36,7 +56,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.judyBarbour.position'),
       comment: t('testimonials.judyBarbour.comment'),
       url: testimonialAssets[2].url,
-      stars: testimonialAssets[2].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[2].id,
     },
     {
@@ -44,7 +64,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.rosieContreras.position'),
       comment: t('testimonials.rosieContreras.comment'),
       url: testimonialAssets[3].url,
-      stars: testimonialAssets[3].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[3].id,
     },
     {
@@ -52,7 +72,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.donnaWhite.position'),
       comment: t('testimonials.donnaWhite.comment'),
       url: testimonialAssets[4].url,
-      stars: testimonialAssets[4].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[4].id,
     },
     {
@@ -60,7 +80,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.marvinReyna.position'),
       comment: t('testimonials.marvinReyna.comment'),
       url: testimonialAssets[5].url,
-      stars: testimonialAssets[5].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[5].id,
     },
     {
@@ -68,7 +88,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.abbyMarcotte.position'),
       comment: t('testimonials.abbyMarcotte.comment'),
       url: testimonialAssets[6].url,
-      stars: testimonialAssets[6].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[6].id,
     },
     {
@@ -76,7 +96,7 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.vikkiCruz.position'),
       comment: t('testimonials.vikkiCruz.comment'),
       url: testimonialAssets[7].url,
-      stars: testimonialAssets[7].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[7].id,
     },
     {
@@ -84,11 +104,10 @@ export const OurCustomerTestimonials = () => {
       position: t('testimonials.sarahAlvarez.position'),
       comment: t('testimonials.sarahAlvarez.comment'),
       url: testimonialAssets[8].url,
-      stars: testimonialAssets[8].stars.map((star) => ({ ...star })),
+      stars,
       id: testimonialAssets[8].id,
     },
   ]
-
   return (
     <section
       id={'customer-testimonials'}

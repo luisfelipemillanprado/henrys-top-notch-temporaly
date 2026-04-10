@@ -1,14 +1,14 @@
 {
   "eyebrow": "SERVICES WE OFFER",
   "title": "Access Expert HVAC Services Today.",
-  "description": "Explore our full range of HVAC services designed to meet your comfort needs year-round. Our experienced team provides reliable heating and cooling solutions, focusing on efficiency, performance, and long-term results so your home or business stays comfortable, safe, and running smoothly every season.",
+  "description": "Choosing our specialized HVAC services means lower energy bills and customized comfort settings for your specific lifestyle. We eliminate hot and cold spots while enhancing your system's overall performance and safety. Benefit from our high-quality workmanship and innovative technology designed to keep your indoor refreshing.",
   "primaryCta": {
     "text": "ALL SERVICES"
   },
   "services": {
     "maintenance": {
       "title": "HVAC System Maintenance.",
-      "description": "Keep your HVAC system efficient with expert maintenance that reduces energy costs and helps prevent breakdowns.",
+      "description": "Protect your home comfort with annual maintenance that prevents sudden failures and improves performance.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",
@@ -22,7 +22,7 @@
     },
     "repair": {
       "title": "HVAC System Repair.",
-      "description": "HVAC repair services you can trust resolve issues quickly, restore reliability, and ensure consistent performance.",
+      "description": "HVAC repair services you can trust resolve issues quickly, restore reliability, and provide consistent performance.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",

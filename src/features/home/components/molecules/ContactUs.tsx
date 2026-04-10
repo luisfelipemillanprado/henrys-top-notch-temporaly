@@ -1,6 +1,7 @@
 import { ContactForm } from '@/common/contact-us/email/components/organisms/ContactForm'
 import { LeadVisual } from '@/common/lead-visual/components/LeadVisual'
 import { SectionHeader } from '@/common/section-header/components/SectionHeader'
+import { CircularDecoration } from '@/features/home/components/atoms/CircularDecoration'
 import clsx from 'clsx'
 
 /**
@@ -11,7 +12,7 @@ import clsx from 'clsx'
  * @param {string} props.description - A brief description for the contact section.
  * @param {string} props.eyebrow - An eyebrow text to provide additional context.
  * @param {string} props.image - The URL of the lead visual image.
- * @param {object} props.contactForm - Configuration for the contact form, including field labels, placeholders, and notifications.
+ * @param {object} props.contactForm - Configuration for the contact form.
  * @param {string} props.contactForm.name.label - The label for the name field.
  * @param {string} props.contactForm.name.placeholder - The placeholder for the name field.
  * @param {string} props.contactForm.name.type - The input type for the name field.
@@ -69,7 +70,10 @@ export const ContactUs = ({
         <LeadVisual image={image} changeBackground />
         <SectionHeader title={title} description={description} eyebrow={eyebrow} />
       </div>
-      <ContactForm contactForm={contactForm} />
+      <div className={clsx('horizontal relative w-full overflow-hidden rounded-3xl')}>
+        <CircularDecoration rings={3} changeColor />
+        <ContactForm contactForm={contactForm} />
+      </div>
     </div>
   )
 }

@@ -3,10 +3,32 @@ import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
+const { features: featureAssets, image, primaryCtaHref, steps: stepAssets } = homeAssets.bookingProcess
+
+/**
+ * @description Renders the "Booking Process" section of the homepage.
+ * @public
+ * @property {string} title - The title of the section.
+ * @property {string} description - The description of the section.
+ * @property {string} eyebrow - The eyebrow text of the section.
+ * @property {string} image - The URL of the image representing the section.
+ * @property {object} primaryCta - Configuration for the primary call-to-action button.
+ * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
+ * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
+ * @property {array} features - An array of objects representing features of the booking process.
+ * @property {number} features[].id - The unique identifier for the feature.
+ * @property {string} features[].icon - The URL of the feature icon.
+ * @property {string} features[].title - The title of the feature.
+ * @property {string} features[].description - The description of the feature.
+ * @property {array} steps - An array of objects representing steps in the booking process.
+ * @property {number} steps[].id - The unique identifier for the step.
+ * @property {string} steps[].url - The URL of the step image.
+ * @property {string} steps[].title - The title of the step.
+ * @property {string} steps[].description - The description of the step.
+ * @returns {JSX.Element} The rendered "OurBookingProcess" component.
+ */
 export const OurBookingProcess = () => {
   const t = useTranslations('home.our-booking-process')
-  const { features: featureAssets, image, primaryCtaHref, steps: stepAssets } = homeAssets.bookingProcess
-
   const title = t('title')
   const description = t('description')
   const eyebrow = t('eyebrow')
@@ -60,7 +82,6 @@ export const OurBookingProcess = () => {
       id: stepAssets[3].id,
     },
   ]
-
   return (
     <section
       id={'booking-process'}

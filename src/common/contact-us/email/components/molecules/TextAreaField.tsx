@@ -25,7 +25,7 @@ export const TextAreaField = (props: {
   return (
     <TextField name={name} validate={validateMessage(charactersLimit)} onChange={(value) => onChange(value)}>
       <Label>{label}</Label>
-      <TextArea placeholder={placeholder} rows={4} value={value} />
+      <TextArea placeholder={placeholder} rows={6} value={value} />
     </TextField>
   )
 }

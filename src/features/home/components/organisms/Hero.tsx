@@ -7,19 +7,33 @@ import { homeAssets } from '@/utils/data/static/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
+const { gallery: galleryAssets, primaryCtaHref, secondaryCtaHref } = homeAssets.hero
+const gallery = galleryAssets.map((item) => ({ ...item }))
+
+/**
+ * @description Renders the "Hero" section of the homepage.
+ * @public
+ * @property {string} title - The title of the hero section.
+ * @property {string} description - The description text of the hero section.
+ * @property {object} primaryCta - Configuration for the primary call-to-action button.
+ * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
+ * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
+ * @property {object} secondaryCta - Configuration for the secondary call-to-action button.
+ * @property {string} secondaryCta.text - The text displayed on the secondary call-to-action button.
+ * @property {string} secondaryCta.href - The URL that the secondary call-to-action button links to.
+ * @property {array} highlight - An array of strings representing highlighted text in the hero section.
+ * @returns {JSX.Element} The rendered "Hero" component.
+ */
 export const Hero = () => {
   const t = useTranslations('home.hero')
-  const { gallery: galleryAssets, primaryCtaHref, secondaryCtaHref } = homeAssets.hero
-
   const title = t('title')
   const description = t('description')
   const primaryCta = { text: t('primaryCta.text'), href: primaryCtaHref }
   const secondaryCta = { text: t('secondaryCta.text'), href: secondaryCtaHref }
   const highlight = [t('highlight.first'), t('highlight.second')]
-  const gallery = galleryAssets.map((item) => ({ ...item }))
-
   return (
     <section
+      id={'hero'}
       aria-labelledby={title}
       role={'region'}
       className={clsx(

@@ -1,0 +1,39 @@
+{
+  "eyebrow": "Contáctenos",
+  "title": "Contáctenos",
+  "description": "¿Tiene alguna pregunta o necesita una cotización? Complete el formulario a continuación y nuestro equipo se comunicará con usted lo antes posible.",
+  "contactForm": {
+    "name": {
+      "label": "Nombre Completo",
+      "placeholder": "Ingrese su nombre completo",
+      "type": "text",
+      "icon": "user"
+    },
+    "email": {
+      "label": "Correo Electrónico",
+      "placeholder": "Ingrese su correo electrónico",
+      "type": "email",
+      "icon": "email"
+    },
+    "phone": {
+      "label": "Número de Teléfono",
+      "placeholder": "(123) 456-7890",
+      "type": "tel",
+      "icon": "phone"
+    },
+    "problemDescription": {
+      "label": "¿Cómo podemos ayudarle?",
+      "placeholder": "Describa su problema de HVAC o el servicio que necesita...",
+      "charactersLimit": 500
+    },
+    "primaryCta": "Enviar Mensaje",
+    "notifications": {
+      "success": {
+        "description": "Su mensaje ha sido enviado exitosamente. ¡Nos pondremos en contacto con usted pronto!"
+      },
+      "error": {
+        "description": "Algo salió mal. Por favor intente de nuevo o llámenos directamente."
+      }
+    }
+  }
+}

@@ -26,52 +26,52 @@ export const homeData = {
     },
     highlight: ['Let’s start your', 'appointment here!'],
     gallery: [
-      { url: '/images/home/main-galleries/main-gallery1.webp', id: 1 },
-      { url: '/images/home/main-galleries/main-gallery2.webp', id: 2 },
-      { url: '/images/home/main-galleries/main-gallery3.webp', id: 3 },
-      { url: '/images/home/main-galleries/main-gallery4.webp', id: 4 },
-      { url: '/images/home/main-galleries/main-gallery5.webp', id: 5 },
-      { url: '/images/home/main-galleries/main-gallery6.webp', id: 6 },
+      { url: '/images/main-galleries/main-gallery1.webp', id: 1 },
+      { url: '/images/main-galleries/main-gallery2.webp', id: 2 },
+      { url: '/images/main-galleries/main-gallery3.webp', id: 3 },
+      { url: '/images/main-galleries/main-gallery4.webp', id: 4 },
+      { url: '/images/main-galleries/main-gallery5.webp', id: 5 },
+      { url: '/images/main-galleries/main-gallery6.webp', id: 6 },
     ],
   },
   trustedAndCertified: [
     {
-      url: '/images/home/trusted-certified/trusted-certified7.webp',
+      url: '/images/trusted-certified/trusted-certified7.webp',
       href: 'https://bcert.me/syfzztge',
       id: 7,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified6.webp',
+      url: '/images/trusted-certified/trusted-certified6.webp',
       href: '/',
       id: 8,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified8.webp',
+      url: '/images/trusted-certified/trusted-certified8.webp',
       href: 'https://bcert.me/sujfjotr',
       id: 9,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified4.webp',
+      url: '/images/trusted-certified/trusted-certified4.webp',
       href: 'https://www.bbb.org/us/tx/houston/profile/residential-air-conditioning-contractors/ace-comfort-air-conditioning-heating-0915-90044634',
       id: 10,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified1.webp',
+      url: '/images/trusted-certified/trusted-certified1.webp',
       href: 'https://www.facebook.com/HenrysTopNotch?mibextid=ZbWKwL',
       id: 11,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified5.webp',
+      url: '/images/trusted-certified/trusted-certified5.webp',
       href: '/',
       id: 12,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified3.webp',
+      url: '/images/trusted-certified/trusted-certified3.webp',
       href: 'https://maps.app.goo.gl/7U3YQJ93nK9Ms2999',
       id: 13,
     },
     {
-      url: '/images/home/trusted-certified/trusted-certified2.webp',
+      url: '/images/trusted-certified/trusted-certified2.webp',
       href: 'https://www.yelp.com/biz/henrys-top-notch-air-conditioning-and-heating-houston-2',
       id: 14,
     },
@@ -85,7 +85,7 @@ export const homeData = {
       text: 'LEARN MORE',
       href: '/about-us',
     },
-    image: '/images/home/about-company/about-company.webp',
+    image: '/images/about-company/about-company.webp',
     benefits: [
       { text: 'Just On Time.', id: 15 },
       { text: '24-7 Support.', id: 16 },
@@ -104,7 +104,7 @@ export const homeData = {
       text: 'LEARN MORE',
       href: '/about-us',
     },
-    image: '/images/home/booking-process/booking-process1.webp',
+    image: '/images/booking-process/booking-process1.webp',
     features: [
       {
         icon: 'emergency',
@@ -130,28 +130,28 @@ export const homeData = {
     ],
     steps: [
       {
-        url: '/images/home/booking-process/booking-process2.webp',
+        url: '/images/booking-process/booking-process2.webp',
         title: 'Book Your Service.',
         description:
           'Schedule your service easily by choosing a convenient date and time that fits your availability perfectly every time without hassle or delays quickly and efficiently',
         id: 24,
       },
       {
-        url: '/images/home/booking-process/booking-process3.webp',
+        url: '/images/booking-process/booking-process3.webp',
         title: 'We Arrive On Time.',
         description:
           'Receive punctual service from our technicians who respect your schedule and deliver reliable HVAC solutions every visit consistently and always professionally.',
         id: 25,
       },
       {
-        url: '/images/home/booking-process/booking-process4.webp',
+        url: '/images/booking-process/booking-process4.webp',
         title: 'Affordable Pricing.',
         description:
           'Enjoy transparent and affordable pricing with no hidden fees, giving you complete confidence and clear expectations before any service begins smoothly today.',
         id: 26,
       },
       {
-        url: '/images/home/booking-process/booking-process5.webp',
+        url: '/images/booking-process/booking-process5.webp',
         title: 'Satisfaction Guaranteed.',
         description:
           'Your satisfaction is guaranteed through reliable service and consistent results that meet your expectations perfectly every time without stress or delays always.',
@@ -170,7 +170,7 @@ export const homeData = {
     },
     services: [
       {
-        url: '/images/home/professional-services/professional-services1.webp',
+        url: '/images/professional-services/professional-services1.webp',
         title: 'HVAC System Maintenance.',
         stars: [{ id: 28 }, { id: 29 }, { id: 30 }, { id: 31 }, { id: 32 }],
         description:
@@ -189,7 +189,7 @@ export const homeData = {
         id: 38,
       },
       {
-        url: '/images/home/professional-services/professional-services2.webp',
+        url: '/images/professional-services/professional-services2.webp',
         title: 'HVAC System Repair.',
         stars: [{ id: 39 }, { id: 40 }, { id: 41 }, { id: 42 }, { id: 43 }],
         description:
@@ -208,7 +208,7 @@ export const homeData = {
         id: 49,
       },
       {
-        url: '/images/home/professional-services/professional-services3.webp',
+        url: '/images/professional-services/professional-services3.webp',
         title: 'HVAC System Installation.',
         stars: [{ id: 50 }, { id: 51 }, { id: 52 }, { id: 53 }, { id: 54 }],
         description:
@@ -227,7 +227,7 @@ export const homeData = {
         id: 60,
       },
       {
-        url: '/images/home/professional-services/professional-services4.webp',
+        url: '/images/professional-services/professional-services4.webp',
         title: 'AC System Installation.',
         stars: [{ id: 61 }, { id: 62 }, { id: 63 }, { id: 64 }, { id: 65 }],
         description:
@@ -256,7 +256,7 @@ export const homeData = {
       text: 'LEARN MORE',
       href: '/about-us',
     },
-    image: '/images/home/why-choose-us/why-choose-us.webp',
+    image: '/images/why-choose-us/why-choose-us.webp',
     reasons: [
       {
         affirmation: 'Trusted Industry Experts.',
@@ -293,14 +293,14 @@ export const homeData = {
       text: 'All REVIEWS',
       href: 'https://maps.app.goo.gl/PJM12ME267TwtviD7',
     },
-    image: '/images/home/customer-testimonials/customer-testimonials.webp',
+    image: '/images/customer-testimonials/customer-testimonials.webp',
     testimonials: [
       {
         name: 'WILL BURNETT.',
         position: 'Architect, Houston, TX.',
         comment:
           'The Henry’s Top Notch team replaced my condenser/compressor. I am very satisfied. Mr. Henry worked late, installed a cover for the Freon lines, and built a custom slab high enough to prevent flooding. I truly appreciate all the time and effort. Thank you so much, Mr. Henry and team! Great!',
-        url: '/images/home/customer-testimonials/customer/customer1.webp',
+        url: '/images/customer-testimonials/customer/customer1.webp',
         stars: [{ id: 76 }, { id: 77 }, { id: 78 }, { id: 79 }, { id: 80 }],
         id: 81,
       },
@@ -309,7 +309,7 @@ export const homeData = {
         position: 'Homeowner, Houston, TX.',
         comment:
           'Henry’s Top Notch team installed 2 A/C units with new furnaces, and I have relied on them for maintenance ever since. They do a thorough job, protected my home with tarps, and quickly they repaired a failed unit when it stopped working. Their service is reliable, efficient, and fairly priced.',
-        url: '/images/home/customer-testimonials/customer/customer2.webp',
+        url: '/images/customer-testimonials/customer/customer2.webp',
         stars: [{ id: 82 }, { id: 83 }, { id: 84 }, { id: 85 }, { id: 86 }],
         id: 87,
       },
@@ -318,7 +318,7 @@ export const homeData = {
         position: 'Office Manager, Houston, TX.',
         comment:
           'I have always called the Henry’s Top Notch team to handle absolutely all our air conditioning and heating needs. Over the years, they have been reliable, professional, and fairly priced. I would recommend them to anyone without hesitation for always excellent, dependable service.',
-        url: '/images/home/customer-testimonials/customer/customer3.webp',
+        url: '/images/customer-testimonials/customer/customer3.webp',
         stars: [{ id: 88 }, { id: 89 }, { id: 90 }, { id: 91 }, { id: 92 }],
         id: 93,
       },
@@ -327,7 +327,7 @@ export const homeData = {
         position: 'Homeowner, Houston, TX.',
         comment:
           'Awesome customer service! They are very clear about their work and consistently take the time to explain everything in detail. The team is very friendly, professional, and incredibly quick to respond. They make sure to answer any questions you may have and leave you feeling very confident.',
-        url: '/images/home/customer-testimonials/customer/customer4.webp',
+        url: '/images/customer-testimonials/customer/customer4.webp',
         stars: [{ id: 94 }, { id: 95 }, { id: 96 }, { id: 97 }, { id: 98 }],
         id: 99,
       },
@@ -336,7 +336,7 @@ export const homeData = {
         position: 'Facility Manager, Houston, TX.',
         comment:
           'This company has always provided a thorough inspection of all mechanical and visible aspects of both heating and AC components. They’re always so friendly, punctual, and professional during every visit. I would highly recommend them for their consistent service, attention, and reliability.',
-        url: '/images/home/customer-testimonials/customer/customer5.webp',
+        url: '/images/customer-testimonials/customer/customer5.webp',
         stars: [{ id: 100 }, { id: 101 }, { id: 102 }, { id: 103 }, { id: 104 }],
         id: 105,
       },
@@ -345,7 +345,7 @@ export const homeData = {
         position: 'Business Owner, Houston, TX.',
         comment:
           'Henry has serviced my AC multiple times and has also been there quickly to help me out in the hot summer when my unit stopped working. He is always honest, reliable and provides great service at a great value. He is my go to AC guy and I highly recommend him to everyone I know.',
-        url: '/images/home/customer-testimonials/customer/customer6.webp',
+        url: '/images/customer-testimonials/customer/customer6.webp',
         stars: [{ id: 106 }, { id: 107 }, { id: 108 }, { id: 109 }, { id: 110 }],
         id: 111,
       },
@@ -354,7 +354,7 @@ export const homeData = {
         position: 'Business Owner, Houston, TX.',
         comment:
           'Five-star service. The technicians were highly professional and competent. They worked perfectly as a team, they found the problem, fixed it quickly, and gave us helpful tips to improve our AC’s efficiency. We’ll be hiring them for all annual maintenance and future A/C services.',
-        url: '/images/home/customer-testimonials/customer/customer7.webp',
+        url: '/images/customer-testimonials/customer/customer7.webp',
         stars: [{ id: 112 }, { id: 113 }, { id: 114 }, { id: 115 }, { id: 116 }],
         id: 117,
       },
@@ -363,7 +363,7 @@ export const homeData = {
         position: 'Business Owner, Houston, TX.',
         comment:
           'Always reliable and honest. Fast, professional service every time. As a female homeowner, I have seen many unnecessary repairs and extra service charges that contractors often try to sell. Not Henry; he is reasonable, transparent, and keeps costs within budget while delivering.',
-        url: '/images/home/customer-testimonials/customer/customer8.webp',
+        url: '/images/customer-testimonials/customer/customer8.webp',
         stars: [{ id: 118 }, { id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }],
         id: 123,
       },
@@ -372,7 +372,7 @@ export const homeData = {
         position: 'Homeowner, Houston, TX.',
         comment:
           'Henry did a complete install for my HVAC system. He is professional, organized, honest, and reliable. I highly recommend his service for any HVAC needs. The entire process was smooth, efficient, and completed on time with careful attention to every detail throughout the entire job.',
-        url: '/images/home/customer-testimonials/customer/customer9.webp',
+        url: '/images/customer-testimonials/customer/customer9.webp',
         stars: [{ id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }, { id: 123 }],
         id: 124,
       },

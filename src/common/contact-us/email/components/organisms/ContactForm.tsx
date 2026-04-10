@@ -2,7 +2,7 @@
 import { ContactFormButton } from '@/common/call-to-action/components/ContactFormButton'
 import { TextAreaField } from '@/common/contact-us/email/components/molecules/TextAreaField'
 import { TextInputField } from '@/common/contact-us/email/components/molecules/TextInputField'
-// import { useContactEmail } from '@/utils/hooks/emails/contact-us/useContactEmail'
+import { useContactEmail } from '@/utils/hooks/emails/contact-us/useContactEmail'
 import clsx from 'clsx'
 import { SyntheticEvent, useState } from 'react'
 
@@ -64,31 +64,29 @@ export const ContactForm = ({
     phone: '',
     description: '',
   })
-  {
-    /*const send = useContactEmail(() => {
+  const send = useContactEmail(() => {
     setForm({ name: '', email: '', phone: '', description: '' })
-  })*/
-  }
+  })
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
     {
-      /*send({
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      description: form.description,
-      notifications: contactForm.notifications,
-    }).finally(() => setIsLoading(false))*/
+      send({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        description: form.description,
+        notifications: contactForm.notifications,
+      }).finally(() => setIsLoading(false))
     }
   }
   return (
     <form
       onSubmit={handleSubmit}
       className={clsx(
-        'vertical bg-off-white border-warmgray/30 w-full gap-y-6.25 rounded-3xl border p-5 shadow-md',
-        'm1x:px-7',
-        'm3x:px-7.5',
+        'vertical bg-off-white border-warmgray/30 w-full gap-y-6.25 rounded-3xl border p-5.5 shadow-md',
+        'm1x:px-6',
+        'm3x:px-6.5',
         'md:gap-y-8 md:px-10.5',
         'lg:px-11.75',
         '1xl:px-13 1xl:gap-y-9',

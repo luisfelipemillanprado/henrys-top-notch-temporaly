@@ -8,21 +8,21 @@
   "features": {
     "energyEfficientSystems": {
       "title": "Energy-Efficient Systems.",
-      "description": "High-efficiency HVAC systems reduce energy consumption while maintaining stable, optimal, and consistent indoor comfort levels."
+      "description": "High efficiency HVAC systems reduce energy consumption while maintaining stable, optimal, and consistent indoor comfort levels."
     },
     "expertInstallationRepair": {
       "title": "Expert Installation & Repair.",
-      "description": "Our HVAC technicians perform precise installations and reliable repairs, ensuring optimal system performance consistently."
+      "description": "Our HVAC technicians perform precise installations and reliable repairs, ensuring optimal system performance always consistently."
     },
     "comfortForHomesBusinesses": {
       "title": "Comfort For Homes & Businesses.",
-      "description": "Advanced climate-control solutions keep residential and commercial spaces comfortable throughout every season of the year."
+      "description": "Advanced climate control solutions keep residential and commercial spaces perfectly comfortable throughout every season year round."
     }
   },
   "steps": {
     "bookYourService": {
       "title": "Book Your Service.",
-      "description": "Schedule your service easily by choosing a convenient date and time that fits your availability without hassle."
+      "description": "Easily book your service by selecting a convenient date and time that fits your schedule perfectly without any unnecessary delays."
     },
     "weArriveOnTime": {
       "title": "We Arrive On Time.",
@@ -30,11 +30,11 @@
     },
     "affordablePricing": {
       "title": "Affordable Pricing.",
-      "description": "Enjoy transparent and affordable pricing with no hidden fees, giving you complete confidence before any service begins."
+      "description": "Enjoy transparent and affordable pricing with no hidden fees, giving you total confidence before our expert service begins."
     },
     "satisfactionGuaranteed": {
       "title": "Satisfaction Guaranteed.",
-      "description": "Your satisfaction is backed by reliable service and consistent results that meet your expectations every time."
+      "description": "Your satisfaction is guaranteed through reliable service and consistent results that meet your expectations without any hassle."
     }
   }
 }

@@ -1,4 +1,8 @@
-import { validateEmail, validateName } from '@/utils/validators/forms/contact-us/ContactUsValidator'
+import {
+  validateEmail,
+  validateName,
+  validatePhone,
+} from '@/utils/validators/forms/contact-us/ContactUsValidator'
 import { EnvelopeIcon, PhoneIcon, UserIcon } from '@heroicons/react/24/solid'
 import { FieldError, InputGroup, Label, TextField } from '@heroui/react'
 import clsx from 'clsx'
@@ -30,7 +34,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-secondary size-6',
+            'fill-irongray size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',
@@ -44,7 +48,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-secondary size-6',
+            'fill-irongray size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',
@@ -58,7 +62,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-secondary size-6',
+            'fill-irongray size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',
@@ -68,6 +72,23 @@ const iconSwitch = (icon: string) => {
       )
     default:
       return <span aria-label={'icon-none'}>?</span>
+  }
+}
+
+/**
+ * @description Selects the appropriate validation function based on the type of input field.
+ * @private
+ * @param {string} type - The TextInputFieldIcon string identifier, icon enum.
+ * @return {function} The validation function corresponding to the input type, or undefined if unknown.
+ */
+const validatorSwitch = (type: string) => {
+  switch (type) {
+    case TextInputFieldIcon.USER:
+      return validateName
+    case TextInputFieldIcon.EMAIL:
+      return validateEmail
+    case TextInputFieldIcon.PHONE:
+      return validatePhone
   }
 }
 
@@ -106,7 +127,7 @@ export const TextInputField = ({
       name={name}
       type={type}
       isRequired
-      validate={type === 'email' ? validateEmail : validateName}
+      validate={validatorSwitch(type)}
       onChange={(value) => onChange(value)}
     >
       <Label>{label}</Label>
