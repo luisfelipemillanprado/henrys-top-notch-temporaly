@@ -26,6 +26,7 @@ const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
 })
+
 /**
  * @description Loads the Reenie_Beanie font with specified weights and subsets for use in the application.
  * @constant

@@ -153,6 +153,25 @@
 }
 
 @layer components {
+  /* ------------------------- TOAST-COMPONENTS ------------------------- */
+  .toast {
+    @apply items-center gap-x-2.5 rounded-2xl;
+  }
+  .toast--success {
+    @apply bg-electric-blue;
+  }
+  .toast--danger {
+    @apply bg-warm-red;
+  }
+  .toast__indicator {
+    @apply text-secondary!;
+  }
+  .toast__title {
+    @apply text-secondary! text-[0.9375rem] leading-6 font-normal;
+  }
+  .toast__close-button {
+    @apply text-electric-blue -top-0.75 -right-0.75 size-5.5;
+  }
   /* ------------------------- ACCORDION-COMPONENTS ------------------------- */
   .accordion {
     @apply w-full;
@@ -177,13 +196,13 @@
     @apply text-secondary 1xl:text-base 3xl:text-[1.0625rem] text-[0.9375rem] md:text-[0.9375rem];
   }
   .input-group {
-    @apply 1xl:h-13 border-warmgray/30 3xl:h-14 m1x:h-11 h-10.75 rounded-lg border md:h-12 lg:h-12.5 2xl:h-13.5;
+    @apply 1xl:h-13 border-warmgray/30 3xl:h-14 m1x:h-12 h-11 rounded-lg border lg:h-12.5 2xl:h-13.5;
   }
   .input-group__input {
     @apply text-secondary placeholder:text-warmgray m1x:text-base 1xl:text-[1.0625rem] 3xl:text-lg w-full text-[0.9375rem];
   }
   .textarea {
-    @apply text-secondary placeholder:text-warmgray border-warmgray/30 m1x:text-base 1xl:h-19.5 1xl:text-[1.0625rem] 3xl:h-21 3xl:text-lg h-18 rounded-lg border text-[0.9375rem] md:h-18 lg:h-18.5 2xl:h-20;
+    @apply text-secondary placeholder:text-warmgray border-warmgray/30 m1x:text-base 1xl:h-19.5 1xl:text-[1.0625rem] 3xl:h-21 3xl:text-lg m1x:h-19 h-18 rounded-lg border text-[0.9375rem] lg:h-18.5 2xl:h-20;
   }
 }
 

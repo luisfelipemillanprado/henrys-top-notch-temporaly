@@ -20,7 +20,7 @@ const CONFIG = {
     ],
   },
   3: {
-    position: 'top-[114%] md:top-11/10 lg:top-6/5 1xl:top-5/4 2xl:top-33/25 3xl:top-69/50',
+    position: 'top-[114%] m1x:top-[113%] md:top-11/10 lg:top-6/5 1xl:top-5/4 2xl:top-33/25 3xl:top-69/50',
     rings: [
       {
         size: 'h-230 w-230 md:w-245 md:h-245 lg:w-300 lg:h-300 1xl:w-350 1xl:h-350 2xl:w-390 2xl:h-390 3xl:w-430 3xl:h-430',
@@ -65,7 +65,7 @@ export const CircularDecoration = ({
             key={`${rings}-${i}`}
             className={clsx(
               'absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border',
-              changeColor ? 'border-warmgray/50' : 'border-warmgray/45',
+              changeColor ? 'border-electric-blue' : 'border-warmgray/45',
               config.position,
               ring.size,
               ring.opacity

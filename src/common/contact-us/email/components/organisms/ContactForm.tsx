@@ -86,7 +86,7 @@ export const ContactForm = ({
       className={clsx(
         'vertical bg-off-white border-warmgray/30 w-full gap-y-6.25 rounded-3xl border p-5.5 shadow-md',
         'm1x:px-6',
-        'm3x:px-6.5',
+        'm3x:gap-y-6.75',
         'md:gap-y-8 md:px-10.5',
         'lg:px-11.75',
         '1xl:px-13 1xl:gap-y-9',
