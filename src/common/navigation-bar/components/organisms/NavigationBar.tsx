@@ -2,21 +2,42 @@ import { GetStartedButton } from '@/common/call-to-action/components/GetStartedB
 import { LogoCompany } from '@/common/logo-company/components/LogoCompany'
 import { MenuOptions } from '@/common/navigation-bar/components/molecules/MenuOptions'
 import { NavigationLinks } from '@/common/navigation-bar/components/molecules/NavigationLinks'
-import type { NavigationbarProps } from '@/common/navigation-bar/types'
+import { layoutAssets } from '@/utils/data/static/global/layout'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
+
+const { logo, getStartedButtonHref, links } = layoutAssets.navigationBar
 
 /**
  * @description Renders the main navigation bar component.
  * @public
- * @interface NavigationbarProps
- * @param {object} props - Component properties.
- * @param {NavigationbarProps['navigationBar']['logo']} props.logo - The properties for the company logo displayed in the navigation bar.
- * @param {NavigationbarProps['navigationBar']['getStartedButton']} props.getStartedButton - The properties for the "Get Started" button.
- * @param {NavigationbarProps['navigationBar']['links']} props.links - An array of navigation link items to be displayed.
- * @param {NavigationbarProps['navigationBar']} props.navigationBar - The configuration for the navigation bar.
+ * @property {string} logo - The properties for the company logo displayed in the navigation bar.
+ * @property {object} getStartedButton - The properties for the "Get Started" button.
+ * @property {string} getStartedButton.text - The text displayed on the "Get Started" button.
+ * @property {string} getStartedButton.href - The URL that the "Get Started" button links to.
+ * @property {Array} links - An array of navigation link items to be displayed.
+ * @property {string} links.text - The display text for the navigation link.
+ * @property {string} links.href - The URL the navigation link points to.
+ * @property {string} links.icon - The icon associated with the navigation link.
+ * @property {string} links.id - The unique identifier for the navigation link item.
  * @returns The rendered navigation bar component.
  */
-export const NavigationBar = ({ navigationBar }: NavigationbarProps) => {
+export const NavigationBar = () => {
+  const t = useTranslations('navigation-bar')
+  const navigationLinks = [
+    { ...links[0], text: t('links.home') },
+    { ...links[1], text: t('links.aboutUs') },
+    { ...links[2], text: t('links.services') },
+    { ...links[3], text: t('links.areas') },
+    { ...links[4], text: t('links.process') },
+    { ...links[5], text: t('links.reviews') },
+    { ...links[6], text: t('links.offers') },
+    { ...links[7], text: t('links.blogs') },
+  ]
+  const getStartedButton = {
+    text: t('getStartedButton.text'),
+    href: getStartedButtonHref.href,
+  }
   return (
     <nav
       className={clsx(
@@ -29,17 +50,14 @@ export const NavigationBar = ({ navigationBar }: NavigationbarProps) => {
       )}
     >
       <div className={clsx('horizontal')}>
-        <LogoCompany url={navigationBar.logo.url} />
+        <LogoCompany url={logo.url} />
       </div>
       <div className={clsx('hidden', 'lg:horizontal lg:w-14/25', '1xl:w-auto')}>
-        <NavigationLinks links={navigationBar.links} />
+        <NavigationLinks links={navigationLinks} />
       </div>
       <div className={clsx('horizontal')}>
-        <MenuOptions links={navigationBar.links} />
-        <GetStartedButton
-          text={navigationBar.getStartedButton.text}
-          href={navigationBar.getStartedButton.href}
-        />
+        <MenuOptions links={navigationLinks} />
+        <GetStartedButton text={getStartedButton.text} href={getStartedButton.href} />
       </div>
     </nav>
   )

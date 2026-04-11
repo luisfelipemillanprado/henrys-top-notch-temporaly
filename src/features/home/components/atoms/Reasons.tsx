@@ -27,13 +27,13 @@ export const Reasons = ({
       {reasons.map((item, index) => (
         <Accordion.Item key={index} className={clsx(index === reasons.length - 1 && 'after:bottom-px')}>
           <Accordion.Heading>
-            <Accordion.Trigger className={clsx(index === 0 && 'pt-1')}>
+            <Accordion.Trigger className={clsx(index === 0 && 'pt-3')}>
               <span className={'horizontal'}>
                 <EllipsisVerticalIcon
                   aria-hidden={true}
                   role={'img'}
                   className={clsx(
-                    'fill-bright-orange size-6.25',
+                    'fill-irongray size-6.25',
                     'm1x:size-6.75',
                     'm3x:size-7',
                     'md:size-6.75',
@@ -50,7 +50,7 @@ export const Reasons = ({
                     aria-hidden={true}
                     role={'img'}
                     className={clsx(
-                      'fill-bright-orange size-4.5',
+                      'fill-irongray size-4.5',
                       'm1x:size-5',
                       '1xl:size-5.25',
                       '2xl:size-5.5',

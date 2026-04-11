@@ -34,7 +34,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-irongray size-6',
+            'fill-bright-orange size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',
@@ -48,7 +48,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-irongray size-6',
+            'fill-bright-orange size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',
@@ -62,7 +62,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-irongray size-6',
+            'fill-bright-orange size-6',
             '1xl:size-6.25',
             '2xl:size-6.75',
             '3xl:size-7.25',

@@ -3,7 +3,7 @@ import { MainTitle } from '@/common/titles/components/MainTitle'
 import { CircularDecoration } from '@/features/home/components/atoms/CircularDecoration'
 import { MainActions } from '@/features/home/components/molecules/MainActions'
 import { MainGallery } from '@/features/home/components/molecules/MainGallery'
-import { homeAssets } from '@/utils/data/static/home'
+import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 

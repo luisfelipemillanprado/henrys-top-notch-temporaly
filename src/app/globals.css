@@ -33,6 +33,7 @@
   --color-strong-blue: oklch(0.4974 0.1649 255.19); /* strong blue */
   --color-primary: oklch(100% 0 0); /* white */
   --color-off-white: oklch(0.9759 0.0029 264.54); /* off-white */
+  --color-light-gray: oklch(0.9461 0 0); /* light gray */
   --color-warm-red: oklch(0.6192 0.2419 11.33); /* warmred */
 
   /* --- HEROUI COMPATIBILITY --- */
@@ -190,10 +191,10 @@
   }
   /* ------------------------- TEXT-FIELD-AREA-COMPONENTS ------------------------- */
   .textfield {
-    @apply 1xl:gap-y-3.5 z-10 w-full gap-y-2 md:gap-y-2.5 lg:gap-y-3 2xl:gap-y-4;
+    @apply 1xl:gap-y-3.5 z-10 w-full gap-y-2.5 md:gap-y-2.5 lg:gap-y-3 2xl:gap-y-4;
   }
   .label {
-    @apply text-secondary 1xl:text-base 3xl:text-[1.0625rem] text-[0.9375rem] md:text-[0.9375rem];
+    @apply text-primary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
   }
   .input-group {
     @apply 1xl:h-13 border-warmgray/30 3xl:h-14 m1x:h-12 h-11 rounded-lg border lg:h-12.5 2xl:h-13.5;

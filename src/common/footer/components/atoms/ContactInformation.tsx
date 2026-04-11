@@ -32,7 +32,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-vivid-orange size-6.25',
+            'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -49,7 +49,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-vivid-orange size-6.25',
+            'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -66,7 +66,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-vivid-orange size-6.25',
+            'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',
@@ -83,7 +83,7 @@ const iconSwitch = (icon: string) => {
           aria-hidden={'true'}
           role={'img'}
           className={clsx(
-            'fill-vivid-orange size-6.25',
+            'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
             'md:size-7.75',

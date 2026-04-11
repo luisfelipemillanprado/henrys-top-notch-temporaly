@@ -1,5 +1,5 @@
 import { WhyChooseUs } from '@/features/home/components/molecules/WhyChooseUs'
-import { homeAssets } from '@/utils/data/static/home'
+import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 

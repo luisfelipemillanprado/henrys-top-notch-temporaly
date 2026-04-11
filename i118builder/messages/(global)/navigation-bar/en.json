@@ -1,5 +1,5 @@
 {
-  "getStartedButton": "Get Started",
+  "getStartedButton": { "text": "Get Started" },
   "links": {
     "home": "Home",
     "aboutUs": "About Us",

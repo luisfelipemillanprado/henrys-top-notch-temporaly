@@ -1,8 +1,9 @@
 import { Providers } from '@/app/[locale]/providers'
+import { FloatingWhatsAppButton } from '@/common/contact-us/whatsapp/components/FloatingWhatsAppButton'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
 import { routing } from '@/i18n/routing'
-import { layoutData } from '@/utils/data/static/en-US/layout'
+import { layoutAssets } from '@/utils/data/static/global/layout'
 import { Toast } from '@heroui/react'
 import clsx from 'clsx'
 import { hasLocale } from 'next-intl'
@@ -93,9 +94,10 @@ export default async function RootLayout({
             themes: ['dark', 'light'],
           }}
         >
-          <NavigationBar navigationBar={layoutData.navigationBar} />
+          <NavigationBar />
           {children}
-          <Footer footer={layoutData.footer} />
+          <Footer />
+          <FloatingWhatsAppButton href={layoutAssets.contactWhatsApp.href} />
           <Toast.Provider placement={'bottom end'} />
         </Providers>
       </body>

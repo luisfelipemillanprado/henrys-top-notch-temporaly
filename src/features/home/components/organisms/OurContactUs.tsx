@@ -1,11 +1,11 @@
 import { ContactUs } from '@/features/home/components/molecules/ContactUs'
-import { layoutData } from '@/utils/data/static/en-US/layout'
-import { homeAssets } from '@/utils/data/static/home'
+import { layoutAssets } from '@/utils/data/static/global/layout'
+import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
 const { image } = homeAssets.contactUs
-const { contactForm: contactFormAssets } = layoutData
+const { contactForm: contactFormAssets } = layoutAssets
 
 /**
  * @description Renders the "Contact Us" section of the homepage, including a lead visual and a contact form.

@@ -17,7 +17,7 @@ export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps)
     <div
       className={clsx(
         'horizontal border-warmgray/30 w-full rounded-3xl border p-1 shadow-md',
-        changeBackground ? 'bg-off-white' : 'bg-primary'
+        changeBackground ? 'bg-light-gray' : 'bg-primary'
       )}
     >
       <div

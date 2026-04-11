@@ -1,5 +1,5 @@
 import { CustomerTestimonials } from '@/features/home/components/molecules/CustomerTestimonials'
-import { homeAssets } from '@/utils/data/static/home'
+import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 

@@ -13,7 +13,7 @@ import clsx from 'clsx'
  * @param {CompanyCertifiedExpertsProps['title']} props.title - The title for the certified experts section.
  * @param {CompanyCertifiedExpertsProps['description']} props.description - The description text for the certified experts section.
  * @param {CompanyCertifiedExpertsProps['license'][number]['text']} props.license.text - The text for the license information.
- * @param {CompanyCertifiedExpertsProps['license'][number]['id']} props.license.id - The unique identifier for the license information item.
+ * @param {CompanyCertifiedExpertsProps['license'][number]['id']} props.license.id - The unique identifier for the license information.
  * @param {CompanyCertifiedExpertsProps['license']} props.license - The license information in the certified experts section.
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
@@ -39,6 +39,8 @@ export const CompanyCertifiedExperts = ({
       <div className={clsx('horizontal w-full')}>
         <iframe
           src={mapsUrl}
+          title={'Google Maps'}
+          sandbox={'allow-scripts allow-same-origin'}
           className={clsx(
             'h-55 w-full rounded-3xl border-none',
             'm1x:h-60',

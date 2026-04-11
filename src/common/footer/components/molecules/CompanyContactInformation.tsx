@@ -9,11 +9,11 @@ import clsx from 'clsx'
  * @interface CompanyContactInformationProps
  * @param {object} props - Component properties.
  * @param {CompanyContactInformationProps['url']} props.url - The URL for the company logo image.
- * @param {CompanyContactInformationProps['contactInformation'][number]['text']} props.text - The display text for the contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['href']} props.href - The URL the contact information item points to.
- * @param {CompanyContactInformationProps['contactInformation'][number]['type']} props.type - The type of contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} props.icon - The icon associated with the contact information.
- * @param {CompanyContactInformationProps['contactInformation'][number]['id']} props.id - The unique identifier for the contact information.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['text']} props.text - The display text for the contact.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['href']} props.href - The URL the contact information item.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['type']} props.type - The type of contact.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} props.icon - The icon associated with the contact.
+ * @param {CompanyContactInformationProps['contactInformation'][number]['id']} props.id - The unique identifier for the contact.
  * @param {CompanyContactInformationProps['contactInformation']} props.contactInformation - An array of contact information items.
  * @returns The rendered company contact information section.
  */
