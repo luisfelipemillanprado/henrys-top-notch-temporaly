@@ -194,7 +194,7 @@
     @apply 1xl:gap-y-3.5 z-10 w-full gap-y-2.5 md:gap-y-2.5 lg:gap-y-3 2xl:gap-y-4;
   }
   .label {
-    @apply text-primary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
+    @apply text-secondary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
   }
   .input-group {
     @apply 1xl:h-13 border-warmgray/30 3xl:h-14 m1x:h-12 h-11 rounded-lg border lg:h-12.5 2xl:h-13.5;
