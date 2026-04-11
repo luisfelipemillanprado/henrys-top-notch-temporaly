@@ -84,8 +84,8 @@ export const ContactForm = ({
     <form
       onSubmit={handleSubmit}
       className={clsx(
-        'vertical bg-midnightgreen w-full gap-y-6.25 rounded-3xl p-5.5 shadow-md',
-        'm1x:px-6',
+        'vertical bg-irongray w-full gap-y-6.25 rounded-3xl p-5.5 shadow-md',
+        'm1x:p-6',
         'm3x:gap-y-6.75',
         'md:gap-y-8 md:px-10.5',
         'lg:px-11.75',
