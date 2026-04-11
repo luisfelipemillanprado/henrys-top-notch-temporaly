@@ -65,7 +65,7 @@ export const CircularDecoration = ({
             key={`${rings}-${i}`}
             className={clsx(
               'absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border',
-              changeColor ? 'border-electric-blue' : 'border-warmgray/45',
+              changeColor ? 'border-warmgray/50' : 'border-warmgray/45',
               config.position,
               ring.size,
               ring.opacity

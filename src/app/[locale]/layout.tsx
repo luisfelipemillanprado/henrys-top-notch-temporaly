@@ -1,11 +1,14 @@
 import { Providers } from '@/app/[locale]/providers'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
+import { routing } from '@/i18n/routing'
 import { layoutData } from '@/utils/data/static/en-US/layout'
 import { Toast } from '@heroui/react'
 import clsx from 'clsx'
-import { Metadata } from 'next'
+import { hasLocale } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Poppins, Reenie_Beanie } from 'next/font/google'
+import { notFound } from 'next/navigation'
 import '../globals.css'
 
 /**
@@ -40,31 +43,45 @@ const reenieBeanie = Reenie_Beanie({
 })
 
 /**
- * @description Metadata object for the application, defining the title and description for SEO and browser display.
- * @constant
- * @interface Metadata
- * @property {string} title - The title of the application, displayed in the browser tab and search engine results.
- * @property {string} description - A brief description of the application, used for SEO and search engine snippets.
+ * @description Generates metadata for the application based on the current locale, using i18n translations.
+ * @public
+ * @param {object} props - The props object containing route params.
+ * @param {Promise<{locale: string}>} props.params - The route parameters containing the locale.
+ * @param {string} props.params.locale - The current locale extracted from the route parameters.
+ * @returns {Promise<{title: string, description: string}>} The localized metadata for SEO and browser display.
  */
-export const metadata: Metadata = layoutData.metadata
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) notFound()
+  const t = await getTranslations({ locale, namespace: 'home.Metadata' })
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
+}
 
 /**
- * @description RootLayout component that wraps the entire application with global providers,
- * navigation, footer, and a floating WhatsApp button. It also applies global fonts and styles.
+ * @description RootLayout component that wraps the entire application with global providers.
  * @public
  * @param {object} props - The props object containing the children to be rendered within the layout.
  * @param {React.ReactNode} props.children - The React node(s) to be rendered within the layout.
  * @returns {JSX.Element} The rendered RootLayout component.
  */
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
   return (
     <html
       suppressHydrationWarning
-      lang={'en-US'}
+      lang={locale}
       className={clsx(reenieBeanie.variable, poppins.className, poppins.variable)}
     >
       <body className={clsx('relative')}>
