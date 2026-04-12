@@ -37,11 +37,11 @@ export const Hero = () => {
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'relative h-231.25 w-full max-w-480 overflow-x-clip',
-        'm1x:h-239',
-        'm2x:h-247.75',
-        'm3x:h-253.75',
-        'm4x:h-258.5',
+        'relative h-230.25 w-full max-w-480 overflow-x-clip',
+        'm1x:h-238',
+        'm2x:h-246.75',
+        'm3x:h-252.75',
+        'm4x:h-257.5',
         'md:h-185',
         'lg:h-190',
         '1xl:h-200',

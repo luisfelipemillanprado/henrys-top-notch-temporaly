@@ -28,7 +28,7 @@ export const ContactFormButton = ({
     <ButtonPulse type={'soft'} rounded float={float} firstColor={firstColor} noAnimation={noAnimation}>
       <button
         className={clsx(
-          'horizontal bg-strong-blue z-40 h-9.25 gap-x-2.5 rounded-full px-4 font-normal shadow-lg',
+          'horizontal bg-electric-blue z-40 h-9.25 gap-x-2.5 rounded-full px-4 font-normal shadow-lg',
           'm1x:h-9.75',
           'm3x:h-10',
           'md:h-10.5 md:px-4.5',
@@ -43,7 +43,7 @@ export const ContactFormButton = ({
       >
         <span
           className={clsx(
-            'text-primary text-base',
+            'text-secondary text-base',
             'm1x:text-[1.0625rem]',
             '1xl:text-lg',
             '3xl:text-[1.1875rem]',
@@ -60,7 +60,7 @@ export const ContactFormButton = ({
               <PaperAirplaneIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx('fill-primary size-6.5', '2xl:size-6.75', '3xl:size-7.25', '5xl:size-7.5')}
+                className={clsx('fill-secondary size-6.5', '2xl:size-6.75', '3xl:size-7.25', '5xl:size-7.5')}
               />
             </span>
           )}

@@ -63,7 +63,7 @@ export const BookingProcess = ({
     <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9')}>
       <div className={clsx('vertical w-full gap-y-8.5', 'm1x:gap-y-9')}>
         <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
-          <LeadVisual image={image} changeBackground />
+          <LeadVisual image={image} changeBackground={true} />
           <div className={clsx('vertical w-full items-center gap-y-8', 'm1x:gap-y-8.75', 'm3x:gap-y-9.5')}>
             <SectionHeader title={title} description={description} eyebrow={eyebrow} />
             <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />

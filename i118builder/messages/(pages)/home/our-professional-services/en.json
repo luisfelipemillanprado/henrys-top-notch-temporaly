@@ -1,14 +1,14 @@
 {
   "eyebrow": "SERVICES WE OFFER",
   "title": "Access Expert HVAC Services Today.",
-  "description": "Choosing our specialized HVAC services means lower energy bills and customized comfort settings for your specific lifestyle. We eliminate hot and cold spots while enhancing your system's overall performance and safety. Benefit from our high-quality workmanship and innovative technology designed to keep your indoor refreshing.",
+  "description": "At Henry’s Top Notch A/C & Heating, we prioritize efficiency to lower energy costs. Our team eliminates uneven temperatures while enhancing system safety. Trust our expert workmanship and advanced technology for customized comfort and a refreshing, cost-effective indoor environment.",
   "primaryCta": {
     "text": "ALL SERVICES"
   },
   "services": {
     "maintenance": {
       "title": "HVAC System Maintenance.",
-      "description": "Protect your home comfort with annual maintenance that prevents sudden failures and improves performance.",
+      "description": "Prevent failures and maximize performance with essential annual home maintenance.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",
@@ -22,7 +22,7 @@
     },
     "repair": {
       "title": "HVAC System Repair.",
-      "description": "HVAC repair services you can trust resolve issues quickly, restore reliability, and provide consistent performance.",
+      "description": "Fast, trusted HVAC repairs that restore availability, and consistent performance.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",
@@ -36,7 +36,7 @@
     },
     "installation": {
       "title": "HVAC System Installation.",
-      "description": "Transform your comfort with HVAC installation services built for performance, reliability, and long-term durability.",
+      "description": "Precision engineering delivers a seamless standard of luxury home comfort.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",
@@ -50,7 +50,7 @@
     },
     "acInstallation": {
       "title": "AC System Installation.",
-      "description": "Get top-quality AC installation that maximizes efficiency, reduces energy costs, and delivers reliable daily comfort.",
+      "description": "Save money and boost cooling performance with precision system A/C installation.",
       "benefits": {
         "freeEstimate": "Free Estimate.",
         "allWarranty": "All Warranty.",

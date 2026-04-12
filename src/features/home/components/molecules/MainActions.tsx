@@ -16,7 +16,11 @@ import clsx from 'clsx'
  * @param {string[]} props.highlight - Array of strings for the highlighted action text.
  * @returns Rendering the call-to-action buttons and highlight.
  */
-export const MainActions = (props: {
+export const MainActions = ({
+  primaryCta,
+  secondaryCta,
+  highlight,
+}: {
   primaryCta: {
     text: string
     href: string
@@ -27,12 +31,12 @@ export const MainActions = (props: {
   }
   highlight: string[]
 }) => {
-  const { primaryCta, secondaryCta, highlight } = props
   return (
     <div
       className={clsx(
-        'horizontal relative mt-6 justify-center gap-x-4 pb-4',
+        'horizontal relative mt-5 justify-center gap-x-4 pb-4.5',
         'm1x:gap-x-5',
+        'm3x:gap-x-6',
         'md:ml-7 md:justify-start'
       )}
     >

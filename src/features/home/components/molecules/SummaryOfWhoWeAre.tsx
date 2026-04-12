@@ -40,10 +40,10 @@ export const SummaryOfWhoWeAre = ({
 }) => {
   return (
     <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
-      <LeadVisual image={image} />
+      <LeadVisual image={image} changeBackground={true} />
       <div
         className={clsx(
-          'vertical bg-primary border-warmgray/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
+          'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
           'm1x:gap-y-6.75',
           'm3x:gap-y-7.5'
         )}

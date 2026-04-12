@@ -48,7 +48,7 @@ export const CustomerTestimonials = ({
   return (
     <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
       <div className={clsx('w-full px-2')}>
-        <LeadVisual image={image} />
+        <LeadVisual image={image} changeBackground={true} />
       </div>
       <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9')}>
         <div className={clsx('vertical w-full items-center gap-y-8 px-2', 'm1x:gap-y-8.75', 'm3x:gap-y-9.5')}>

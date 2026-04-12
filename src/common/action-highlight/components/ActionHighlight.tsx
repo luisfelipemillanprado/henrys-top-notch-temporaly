@@ -18,7 +18,7 @@ export const ActionHighlight = ({ firstText, secondText, firstChangePosition }: 
       className={clsx(
         'horizontal absolute gap-x-2.75',
         firstChangePosition && [
-          '-bottom-14.5 pr-8',
+          '-bottom-14.5 pr-7',
           'm2x:-bottom-15',
           'md:-bottom-15.75 md:ml-13.5',
           'lg:-bottom-16.5',

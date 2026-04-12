@@ -36,7 +36,7 @@ export const ProfessionalService = ({
   return (
     <div
       className={clsx(
-        'vertical bg-primary border-warmgray/30 w-full items-center gap-y-5 rounded-3xl border px-2 pt-2 pb-6 shadow-md',
+        'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-5 rounded-3xl border px-2 pt-2 pb-6 shadow-md',
         'm1x:gap-y-5.5 m1x:pb-6.5',
         'm3x:pb-6.5 m3x:px-2.25 m3x:pt-2.25'
       )}

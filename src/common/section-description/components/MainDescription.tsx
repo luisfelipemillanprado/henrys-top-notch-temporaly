@@ -16,7 +16,7 @@ export const MainDescription = ({ description, changeWidth }: SectionDescription
       <p
         className={clsx(
           'text-dimgray text-center text-[0.9375rem] leading-6.75',
-          changeWidth ? ['w-71', 'm1x:w-77'] : ['w-75', 'm1x:w-80'],
+          changeWidth ? ['w-68', 'm1x:w-73'] : ['w-69', 'm1x:w-74'],
           'm1x:text-base m1x:leading-7'
         )}
       >

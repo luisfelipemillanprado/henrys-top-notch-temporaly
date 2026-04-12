@@ -33,7 +33,7 @@ export const CardDescription = ({
       <p
         className={clsx(
           'text-[0.9375rem] leading-6.75',
-          changeColor ? 'text-warmgray' : 'text-dimgray',
+          changeColor ? 'text-secondary' : 'text-dimgray',
           changePosition && 'text-center',
           changeWidth && ['w-67', 'm1x:w-71'],
           addPadding && ['m3x:pr-3', 'm4x:pr-5'],

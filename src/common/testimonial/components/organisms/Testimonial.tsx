@@ -23,7 +23,7 @@ export const Testimonial = ({ name, position, comment, url, stars }: Testimonial
   return (
     <div
       className={clsx(
-        'bg-primary border-warmgray/30 vertical w-full items-start gap-y-5 rounded-3xl border p-5 shadow-md',
+        'bg-primary border-electric-blue/30 vertical w-full items-start gap-y-5 rounded-3xl border p-5 shadow-md',
         'm1x:p-5.25',
         'm4x:p-5.5'
       )}

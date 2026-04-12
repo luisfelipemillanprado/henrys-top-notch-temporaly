@@ -98,7 +98,7 @@ export const BookingFeature = ({
   return (
     <div
       className={clsx(
-        'bg-off-white border-warmgray/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
+        'bg-off-white border-electric-blue/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
         'm1x:p-5.25',
         'm4x:p-5.5',
         'lg:px-6',

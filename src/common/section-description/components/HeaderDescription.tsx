@@ -24,9 +24,8 @@ export const HeaderDescription = ({ description }: SectionDescriptionProps) => {
     >
       <p
         className={clsx(
-          'text-warmgray w-79 text-center text-[0.9375rem] leading-6.75',
-          'm1x:text-base m1x:leading-7 m1x:w-83.5',
-          'm2x:w-85',
+          'text-warmgray w-71 text-center text-[0.9375rem] leading-6.75',
+          'm1x:text-base m1x:leading-7 m1x:w-75.5',
           'md:mt-2 md:w-auto md:text-start md:leading-7.5',
           '1xl:text-[1.0625rem] 1xl:leading-7.75',
           '2xl:leading-8',

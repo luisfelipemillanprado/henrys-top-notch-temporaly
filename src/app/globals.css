@@ -24,7 +24,7 @@
   --color-secondary: oklch(0.2308 0 0); /* nearblack */
   --color-midnightgreen: oklch(0.252 0 0); /* midnightgreen */
   --color-irongray: oklch(0.3171 0 0); /* irongray */
-  --color-dimgray: oklch(0.5322 0.0012 17.2); /* dimgray */
+  --color-dimgray: oklch(0.5727 0.0052 54.37); /* dimgray */
   --color-warmgray: oklch(0.6132 0.0092 91.54); /* warmgray */
   --color-bright-orange: oklch(0.6884 0.2089 41.7); /* bright orange */
   --color-vivid-orange: oklch(0.7426 0.1817 56.01); /* vivid orange */
@@ -194,7 +194,7 @@
     @apply 1xl:gap-y-3.5 z-10 w-full gap-y-2.5 md:gap-y-2.5 lg:gap-y-3 2xl:gap-y-4;
   }
   .label {
-    @apply text-secondary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
+    @apply text-primary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
   }
   .input-group {
     @apply 1xl:h-13 border-warmgray/30 3xl:h-14 m1x:h-12 h-11 rounded-lg border lg:h-12.5 2xl:h-13.5;

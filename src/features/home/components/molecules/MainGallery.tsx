@@ -6,13 +6,12 @@ import Image from 'next/image'
  * @description Renders a responsive image gallery component that displays exactly 6 images.
  * @public
  * @param {object} props - Component properties.
- * @param {Array} gallery - Array of exactly 6 image objects.
- * @param {string} gallery[].url - URL string of the image.
- * @param {number} gallery[].id - Unique id for rendering list items.
+ * @param {Array} props.gallery - Array of exactly 6 image objects.
+ * @param {string} props.gallery[].url - URL string of the image.
+ * @param {number} props.gallery[].id - Unique id for rendering list items.
  * @returns Rendering the styled responsive image gallery.
  */
-export const MainGallery = (props: { gallery: { url: string; id: number }[] }) => {
-  const { gallery } = props
+export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[] }) => {
   const imageContainerClasses = {
     base: 'relative h-55 w-40',
     breakPoints:
@@ -29,10 +28,10 @@ export const MainGallery = (props: { gallery: { url: string; id: number }[] }) =
   const imageClasses = {
     base: 'size-full rounded-3xl object-cover',
     breakPoints: [
-      'opacity-40 md:opacity-15 lg:opacity-40',
+      'opacity-40 md:opacity-100',
       'opacity-100',
       null,
-      'opacity-50 md:opacity-15 lg:opacity-40',
+      'opacity-50 md:opacity-100',
       'opacity-80 md:opacity-100',
       null,
     ],
