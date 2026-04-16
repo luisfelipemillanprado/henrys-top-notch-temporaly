@@ -90,10 +90,7 @@ export const Footer = () => {
     imagesUrl: layoutAssets.footer.certifiedExperts.imagesUrl,
     mapsUrl: layoutAssets.footer.certifiedExperts.mapsUrl,
   }
-
-  // Copyright: usa el año actual automáticamente para la interpolación
   const copyright = t('copyright', { year: new Date().getFullYear().toString() })
-
   return (
     <footer
       id={'footer'}
@@ -118,5 +115,3 @@ export const Footer = () => {
     </footer>
   )
 }
-/*
- */

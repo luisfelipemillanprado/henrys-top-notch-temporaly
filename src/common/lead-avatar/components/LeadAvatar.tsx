@@ -21,7 +21,6 @@ export const LeadAvatar = ({ url, background = false }: LeadAvatarProps) => {
         'm1x:h-12.5 m1x:w-12.5',
         'm3x:h-13 m3x:w-13',
         'm4x:h-13.5 m4x:w-13.5',
-        'md:h-14 md:w-14',
         '1xl:h-14.5 1xl:w-14.5',
         '2xl:h-15 2xl:w-15',
         '3xl:h-15.5 3xl:w-15.5'

@@ -25,7 +25,8 @@ export const Testimonial = ({ name, position, comment, url, stars }: Testimonial
       className={clsx(
         'bg-primary border-electric-blue/30 vertical w-full items-start gap-y-5 rounded-3xl border p-5 shadow-md',
         'm1x:p-5.25',
-        'm4x:p-5.5'
+        'm4x:p-5.5',
+        'md:w-98'
       )}
     >
       <div className={clsx('horizontal w-full justify-start gap-x-3')}>

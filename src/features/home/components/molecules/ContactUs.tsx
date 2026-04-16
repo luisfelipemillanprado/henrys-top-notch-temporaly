@@ -65,12 +65,14 @@ export const ContactUs = ({
   }
 }) => {
   return (
-    <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9')}>
-      <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
+    <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9', 'md:gap-y-12')}>
+      <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75', 'md:gap-y-9.5')}>
         <LeadVisual image={image} changeBackground={true} />
-        <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+        <div className={clsx('w-full', 'md:pr-27.25 md:pl-4')}>
+          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+        </div>
       </div>
-      <div className={clsx('horizontal relative w-full overflow-hidden rounded-3xl')}>
+      <div className={clsx('horizontal relative w-full overflow-hidden rounded-3xl', 'md:w-140')}>
         <CircularDecoration rings={3} changeColor />
         <ContactForm contactForm={contactForm} />
       </div>

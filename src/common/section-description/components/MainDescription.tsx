@@ -12,12 +12,13 @@ import clsx from 'clsx'
  */
 export const MainDescription = ({ description, changeWidth }: SectionDescriptionProps) => {
   return (
-    <div className={clsx('horizontal w-full justify-center')}>
+    <div className={clsx('horizontal w-full justify-center', 'md:justify-start')}>
       <p
         className={clsx(
           'text-dimgray text-center text-[0.9375rem] leading-6.75',
-          changeWidth ? ['w-68', 'm1x:w-73'] : ['w-69', 'm1x:w-74'],
-          'm1x:text-base m1x:leading-7'
+          changeWidth ? ['w-68', 'm1x:w-73', 'md:w-auto'] : ['w-69', 'm1x:w-73.5', 'md:w-auto'],
+          'm1x:text-base m1x:leading-7',
+          'md:text-start'
         )}
       >
         {description}

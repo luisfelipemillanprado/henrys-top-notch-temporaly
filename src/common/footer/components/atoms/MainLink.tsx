@@ -21,7 +21,7 @@ export const MainLink = ({ text, href, highlight }: MainLinkProps) => {
         'm2x:w-45',
         'm3x:w-46',
         'm4x:w-47',
-        '2xl:w-full'
+        'md:w-full md:justify-start'
       )}
       href={href}
       title={text}

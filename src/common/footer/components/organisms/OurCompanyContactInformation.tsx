@@ -54,14 +54,16 @@ export const OurCompanyContactInformation = ({
       )}
     >
       <CompanyContactInformation url={logo.url} contactInformation={contactInformation} />
-      <MainLinks links={links} highlight={highlight} />
-      <CompanyCertifiedExperts
-        title={certifiedExperts.title}
-        description={certifiedExperts.description}
-        license={certifiedExperts.license}
-        imagesUrl={certifiedExperts.imagesUrl}
-        mapsUrl={certifiedExperts.mapsUrl}
-      />
+      <div className={clsx('vertical w-full items-start gap-y-14', 'md:horizontal')}>
+        <MainLinks links={links} highlight={highlight} />
+        <CompanyCertifiedExperts
+          title={certifiedExperts.title}
+          description={certifiedExperts.description}
+          license={certifiedExperts.license}
+          imagesUrl={certifiedExperts.imagesUrl}
+          mapsUrl={certifiedExperts.mapsUrl}
+        />
+      </div>
     </section>
   )
 }

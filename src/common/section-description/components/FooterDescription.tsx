@@ -12,11 +12,12 @@ import clsx from 'clsx'
  */
 export const FooterDescription = ({ description }: SectionDescriptionProps) => {
   return (
-    <div className={clsx('horizontal w-full justify-center', '1xl:justify-start')}>
+    <div className={clsx('horizontal w-full justify-center', 'md:justify-start')}>
       <p
         className={clsx(
           'text-warmgray w-68 text-center text-[0.9375rem] leading-6.75',
           'm1x:text-base m1x:w-71 m1x:leading-7',
+          'md:w-auto md:text-start',
           '1xl:text-[1.0625rem] 1xl:leading-8 1xl:text-left',
           '3xl:text-lg 3xl:leading-8.5',
           '5xl:text-[1.3125rem] 5xl:leading-9'

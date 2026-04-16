@@ -35,7 +35,9 @@ export const TrustedAndCertified = ({
       modules={[Autoplay]}
       className={clsx(
         'mx-5.5! h-auto w-full',
-        'md:mr-15! md:ml-12.5! md:w-27/50',
+        'm3x:mx-6.25!',
+        'm4x:mx-7!',
+        'md:mr-14! md:ml-13! md:w-51/100',
         'lg:ml-17! lg:w-12/25',
         '1xl:w-21/50 1xl:ml-29!',
         '2xl:ml-32! 2xl:w-41/100',
@@ -46,7 +48,7 @@ export const TrustedAndCertified = ({
       {trustedAndCertified.map((item) => (
         <SwiperSlide
           key={item.id}
-          className={clsx('mr-5.5 size-auto!', 'm1x:mr-5.75', 'm2x:mr-6', 'm3x:mr-6.25', 'm4x:mr-6')}
+          className={clsx('mr-5.5 size-auto!', 'm1x:mr-5.75', 'm2x:mr-6', 'm3x:mr-6.25', 'm4x:mr-6.5')}
         >
           <TrustedAndCertification url={item.url} href={item.href} />
         </SwiperSlide>

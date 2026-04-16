@@ -19,7 +19,7 @@ export const SocialNetworks = ({ socialNetworks }: SocialNetworksProps) => {
     <div
       className={clsx(
         'horizontal w-full justify-center gap-x-3',
-        'md:gap-x-3.5',
+        'md:justify-end md:gap-x-3.5',
         'lg:gap-x-4',
         '1xl:justify-start 1xl:gap-x-3'
       )}

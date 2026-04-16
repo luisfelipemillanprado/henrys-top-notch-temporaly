@@ -20,7 +20,7 @@ export const MainLinks = ({ links, highlight }: MainLinksProps) => {
     <div
       className={clsx(
         'grid grid-cols-2',
-        'md:grid-cols-4 md:grid-rows-1 md:gap-x-15',
+        'md:w-22/50 md:grid-cols-1 md:grid-rows-2 md:gap-y-10',
         'lg:gap-x-26',
         '1xl:w-33/50',
         '5xl:gap-x-34'

@@ -35,7 +35,7 @@ const iconSwitch = (icon: string) => {
             'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
-            'md:size-7.75',
+            'md:size-7.5',
             '1xl:size-8.5',
             '2xl:size-8.75',
             '3xl:size-9.25',
@@ -52,7 +52,7 @@ const iconSwitch = (icon: string) => {
             'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
-            'md:size-7.75',
+            'md:size-7.5',
             '1xl:size-8.5',
             '2xl:size-8.75',
             '3xl:size-9.25',
@@ -69,7 +69,7 @@ const iconSwitch = (icon: string) => {
             'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
-            'md:size-7.75',
+            'md:size-7.5',
             '1xl:size-8.5',
             '2xl:size-8.75',
             '3xl:size-9.25',
@@ -86,7 +86,7 @@ const iconSwitch = (icon: string) => {
             'fill-bright-orange size-6.25',
             'm1x:size-6.5',
             'm3x:size-6.75',
-            'md:size-7.75',
+            'md:size-7.5',
             '1xl:size-8.5',
             '2xl:size-8.75',
             '3xl:size-9.25',
@@ -120,7 +120,6 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
           className={clsx(
             'text-primary text-[1.0625rem] font-medium',
             'm1x:text-lg',
-            'md:text-[1.1875rem]',
             '3xl:text-xl',
             '5xl:text-[1.375rem]'
           )}
@@ -145,12 +144,12 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
       href={href}
       target={'_blank'}
       rel={'noopener noreferrer'}
-      className={clsx('horizontal justify-center gap-x-3')}
+      className={clsx('horizontal w-full justify-start gap-x-3')}
       aria-label={`contact information ${type.toLowerCase()}`}
     >
       {content}
     </Link>
   ) : (
-    <div className={clsx('horizontal justify-center gap-x-3')}>{content}</div>
+    <div className={clsx('horizontal w-full justify-start gap-x-3')}>{content}</div>
   )
 }

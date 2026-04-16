@@ -15,8 +15,9 @@ export const HeaderDescription = ({ description }: SectionDescriptionProps) => {
     <div
       className={clsx(
         'horizontal z-30 w-full justify-center',
-        'md:w-7/10 md:px-6',
-        '1xl:w-33/50',
+        'md:w-63/100 md:justify-start md:px-6',
+        'lg:w-31/50',
+        '1xl:w-[67%]',
         '3xl:w-16/25',
         '4xl:w-7/10',
         '5xl:w-67/100'

@@ -18,7 +18,8 @@ export const ServiceImage = ({ url }: ServiceImageProps) => {
         'relative h-64 w-full overflow-hidden rounded-3xl shadow-lg',
         'm1x:h-73',
         'm3x:h-79',
-        'm4x:h-81'
+        'm4x:h-81',
+        'md:h-74'
       )}
     >
       <Image

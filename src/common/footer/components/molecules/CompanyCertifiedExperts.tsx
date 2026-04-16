@@ -29,7 +29,7 @@ export const CompanyCertifiedExperts = ({
   mapsUrl,
 }: CompanyCertifiedExpertsProps) => {
   return (
-    <div className={clsx('vertical w-full gap-y-14')}>
+    <div className={clsx('vertical w-full gap-y-14', 'md:w-14/25')}>
       <div className={clsx('vertical w-full items-center gap-y-4.5')}>
         <QuinaryTitle title={title} />
         <FooterDescription description={description} />
@@ -46,7 +46,8 @@ export const CompanyCertifiedExperts = ({
             'm1x:h-60',
             'm2x:h-65',
             'm3x:h-70',
-            'm4x:h-75'
+            'm4x:h-75',
+            'md:h-74'
           )}
           allowFullScreen
           loading={'lazy'}

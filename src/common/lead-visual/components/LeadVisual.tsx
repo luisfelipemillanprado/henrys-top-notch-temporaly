@@ -26,7 +26,9 @@ export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps)
           'm1x:h-73',
           'm2x:h-76',
           'm3x:h-80',
-          'm4x:h-82.5'
+          'm4x:h-82.5',
+          'md:h-128.75',
+          'lg:h-150'
         )}
       >
         <Image

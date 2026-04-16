@@ -45,7 +45,9 @@ export const SummaryOfWhoWeAre = ({
         className={clsx(
           'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
           'm1x:gap-y-6.75',
-          'm3x:gap-y-7.5'
+          'm3x:gap-y-7.5',
+          'md:items-start md:p-8',
+          'lg:pr-30 lg:pl-9'
         )}
       >
         <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />

@@ -17,10 +17,10 @@ export const QuaternaryTitle = ({ title, changePosition = false, truncate = true
       <h4
         id={title}
         className={clsx(
-          'text-secondary text-[1.0625rem] font-semibold',
+          'text-secondary text-lg font-semibold',
           truncate && 'truncate',
-          'm1x:text-lg',
-          'md:text-[1.1875rem]',
+          'm1x:text-[1.1875rem]',
+          'md:text-xl md:leading-7.5',
           'lg:text-xl lg:leading-7.5',
           '3xl:text-[1.3125rem] 3xl:leading-7.75',
           '5xl:text-2xl 5xl:leading-8'

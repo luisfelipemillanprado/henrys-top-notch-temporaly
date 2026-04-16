@@ -29,15 +29,15 @@ export const SectionHeader = ({
         'vertical w-full items-center gap-y-4.25',
         'm1x:gap-y-5',
         'm3x:gap-y-5.25',
-        'm4x:gap-y-5'
+        'm4x:gap-y-5',
+        'md:items-start'
       )}
     >
       <EyeBrow text={eyebrow} hidden={hidden} />
       <div
         className={clsx(
           'vertical gap-y-5',
-          'md:w-31/50',
-          'lg:w-27/50',
+          'md:w-87/100 md:gap-y-5.5',
           '1xl:w-12/25 1xl:gap-y-6',
           '5xl:w-9/20'
         )}

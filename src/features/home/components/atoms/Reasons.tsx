@@ -1,3 +1,4 @@
+'use client'
 import { QuaternaryTitle } from '@/common/titles/components/QuaternaryTitle'
 import { ChevronDownIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { Accordion } from '@heroui/react'
@@ -25,9 +26,13 @@ export const Reasons = ({
   return (
     <Accordion>
       {reasons.map((item, index) => (
-        <Accordion.Item key={item.id} className={clsx(index === reasons.length - 1 && 'after:bottom-px')}>
+        <Accordion.Item
+          key={item.id}
+          id={item.id}
+          className={clsx(index === reasons.length - 1 && 'after:bottom-px')}
+        >
           <Accordion.Heading>
-            <Accordion.Trigger className={clsx(index === 0 && 'pt-3')}>
+            <Accordion.Trigger>
               <span className={'horizontal'}>
                 <EllipsisVerticalIcon
                   aria-hidden={true}

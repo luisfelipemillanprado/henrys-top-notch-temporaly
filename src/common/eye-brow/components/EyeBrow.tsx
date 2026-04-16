@@ -25,7 +25,7 @@ const decorationLine = (
  */
 export const EyeBrow = ({ text, hidden = false }: EyeBrowProps) => {
   return (
-    <div className={clsx('horizontal w-full justify-center gap-x-2', hidden && 'hidden')}>
+    <div className={clsx('horizontal w-full justify-center gap-x-2', hidden && 'hidden', 'md:justify-start')}>
       {decorationLine}
       <span
         className={clsx(

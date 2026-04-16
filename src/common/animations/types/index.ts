@@ -26,6 +26,7 @@ export interface AvatarPulseAnimationProps {
  * @property {boolean} [firstColor] - Uses the first color for the pulse if true.
  * @property {boolean} [secondColor] - Uses the second color for the pulse if true.
  * @property {boolean} [thirdColor] - Uses the third color for the pulse if true.
+ * @property {boolean} [forthColor] - Uses the fourth color for the pulse if true.
  * @property {boolean} [rounded] - Applies fully rounded corners if true; otherwise uses rounded-2xl.
  * @property {boolean} [overlayMore] - Enlarges pulse overlay area if true.
  * @property {boolean} [hidden] - Hides the entire component if true.
@@ -38,6 +39,7 @@ export interface ButtonPulseAnimationProps {
   firstColor?: boolean
   secondColor?: boolean
   thirdColor?: boolean
+  forthColor?: boolean
   rounded?: boolean
   overlayMore?: boolean
   hidden?: boolean

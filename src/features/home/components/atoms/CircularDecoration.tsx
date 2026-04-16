@@ -20,23 +20,23 @@ const CONFIG = {
     ],
   },
   3: {
-    position: 'top-[114%] m1x:top-[113%] md:top-11/10 lg:top-6/5 1xl:top-5/4 2xl:top-33/25 3xl:top-69/50',
+    position: 'top-[114%] m1x:top-[113%] md:top-[114%] lg:top-6/5 1xl:top-5/4 2xl:top-33/25 3xl:top-69/50',
     rings: [
       {
         size: 'h-230 w-230 md:w-245 md:h-245 lg:w-300 lg:h-300 1xl:w-350 1xl:h-350 2xl:w-390 2xl:h-390 3xl:w-430 3xl:h-430',
-        opacity: 'opacity-20',
+        opacity: 'opacity-30',
       },
       {
         size: 'h-180 w-180 md:w-195 md:h-195 lg:w-250 lg:h-250 1xl:w-290 1xl:h-290 2xl:w-330 2xl:h-330 3xl:w-370 3xl:h-370',
-        opacity: 'opacity-20',
+        opacity: 'opacity-40',
       },
       {
         size: 'h-130 w-130 md:w-145 md:h-145 lg:w-190 lg:h-190 1xl:w-230 1xl:h-230 2xl:w-260 2xl:h-260 3xl:w-300 3xl:h-300',
-        opacity: 'opacity-20',
+        opacity: 'opacity-45',
       },
       {
         size: 'h-80 w-80 md:w-95 md:h-95 lg:w-130 lg:h-130 1xl:w-160 1xl:h-160 2xl:w-190 2xl:h-190 3xl:w-230 3xl:h-230',
-        opacity: 'opacity-40',
+        opacity: 'opacity-60',
       },
     ],
   },
@@ -64,8 +64,7 @@ export const CircularDecoration = ({
           <div
             key={`${rings}-${i}`}
             className={clsx(
-              'absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border',
-              changeColor ? 'border-electric-blue' : 'border-warmgray/45',
+              'border-warmgray/45 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border',
               config.position,
               ring.size,
               ring.opacity

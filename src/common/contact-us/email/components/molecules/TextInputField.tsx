@@ -35,7 +35,8 @@ const iconSwitch = (icon: string) => {
           role={'img'}
           className={clsx(
             'fill-bright-orange size-6',
-            '1xl:size-6.25',
+            'md:size-6.75',
+            '1xl:size-6.75',
             '2xl:size-6.75',
             '3xl:size-7.25',
             '5xl:size-7.5'
@@ -49,7 +50,8 @@ const iconSwitch = (icon: string) => {
           role={'img'}
           className={clsx(
             'fill-bright-orange size-6',
-            '1xl:size-6.25',
+            'md:size-6.75',
+            '1xl:size-6.75',
             '2xl:size-6.75',
             '3xl:size-7.25',
             '5xl:size-7.5'
@@ -63,7 +65,8 @@ const iconSwitch = (icon: string) => {
           role={'img'}
           className={clsx(
             'fill-bright-orange size-6',
-            '1xl:size-6.25',
+            'md:size-6.75',
+            '1xl:size-6.75',
             '2xl:size-6.75',
             '3xl:size-7.25',
             '5xl:size-7.5'

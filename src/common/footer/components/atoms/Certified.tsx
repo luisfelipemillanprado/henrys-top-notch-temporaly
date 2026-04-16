@@ -15,7 +15,14 @@ import Image from 'next/image'
  */
 export const Certified = ({ imagesUrl }: CertifiedProps) => {
   return (
-    <div className={clsx('horizontal mt-4 w-full justify-center gap-x-7', 'm1x:mt-4.5', 'm4x:gap-x-8')}>
+    <div
+      className={clsx(
+        'horizontal mt-4 w-full justify-center gap-x-7',
+        'm1x:mt-4.5',
+        'm4x:gap-x-8',
+        'md:justify-start'
+      )}
+    >
       {imagesUrl.map((item) => (
         <div
           key={item.id}

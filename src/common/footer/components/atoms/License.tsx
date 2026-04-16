@@ -13,7 +13,13 @@ import clsx from 'clsx'
  */
 export const License = ({ license }: LicenseProps) => {
   return (
-    <div className={clsx('vertical mt-4 w-full items-center gap-y-2', 'm1x:mt4.5')}>
+    <div
+      className={clsx(
+        'vertical mt-4 w-full items-center gap-y-2',
+        'm1x:mt4.5',
+        'md:horizontal md:justify-start md:gap-x-2'
+      )}
+    >
       {license.map((item) => (
         <span
           key={item.id}

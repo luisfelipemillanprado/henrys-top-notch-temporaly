@@ -13,7 +13,7 @@ import clsx from 'clsx'
  */
 export const Benefit = ({ text }: BenefitProps) => {
   return (
-    <div className={clsx('horizontal justify-center gap-x-2', 'm3x:gap-x-2.5')}>
+    <div className={clsx('horizontal justify-center gap-x-2', 'm3x:gap-x-2.5', 'md:justify-start')}>
       <span
         className={clsx('horizontal bg-off-white border-strong-blue/40 rounded-full border p-1 shadow-md')}
       >

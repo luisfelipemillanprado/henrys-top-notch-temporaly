@@ -22,7 +22,7 @@ export const BookingFeatures = ({
       className={clsx(
         'grid grid-cols-1 grid-rows-3 gap-y-7.5',
         'm3x:gap-y-7.75',
-        'md:grid-cols-2 md:grid-rows-3 md:gap-7',
+        'md:grid-cols-2 md:grid-rows-2 md:gap-7.75',
         'lg:gap-7.5',
         '1xl:grid-cols-3 1xl:grid-rows-2',
         '2xl:gap-8',

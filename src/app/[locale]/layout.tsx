@@ -1,4 +1,5 @@
 import { Providers } from '@/app/[locale]/providers'
+import { FloatingPhoneButton } from '@/common/contact-us/phone/components/FloatingPhoneButton'
 import { FloatingWhatsAppButton } from '@/common/contact-us/whatsapp/components/FloatingWhatsAppButton'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
@@ -98,6 +99,7 @@ export default async function RootLayout({
           {children}
           <Footer />
           <FloatingWhatsAppButton href={layoutAssets.contactWhatsApp.href} />
+          <FloatingPhoneButton href={layoutAssets.contactPhone.href} />
           <Toast.Provider placement={'bottom end'} />
         </Providers>
       </body>

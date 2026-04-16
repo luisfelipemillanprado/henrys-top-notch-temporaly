@@ -95,4 +95,7 @@ export const layoutAssets = {
   contactWhatsApp: {
     href: `https://wa.me/${process.env.WHATSAPP_CONTACT_NUMBER}?text=${encodeURIComponent(process.env.WHATSAPP_CONTACT_MESSAGE ?? '')}`,
   },
+  contactPhone: {
+    href: `tel:${process.env.PHONE_CONTACT_NUMBER}`,
+  },
 }

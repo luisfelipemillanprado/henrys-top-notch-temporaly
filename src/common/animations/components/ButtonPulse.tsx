@@ -52,6 +52,7 @@ export const ButtonPulse = ({
   firstColor = false,
   secondColor = false,
   thirdColor = false,
+  forthColor = false,
   rounded,
   overlayMore,
   hidden,
@@ -76,6 +77,7 @@ export const ButtonPulse = ({
             firstColor && 'bg-electric-blue',
             secondColor && 'bg-strong-blue',
             thirdColor && 'bg-strong-blue/40',
+            forthColor && 'bg-light-green',
             rounded ? 'rounded-full' : 'rounded-2xl',
             overlayMore ? '-inset-0.75' : '-inset-0.5'
           )}

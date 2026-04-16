@@ -46,7 +46,7 @@ export const Testimonials = ({
       className={clsx('h-auto w-full')}
     >
       {testimonials.map((item) => (
-        <SwiperSlide key={item.id} className={clsx('mr-2 px-2 pb-2')}>
+        <SwiperSlide key={item.id} className={clsx('mr-2 px-2 pb-2', 'md:mr-3 md:w-auto!')}>
           <Testimonial
             name={item.name}
             position={item.position}

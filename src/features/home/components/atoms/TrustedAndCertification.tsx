@@ -20,8 +20,8 @@ export const TrustedAndCertification = (props: { url: string; href: string }) =>
         'horizontal relative size-16.5 items-center',
         'm1x:size-17.5',
         'm2x:size-18.5',
-        'm3x:size-19',
-        'm4x:size-19.5'
+        'm3x:size-18.75',
+        'md:size-18'
       )}
       target={'_blank'}
       rel={'noopener noreferrer'}
