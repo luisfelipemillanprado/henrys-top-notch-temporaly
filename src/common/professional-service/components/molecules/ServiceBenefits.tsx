@@ -21,7 +21,8 @@ export const ServiceBenefits = ({ benefits }: ServiceBenefitsProps) => {
         'm1x:gap-x-3 m1x:mb-3.25',
         'm2x:gap-x-3.5',
         'm3x:gap-x-4',
-        'm4x:gap-x-4.5'
+        'm4x:gap-x-4.5',
+        'lg:grid-cols-2 lg:grid-rows-3 lg:gap-y-4.5 lg:[&>*:nth-child(n+3)]:flex'
       )}
     >
       {benefits.map((item) => (

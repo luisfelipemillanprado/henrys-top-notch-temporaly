@@ -52,18 +52,17 @@ export const OurWhyChooseUs = () => {
       id: reasonAssets[3].id,
     },
   ]
-
   return (
     <section
       id={'why-choose-us'}
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'vertical w-full px-5.5 pt-12 pb-11 shadow-2xs',
+        'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',
         'm3x:pb-12.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:py-20',
-        'lg:px-18 lg:pt-28 lg:pb-28',
+        'lg:px-15 lg:py-24',
         '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
         '2xl:px-32 2xl:pt-36 2xl:pb-36'
       )}

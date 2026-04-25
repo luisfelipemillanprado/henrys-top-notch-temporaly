@@ -20,6 +20,8 @@ const { features: featureAssets, image, primaryCtaHref, steps: stepAssets } = ho
  * @property {string} features[].icon - The URL of the feature icon.
  * @property {string} features[].title - The title of the feature.
  * @property {string} features[].description - The description of the feature.
+ * @property {string} features[].href - The URL that the feature links to for more details.
+ * @property {string} features[].text - The text displayed for the feature's call-to-action.
  * @property {array} steps - An array of objects representing steps in the booking process.
  * @property {number} steps[].id - The unique identifier for the step.
  * @property {string} steps[].url - The URL of the step image.
@@ -41,18 +43,24 @@ export const OurBookingProcess = () => {
       icon: featureAssets[0].icon,
       title: t('features.energyEfficientSystems.title'),
       description: t('features.energyEfficientSystems.description'),
+      href: featureAssets[0].href,
+      text: t('features.energyEfficientSystems.moreDetails'),
       id: featureAssets[0].id,
     },
     {
       icon: featureAssets[1].icon,
       title: t('features.expertInstallationRepair.title'),
       description: t('features.expertInstallationRepair.description'),
+      href: featureAssets[1].href,
+      text: t('features.expertInstallationRepair.moreDetails'),
       id: featureAssets[1].id,
     },
     {
       icon: featureAssets[2].icon,
       title: t('features.comfortForHomesBusinesses.title'),
       description: t('features.comfortForHomesBusinesses.description'),
+      href: featureAssets[2].href,
+      text: t('features.comfortForHomesBusinesses.moreDetails'),
       id: featureAssets[2].id,
     },
   ]
@@ -84,15 +92,16 @@ export const OurBookingProcess = () => {
   ]
   return (
     <section
-      id={'booking-process'}
+      id={'process'}
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'vertical w-full px-5.5 pt-12 pb-11 shadow-2xs',
+        'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',
         'm3x:pb-12.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:py-20',
-        'lg:px-18 lg:pt-28 lg:pb-28',
+        'lg:px-15 lg:py-24',
+        'xl:px-13',
         '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
         '2xl:px-32 2xl:pt-36 2xl:pb-36'
       )}

@@ -39,14 +39,14 @@ export const Testimonials = ({
       slidesPerView={'auto'}
       loop={true}
       autoplay={{
-        delay: 6000,
+        delay: 7000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
       className={clsx('h-auto w-full')}
     >
       {testimonials.map((item) => (
-        <SwiperSlide key={item.id} className={clsx('mr-2 px-2 pb-2', 'md:mr-3 md:w-auto!')}>
+        <SwiperSlide key={item.id} className={clsx('mr-2 pb-2', 'md:mr-6 md:w-auto! md:pl-px')}>
           <Testimonial
             name={item.name}
             position={item.position}

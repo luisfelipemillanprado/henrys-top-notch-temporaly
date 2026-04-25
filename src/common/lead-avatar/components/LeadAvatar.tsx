@@ -16,23 +16,19 @@ export const LeadAvatar = ({ url, background = false }: LeadAvatarProps) => {
   return (
     <div
       className={clsx(
-        'border-strong-blue/40 relative h-12 w-12 overflow-hidden rounded-full border shadow-sm',
+        'border-strong-blue/40 relative overflow-hidden rounded-full border shadow-sm',
         background && 'bg-off-white',
-        'm1x:h-12.5 m1x:w-12.5',
-        'm3x:h-13 m3x:w-13',
-        'm4x:h-13.5 m4x:w-13.5',
-        '1xl:h-14.5 1xl:w-14.5',
-        '2xl:h-15 2xl:w-15',
-        '3xl:h-15.5 3xl:w-15.5'
+        'size-[clamp(3rem,calc(3rem+(100vw-23.4375rem)*0.0923),3.375rem)]',
+        '1xl:size-14.5',
+        '2xl:size-15',
+        '3xl:size-15.5'
       )}
     >
       <Image
         className={clsx('size-full object-cover')}
         src={url}
         fill
-        sizes={
-          '(max-width: 640px) 157px, (max-width: 1024px) 182px, (max-width: 1536px) 220px, (max-width: 1920px) 286px, 380px'
-        }
+        sizes={'(max-width: 768px) 60px, 80px'}
         placeholder={'blur'}
         blurDataURL={blurDataUrlAvatar}
         alt={'Lead Avatar'}

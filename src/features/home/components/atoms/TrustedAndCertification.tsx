@@ -17,11 +17,10 @@ export const TrustedAndCertification = (props: { url: string; href: string }) =>
     <Link
       href={href}
       className={clsx(
-        'horizontal relative size-16.5 items-center',
-        'm1x:size-17.5',
-        'm2x:size-18.5',
-        'm3x:size-18.75',
-        'md:size-18'
+        'horizontal relative items-center',
+        'size-[clamp(4.125rem,calc(4.125rem+(100vw-23.4375rem)*0.154),4.75rem)]',
+        'md:size-18',
+        'lg:size-18.5'
       )}
       target={'_blank'}
       rel={'noopener noreferrer'}

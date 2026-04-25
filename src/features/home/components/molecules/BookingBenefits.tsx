@@ -20,7 +20,8 @@ export const BookingBenefits = ({ benefits }: { benefits: { text: string; id: nu
         'm2x:gap-x-4 m2x:gap-y-5.75',
         'm3x:gap-x-4.5 m3x:gap-y-6',
         'm4x:gap-x-5',
-        'md:[&>*:nth-child(3)]:col-auto md:[&>*:nth-child(3)]:justify-start md:[&>*:nth-child(n+4)]:flex'
+        'md:mb-2 md:[&>*:nth-child(3)]:col-auto md:[&>*:nth-child(3)]:justify-start md:[&>*:nth-child(n+4)]:flex',
+        'xl:gap-x-6.5'
       )}
     >
       {benefits.map((item) => (

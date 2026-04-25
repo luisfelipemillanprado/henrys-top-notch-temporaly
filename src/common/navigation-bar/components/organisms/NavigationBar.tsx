@@ -11,15 +11,15 @@ const { logo, getStartedButtonHref, links } = layoutAssets.navigationBar
 /**
  * @description Renders the main navigation bar component.
  * @public
- * @property {string} logo - The properties for the company logo displayed in the navigation bar.
- * @property {object} getStartedButton - The properties for the "Get Started" button.
- * @property {string} getStartedButton.text - The text displayed on the "Get Started" button.
- * @property {string} getStartedButton.href - The URL that the "Get Started" button links to.
- * @property {Array} links - An array of navigation link items to be displayed.
- * @property {string} links.text - The display text for the navigation link.
- * @property {string} links.href - The URL the navigation link points to.
- * @property {string} links.icon - The icon associated with the navigation link.
- * @property {string} links.id - The unique identifier for the navigation link item.
+ * @param {string} props.logo - The properties for the company logo displayed in the navigation bar.
+ * @param {object} props.getStartedButton - The properties for the "Get Started" button.
+ * @param {string} props.getStartedButton.text - The text displayed on the "Get Started" button.
+ * @param {string} props.getStartedButton.href - The URL that the "Get Started" button links to.
+ * @param {Array} props.links - An array of navigation link items to be displayed.
+ * @param {string} props.links.text - The display text for the navigation link.
+ * @param {string} props.links.href - The URL the navigation link points to.
+ * @param {string} props.links.icon - The icon associated with the navigation link.
+ * @param {string} props.links.id - The unique identifier for the navigation link item.
  * @returns The rendered navigation bar component.
  */
 export const NavigationBar = () => {
@@ -43,6 +43,7 @@ export const NavigationBar = () => {
       className={clsx(
         'horizontal bg-secondary sticky inset-x-0 top-0 z-50! h-21 w-full justify-between px-6 py-4',
         'md:h-23 md:px-13 md:py-6.25',
+        'xl:px-16',
         '1xl:px-30',
         '2xl:h-25',
         '3xl:h-26.5',
@@ -52,7 +53,7 @@ export const NavigationBar = () => {
       <div className={clsx('horizontal')}>
         <LogoCompany url={logo.url} />
       </div>
-      <div className={clsx('hidden', 'lg:horizontal lg:w-14/25', '1xl:w-auto')}>
+      <div className={clsx('hidden', 'lg:horizontal lg:w-12/25', 'xl:w-55/100', '1xl:w-auto')}>
         <NavigationLinks links={navigationLinks} />
       </div>
       <div className={clsx('horizontal')}>

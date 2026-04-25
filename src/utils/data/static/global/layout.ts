@@ -11,14 +11,14 @@
 export const layoutAssets = {
   navigationBar: {
     logo: { url: '/images/logo-company/logo-company.webp' },
-    getStartedButtonHref: { href: '#contactus' },
+    getStartedButtonHref: { href: '#contact-us' },
     links: [
       { key: 'home', href: '/', icon: 'home', id: 15 },
       { key: 'aboutUs', href: '#about-us', icon: 'about-us', id: 16 },
       { key: 'services', href: '#services', icon: 'services', id: 17 },
       { key: 'areas', href: '#areas', icon: 'areas', id: 18 },
       { key: 'process', href: '#process', icon: 'process', id: 19 },
-      { key: 'reviews', href: '#reviews', icon: 'reviews', id: 20 },
+      { key: 'reviews', href: '#testimonials', icon: 'reviews', id: 20 },
       { key: 'offers', href: '#offers', icon: 'offers', id: 21 },
       { key: 'blogs', href: '#blogs', icon: 'blogs', id: 22 },
     ],
@@ -92,10 +92,11 @@ export const layoutAssets = {
       { href: 'https://instagram.com/remiuxsoft', icon: 'instagram', name: 'Instagram', id: 45 },
     ],
   },
-  contactWhatsApp: {
-    href: `https://wa.me/${process.env.WHATSAPP_CONTACT_NUMBER}?text=${encodeURIComponent(process.env.WHATSAPP_CONTACT_MESSAGE ?? '')}`,
-  },
-  contactPhone: {
-    href: `tel:${process.env.PHONE_CONTACT_NUMBER}`,
-  },
-}
+  directLine: [
+    {
+      href: `https://wa.me/${process.env.WHATSAPP_CONTACT_NUMBER}?text=${encodeURIComponent(process.env.WHATSAPP_CONTACT_MESSAGE ?? '')}`,
+      icon: 'whatsapp',
+    },
+    { href: `tel:${process.env.PHONE_CONTACT_NUMBER}`, icon: 'phone' },
+  ],
+} as const

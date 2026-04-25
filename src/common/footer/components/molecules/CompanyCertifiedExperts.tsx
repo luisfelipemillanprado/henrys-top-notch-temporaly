@@ -11,14 +11,14 @@ import clsx from 'clsx'
  * @interface CompanyCertifiedExpertsProps
  * @param {object} props - Component properties.
  * @param {CompanyCertifiedExpertsProps['title']} props.title - The title for the certified experts section.
- * @param {CompanyCertifiedExpertsProps['description']} props.description - The description text for the certified experts section.
+ * @param {CompanyCertifiedExpertsProps['description']} props.description - The description text for the certified experts.
  * @param {CompanyCertifiedExpertsProps['license'][number]['text']} props.license.text - The text for the license information.
- * @param {CompanyCertifiedExpertsProps['license'][number]['id']} props.license.id - The unique identifier for the license information.
+ * @param {CompanyCertifiedExpertsProps['license'][number]['id']} props.license.id - The unique identifier for the license.
  * @param {CompanyCertifiedExpertsProps['license']} props.license - The license information in the certified experts section.
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
- * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
- * @param {CompanyCertifiedExpertsProps['imagesUrl']} props.imagesUrl - The URL for the license image or link in the certified experts.
- * @param {CompanyCertifiedExpertsProps['mapsUrl']} props.mapsUrl - The URL for the embedded Google Maps location to be displayed.
+ * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the.
+ * @param {CompanyCertifiedExpertsProps['imagesUrl']} props.imagesUrl - The URL for the license image or link in the certified.
+ * @param {CompanyCertifiedExpertsProps['mapsUrl']} props.mapsUrl - The URL for the embedded Google Maps location to be.
  * @returns The rendered company certified experts section.
  */
 export const CompanyCertifiedExperts = ({
@@ -29,7 +29,7 @@ export const CompanyCertifiedExperts = ({
   mapsUrl,
 }: CompanyCertifiedExpertsProps) => {
   return (
-    <div className={clsx('vertical w-full gap-y-14', 'md:w-14/25')}>
+    <div className={clsx('vertical w-full gap-y-14', 'md:w-14/25', 'lg:w-23/50')}>
       <div className={clsx('vertical w-full items-center gap-y-4.5')}>
         <QuinaryTitle title={title} />
         <FooterDescription description={description} />
@@ -47,7 +47,8 @@ export const CompanyCertifiedExperts = ({
             'm2x:h-65',
             'm3x:h-70',
             'm4x:h-75',
-            'md:h-74'
+            'md:h-74',
+            'lg:h-75'
           )}
           allowFullScreen
           loading={'lazy'}

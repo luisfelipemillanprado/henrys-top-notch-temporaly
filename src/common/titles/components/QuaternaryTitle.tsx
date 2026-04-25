@@ -7,7 +7,7 @@ import clsx from 'clsx'
  * @interface MainTitleProps
  * @param {object} props - Component properties.
  * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
- * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional flag to indicate if the title position should change.
+ * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional flag to indicate if the title position.
  * @param {MainTitleProps['truncate']} [props.truncate] - Optional flag to enable text truncation with ellipsis for long titles.
  * @returns The rendered quaternary title component.
  */
@@ -19,11 +19,8 @@ export const QuaternaryTitle = ({ title, changePosition = false, truncate = true
         className={clsx(
           'text-secondary text-lg font-semibold',
           truncate && 'truncate',
-          'm1x:text-[1.1875rem]',
-          'md:text-xl md:leading-7.5',
-          'lg:text-xl lg:leading-7.5',
-          '3xl:text-[1.3125rem] 3xl:leading-7.75',
-          '5xl:text-2xl 5xl:leading-8'
+          'md:text-[1.3125rem]',
+          'lg:text-[1.375rem]'
         )}
       >
         {title}

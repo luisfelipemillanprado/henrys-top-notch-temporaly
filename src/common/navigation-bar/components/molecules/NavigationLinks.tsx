@@ -20,6 +20,7 @@ export const NavigationLinks = ({ links }: NavigationBarLinksProps) => {
       className={clsx(
         'horizontal w-full',
         'lg:gap-x-8 lg:overflow-x-hidden',
+        'xl:gap-x-8.5',
         '1xl:gap-x-6.5',
         '2xl:gap-x-7.5'
       )}

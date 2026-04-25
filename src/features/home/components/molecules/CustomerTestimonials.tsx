@@ -46,17 +46,30 @@ export const CustomerTestimonials = ({
   }[]
 }) => {
   return (
-    <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75', 'md:gap-y-9.5')}>
-      <div className={clsx('w-full px-2')}>
-        <LeadVisual image={image} changeBackground={true} />
-      </div>
-      <div className={clsx('vertical w-full items-center gap-y-8.5', 'm1x:gap-y-9', 'md:gap-y-9.5')}>
+    <div
+      className={clsx(
+        'vertical w-full items-start gap-y-8',
+        'm3x:gap-y-8.75',
+        'md:gap-y-11',
+        'lg:gap-y-12'
+      )}
+    >
+      <LeadVisual image={image} changeBackground={true} />
+      <div
+        className={clsx(
+          'vertical w-full items-center gap-y-8.5',
+          'm1x:gap-y-9',
+          'md:gap-y-11',
+          'lg:gap-y-12'
+        )}
+      >
         <div
           className={clsx(
-            'vertical w-full items-center gap-y-8 px-2',
+            'vertical w-full items-center gap-y-8',
             'm1x:gap-y-8.75',
             'm3x:gap-y-9.5',
-            'md:items-start md:pr-16.75 md:pl-4'
+            'md:bg-primary md:border-electric-blue/30 md:items-start md:rounded-3xl md:border md:p-8 md:shadow-md',
+            'lg:p-10'
           )}
         >
           <SectionHeader title={title} description={description} eyebrow={eyebrow} />

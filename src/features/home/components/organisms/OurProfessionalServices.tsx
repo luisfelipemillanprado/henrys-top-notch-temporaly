@@ -114,7 +114,7 @@ export const OurProfessionalServices = () => {
   ]
   return (
     <section
-      id={'professional-services'}
+      id={'services'}
       aria-labelledby={title}
       role={'region'}
       className={clsx(
@@ -122,7 +122,7 @@ export const OurProfessionalServices = () => {
         'm3x:pb-12.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:py-20',
-        'lg:px-18 lg:pt-28 lg:pb-28',
+        'lg:px-15 lg:py-24',
         '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
         '2xl:px-32 2xl:pt-36 2xl:pb-36'
       )}

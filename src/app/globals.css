@@ -8,7 +8,7 @@
   --breakpoint-m1x: 24.375rem; /* 390px */
   --breakpoint-m2x: 25.75rem; /* 412px */
   --breakpoint-m3x: 26.75rem; /* 428px */
-  --breakpoint-m4x: 27.5rem; /* 440px */
+  --breakpoint-m4x: 27.4375rem; /* 439px */
   --breakpoint-sm: 40rem; /* 640px */
   --breakpoint-md: 48rem; /* 768px */
   --breakpoint-lg: 64rem; /* 1024px */
@@ -21,7 +21,7 @@
 
   /* --- COLORS (Design Tokens for Tailwind) --- */
   /* By defining them this way, Tailwind creates bg-primary, text-secondary, border-accent, etc. */
-  --color-secondary: oklch(0.2308 0 0); /* nearblack */
+  --color-secondary: oklch(0.221 0.0015 197.05); /* nearblack */
   --color-midnightgreen: oklch(0.252 0 0); /* midnightgreen */
   --color-irongray: oklch(0.3171 0 0); /* irongray */
   --color-dimgray: oklch(0.5727 0.0052 54.37); /* dimgray */
@@ -29,6 +29,7 @@
   --color-bright-orange: oklch(0.6884 0.2089 41.7); /* bright orange */
   --color-vivid-orange: oklch(0.7426 0.1817 56.01); /* vivid orange */
   --color-golden: oklch(0.7819 0.1585 72.33); /* golden */
+  --color-pale-yellow: oklch(0.9047 0.1875 99.07); /* pale yellow */
   --color-electric-blue: oklch(0.7647 0.125269 249.7656); /* electric blue */
   --color-strong-blue: oklch(0.4974 0.1649 255.19); /* strong blue */
   --color-primary: oklch(100% 0 0); /* white */
@@ -144,13 +145,18 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    overflow-y: scroll;
+    background: var(--color-secondary);
+  }
+  body {
+    /* overflow-x: hidden; */
     -ms-overflow-style: none;
     scrollbar-width: none;
-    user-select: none;
+    background: var(--color-secondary);
   }
-  html::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -192,19 +198,19 @@
   }
   /* ------------------------- TEXT-FIELD-AREA-COMPONENTS ------------------------- */
   .textfield {
-    @apply 1xl:gap-y-3.5 z-10 w-full gap-y-2.5 md:gap-y-2.5 lg:gap-y-3 2xl:gap-y-4;
+    @apply z-10 w-full gap-y-2.5 md:gap-y-2.5 lg:gap-y-3;
   }
   .label {
     @apply text-primary m1x:text-base 3xl:text-[1.0625rem] text-[0.9375rem];
   }
   .input-group {
-    @apply border-warmgray/30 m1x:h-12 h-11 rounded-lg border md:h-12.5;
+    @apply border-warmgray/30 m1x:h-12 h-11 rounded-lg border md:h-12.5 lg:h-14;
   }
   .input-group__input {
     @apply text-secondary placeholder:text-warmgray m1x:text-base 1xl:text-[1.0625rem] 3xl:text-lg w-full text-[0.9375rem];
   }
   .textarea {
-    @apply text-secondary placeholder:text-warmgray border-warmgray/30 m1x:text-base 1xl:h-19.5 1xl:text-[1.0625rem] 3xl:h-21 3xl:text-lg m1x:h-19 h-18 rounded-lg border text-[0.9375rem] lg:h-18.5 2xl:h-20;
+    @apply text-secondary placeholder:text-warmgray border-warmgray/30 m1x:text-base 1xl:h-19.5 1xl:text-[1.0625rem] 3xl:h-21 3xl:text-lg m1x:h-19 h-18 rounded-lg border text-[0.9375rem] lg:h-19 2xl:h-20;
   }
 }
 

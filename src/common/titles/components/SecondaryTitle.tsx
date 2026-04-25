@@ -18,7 +18,7 @@ export const SecondaryTitle = ({ title }: MainTitleProps) => {
           'm1x:text-[1.625rem]',
           'm3x:text-[1.6875rem]',
           'md:text-start md:text-[2.1875rem] md:leading-11.75',
-          'lg:text-[2.3125rem] lg:leading-12.5',
+          'lg:text-4xl lg:leading-12.5',
           '1xl:text-[2.875rem] 1xl:leading-14.5',
           '3xl:text-[3.0625rem] 3xl:leading-16',
           '5xl:text-[3.4375rem] 5xl:leading-17'

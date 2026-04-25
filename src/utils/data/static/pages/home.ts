@@ -83,9 +83,9 @@ export const homeAssets = {
     image: '/images/booking-process/booking-process1.webp',
     primaryCtaHref: '/about-us',
     features: [
-      { key: 'energyEfficientSystems', icon: 'emergency', id: 21 },
-      { key: 'expertInstallationRepair', icon: 'experts', id: 22 },
-      { key: 'comfortForHomesBusinesses', icon: 'comfort', id: 23 },
+      { key: 'energyEfficientSystems', href: '/about-us', icon: 'emergency', id: 21 },
+      { key: 'expertInstallationRepair', href: '/about-us', icon: 'experts', id: 22 },
+      { key: 'comfortForHomesBusinesses', href: '/about-us', icon: 'comfort', id: 23 },
     ],
     steps: [
       { key: 'bookYourService', url: '/images/booking-process/booking-process2.webp', id: 24 },
@@ -220,12 +220,13 @@ export const homeAssets = {
       {
         key: 'sarahAlvarez',
         url: '/images/customer-testimonials/customer/customer9.webp',
-        stars: [{ id: 119 }, { id: 120 }, { id: 121 }, { id: 122 }, { id: 123 }],
-        id: 124,
+        stars: [{ id: 124 }, { id: 125 }, { id: 126 }, { id: 127 }, { id: 128 }],
+        id: 129,
       },
     ],
   },
   contactUs: {
     image: '/images/contact-us/contact-us.webp',
+    primaryCtaHref: '#contact-us',
   },
 } as const

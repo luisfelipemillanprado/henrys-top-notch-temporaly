@@ -16,7 +16,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
  * @param {number} props.trustedAndCertified[].id - Unique numeric key for React list rendering.
  * @returns A Swiper carousel rendering the trusted and certified items in a horizontal scrolling format.
  */
-
 export const TrustedAndCertified = ({
   trustedAndCertified,
 }: {
@@ -34,11 +33,12 @@ export const TrustedAndCertified = ({
       }}
       modules={[Autoplay]}
       className={clsx(
-        'mx-5.5! h-auto w-full',
-        'm3x:mx-6.25!',
-        'm4x:mx-7!',
-        'md:mr-14! md:ml-13! md:w-51/100',
+        'h-auto w-full',
+        'mx-[clamp(1.375rem,calc(1.375rem+(100vw-23.4375rem)*0.0923),1.75rem)]!',
+        'md:mr-14! md:w-51/100',
+        'md:ml-[clamp(3.25rem,calc(3.25rem+(100vw-48rem)*0.0625),4.25rem)]!',
         'lg:ml-17! lg:w-12/25',
+        'xl:ml-14! xl:w-23/50',
         '1xl:w-21/50 1xl:ml-29!',
         '2xl:ml-32! 2xl:w-41/100',
         '3xl:w-2/5',
@@ -48,7 +48,10 @@ export const TrustedAndCertified = ({
       {trustedAndCertified.map((item) => (
         <SwiperSlide
           key={item.id}
-          className={clsx('mr-5.5 size-auto!', 'm1x:mr-5.75', 'm2x:mr-6', 'm3x:mr-6.25', 'm4x:mr-6.5')}
+          className={clsx(
+            'size-auto!',
+            'mr-[clamp(1.375rem,calc(1.375rem+(100vw-23.4375rem)*0.0615),1.625rem)]'
+          )}
         >
           <TrustedAndCertification url={item.url} href={item.href} />
         </SwiperSlide>

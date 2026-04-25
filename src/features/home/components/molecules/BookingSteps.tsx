@@ -25,15 +25,11 @@ export const BookingSteps = ({
   return (
     <div
       className={clsx(
-        'mt-2 grid grid-cols-1 grid-rows-4 gap-y-8.5',
+        'mt-2 grid w-full grid-cols-1 grid-rows-4 gap-y-8.5',
         'm1x:gap-y-9',
         'm3x:gap-y-9.5',
-        'md:grid-cols-2 md:grid-rows-2 md:gap-7.75',
-        'lg:gap-7.5',
-        '1xl:grid-cols-3 1xl:grid-rows-2',
-        '2xl:gap-8',
-        '3xl:gap-8.75',
-        '5xl:gap-9.5'
+        'md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-11',
+        'lg:gap-x-24 lg:gap-y-12 lg:pl-1'
       )}
     >
       {steps.map((item) => (

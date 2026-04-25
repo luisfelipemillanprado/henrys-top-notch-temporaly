@@ -11,9 +11,9 @@ import clsx from 'clsx'
  * @param {object} props - Component properties.
  * @param {SectionHeaderProps['title']} props.title - The main heading text displayed for the section.
  * @param {SectionHeaderProps['description']} props.description - A short supporting description shown beneath the title.
- * @param {SectionHeaderProps['eyebrow']} props.eyebrow - A brief text displayed above the title, often used to categorize the section.
+ * @param {SectionHeaderProps['eyebrow']} props.eyebrow - A brief text displayed above the title, often used to categorize.
  * @param {SectionHeaderProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
- * @param {SectionHeaderProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the section header component.
+ * @param {SectionHeaderProps['hidden']} [props.hidden] - An optional boolean that, when true, hides the section header.
  * @returns A rendering the composed section header.
  */
 export const SectionHeader = ({
@@ -30,16 +30,18 @@ export const SectionHeader = ({
         'm1x:gap-y-5',
         'm3x:gap-y-5.25',
         'm4x:gap-y-5',
-        'md:items-start'
+        'md:max-w-150 md:items-start',
+        'lg:max-w-205.5',
+        'xl:w-auto xl:max-w-none xl:gap-y-5.25'
       )}
     >
       <EyeBrow text={eyebrow} hidden={hidden} />
       <div
         className={clsx(
           'vertical gap-y-5',
-          'md:w-87/100 md:gap-y-5.5',
-          '1xl:w-12/25 1xl:gap-y-6',
-          '5xl:w-9/20'
+          'md:max-w-87/100 md:gap-y-5.5',
+          'lg:max-w-33/50 lg:gap-y-6',
+          'xl:max-w-19/20'
         )}
       >
         <SecondaryTitle title={title} />

@@ -48,7 +48,7 @@ const iconSwitch = (icon: string) => {
         <HomeIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.ABOUT_US:
@@ -56,7 +56,7 @@ const iconSwitch = (icon: string) => {
         <InformationCircleIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.SERVICES:
@@ -64,7 +64,7 @@ const iconSwitch = (icon: string) => {
         <WrenchScrewdriverIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.PROCESS:
@@ -72,7 +72,7 @@ const iconSwitch = (icon: string) => {
         <ClipboardDocumentListIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.AREAS:
@@ -80,7 +80,7 @@ const iconSwitch = (icon: string) => {
         <MapIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.REVIEWS:
@@ -88,7 +88,7 @@ const iconSwitch = (icon: string) => {
         <StarIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.OFFERS:
@@ -96,7 +96,7 @@ const iconSwitch = (icon: string) => {
         <GiftIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     case NavigationLinkIcon.BLOGS:
@@ -104,7 +104,7 @@ const iconSwitch = (icon: string) => {
         <NewspaperIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-electric-blue size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
+          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
         />
       )
     default:
@@ -121,7 +121,7 @@ const iconSwitch = (icon: string) => {
  * @param {NavigationBarLinkItem['href']} props.href - The URL the navigation link points to.
  * @param {NavigationBarLinkItem['icon']} props.icon - The icon associated with the navigation link.
  * @param {NavigationBarLinkItem['id']} props.id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinkItem['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
+ * @param {NavigationBarLinkItem['handleCloseO100%ptions']} [props.handleCloseOptions] - Optional function to handle closing.
  * @returns The rendered navigation link component.
  */
 export const NavigationLink = ({ text, href, icon, handleCloseOptions }: NavigationBarLinkItem) => {

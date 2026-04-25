@@ -4,8 +4,7 @@ import { layoutAssets } from '@/utils/data/static/global/layout'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const logo = layoutAssets.footer.logo
-const socialNetworks = layoutAssets.footer.socialNetworks
+const footer = layoutAssets.footer
 
 /**
  * @description Renders the footer component, which includes company information, legal statements, and social network links.
@@ -43,54 +42,55 @@ const socialNetworks = layoutAssets.footer.socialNetworks
  */
 export const Footer = () => {
   const t = useTranslations('footer')
-  const contactInformation = [
-    {
-      text: t('contactInformation.address'),
-      ...layoutAssets.footer.contactInformation[0],
-    },
-    {
-      text: t('contactInformation.phone'),
-      ...layoutAssets.footer.contactInformation[1],
-    },
-    {
-      text: t('contactInformation.schedule'),
-      ...layoutAssets.footer.contactInformation[2],
-    },
-    {
-      text: t('contactInformation.email'),
-      ...layoutAssets.footer.contactInformation[3],
-    },
-  ]
-  const links = [
-    { ...layoutAssets.footer.links[0], text: t('links.quickLinks') },
-    { ...layoutAssets.footer.links[1], text: t('links.allAboutUs') },
-    { ...layoutAssets.footer.links[2], text: t('links.home') },
-    { ...layoutAssets.footer.links[3], text: t('links.allAreas') },
-    { ...layoutAssets.footer.links[4], text: t('links.ourBlogs') },
-    { ...layoutAssets.footer.links[5], text: t('links.allReviews') },
-    { ...layoutAssets.footer.links[6], text: t('links.ourProcess') },
-    { ...layoutAssets.footer.links[7], text: t('links.specialOffers') },
-    { ...layoutAssets.footer.links[8], text: t('links.ourServices') },
-    { ...layoutAssets.footer.links[9], text: t('links.hvacSystemMaintenance') },
-    { ...layoutAssets.footer.links[10], text: t('links.hvacSystemInstallation') },
-    { ...layoutAssets.footer.links[11], text: t('links.hvacSystemRepair') },
-    { ...layoutAssets.footer.links[12], text: t('links.airQualitySolutions') },
-    { ...layoutAssets.footer.links[13], text: t('links.acInstallation') },
-    { ...layoutAssets.footer.links[14], text: t('links.breatheEasyBundle') },
-    { ...layoutAssets.footer.links[15], text: t('links.coolComfortDeal') },
-  ]
   const highlight = [t('highlight.quickLinks'), t('highlight.ourServices')]
+  const copyright = t('copyright', { year: new Date().getFullYear().toString() })
   const certifiedExperts = {
     title: t('certifiedExperts.title'),
     description: t('certifiedExperts.description'),
     license: [
-      { ...layoutAssets.footer.certifiedExperts.license[0], text: t('certifiedExperts.license.label') },
-      { ...layoutAssets.footer.certifiedExperts.license[1], text: t('certifiedExperts.license.number') },
+      { id: footer.certifiedExperts.license[0].id, text: t('certifiedExperts.license.label') },
+      { id: footer.certifiedExperts.license[1].id, text: t('certifiedExperts.license.number') },
     ],
-    imagesUrl: layoutAssets.footer.certifiedExperts.imagesUrl,
-    mapsUrl: layoutAssets.footer.certifiedExperts.mapsUrl,
+    imagesUrl: [...footer.certifiedExperts.imagesUrl],
+    mapsUrl: footer.certifiedExperts.mapsUrl,
   }
-  const copyright = t('copyright', { year: new Date().getFullYear().toString() })
+  const socialNetworks = [...footer.socialNetworks]
+  const contactInformation = [
+    {
+      text: t('contactInformation.address'),
+      ...footer.contactInformation[0],
+    },
+    {
+      text: t('contactInformation.phone'),
+      ...footer.contactInformation[1],
+    },
+    {
+      text: t('contactInformation.schedule'),
+      ...footer.contactInformation[2],
+    },
+    {
+      text: t('contactInformation.email'),
+      ...footer.contactInformation[3],
+    },
+  ]
+  const links = [
+    { ...footer.links[0], text: t('links.quickLinks') },
+    { ...footer.links[1], text: t('links.allAboutUs') },
+    { ...footer.links[2], text: t('links.home') },
+    { ...footer.links[3], text: t('links.allAreas') },
+    { ...footer.links[4], text: t('links.ourBlogs') },
+    { ...footer.links[5], text: t('links.allReviews') },
+    { ...footer.links[6], text: t('links.ourProcess') },
+    { ...footer.links[7], text: t('links.specialOffers') },
+    { ...footer.links[8], text: t('links.ourServices') },
+    { ...footer.links[9], text: t('links.hvacSystemMaintenance') },
+    { ...footer.links[10], text: t('links.hvacSystemInstallation') },
+    { ...footer.links[11], text: t('links.hvacSystemRepair') },
+    { ...footer.links[12], text: t('links.airQualitySolutions') },
+    { ...footer.links[13], text: t('links.acInstallation') },
+    { ...footer.links[14], text: t('links.breatheEasyBundle') },
+    { ...footer.links[15], text: t('links.coolComfortDeal') },
+  ]
   return (
     <footer
       id={'footer'}
@@ -98,14 +98,15 @@ export const Footer = () => {
       className={clsx(
         'bg-secondary vertical w-full px-6 pt-12',
         'm3x:px-7',
-        'md:px-13',
+        'md:px-13 md:pt-13',
+        'lg:px-15 lg:pt-15',
         '1xl:px-27.5',
         '2xl:px-28',
         '3xl:px-32'
       )}
     >
       <OurCompanyContactInformation
-        logo={logo}
+        logo={footer.logo}
         contactInformation={contactInformation}
         links={links}
         highlight={highlight}

@@ -1,6 +1,5 @@
 import { Providers } from '@/app/[locale]/providers'
-import { FloatingPhoneButton } from '@/common/contact-us/phone/components/FloatingPhoneButton'
-import { FloatingWhatsAppButton } from '@/common/contact-us/whatsapp/components/FloatingWhatsAppButton'
+import { DirectLine } from '@/common/contact-us/direct-line/components/organisms/DirectLine'
 import { Footer } from '@/common/footer/components/organisms/Footer'
 import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
 import { routing } from '@/i18n/routing'
@@ -44,6 +43,8 @@ const reenieBeanie = Reenie_Beanie({
   subsets: ['latin'],
   display: 'swap',
 })
+
+const directLine = [...layoutAssets.directLine]
 
 /**
  * @description Generates metadata for the application based on the current locale, using i18n translations.
@@ -98,8 +99,7 @@ export default async function RootLayout({
           <NavigationBar />
           {children}
           <Footer />
-          <FloatingWhatsAppButton href={layoutAssets.contactWhatsApp.href} />
-          <FloatingPhoneButton href={layoutAssets.contactPhone.href} />
+          <DirectLine directLine={directLine} />
           <Toast.Provider placement={'bottom end'} />
         </Providers>
       </body>

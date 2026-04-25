@@ -14,11 +14,11 @@ export const QuinaryTitle = ({ title }: MainTitleProps) => {
     <div className={clsx('horizontal w-full justify-center', 'md:justify-start')}>
       <h5
         className={clsx(
-          'text-primary text-center text-[1.375rem] font-semibold',
+          'text-primary text-center text-[1.375rem] leading-9 font-semibold',
           'm1x:text-[1.4375rem]',
           'm4x:text-2xl',
           'md:text-start md:text-[1.75rem] md:leading-11',
-          'lg:text-[1.1875rem]',
+          'lg:text-[1.8125rem]',
           '1xl:text-xl',
           '3xl:text-[1.3125rem]',
           '5xl:text-2xl'

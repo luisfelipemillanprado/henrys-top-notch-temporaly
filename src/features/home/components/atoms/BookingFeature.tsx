@@ -2,6 +2,7 @@ import { TertiaryTitle } from '@/common/titles/components/TertiaryTitle'
 import { CardDescription } from '@/features/home/components/atoms/CardDescription'
 import { BoltIcon, BuildingOffice2Icon, CheckBadgeIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
+import { MoreInformation } from './MoreInformation'
 
 /**
  * @description Enum representing the different service icons used in the booking features section.
@@ -84,16 +85,22 @@ const iconSwitch = (icon: string) => {
  * @param {string} props.icon - The URL of the feature icon.
  * @param {string} props.title - The title of the feature.
  * @param {string} props.description - A brief description of the feature.
+ * @param {string} props.href - The URL that the feature links to for more details.
+ * @param {string} props.text - The text displayed for the feature's call-to-action.
  * @returns A JSX element representing the booking feature.
  */
 export const BookingFeature = ({
   icon,
   title,
   description,
+  href,
+  text,
 }: {
   icon: string
   title: string
   description: string
+  href: string
+  text: string
 }) => {
   return (
     <div
@@ -101,18 +108,17 @@ export const BookingFeature = ({
         'bg-off-white border-electric-blue/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
         'm1x:p-5.25',
         'm4x:p-5.5',
-        'lg:px-6',
-        '2xl:px-6.5',
-        '3xl:px-6.75'
+        'md:pr-6.25',
+        'lg:gap-y-4 lg:py-7 lg:pr-10 lg:pl-7',
+        'xl:gap-y-4.5 xl:py-8 xl:pl-8'
       )}
     >
-      <div className={clsx('vertical w-full items-start gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
+      <div className={clsx('vertical w-full items-start gap-y-4.5', 'lg:gap-y-5', 'xl:gap-y-5.5')}>
         <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
         <TertiaryTitle title={title} />
       </div>
-      <div className={clsx('horizontal w-full justify-start')}>
-        <CardDescription description={description} />
-      </div>
+      <CardDescription description={description} />
+      <MoreInformation href={href} text={text} />
     </div>
   )
 }

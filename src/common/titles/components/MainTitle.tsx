@@ -11,7 +11,7 @@ import clsx from 'clsx'
  */
 export const MainTitle = ({ title }: MainTitleProps) => {
   return (
-    <div className={clsx('horizontal w-full px-4')}>
+    <div className={clsx('horizontal w-full px-4', 'md:px-0')}>
       <h1
         id={title}
         className={clsx(
@@ -22,6 +22,7 @@ export const MainTitle = ({ title }: MainTitleProps) => {
           'm4x:leading-13.25',
           'md:text-start md:text-[3.3125rem] md:leading-17.5',
           'lg:text-[3.5625rem] lg:leading-19',
+          'xl:text-[3.625rem] xl:leading-20',
           '1xl:text-[4.0625rem] 1xl:leading-21.5',
           '2xl:text-[4.3125rem] 2xl:leading-22',
           '3xl:text-[4.625rem] 3xl:leading-25',

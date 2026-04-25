@@ -22,8 +22,8 @@ export const BookingStep = ({
   description: string
 }) => {
   return (
-    <div className={clsx('vertical w-full gap-y-3.5 rounded-3xl')}>
-      <div className={clsx('vertical w-full items-center gap-y-4.5', '1xl:gap-y-5', '3xl:gap-y-5.25')}>
+    <div className={clsx('vertical w-full gap-y-3.5 rounded-3xl', 'lg:gap-y-4')}>
+      <div className={clsx('vertical w-full items-center gap-y-4.5', 'lg:items-start lg:gap-y-5')}>
         <LeadAvatar url={url} background={true} />
         <TertiaryTitle title={title} changePosition={true} />
       </div>

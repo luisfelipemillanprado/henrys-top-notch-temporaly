@@ -4,7 +4,7 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const { image } = homeAssets.contactUs
+const { image, primaryCtaHref } = homeAssets.contactUs
 const { contactForm: contactFormAssets } = layoutAssets
 
 /**
@@ -48,6 +48,10 @@ export const OurContactUs = () => {
   const title = tContact('title')
   const description = tContact('description')
   const eyebrow = tContact('eyebrow')
+  const primaryCta = {
+    text: tContact('primaryCta.text'),
+    href: primaryCtaHref,
+  }
   const contactForm = {
     name: {
       label: tForm('name.label'),
@@ -80,15 +84,14 @@ export const OurContactUs = () => {
   }
   return (
     <section
-      id={'contact-us'}
       aria-labelledby={title}
       role={'region'}
       className={clsx(
-        'vertical w-full px-5.5 pt-12 pb-11 shadow-2xs',
+        'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',
         'm3x:pb-12.5 m3x:px-5.75',
         'm4x:px-6',
         'md:px-13 md:py-20',
-        'lg:px-18 lg:pt-28 lg:pb-28',
+        'lg:px-15 lg:py-24',
         '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
         '2xl:px-32 2xl:pt-36 2xl:pb-36'
       )}
@@ -98,6 +101,7 @@ export const OurContactUs = () => {
         description={description}
         eyebrow={eyebrow}
         image={image}
+        primaryCta={primaryCta}
         contactForm={contactForm}
       />
     </section>

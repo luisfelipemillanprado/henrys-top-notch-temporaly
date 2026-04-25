@@ -7,11 +7,11 @@ import clsx from 'clsx'
  * @interface CardDescriptionProps
  * @param {object} props - Component properties.
  * @param {CardDescriptionProps['description']} props.description - Text content rendered inside the description.
- * @param {CardDescriptionProps['changePosition']} [props.changePosition] - An optional boolean that, when true, changes the text.
+ * @param {CardDescriptionProps['changePosition']} [props.changePosition] - An optional boolean that, when true, changes.
  * @param {CardDescriptionProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
- * @param {CardDescriptionProps['changeMargin']} [props.changeMargin] - An optional boolean that, when true, adds a bottom margin.
- * @param {CardDescriptionProps['changeColor']} [props.changeColor] - An optional boolean that, when true, changes the text color.
- * @param {CardDescriptionProps['addPadding']} [props.addPadding] - An optional boolean that, when true, adds padding to the description.
+ * @param {CardDescriptionProps['changeMargin']} [props.changeMargin] - An optional boolean that, when true, adds a bottom.
+ * @param {CardDescriptionProps['changeColor']} [props.changeColor] - An optional boolean that, when true, changes the text.
+ * @param {CardDescriptionProps['addPadding']} [props.addPadding] - An optional boolean that, when true, adds padding.
  * @returns A rendering a responsive description paragraph.
  */
 export const CardDescription = ({
@@ -27,7 +27,8 @@ export const CardDescription = ({
       className={clsx(
         'horizontal w-full',
         changePosition ? 'justify-center' : 'justify-start',
-        changeMargin && ['mb-0.5', 'm1x:mb-1']
+        changeMargin && ['mb-0.5', 'm1x:mb-1'],
+        'lg:justify-start'
       )}
     >
       <p
@@ -35,10 +36,11 @@ export const CardDescription = ({
           'text-[0.9375rem] leading-6.75',
           changeColor ? 'text-secondary' : 'text-dimgray',
           changePosition && 'text-center',
-          changeWidth && ['w-67', 'm1x:w-71'],
+          changeWidth && ['w-67', 'm1x:w-71', 'lg:w-93'],
           addPadding && ['m3x:pr-3', 'm4x:pr-5'],
           'm1x:text-base m1x:leading-7',
           'md:leading-7.5',
+          'lg:text-start',
           '1xl:text-[1.0625rem] 1xl:leading-7.5',
           '2xl:leading-8',
           '3xl:text-lg 3xl:leading-8.5',

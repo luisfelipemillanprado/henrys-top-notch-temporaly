@@ -15,14 +15,14 @@ import clsx from 'clsx'
  * @param {ProfessionalServiceProps['url']} props.url - The URL of the image representing a specific service.
  * @param {ProfessionalServiceProps['title']} props.title - The title describing a specific service.
  * @param {ProfessionalServiceProps['stars']} props.stars - An array of objects representing the star rating.
- * @param {ProfessionalServiceProps['stars'][number]['id']} props.stars.id - A unique identifier for each star in the star rating.
+ * @param {ProfessionalServiceProps['stars'][number]['id']} props.stars.id - A unique identifier for each star.
  * @param {ProfessionalServiceProps['description']} props.description - A brief description of a specific service.
  * @param {ProfessionalServiceProps['benefits']} props.benefits - An array of benefit objects, each containing text.
- * @param {ProfessionalServiceProps['benefits'][number]['text']} props.services.benefits.text - The text description of a key benefit.
- * @param {ProfessionalServiceProps['benefits'][number]['id']} props.services.benefits.id - A unique identifier for each key benefit.
+ * @param {ProfessionalServiceProps['benefits'][number]['text']} props.services.benefits.text - The text description.
+ * @param {ProfessionalServiceProps['benefits'][number]['id']} props.services.benefits.id - A unique identifier benefit.
  * @param {ProfessionalServiceProps['secondaryCta']} props.secondaryCta - An object containing the text and href.
- * @param {ProfessionalServiceProps['secondaryCta']['text']} props.secondaryCta.text - The text of the secondary call-to-action button.
- * @param {ProfessionalServiceProps['secondaryCta']['href']} props.secondaryCta.href - The URL of the secondary call-to-action button.
+ * @param {ProfessionalServiceProps['secondaryCta']['text']} props.secondaryCta.text - The text of the secondary.
+ * @param {ProfessionalServiceProps['secondaryCta']['href']} props.secondaryCta.href - The URL of the secondary call-to-action.
  * @returns A React component that renders the professional service.
  */
 export const ProfessionalService = ({
@@ -38,13 +38,27 @@ export const ProfessionalService = ({
       className={clsx(
         'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-5 rounded-3xl border px-2 pt-2 pb-6 shadow-md',
         'm1x:gap-y-5.5 m1x:pb-6.5',
-        'm3x:pb-6.5 m3x:px-2.25 m3x:pt-2.25'
+        'm3x:pb-6.5 m3x:px-2.25 m3x:pt-2.25',
+        'lg:horizontal lg:gap-x-8 lg:pr-0 lg:pb-2.25'
       )}
     >
       <ServiceImage url={url} />
-      <div className={clsx('vertical items-center gap-y-4.25', 'm1x:gap-y-4.5')}>
+      <div
+        className={clsx(
+          'vertical items-center gap-y-4.25',
+          'm1x:gap-y-4.5',
+          'lg:w-13/25 lg:items-start lg:gap-y-5.25 lg:pr-6'
+        )}
+      >
         <RatingStars stars={stars} />
-        <div className={clsx('vertical items-center gap-y-3.25', 'm1x:gap-y-3.5', 'm3x:gap-y-3.75')}>
+        <div
+          className={clsx(
+            'vertical items-center gap-y-3.25',
+            'm1x:gap-y-3.5',
+            'm3x:gap-y-3.75',
+            'lg:items-start lg:gap-y-4'
+          )}
+        >
           <TertiaryTitle title={title} changePosition={true} />
           <CardDescription
             description={description}

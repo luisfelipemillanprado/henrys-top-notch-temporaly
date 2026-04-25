@@ -20,7 +20,7 @@ export const OurLegalInformation = ({ copyright, socialNetworks }: LegalInformat
   return (
     <div
       className={clsx(
-        'border-light-gray/29 vertical w-full gap-y-6.5 border-t py-7.5',
+        'border-pale-yellow/20 vertical w-full gap-y-6.5 border-t py-7.5',
         'md:horizontal md:justify-between'
       )}
     >

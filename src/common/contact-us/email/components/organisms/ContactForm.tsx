@@ -4,6 +4,7 @@ import { TextAreaField } from '@/common/contact-us/email/components/molecules/Te
 import { TextInputField } from '@/common/contact-us/email/components/molecules/TextInputField'
 import { useContactEmail } from '@/utils/hooks/emails/contact-us/useContactEmail'
 import clsx from 'clsx'
+import dynamic from 'next/dynamic'
 import { SyntheticEvent, useState } from 'react'
 
 /**
@@ -38,7 +39,7 @@ import { SyntheticEvent, useState } from 'react'
  * @param {string} props.contactForm.notifications.error.description - Description for the error notification.
  * @returns {JSX.Element} The rendered contact form component.
  */
-export const ContactForm = ({
+const ContactFormWithoutSSR = ({
   contactForm,
 }: {
   contactForm: {
@@ -82,16 +83,14 @@ export const ContactForm = ({
   }
   return (
     <form
+      id={'contact-us'}
       onSubmit={handleSubmit}
       className={clsx(
         'vertical bg-secondary w-full gap-y-6.25 rounded-3xl border p-5.5 shadow-md',
         'm1x:p-6',
         'm3x:gap-y-6.75',
         'md:gap-y-8 md:rounded-4xl md:p-8',
-        'lg:px-11.75',
-        '1xl:px-13 1xl:gap-y-9',
-        '2xl:px-16.5',
-        '3xl:px-16 3xl:gap-y-10.5'
+        'lg:p-10'
       )}
     >
       <TextInputField
@@ -163,3 +162,4 @@ export const ContactForm = ({
     </form>
   )
 }
+export const ContactForm = dynamic(() => Promise.resolve(ContactFormWithoutSSR), { ssr: false })

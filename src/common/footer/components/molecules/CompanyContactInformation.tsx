@@ -23,14 +23,16 @@ export const CompanyContactInformation = ({ url, contactInformation }: CompanyCo
       className={clsx(
         'vertical bg-midnightgreen border-warmgray/10 w-full items-center gap-y-10 rounded-4xl border p-6.5',
         'm3x:gap-y-11.5',
-        'md:px-8 md:py-10'
+        'md:px-8 md:py-10',
+        'lg:gap-y-13 lg:px-10 lg:py-12'
       )}
     >
       <LogoCompany url={url} footer />
       <div
         className={clsx(
           'grid w-full grid-cols-1 items-start gap-y-7.5',
-          'md:grid-cols-2 md:grid-rows-2 md:gap-y-10'
+          'md:grid-cols-2 md:grid-rows-2 md:gap-y-10',
+          'lg:grid-cols-3 lg:gap-14'
         )}
       >
         {contactInformation.map((item) => (

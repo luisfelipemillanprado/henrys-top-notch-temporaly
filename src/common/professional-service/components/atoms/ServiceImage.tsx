@@ -15,11 +15,10 @@ export const ServiceImage = ({ url }: ServiceImageProps) => {
   return (
     <div
       className={clsx(
-        'relative h-64 w-full overflow-hidden rounded-3xl shadow-lg',
-        'm1x:h-73',
-        'm3x:h-79',
-        'm4x:h-81',
-        'md:h-74'
+        'relative w-full overflow-hidden rounded-3xl shadow-lg',
+        'h-[clamp(16rem,calc(16rem+(100vw-23.4375rem)*1.046),20.25rem)]',
+        'md:h-[clamp(18.5rem,calc(18.5rem+(100vw-48rem)*0.406),25rem)]',
+        'lg:w-12/25'
       )}
     >
       <Image

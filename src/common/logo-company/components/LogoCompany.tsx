@@ -16,29 +16,26 @@ export const LogoCompany = ({ url, footer }: LogoCompanyProps) => {
   return (
     <div
       className={clsx(
-        'horizontal relative',
+        'horizontal relative w-50',
+        'h-[clamp(2.5rem,calc(2.5rem+(100vw-23.4375rem)*0.0461),2.6875rem)]',
         footer
-          ? ['h-10 w-50', 'm1x:h-10.25', 'm2x:h-10.5', 'm3x:h-10.75', 'md:h-11 md:w-52']
+          ? [
+              'md:h-[clamp(2.75rem,calc(2.75rem+(100vw-48rem)*0.016),3rem)]!',
+              'md:w-[clamp(13rem,calc(13rem+(100vw-48rem)*0.0781),14.25rem)]!',
+            ]
           : [
-              'h-10 w-50',
-              'm1x:h-10.25',
-              'm2x:h-10.5',
-              'm3x:h-10.75',
-              'md:h-11 md:w-52',
-              'lg:h-10 lg:w-50',
-              '1xl:h-12',
-              '2xl:h-12.25',
-              '3xl:h-13',
-              '5xl:h-13.5',
+              'md:h-[clamp(2.5rem,calc(2.75rem-(100vw-48rem)*0.016),2.75rem)]!',
+              'md:w-[clamp(12.5rem,calc(13rem-(100vw-48rem)*0.0312),13rem)]!',
+              '1xl:h-12 3xl:h-13 5xl:h-13.5 2xl:h-12.25',
             ]
       )}
     >
       <Image
-        className={clsx('size-full object-cover')}
+        className={'size-full object-cover'}
         src={url}
         fill
-        alt={`Logo's company`}
-        sizes={''}
+        alt={'Logo'}
+        sizes={'(max-width: 768px) 200px, 250px'}
         placeholder={'blur'}
         blurDataURL={blurDataUrlLogo}
       />

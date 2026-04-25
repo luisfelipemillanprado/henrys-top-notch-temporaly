@@ -3,9 +3,10 @@ import { QuaternaryTitle } from '@/common/titles/components/QuaternaryTitle'
 import { ChevronDownIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import { Accordion } from '@heroui/react'
 import clsx from 'clsx'
+import dynamic from 'next/dynamic'
 
 /**
- * @description Renders the "Reasons" component, which displays a list of reasons.
+ * @description Renders a list of reasons for choosing the service, displayed in an accordion format.
  * @public
  * @param {object} props - Component properties.
  * @param {Array} props.reasons - The reasons for choosing us.
@@ -14,7 +15,7 @@ import clsx from 'clsx'
  * @param {number} props.reasons.id - The unique identifier of the reason.
  * @returns The rendered Reasons component.
  */
-export const Reasons = ({
+const ReasonsWithoutSSR = ({
   reasons,
 }: {
   reasons: {
@@ -41,8 +42,7 @@ export const Reasons = ({
                     'fill-secondary size-6.25',
                     'm1x:size-6.75',
                     'm3x:size-7',
-                    'md:size-6.75',
-                    '2xl:size-7',
+                    '2xl:size-7.25',
                     '3xl:size-7.5',
                     '5xl:size-8.5'
                   )}
@@ -88,3 +88,4 @@ export const Reasons = ({
     </Accordion>
   )
 }
+export const Reasons = dynamic(() => Promise.resolve(ReasonsWithoutSSR), { ssr: false })

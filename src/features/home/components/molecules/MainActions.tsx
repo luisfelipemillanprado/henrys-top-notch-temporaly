@@ -37,7 +37,7 @@ export const MainActions = ({
         'horizontal relative mt-5 justify-center gap-x-4 pb-4.5',
         'm1x:gap-x-5',
         'm3x:gap-x-6',
-        'md:ml-7 md:justify-start'
+        'md:justify-start'
       )}
     >
       <GetStartedButton text={primaryCta.text} href={primaryCta.href} hidden={false} />

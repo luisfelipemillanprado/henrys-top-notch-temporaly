@@ -9,7 +9,7 @@ import Image from 'next/image'
  * @interface LeadVisualProps
  * @param {object} props - Component properties.
  * @param {LeadVisualProps['image']} props.image - The URL of the image to display.
- * @param {LeadVisualProps['changeBackground']} props.changeBackground - A boolean indicating whether to change the background color.
+ * @param {LeadVisualProps['changeBackground']} props.changeBackground - A boolean indicating whether to change the background.
  * @returns {JSX.Element} The rendered lead visual component.
  */
 export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps) => {
@@ -22,13 +22,10 @@ export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps)
     >
       <div
         className={clsx(
-          'relative h-69 w-full overflow-hidden rounded-3xl shadow-md',
-          'm1x:h-73',
-          'm2x:h-76',
-          'm3x:h-80',
-          'm4x:h-82.5',
-          'md:h-128.75',
-          'lg:h-150'
+          'relative w-full overflow-hidden rounded-3xl shadow-md',
+          'h-[clamp(17.25rem,calc(17.25rem+(100vw-23.4375rem)*0.8307),20.625rem)]',
+          'md:h-[clamp(32.1875rem,calc(32.1875rem+(100vw-48rem)*0.4882),40rem)]',
+          'xl:h-156'
         )}
       >
         <Image

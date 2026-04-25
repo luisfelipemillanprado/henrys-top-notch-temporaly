@@ -39,15 +39,24 @@ export const SummaryOfWhoWeAre = ({
   benefits: { text: string; id: number }[]
 }) => {
   return (
-    <div className={clsx('vertical w-full items-start gap-y-8', 'm3x:gap-y-8.75')}>
+    <div
+      className={clsx(
+        'vertical w-full items-start gap-y-8',
+        'm3x:gap-y-8.75',
+        'md:gap-y-11',
+        'lg:gap-y-12',
+        'xl:horizontal xl:gap-x-8 xl:gap-y-0'
+      )}
+    >
       <LeadVisual image={image} changeBackground={true} />
       <div
         className={clsx(
           'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
           'm1x:gap-y-6.75',
           'm3x:gap-y-7.5',
-          'md:items-start md:p-8',
-          'lg:pr-30 lg:pl-9'
+          'md:items-start md:gap-y-7.75 md:p-8',
+          'lg:p-10',
+          'xl:p-9'
         )}
       >
         <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
