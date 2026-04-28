@@ -27,10 +27,8 @@ export const Certified = ({ imagesUrl }: CertifiedProps) => {
         <div
           key={item.id}
           className={clsx(
-            'horizontal relative size-21 items-center',
-            'm1x:size-21.5',
-            'm2x:size-22',
-            'm4x:size-22.5'
+            'horizontal relative items-center',
+            'size-[clamp(5.25rem,calc(5.25rem+(100vw-23.4375rem)*0.0923),5.625rem)]'
           )}
         >
           <Image

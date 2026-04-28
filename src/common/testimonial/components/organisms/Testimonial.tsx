@@ -24,7 +24,7 @@ export const Testimonial = ({ name, position, comment, url, stars }: Testimonial
     <div
       className={clsx(
         'bg-primary border-electric-blue/30 vertical w-full items-start gap-y-5 rounded-3xl border p-5 shadow-md',
-        'm1x:p-5.25',
+        'm3x:p-5.25',
         'm4x:p-5.5',
         'md:w-98'
       )}
@@ -37,7 +37,7 @@ export const Testimonial = ({ name, position, comment, url, stars }: Testimonial
         </div>
       </div>
       <CardDescription description={comment} addPadding={true} />
-      <RatingStars stars={stars} changePosition={true} changeSize={true} />
+      <RatingStars stars={stars} changePosition={true} />
     </div>
   )
 }

@@ -39,8 +39,7 @@ export const ReusableButton = ({
           'm1x:h-10',
           'm3x:h-10.5',
           'md:h-11',
-          '1xl:px-4.5',
-          '2xl:h-11.5',
+          '1xl:px-4.5 1xl:h-11.5',
           '3xl:h-12.5 3xl:px-5',
           '5xl:h-13'
         )}
@@ -56,10 +55,9 @@ export const ReusableButton = ({
                 role={'img'}
                 className={clsx(
                   'fill-electric-blue size-6',
-                  '1xl:size-6.25',
-                  '2xl:size-6.75',
-                  '3xl:size-7.25',
-                  '5xl:size-7.5'
+                  'm1x:size-6.25',
+                  'm3x:size-6.5',
+                  'lg:size-6.75'
                 )}
               />
             </span>
@@ -80,7 +78,7 @@ export const ReusableButton = ({
               <ArrowRightCircleIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx('fill-primary size-6.5', '2xl:size-6.75', '3xl:size-7.25', '5xl:size-7.5')}
+                className={clsx('fill-primary size-6.25', 'm1x:size-6.5', 'm3x:size-6.75', 'md:size-7.5')}
               />
             </span>
           )}

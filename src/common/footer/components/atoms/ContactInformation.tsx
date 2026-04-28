@@ -18,6 +18,17 @@ enum ContactInformationIcon {
   CLOCK = 'clock',
 }
 
+const iconStyles = clsx(
+  'fill-bright-orange size-6.25',
+  'm1x:size-6.5',
+  'm3x:size-6.75',
+  'md:size-7.5',
+  '1xl:size-8.5',
+  '2xl:size-8.75',
+  '3xl:size-9.25',
+  '5xl:size-10.75'
+)
+
 /**
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
@@ -27,73 +38,13 @@ enum ContactInformationIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case ContactInformationIcon.LOCATION:
-      return (
-        <MapIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6.25',
-            'm1x:size-6.5',
-            'm3x:size-6.75',
-            'md:size-7.5',
-            '1xl:size-8.5',
-            '2xl:size-8.75',
-            '3xl:size-9.25',
-            '5xl:size-10.75'
-          )}
-        />
-      )
+      return <MapIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case ContactInformationIcon.EMAIL:
-      return (
-        <EnvelopeIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6.25',
-            'm1x:size-6.5',
-            'm3x:size-6.75',
-            'md:size-7.5',
-            '1xl:size-8.5',
-            '2xl:size-8.75',
-            '3xl:size-9.25',
-            '5xl:size-10.75'
-          )}
-        />
-      )
+      return <EnvelopeIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case ContactInformationIcon.PHONE:
-      return (
-        <PhoneIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6.25',
-            'm1x:size-6.5',
-            'm3x:size-6.75',
-            'md:size-7.5',
-            '1xl:size-8.5',
-            '2xl:size-8.75',
-            '3xl:size-9.25',
-            '5xl:size-10.75'
-          )}
-        />
-      )
+      return <PhoneIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case ContactInformationIcon.CLOCK:
-      return (
-        <CalendarDaysIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6.25',
-            'm1x:size-6.5',
-            'm3x:size-6.75',
-            'md:size-7.5',
-            '1xl:size-8.5',
-            '2xl:size-8.75',
-            '3xl:size-9.25',
-            '5xl:size-10.75'
-          )}
-        />
-      )
+      return <CalendarDaysIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }

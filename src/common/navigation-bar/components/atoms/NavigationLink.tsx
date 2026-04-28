@@ -35,6 +35,8 @@ enum NavigationLinkIcon {
   BLOGS = 'blogs',
 }
 
+const iconStyles = clsx('fill-bright-orange size-7.25', 'm1x:size-7.5', 'm3x:size-7.75', 'md:size-8.25')
+
 /**
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
@@ -44,69 +46,21 @@ enum NavigationLinkIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case NavigationLinkIcon.HOME:
-      return (
-        <HomeIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <HomeIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.ABOUT_US:
-      return (
-        <InformationCircleIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <InformationCircleIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.SERVICES:
-      return (
-        <WrenchScrewdriverIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <WrenchScrewdriverIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.PROCESS:
-      return (
-        <ClipboardDocumentListIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <ClipboardDocumentListIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.AREAS:
-      return (
-        <MapIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <MapIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.REVIEWS:
-      return (
-        <StarIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <StarIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.OFFERS:
-      return (
-        <GiftIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <GiftIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case NavigationLinkIcon.BLOGS:
-      return (
-        <NewspaperIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-7', 'm1x:size-7.25', 'm3x:size-7.75', 'md:size-8.25')}
-        />
-      )
+      return <NewspaperIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -121,7 +75,7 @@ const iconSwitch = (icon: string) => {
  * @param {NavigationBarLinkItem['href']} props.href - The URL the navigation link points to.
  * @param {NavigationBarLinkItem['icon']} props.icon - The icon associated with the navigation link.
  * @param {NavigationBarLinkItem['id']} props.id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinkItem['handleCloseO100%ptions']} [props.handleCloseOptions] - Optional function to handle closing.
+ * @param {NavigationBarLinkItem['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
  * @returns The rendered navigation link component.
  */
 export const NavigationLink = ({ text, href, icon, handleCloseOptions }: NavigationBarLinkItem) => {
@@ -148,7 +102,7 @@ export const NavigationLink = ({ text, href, icon, handleCloseOptions }: Navigat
               'm1x:text-base',
               'md:text-lg',
               'lg:text-[1.0625rem]',
-              '2xl:text-lg',
+              '1xl:text-lg',
               '3xl:text-[1.1875rem]',
               '5xl:text-[1.3125rem]'
             )}

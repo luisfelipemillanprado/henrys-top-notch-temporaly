@@ -9,9 +9,9 @@ import clsx from 'clsx'
  * @interface LegalInformationProps
  * @param {object} props - Component properties.
  * @param {LegalInformationProps['copyright']} props.copyright - The copyright information to be displayed in the footer.
- * @param {LegalInformationProps['socialNetworks']} props.socialNetworks - An array of social network items to be displayed in the footer.
- * @param {LegalInformationProps['socialNetworks'][number]['href']} props.socialNetworks.href - The URL the social network item points to.
- * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the social.
+ * @param {LegalInformationProps['socialNetworks']} props.socialNetworks - An array of social network items to be displayed.
+ * @param {LegalInformationProps['socialNetworks'][number]['href']} props.socialNetworks.href - The URL the social network item.
+ * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the.
  * @param {LegalInformationProps['socialNetworks'][number]['name']} props.socialNetworks.name - The name of the social network.
  * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social network.
  * @returns The rendered legal information section.

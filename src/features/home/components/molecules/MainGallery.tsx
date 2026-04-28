@@ -13,7 +13,7 @@ import Image from 'next/image'
  */
 export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[] }) => {
   const imageContainerClasses = {
-    base: 'relative w-full h-58 m1x:h-59 m2x:h-60 m3x:h-61 m4x:h-62 md:h-80 3xl:h-110 rounded-3xl overflow-hidden',
+    base: 'relative w-full h-58 m1x:h-59 m2x:h-60 m3x:h-61 m4x:h-62 md:h-80 xl:h-90 1xl:h-100 3xl:h-110 rounded-3xl overflow-hidden',
     extras: [
       'col-start-1 row-start-1 md:translate-y-1',
       'md:translate-y-1 md:mask-t-from-100% z-30 col-start-1 row-start-2 translate-y-6 transform mask-t-from-60%',
@@ -26,11 +26,11 @@ export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[
   const imageClasses = {
     base: 'size-full object-cover',
     breakPoints: [
-      'brightness-70',
-      'brightness-70',
+      'brightness-70 md:brightness-40',
+      'brightness-90 md:brightness-70',
       'md:brightness-70',
       'brightness-70',
-      'brightness-70',
+      'brightness-80 md:brightness-70',
       'md:brightness-70',
     ],
   }
@@ -38,11 +38,11 @@ export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[
     <div
       className={clsx(
         'absolute -bottom-19.5 left-1/2 z-10 grid -translate-x-1/2 grid-cols-2 grid-rows-3 gap-x-3 gap-y-3',
-        'w-[clamp(20rem,90vw,32rem)]',
-        'md:right-0 md:-bottom-27.5 md:left-auto md:w-[clamp(30rem,42vw,48.25rem)]',
-        'md:translate-x-[clamp(8%,calc(42%-(100vw-768px)*0.8),42%)]',
-        'xl:translate-x-2/25',
-        '1xl:-bottom-26 1xl:translate-x-3/25',
+        'w-[clamp(20.75rem,90.5vw,24.75rem)]',
+        'md:right-0 md:-bottom-28 md:w-114 md:translate-x-[clamp(18%,38%-1.95vw,23%)]',
+        'lg:-bottom-29 lg:w-121 lg:translate-x-[clamp(8%,42%-2.73vw,12%)]',
+        'xl:-bottom-30 xl:w-135 xl:translate-x-[clamp(8%,1.875vw-15%,12%)]',
+        '1xl:-bottom-32 1xl:translate-x-[8%] 1xl:w-147',
         '3xl:-bottom-34 3xl:translate-x-4/25',
         '4xl:translate-x-3/20',
         '5xl:translate-x-3/25'

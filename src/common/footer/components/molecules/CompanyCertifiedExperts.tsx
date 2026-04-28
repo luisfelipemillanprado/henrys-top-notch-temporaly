@@ -15,7 +15,7 @@ import clsx from 'clsx'
  * @param {CompanyCertifiedExpertsProps['license'][number]['text']} props.license.text - The text for the license information.
  * @param {CompanyCertifiedExpertsProps['license'][number]['id']} props.license.id - The unique identifier for the license.
  * @param {CompanyCertifiedExpertsProps['license']} props.license - The license information in the certified experts section.
- * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
+ * @param {CompanyCertifiedExpertsProps['imagesUrl'][numbers]['url']} props.imagesUrl.url - The URL for the certificate.
  * @param {CompanyCertifiedExpertsProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the.
  * @param {CompanyCertifiedExpertsProps['imagesUrl']} props.imagesUrl - The URL for the license image or link in the certified.
  * @param {CompanyCertifiedExpertsProps['mapsUrl']} props.mapsUrl - The URL for the embedded Google Maps location to be.
@@ -42,13 +42,9 @@ export const CompanyCertifiedExperts = ({
           title={'Google Maps'}
           sandbox={'allow-scripts allow-same-origin'}
           className={clsx(
-            'h-55 w-full rounded-3xl border-none',
-            'm1x:h-60',
-            'm2x:h-65',
-            'm3x:h-70',
-            'm4x:h-75',
-            'md:h-74',
-            'lg:h-75'
+            'w-full rounded-3xl border-none shadow-sm',
+            'h-[clamp(13.75rem,calc(13.75rem+(100vw-23.4375rem)*1.2307),18.75rem)]',
+            'md:h-[clamp(18.5rem,calc(18.5rem+(100vw-48rem)*0.0156),18.75rem)]'
           )}
           allowFullScreen
           loading={'lazy'}

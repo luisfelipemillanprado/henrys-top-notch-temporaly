@@ -43,8 +43,7 @@ export const NavigationBar = () => {
       className={clsx(
         'horizontal bg-secondary sticky inset-x-0 top-0 z-50! h-21 w-full justify-between px-6 py-4',
         'md:h-23 md:px-13 md:py-6.25',
-        'xl:px-16',
-        '1xl:px-30',
+        '1xl:px-20',
         '2xl:h-25',
         '3xl:h-26.5',
         '5xl:h-27'

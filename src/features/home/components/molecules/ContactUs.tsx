@@ -72,8 +72,8 @@ export const ContactUs = ({
       className={clsx(
         'vertical w-full items-center gap-y-8.5',
         'm1x:gap-y-9',
-        'md:gap-y-13',
-        'lg:gap-y-14'
+        'md:gap-y-18',
+        'lg:gap-y-22'
       )}
     >
       <div
@@ -101,7 +101,7 @@ export const ContactUs = ({
       <div
         className={clsx('horizontal relative w-full overflow-hidden rounded-3xl', 'md:w-140', 'lg:w-170')}
       >
-        <CircularDecoration rings={3} />
+        <CircularDecoration rings={4} />
         <ContactForm contactForm={contactForm} />
       </div>
     </div>

@@ -23,8 +23,8 @@ export const GetStartedButton = ({ text, href, hidden = true, float }: GetStarte
           'm1x:h-9.75',
           'm3x:h-10',
           'md:h-10.5',
-          '1xl:px-4.5',
-          '2xl:h-11 2xl:px-5',
+          '1xl:px-4.5 1xl:h-11',
+          '2xl:px-5',
           '3xl:h-12 3xl:px-6',
           '5xl:h-12.5'
         )}

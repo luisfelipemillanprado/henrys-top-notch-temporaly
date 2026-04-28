@@ -16,9 +16,8 @@ export const ServiceImage = ({ url }: ServiceImageProps) => {
     <div
       className={clsx(
         'relative w-full overflow-hidden rounded-3xl shadow-lg',
-        'h-[clamp(16rem,calc(16rem+(100vw-23.4375rem)*1.046),20.25rem)]',
-        'md:h-[clamp(18.5rem,calc(18.5rem+(100vw-48rem)*0.406),25rem)]',
-        'lg:w-12/25'
+        'h-[clamp(16rem,74vw,20.25rem)]',
+        'md:h-[clamp(18.5rem,39vw,25rem)]'
       )}
     >
       <Image

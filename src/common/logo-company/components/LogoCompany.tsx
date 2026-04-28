@@ -16,17 +16,19 @@ export const LogoCompany = ({ url, footer }: LogoCompanyProps) => {
   return (
     <div
       className={clsx(
-        'horizontal relative w-50',
-        'h-[clamp(2.5rem,calc(2.5rem+(100vw-23.4375rem)*0.0461),2.6875rem)]',
+        'horizontal relative',
         footer
-          ? [
-              'md:h-[clamp(2.75rem,calc(2.75rem+(100vw-48rem)*0.016),3rem)]!',
-              'md:w-[clamp(13rem,calc(13rem+(100vw-48rem)*0.0781),14.25rem)]!',
-            ]
+          ? ['h-10 w-50', 'm1x:h-10.25', 'm2x:h-10.5', 'm3x:h-10.75', 'md:h-11 md:w-52', 'lg:h-12 lg:w-57']
           : [
-              'md:h-[clamp(2.5rem,calc(2.75rem-(100vw-48rem)*0.016),2.75rem)]!',
-              'md:w-[clamp(12.5rem,calc(13rem-(100vw-48rem)*0.0312),13rem)]!',
-              '1xl:h-12 3xl:h-13 5xl:h-13.5 2xl:h-12.25',
+              'h-10 w-50',
+              'm1x:h-10.25',
+              'm2x:h-10.5',
+              'm3x:h-10.75',
+              'md:h-11 md:w-52',
+              '1xl:h-12 1xl:w-57',
+              '2xl:h-12.25 2xl:w-61',
+              '3xl:h-13 3xl:w-62',
+              '5xl:h-13.5 5xl:w-63',
             ]
       )}
     >

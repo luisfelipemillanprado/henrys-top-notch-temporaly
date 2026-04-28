@@ -29,7 +29,7 @@ export const BookingSteps = ({
         'm1x:gap-y-9',
         'm3x:gap-y-9.5',
         'md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-11',
-        'lg:gap-x-24 lg:gap-y-12 lg:pl-1'
+        'lg:gap-x-24 lg:gap-y-12'
       )}
     >
       {steps.map((item) => (

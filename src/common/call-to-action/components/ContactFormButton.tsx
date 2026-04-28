@@ -31,9 +31,9 @@ export const ContactFormButton = ({
           'horizontal bg-electric-blue z-40 h-9.25 gap-x-2.5 rounded-full px-4 font-normal shadow-lg',
           'm1x:h-9.75',
           'm3x:h-10',
-          'md:h-10.5 md:px-4.5',
-          '1xl:px-4.5',
-          '2xl:h-11 2xl:px-5',
+          'md:h-10.5',
+          '1xl:px-4.5 1xl:h-11',
+          '2xl:px-5',
           '3xl:h-12 3xl:px-6',
           '5xl:h-12.5'
         )}
@@ -60,7 +60,7 @@ export const ContactFormButton = ({
               <PaperAirplaneIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx('fill-secondary size-6.5', '2xl:size-6.75', '3xl:size-7.25', '5xl:size-7.5')}
+                className={clsx('fill-secondary size-6.25', 'm1x:size-6.5', 'm3x:size-6.75', 'md:size-7.5')}
               />
             </span>
           )}

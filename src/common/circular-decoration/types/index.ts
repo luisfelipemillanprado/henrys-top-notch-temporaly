@@ -8,6 +8,6 @@
  * @property {boolean} [changeColor] - An optional boolean to indicate if the color of the rings should change.
  */
 export interface CircularDecorationProps {
-  rings?: 2 | 3
+  rings?: 2 | 4
   changeColor?: boolean
 }

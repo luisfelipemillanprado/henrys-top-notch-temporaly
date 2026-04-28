@@ -18,6 +18,8 @@ enum SocialIcon {
   TWITTER = 'twitter',
 }
 
+const iconStyles = clsx('fill-bright-orange size-6', 'm1x:size-6.25', 'm3x:size-6.5', 'md:size-6.75')
+
 /**
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
@@ -27,37 +29,13 @@ enum SocialIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case SocialIcon.FACEBOOK:
-      return (
-        <SiFacebook
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-5', 'm1x:size-5.5', 'md:size-5.5')}
-        />
-      )
+      return <SiFacebook aria-hidden={'true'} role={'img'} className={iconStyles} />
     case SocialIcon.YOUTUBE:
-      return (
-        <SiYoutube
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-5', 'm1x:size-5.5', 'md:size-5.5')}
-        />
-      )
+      return <SiYoutube aria-hidden={'true'} role={'img'} className={iconStyles} />
     case SocialIcon.INSTAGRAM:
-      return (
-        <SiInstagram
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-5', 'm1x:size-5.5', 'md:size-5.5')}
-        />
-      )
+      return <SiInstagram aria-hidden={'true'} role={'img'} className={iconStyles} />
     case SocialIcon.TWITTER:
-      return (
-        <SiX
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx('fill-bright-orange size-5', 'm1x:size-5.5', 'md:size-5.5')}
-        />
-      )
+      return <SiX aria-hidden={'true'} role={'img'} className={iconStyles} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -78,10 +56,9 @@ export const SocialNetwork = ({ href, icon }: SocialNetworkItem) => {
   return (
     <Link
       className={clsx(
-        'horizontal size-9 justify-center rounded-full',
-        'm1x:size-9.5',
-        'md:size-10',
-        'lg:size-10.5',
+        'horizontal justify-center rounded-full',
+        'size-[clamp(2.25rem,calc(2.25rem+(100vw-23.4375rem)*0.0307),2.375rem)]',
+        'md:size-[clamp(2.5rem,calc(2.5rem+(100vw-48rem)*0.0078),2.625rem)]',
         '1xl:size-9.5',
         '5xl:size-10.5'
       )}

@@ -55,10 +55,10 @@ export const CardActionButton = ({
               aria-hidden={'true'}
               role={'img'}
               className={clsx(
-                'fill-strong-blue size-6.5 -rotate-45',
-                '2xl:size-6.75',
-                '3xl:size-7.25',
-                '5xl:size-7.5'
+                'fill-strong-blue size-6.25 -rotate-45',
+                'm1x:size-6.5',
+                'm3x:size-6.75',
+                'md:size-7.5'
               )}
             />
           </span>

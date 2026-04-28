@@ -23,8 +23,9 @@ export const LeadVisual = ({ image, changeBackground = false }: LeadVisualProps)
       <div
         className={clsx(
           'relative w-full overflow-hidden rounded-3xl shadow-md',
-          'h-[clamp(17.25rem,calc(17.25rem+(100vw-23.4375rem)*0.8307),20.625rem)]',
-          'md:h-[clamp(32.1875rem,calc(32.1875rem+(100vw-48rem)*0.4882),40rem)]',
+          'h-[clamp(17.25rem,76vw,20.625rem)]',
+          'md:h-[clamp(32.1875rem,65vw,40rem)]',
+          'lg:h-[clamp(39rem,44rem-3.9vw,40rem)]',
           'xl:h-156'
         )}
       >

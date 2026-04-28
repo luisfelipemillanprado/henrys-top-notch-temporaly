@@ -10,7 +10,7 @@ const decorationLine = (
   <MinusIcon
     aria-hidden={'true'}
     role={'img'}
-    className={clsx('fill-bright-orange size-6', 'm1x:size-6.75', 'm3x:size-7.25')}
+    className={clsx('fill-bright-orange size-6', 'm1x:size-7', 'm3x:size-7.5')}
   />
 )
 
@@ -25,7 +25,9 @@ const decorationLine = (
  */
 export const EyeBrow = ({ text, hidden = false }: EyeBrowProps) => {
   return (
-    <div className={clsx('horizontal w-full justify-center gap-x-2', hidden && 'hidden', 'md:justify-start')}>
+    <div
+      className={clsx('horizontal w-full justify-center gap-x-2', hidden && 'hidden', 'md:justify-start')}
+    >
       {decorationLine}
       <span
         className={clsx(

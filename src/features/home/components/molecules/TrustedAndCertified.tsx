@@ -35,9 +35,8 @@ export const TrustedAndCertified = ({
       className={clsx(
         'h-auto w-full',
         'mx-[clamp(1.375rem,calc(1.375rem+(100vw-23.4375rem)*0.0923),1.75rem)]!',
-        'md:mr-14! md:w-51/100',
-        'md:ml-[clamp(3.25rem,calc(3.25rem+(100vw-48rem)*0.0625),4.25rem)]!',
-        'lg:ml-17! lg:w-12/25',
+        'md:mr-14! md:ml-13! md:w-51/100',
+        'lg:w-12/25',
         'xl:ml-14! xl:w-23/50',
         '1xl:w-21/50 1xl:ml-29!',
         '2xl:ml-32! 2xl:w-41/100',

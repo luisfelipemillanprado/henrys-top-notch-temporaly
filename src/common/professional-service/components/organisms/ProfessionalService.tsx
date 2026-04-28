@@ -39,15 +39,15 @@ export const ProfessionalService = ({
         'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-5 rounded-3xl border px-2 pt-2 pb-6 shadow-md',
         'm1x:gap-y-5.5 m1x:pb-6.5',
         'm3x:pb-6.5 m3x:px-2.25 m3x:pt-2.25',
-        'lg:horizontal lg:gap-x-8 lg:pr-0 lg:pb-2.25'
+        'lg:horizontal lg:gap-x-8 lg:py-3.5 lg:pr-0 lg:pl-3.5'
       )}
     >
       <ServiceImage url={url} />
       <div
         className={clsx(
-          'vertical items-center gap-y-4.25',
+          'vertical w-full items-center gap-y-4.25',
           'm1x:gap-y-4.5',
-          'lg:w-13/25 lg:items-start lg:gap-y-5.25 lg:pr-6'
+          'lg:items-start lg:gap-y-5.25 lg:pr-6'
         )}
       >
         <RatingStars stars={stars} />

@@ -20,6 +20,18 @@ enum TextInputFieldIcon {
   PHONE = 'phone',
 }
 
+const iconStyles = clsx(
+  'fill-bright-orange animate-tada size-6',
+  'm1x:size-6.25',
+  'm3x:size-6.5',
+  'md:size-6.75',
+  'lg:size-7',
+  '1xl:size-6.75',
+  '2xl:size-6.75',
+  '3xl:size-7.25',
+  '5xl:size-7.5'
+)
+
 /**
  * @description Maps a given icon identifier to its corresponding icon component for each text input field.
  * @private
@@ -29,50 +41,11 @@ enum TextInputFieldIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case TextInputFieldIcon.USER:
-      return (
-        <UserIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6',
-            'md:size-6.75',
-            '1xl:size-6.75',
-            '2xl:size-6.75',
-            '3xl:size-7.25',
-            '5xl:size-7.5'
-          )}
-        />
-      )
+      return <UserIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case TextInputFieldIcon.EMAIL:
-      return (
-        <EnvelopeIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6',
-            'md:size-6.75',
-            '1xl:size-6.75',
-            '2xl:size-6.75',
-            '3xl:size-7.25',
-            '5xl:size-7.5'
-          )}
-        />
-      )
+      return <EnvelopeIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case TextInputFieldIcon.PHONE:
-      return (
-        <PhoneIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange size-6',
-            'md:size-6.75',
-            '1xl:size-6.75',
-            '2xl:size-6.75',
-            '3xl:size-7.25',
-            '5xl:size-7.5'
-          )}
-        />
-      )
+      return <PhoneIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }

@@ -16,6 +16,16 @@ enum LineIcon {
   WHATSAPP = 'whatsapp',
 }
 
+const iconStyles = clsx(
+  'animate-tada',
+  'size-[clamp(2.1875rem,calc(2.1875rem+(100vw-23.4375rem)*0.0154),2.3125rem)]',
+  'md:size-[clamp(2.375rem,calc(2.375rem+(100vw-48rem)*0.0078),2.5rem)]',
+  '1xl:size-10.25',
+  '2xl:size-10.5',
+  '3xl:size-11',
+  '5xl:size-11.75'
+)
+
 /**
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
@@ -25,39 +35,9 @@ enum LineIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case LineIcon.PHONE:
-      return (
-        <PhoneIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-secondary animate-tada size-8.75',
-            'm1x:size-9',
-            'md:size-9.5',
-            'lg:size-10',
-            '1xl:size-10.25',
-            '2xl:size-10.5',
-            '3xl:size-11',
-            '5xl:size-11.75'
-          )}
-        />
-      )
+      return <PhoneIcon aria-hidden={'true'} role={'img'} className={clsx('fill-secondary', iconStyles)} />
     case LineIcon.WHATSAPP:
-      return (
-        <SiWhatsapp
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-primary animate-tada size-8.75',
-            'm1x:size-9',
-            'md:size-9.5',
-            'lg:size-10',
-            '1xl:size-10.25',
-            '2xl:size-10.5',
-            '3xl:size-11',
-            '5xl:size-11.75'
-          )}
-        />
-      )
+      return <SiWhatsapp aria-hidden={'true'} role={'img'} className={clsx('fill-primary', iconStyles)} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -91,15 +71,14 @@ export const Line = ({
     >
       <Link
         className={clsx(
-          'horizontal z-50 size-13.25 justify-center rounded-2xl pl-px',
+          'horizontal z-50 justify-center rounded-2xl pl-px',
           changeBackground ? 'bg-electric-blue' : 'bg-light-green',
-          'm1x:size-13.75',
-          'md:size-14.5',
-          'lg:size-15.25',
+          'size-[clamp(3.3125rem,calc(3.3125rem+(100vw-23.4375rem)*0.0615),3.5625rem)]',
+          'md:size-[clamp(3.625rem,calc(3.625rem+(100vw-48rem)*0.0117),3.8125rem)]',
           '1xl:size-15.5',
-          '2xl:size-16',
           '3xl:size-17',
-          '5xl:size-17.25'
+          '5xl:size-17.25',
+          '2xl:size-16'
         )}
         target={'_blank'}
         rel={'noopener noreferrer'}

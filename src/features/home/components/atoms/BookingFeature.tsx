@@ -1,6 +1,6 @@
 import { TertiaryTitle } from '@/common/titles/components/TertiaryTitle'
 import { CardDescription } from '@/features/home/components/atoms/CardDescription'
-import { BoltIcon, BuildingOffice2Icon, CheckBadgeIcon } from '@heroicons/react/24/solid'
+import { BoltIcon, BuildingOffice2Icon, CheckBadgeIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import { MoreInformation } from './MoreInformation'
 
@@ -10,12 +10,24 @@ import { MoreInformation } from './MoreInformation'
  * @property {string} EMERGENCY  -Icon for emergency services, such as urgent repairs or critical issues.
  * @property {string} EXPERTS    -Icon for expert services, indicating professional and specialized assistance.
  * @property {string} COMFORT    -Icon for comfort services, providing convenience and ease for users.
+ * @property {string} CUSTOMER   -Icon for personalized customer care, representing attentive and customized support.
  */
 enum BookingFeaturesIcon {
   EMERGENCY = 'emergency',
   EXPERTS = 'experts',
   COMFORT = 'comfort',
+  CUSTOMER = 'customer',
 }
+
+const iconStyles = clsx(
+  'fill-bright-orange size-7.25',
+  'm1x:size-7.5',
+  'm3x:size-7.75',
+  'md:size-8.25',
+  'lg:size-8.75',
+  '1xl:size-9.25',
+  '2xl:size-9.5'
+)
 
 /**
  * @description Maps a given icon identifier to its corresponding icon component for each booking feature.
@@ -26,53 +38,13 @@ enum BookingFeaturesIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case BookingFeaturesIcon.EMERGENCY:
-      return (
-        <BoltIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange h-7.25 w-7.25',
-            'm1x:h-7.5 m1x:w-7.5',
-            'm3x:h-7.75 m3x:w-7.75',
-            'md:h-8.25 md:w-8.25',
-            'lg:h-8.75 lg:w-8.75',
-            '1xl:h-9.25 1xl:w-9.25',
-            '2xl:h-9.5 2xl:w-9.5'
-          )}
-        />
-      )
+      return <BoltIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case BookingFeaturesIcon.EXPERTS:
-      return (
-        <CheckBadgeIcon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange h-7.25 w-7.25',
-            'm1x:h-7.5 m1x:w-7.5',
-            'm3x:h-7.75 m3x:w-7.75',
-            'md:h-8.25 md:w-8.25',
-            'lg:h-8.75 lg:w-8.75',
-            '1xl:h-9.25 1xl:w-9.25',
-            '2xl:h-9.5 2xl:w-9.5'
-          )}
-        />
-      )
+      return <CheckBadgeIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     case BookingFeaturesIcon.COMFORT:
-      return (
-        <BuildingOffice2Icon
-          aria-hidden={'true'}
-          role={'img'}
-          className={clsx(
-            'fill-bright-orange h-7.25 w-7.25',
-            'm1x:h-7.5 m1x:w-7.5',
-            'm3x:h-7.75 m3x:w-7.75',
-            'md:h-8.25 md:w-8.25',
-            'lg:h-8.75 lg:w-8.75',
-            '1xl:h-9.25 1xl:w-9.25',
-            '2xl:h-9.5 2xl:w-9.5'
-          )}
-        />
-      )
+      return <BuildingOffice2Icon aria-hidden={'true'} role={'img'} className={iconStyles} />
+    case BookingFeaturesIcon.CUSTOMER:
+      return <ShieldCheckIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -109,7 +81,7 @@ export const BookingFeature = ({
         'm1x:p-5.25',
         'm4x:p-5.5',
         'md:pr-6.25',
-        'lg:gap-y-4 lg:py-7 lg:pr-10 lg:pl-7',
+        'lg:gap-y-4 lg:py-7 lg:pr-13 lg:pl-7',
         'xl:gap-y-4.5 xl:py-8 xl:pl-8'
       )}
     >

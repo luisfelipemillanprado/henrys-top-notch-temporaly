@@ -30,9 +30,10 @@ export const MoreInformation = ({ href, text }: { href: string; text: string }) 
           role={'img'}
           className={clsx(
             'animate-wiggle text-secondary h-5 w-5',
-            'm2x:h-5.25 m2x:w-5.25',
-            'md:h-5.5 md:w-5.5',
-            '1xl:h-5.75 1xl:w-5.75'
+            'm1x:h-5.25 m1x:w-5.25',
+            'm2x:h-5.5 m2x:w-5.5',
+            'md:h-5.75 md:w-5.75',
+            '1xl:h-6 1xl:w-6'
           )}
         />
       </span>
