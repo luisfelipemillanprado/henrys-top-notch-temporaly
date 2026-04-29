@@ -15,9 +15,9 @@ export const License = ({ license }: LicenseProps) => {
   return (
     <div
       className={clsx(
-        'vertical mt-4 w-full items-center gap-y-2',
-        'm1x:mt4.5',
-        'md:horizontal md:justify-start md:gap-x-2'
+        'vertical mt-3 w-full items-center gap-y-2',
+        'md:horizontal md:justify-start md:gap-x-2 md:gap-y-0',
+        'lg:mt-2'
       )}
     >
       {license.map((item) => (

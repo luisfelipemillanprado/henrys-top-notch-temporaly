@@ -1,24 +1,31 @@
-import type { MainTitleProps } from '@/common/titles/types'
+import type { QuaternaryTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a quaternary title component with customizable properties such as text position, and truncation.
- * @public
- * @interface MainTitleProps
- * @param {object} props - Component properties.
- * @param {MainTitleProps['title']} props.title - The text content rendered as the main heading.
- * @param {MainTitleProps['changePosition']} [props.changePosition] - Optional flag to indicate if the title position.
- * @param {MainTitleProps['truncate']} [props.truncate] - Optional flag to enable text truncation with ellipsis for long titles.
- * @returns The rendered quaternary title component.
+ * @description Renders a quaternary heading (h4) with options for text truncation and alignment.
+ * @component
+ * @param {QuaternaryTitleProps} props - The properties for the QuaternaryTitle component.
+ * @param {string} props.title - The text content to be displayed in the heading.
+ * @param {string} [props.headingId] - Optional unique identifier. Defaults to the title if not provided.
+ * @param {boolean} [props.changePosition=false] - If true, centers the title within its container.
+ * @param {boolean} [props.truncate=true] - If true, applies ellipsis to overflowing text.
+ * @returns A container div wrapping a styled h4 element.
  */
-export const QuaternaryTitle = ({ title, changePosition = false, truncate = true }: MainTitleProps) => {
+export const QuaternaryTitle = ({
+  title,
+  headingId,
+  changePosition = false,
+  truncate = true,
+}: QuaternaryTitleProps) => {
   return (
-    <div className={clsx('horizontal w-full', changePosition ? 'justify-center' : 'justify-start')}>
+    <div className={clsx('horizontal', 'w-full', changePosition ? 'justify-center' : 'justify-start')}>
       <h4
-        id={title}
+        id={headingId ?? title}
         className={clsx(
-          'text-secondary text-lg font-semibold',
+          'text-secondary',
+          'font-semibold',
           truncate && 'truncate',
+          'text-lg',
           'md:text-[1.3125rem]',
           'lg:text-[1.375rem]'
         )}

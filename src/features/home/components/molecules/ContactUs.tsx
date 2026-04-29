@@ -94,7 +94,12 @@ export const ContactUs = ({
             'lg:p-10'
           )}
         >
-          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+          <SectionHeader
+            title={title}
+            description={description}
+            eyebrow={eyebrow}
+            titleId={'home-contact-us-title'}
+          />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
         </div>
       </div>

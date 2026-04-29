@@ -26,11 +26,11 @@ export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[
   const imageClasses = {
     base: 'size-full object-cover',
     breakPoints: [
-      'brightness-70 md:brightness-40',
+      'brightness-50 md:brightness-40',
       'brightness-90 md:brightness-70',
       'md:brightness-70',
-      'brightness-70',
-      'brightness-80 md:brightness-70',
+      'brightness-50',
+      'brightness-90 md:brightness-70',
       'md:brightness-70',
     ],
   }

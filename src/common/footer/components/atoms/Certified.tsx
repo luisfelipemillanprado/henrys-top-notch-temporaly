@@ -17,10 +17,9 @@ export const Certified = ({ imagesUrl }: CertifiedProps) => {
   return (
     <div
       className={clsx(
-        'horizontal mt-4 w-full justify-center gap-x-7',
-        'm1x:mt-4.5',
+        'horizontal mt-3 w-full justify-center gap-x-7',
         'm4x:gap-x-8',
-        'md:justify-start'
+        'md:mt-1 md:justify-start md:gap-x-9'
       )}
     >
       {imagesUrl.map((item) => (
@@ -28,7 +27,9 @@ export const Certified = ({ imagesUrl }: CertifiedProps) => {
           key={item.id}
           className={clsx(
             'horizontal relative items-center',
-            'size-[clamp(5.25rem,calc(5.25rem+(100vw-23.4375rem)*0.0923),5.625rem)]'
+            'size-[clamp(5.25rem,23vw,5.625rem)]',
+            'md:size-[clamp(5.25rem,11vw,5.5rem)]',
+            'lg:size-22'
           )}
         >
           <Image

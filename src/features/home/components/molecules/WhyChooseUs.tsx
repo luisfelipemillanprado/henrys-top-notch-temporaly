@@ -63,7 +63,12 @@ export const WhyChooseUs = ({
             'lg:p-10'
           )}
         >
-          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+          <SectionHeader
+            title={title}
+            description={description}
+            eyebrow={eyebrow}
+            titleId={'home-why-choose-us-title'}
+          />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
         </div>
         <Reasons reasons={reasons} />

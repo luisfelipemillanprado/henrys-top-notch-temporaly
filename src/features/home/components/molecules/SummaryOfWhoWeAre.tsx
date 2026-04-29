@@ -59,7 +59,13 @@ export const SummaryOfWhoWeAre = ({
           'xl:p-9'
         )}
       >
-        <SectionHeader title={title} description={description} eyebrow={eyebrow} changeWidth={true} />
+        <SectionHeader
+          title={title}
+          description={description}
+          eyebrow={eyebrow}
+          changeWidth={true}
+          titleId={'home-about-us-title'}
+        />
         <BookingBenefits benefits={benefits} />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
       </div>

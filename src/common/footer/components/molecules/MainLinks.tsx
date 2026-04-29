@@ -20,14 +20,14 @@ export const MainLinks = ({ links, highlight }: MainLinksProps) => {
     <div
       className={clsx(
         'grid grid-cols-2',
-        'md:w-22/50 md:grid-cols-1 md:grid-rows-2 md:gap-y-10',
-        'lg:w-23/50 lg:grid-cols-2 lg:grid-rows-1'
+        'md:max-w-60 md:grid-cols-1 md:grid-rows-2 md:gap-y-10',
+        'lg:max-w-90 lg:pl-2'
       )}
     >
       {[0, 1].map((colIndex) => (
         <div
           key={colIndex}
-          className={clsx('vertical items-center gap-y-5', 'md:items-start', 'lg:gap-y-6')}
+          className={clsx('vertical items-center gap-y-5', 'md:items-start md:gap-y-6', 'lg:gap-y-7')}
         >
           {links
             .slice(colIndex * LINKS_PER_COLUMN, colIndex * LINKS_PER_COLUMN + LINKS_PER_COLUMN)

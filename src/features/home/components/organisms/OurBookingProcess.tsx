@@ -101,7 +101,7 @@ export const OurBookingProcess = () => {
   return (
     <section
       id={'process'}
-      aria-labelledby={title}
+      aria-labelledby={'home-process-title'}
       role={'region'}
       className={clsx(
         'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',

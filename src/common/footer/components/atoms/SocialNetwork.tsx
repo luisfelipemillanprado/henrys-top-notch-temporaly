@@ -55,13 +55,7 @@ const iconSwitch = (icon: string) => {
 export const SocialNetwork = ({ href, icon }: SocialNetworkItem) => {
   return (
     <Link
-      className={clsx(
-        'horizontal justify-center rounded-full',
-        'size-[clamp(2.25rem,calc(2.25rem+(100vw-23.4375rem)*0.0307),2.375rem)]',
-        'md:size-[clamp(2.5rem,calc(2.5rem+(100vw-48rem)*0.0078),2.625rem)]',
-        '1xl:size-9.5',
-        '5xl:size-10.5'
-      )}
+      className={clsx('horizontal justify-center p-1')}
       target={'_blank'}
       rel={'noopener noreferrer'}
       aria-label={`social-network-${icon}`}

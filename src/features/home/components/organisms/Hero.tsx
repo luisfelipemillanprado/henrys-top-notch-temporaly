@@ -34,7 +34,7 @@ export const Hero = () => {
   return (
     <section
       id={'hero'}
-      aria-labelledby={title}
+      aria-labelledby={'home-hero-title'}
       role={'region'}
       className={clsx(
         'relative h-236.75 w-full max-w-480 overflow-x-clip',
@@ -67,7 +67,7 @@ export const Hero = () => {
             '5xl:max-w-[56%] 5xl:mt-19'
           )}
         >
-          <MainTitle title={title} />
+          <MainTitle title={title} headingId={'home-hero-title'} />
           <HeaderDescription description={description} />
           <MainActions primaryCta={primaryCta} secondaryCta={secondaryCta} highlight={highlight} />
         </div>

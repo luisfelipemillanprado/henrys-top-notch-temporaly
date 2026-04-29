@@ -39,8 +39,8 @@ export const OurSummaryOfWhoWeAre = () => {
   ]
   return (
     <section
-      id={'who-we-are'}
-      aria-labelledby={title}
+      id={'about-us'}
+      aria-labelledby={'home-about-us-title'}
       role={'region'}
       className={clsx(
         'vertical bg-off-white w-full px-5.5 pt-11 pb-11 shadow-2xs',

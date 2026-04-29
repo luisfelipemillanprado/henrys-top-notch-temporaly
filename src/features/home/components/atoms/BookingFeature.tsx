@@ -19,15 +19,7 @@ enum BookingFeaturesIcon {
   CUSTOMER = 'customer',
 }
 
-const iconStyles = clsx(
-  'fill-bright-orange size-7.25',
-  'm1x:size-7.5',
-  'm3x:size-7.75',
-  'md:size-8.25',
-  'lg:size-8.75',
-  '1xl:size-9.25',
-  '2xl:size-9.5'
-)
+const iconStyles = `size-7.25 m1x:size-7.5 m3x:size-7.75 md:size-8.25 lg:size-8.75 1xl:size-9.25 2xl:size-9.5`
 
 /**
  * @description Maps a given icon identifier to its corresponding icon component for each booking feature.
@@ -38,13 +30,31 @@ const iconStyles = clsx(
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case BookingFeaturesIcon.EMERGENCY:
-      return <BoltIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
+      return <BoltIcon aria-hidden={'true'} role={'img'} className={clsx('fill-primary', iconStyles)} />
     case BookingFeaturesIcon.EXPERTS:
-      return <CheckBadgeIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
+      return (
+        <CheckBadgeIcon
+          aria-hidden={'true'}
+          role={'img'}
+          className={clsx('fill-bright-orange', iconStyles)}
+        />
+      )
     case BookingFeaturesIcon.COMFORT:
-      return <BuildingOffice2Icon aria-hidden={'true'} role={'img'} className={iconStyles} />
+      return (
+        <BuildingOffice2Icon
+          aria-hidden={'true'}
+          role={'img'}
+          className={clsx('fill-bright-orange', iconStyles)}
+        />
+      )
     case BookingFeaturesIcon.CUSTOMER:
-      return <ShieldCheckIcon aria-hidden={'true'} role={'img'} className={iconStyles} />
+      return (
+        <ShieldCheckIcon
+          aria-hidden={'true'}
+          role={'img'}
+          className={clsx('fill-bright-orange', iconStyles)}
+        />
+      )
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -59,6 +69,7 @@ const iconSwitch = (icon: string) => {
  * @param {string} props.description - A brief description of the feature.
  * @param {string} props.href - The URL that the feature links to for more details.
  * @param {string} props.text - The text displayed for the feature's call-to-action.
+ * @param {boolean} props.isActive - A boolean that indicates whether to change the background color of the feature.
  * @returns A JSX element representing the booking feature.
  */
 export const BookingFeature = ({
@@ -67,17 +78,20 @@ export const BookingFeature = ({
   description,
   href,
   text,
+  isActive = false,
 }: {
   icon: string
   title: string
   description: string
   href: string
   text: string
+  isActive: boolean
 }) => {
   return (
     <div
       className={clsx(
-        'bg-off-white border-electric-blue/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
+        'border-electric-blue/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
+        isActive ? 'bg-secondary -rotate-2' : 'bg-off-white',
         'm1x:p-5.25',
         'm4x:p-5.5',
         'md:pr-6.25',
@@ -87,10 +101,10 @@ export const BookingFeature = ({
     >
       <div className={clsx('vertical w-full items-start gap-y-4.5', 'lg:gap-y-5', 'xl:gap-y-5.5')}>
         <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
-        <TertiaryTitle title={title} />
+        <TertiaryTitle title={title} isActive={isActive} />
       </div>
-      <CardDescription description={description} />
-      <MoreInformation href={href} text={text} />
+      <CardDescription description={description} isActive={isActive} />
+      <MoreInformation href={href} text={text} isActive={isActive} />
     </div>
   )
 }

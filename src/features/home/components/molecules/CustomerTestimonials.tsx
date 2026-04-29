@@ -72,7 +72,12 @@ export const CustomerTestimonials = ({
             'lg:p-10'
           )}
         >
-          <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+          <SectionHeader
+            title={title}
+            description={description}
+            eyebrow={eyebrow}
+            titleId={'home-testimonials-title'}
+          />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} newTab={true} />
         </div>
         <Testimonials testimonials={testimonials} />

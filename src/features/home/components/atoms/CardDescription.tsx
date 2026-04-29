@@ -13,10 +13,12 @@ export const CardDescription = ({
   description,
   changePosition = false,
   changeWidth = false,
+  isActive = false,
 }: {
   description: string
   changePosition?: boolean
   changeWidth?: boolean
+  isActive?: boolean
 }) => {
   return (
     <div
@@ -28,9 +30,10 @@ export const CardDescription = ({
     >
       <p
         className={clsx(
-          'text-dimgray text-[0.9375rem] leading-6.75',
+          'text-[0.9375rem] leading-6.75',
           changePosition && 'text-center',
           changeWidth && ['w-74', 'm1x:w-79', 'lg:w-auto'],
+          isActive ? 'text-warmgray' : 'text-dimgray',
           'm1x:text-base m1x:leading-7',
           'md:leading-7.5',
           'lg:text-start',

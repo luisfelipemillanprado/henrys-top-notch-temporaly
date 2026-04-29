@@ -20,6 +20,7 @@ export const SectionHeader = ({
   title,
   description,
   eyebrow,
+  titleId,
   changeWidth = false,
   hidden,
 }: SectionHeaderProps) => {
@@ -44,7 +45,7 @@ export const SectionHeader = ({
           'xl:max-w-19/20'
         )}
       >
-        <SecondaryTitle title={title} />
+        <SecondaryTitle title={title} headingId={titleId} />
         <MainDescription description={description} changeWidth={changeWidth} />
       </div>
     </div>

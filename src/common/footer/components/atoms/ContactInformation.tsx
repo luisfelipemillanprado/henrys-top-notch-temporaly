@@ -66,7 +66,7 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
   const content = (
     <>
       <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
-      <div className={clsx('vertical gap-y-0.5')}>
+      <div className={clsx('vertical gap-y-1', 'md:gap-y-2')}>
         <span
           className={clsx(
             'text-primary text-[1.0625rem] font-medium',
@@ -80,6 +80,7 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
         <span
           className={clsx(
             'text-warmgray truncate text-[0.9375rem]',
+            'md:text-base',
             '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
             '3xl:text-lg',
             '5xl:text-[1.3125rem]'
@@ -96,7 +97,7 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
       target={'_blank'}
       rel={'noopener noreferrer'}
       className={clsx('horizontal w-full justify-start gap-x-3')}
-      aria-label={`contact information ${type.toLowerCase()}`}
+      aria-label={`contact-information-${text}`}
     >
       {content}
     </Link>

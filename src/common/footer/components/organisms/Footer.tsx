@@ -98,8 +98,8 @@ export const Footer = () => {
       className={clsx(
         'bg-secondary vertical w-full px-6 pt-12',
         'm3x:px-7',
-        'md:px-13 md:pt-13',
-        'lg:pt-15',
+        'md:px-13 md:pt-16',
+        'lg:pt-20',
         '1xl:px-27.5',
         '2xl:px-28',
         '3xl:px-32'

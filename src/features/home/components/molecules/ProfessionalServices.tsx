@@ -73,7 +73,12 @@ export const ProfessionalServices = ({
           'lg:p-10'
         )}
       >
-        <SectionHeader title={title} description={description} eyebrow={eyebrow} />
+        <SectionHeader
+          title={title}
+          description={description}
+          eyebrow={eyebrow}
+          titleId={'home-services-title'}
+        />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
       </div>
       <div

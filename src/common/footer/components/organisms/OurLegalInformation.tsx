@@ -13,14 +13,14 @@ import clsx from 'clsx'
  * @param {LegalInformationProps['socialNetworks'][number]['href']} props.socialNetworks.href - The URL the social network item.
  * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the.
  * @param {LegalInformationProps['socialNetworks'][number]['name']} props.socialNetworks.name - The name of the social network.
- * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social network.
+ * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social.
  * @returns The rendered legal information section.
  */
 export const OurLegalInformation = ({ copyright, socialNetworks }: LegalInformationProps) => {
   return (
     <div
       className={clsx(
-        'border-pale-yellow/20 vertical w-full gap-y-6.5 border-t py-7.5',
+        'border-pale-yellow/20 vertical w-full gap-y-7 border-t py-8',
         'md:horizontal md:justify-between'
       )}
     >

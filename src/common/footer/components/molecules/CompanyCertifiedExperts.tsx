@@ -29,8 +29,8 @@ export const CompanyCertifiedExperts = ({
   mapsUrl,
 }: CompanyCertifiedExpertsProps) => {
   return (
-    <div className={clsx('vertical w-full gap-y-14', 'md:w-14/25', 'lg:w-23/50')}>
-      <div className={clsx('vertical w-full items-center gap-y-4.5')}>
+    <div className={clsx('vertical w-full gap-y-14', 'md:max-w-95 md:gap-y-10', 'lg:max-w-127')}>
+      <div className={clsx('vertical w-full gap-y-5', 'md:gap-y-6', 'lg:max-w-110 lg:gap-y-6.5')}>
         <QuinaryTitle title={title} />
         <FooterDescription description={description} />
         <Certified imagesUrl={imagesUrl} />
@@ -39,12 +39,13 @@ export const CompanyCertifiedExperts = ({
       <div className={clsx('horizontal w-full')}>
         <iframe
           src={mapsUrl}
-          title={'Google Maps'}
+          title={'google-maps-location'}
           sandbox={'allow-scripts allow-same-origin'}
           className={clsx(
-            'w-full rounded-3xl border-none shadow-sm',
-            'h-[clamp(13.75rem,calc(13.75rem+(100vw-23.4375rem)*1.2307),18.75rem)]',
-            'md:h-[clamp(18.5rem,calc(18.5rem+(100vw-48rem)*0.0156),18.75rem)]'
+            'relative w-full overflow-hidden rounded-3xl shadow-lg',
+            'h-[clamp(16rem,78vw,20.25rem)]',
+            'md:h-[clamp(22rem,35vw,25.25rem)]',
+            'lg:h-101'
           )}
           allowFullScreen
           loading={'lazy'}

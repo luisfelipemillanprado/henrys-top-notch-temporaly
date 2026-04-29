@@ -29,7 +29,7 @@ export const BookingFeatures = ({
         'xl:grid-cols-1 xl:grid-rows-3 xl:gap-x-0'
       )}
     >
-      {features.map((item) => (
+      {features.map((item, index) => (
         <BookingFeature
           key={item.id}
           icon={item.icon}
@@ -37,6 +37,7 @@ export const BookingFeatures = ({
           description={item.description}
           href={item.href}
           text={item.text}
+          isActive={index === 0 && true}
         />
       ))}
     </div>

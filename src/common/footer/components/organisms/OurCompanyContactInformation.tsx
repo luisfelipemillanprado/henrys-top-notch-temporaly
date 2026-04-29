@@ -24,7 +24,7 @@ import clsx from 'clsx'
  * @param {OurCompanyContactInformationProps['certifiedExperts']} props.certifiedExperts - The properties for the certified.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['title']} props.certifiedExperts.title - The title for the.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['description']} props.certifiedExperts.description - A brief.
- * @param {OurCompanyContactInformationProps['certifiedExperts']['license']} props.certifiedExperts.license - An array of objects.
+ * @param {OurCompanyContactInformationProps['certifiedExperts']['license']} props.certifi95edExperts.license - An array of objects.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['license']['text']} props.certifiedExperts.license.text - The.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['license']['id']} props.certifiedExperts.license.id - The unique.
  * @param {OurCompanyContactInformationProps['certifiedExperts']['imagesUrl']} props.certifiedExperts.imagesUrl - An array of.
@@ -42,7 +42,7 @@ export const OurCompanyContactInformation = ({
 }: OurCompanyContactInformationProps) => {
   return (
     <section
-      aria-label={'company-about-information'}
+      aria-label={'company-contact-information'}
       role={'region'}
       className={clsx('vertical gap-y-14 pb-14', 'md:gap-y-19 md:pb-19', 'lg:gap-y-22 lg:pb-22')}
     >
@@ -50,8 +50,7 @@ export const OurCompanyContactInformation = ({
       <div
         className={clsx(
           'vertical w-full items-start gap-y-14',
-          'md:horizontal',
-          'lg:items-start lg:justify-between'
+          'md:horizontal md:items-start md:justify-between md:gap-y-0'
         )}
       >
         <MainLinks links={links} highlight={highlight} />

@@ -55,7 +55,7 @@ export const OurWhyChooseUs = () => {
   return (
     <section
       id={'why-choose-us'}
-      aria-labelledby={title}
+      aria-labelledby={'home-why-choose-us-title'}
       role={'region'}
       className={clsx(
         'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',

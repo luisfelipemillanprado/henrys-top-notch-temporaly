@@ -111,7 +111,7 @@ export const OurCustomerTestimonials = () => {
   return (
     <section
       id={'testimonials'}
-      aria-labelledby={title}
+      aria-labelledby={'home-testimonials-title'}
       role={'region'}
       className={clsx(
         'vertical bg-off-white w-full px-5.5 pt-12 pb-11 shadow-2xs',
