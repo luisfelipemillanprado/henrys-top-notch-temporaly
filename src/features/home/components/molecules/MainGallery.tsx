@@ -3,13 +3,13 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 /**
- * @description Renders a responsive image gallery component that displays exactly 6 images.
- * @public
+ * @description Renders the hero media gallery using six optimized images in a responsive mosaic.
+ * @component
  * @param {object} props - Component properties.
- * @param {Array} props.gallery - Array of exactly 6 image objects.
- * @param {string} props.gallery[].url - URL string of the image.
- * @param {number} props.gallery[].id - Unique id for rendering list items.
- * @returns Rendering the styled responsive image gallery.
+ * @param {array} props.gallery - Ordered gallery items used to render the two-column mosaic.
+ * @param {string} props.gallery[].url - Image source URL.
+ * @param {number} props.gallery[].id - Unique numeric key.
+ * @returns An absolutely positioned image gallery with responsive transforms and masks.
  */
 export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[] }) => {
   const imageContainerClasses = {
@@ -37,13 +37,32 @@ export const MainGallery = ({ gallery }: { gallery: { url: string; id: number }[
   return (
     <div
       className={clsx(
-        'absolute -bottom-19.5 left-1/2 z-10 grid -translate-x-1/2 grid-cols-2 grid-rows-3 gap-x-3 gap-y-3',
+        'absolute',
+        'z-10',
+        'left-1/2',
+        '-translate-x-1/2',
+        'grid',
+        'grid-cols-2',
+        'grid-rows-3',
+        'gap-x-3',
+        'gap-y-3',
+        '-bottom-19.5',
         'w-[clamp(20.75rem,90.5vw,24.75rem)]',
-        'md:right-0 md:-bottom-28 md:w-114 md:translate-x-[clamp(18%,38%-1.95vw,23%)]',
-        'lg:-bottom-29 lg:w-121 lg:translate-x-[clamp(8%,42%-2.73vw,12%)]',
-        'xl:-bottom-30 xl:w-135 xl:translate-x-[clamp(8%,1.875vw-15%,12%)]',
-        '1xl:-bottom-32 1xl:translate-x-[8%] 1xl:w-147',
-        '3xl:-bottom-34 3xl:translate-x-4/25',
+        'md:right-0',
+        'md:-bottom-28',
+        'md:w-114',
+        'md:translate-x-[clamp(18%,38%-1.95vw,23%)]',
+        'lg:-bottom-29',
+        'lg:w-121',
+        'lg:translate-x-[clamp(8%,42%-2.73vw,12%)]',
+        'xl:-bottom-30',
+        'xl:w-135',
+        'xl:translate-x-[clamp(8%,1.875vw-15%,12%)]',
+        '1xl:-bottom-32',
+        '1xl:w-147',
+        '1xl:translate-x-[8%]',
+        '3xl:-bottom-34',
+        '3xl:translate-x-4/25',
         '4xl:translate-x-3/20',
         '5xl:translate-x-3/25'
       )}

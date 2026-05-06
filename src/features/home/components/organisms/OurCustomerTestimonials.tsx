@@ -3,27 +3,35 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const { image, primaryCtaHref, testimonials: testimonialAssets } = homeAssets.customerTestimonials
+const {
+  sectionId,
+  headingId,
+  image,
+  primaryCtaHref,
+  testimonials: testimonialAssets,
+} = homeAssets.customerTestimonials
 const stars = testimonialAssets[0].stars.map((star) => ({ ...star }))
 
 /**
- * @description Renders the "Customer Testimonials" section of the homepage.
- * @public
- * @property {string} title - The title of the section.
- * @property {string} description - The description of the section.
- * @property {string} eyebrow - The eyebrow text of the section.
- * @property {string} image - The URL of the image representing the section.
- * @property {object} primaryCta - Configuration for the primary call-to-action button.
- * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
- * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
- * @property {array} testimonials - An array of objects representing customer testimonials.
- * @property {number} testimonials[].id - The unique identifier for the testimonial.
- * @property {string} testimonials[].name - The name of the customer.
- * @property {string} testimonials[].position - The position or title of the customer.
- * @property {string} testimonials[].comment - The comment or feedback from the customer.
- * @property {string} testimonials[].url - The URL of the customer's image.
- * @property {array} testimonials[].stars - An array of objects representing the star ratings for the testimonial.
- * @returns {JSX.Element} The rendered "OurCustomerTestimonials" component.
+ * @description Renders the "Customer Testimonials" section, managing the display of localized
+ * social proof, star ratings, and lead visuals.
+ * @component
+ * @param {object} props - Component properties derived from internal translations and static assets.
+ * @param {string} props.title - The localized main title for the testimonials section.
+ * @param {string} props.description - A localized summary or invitation to read reviews.
+ * @param {string} props.eyebrow - A short localized accent label displayed above the title.
+ * @param {string} props.image - The URL of the lead visual image for the section.
+ * @param {object} props.primaryCta - Configuration for the primary call-to-action button.
+ * @param {string} props.primaryCta.text - Localized text for the CTA button.
+ * @param {string} props.primaryCta.href - Target URL for the CTA.
+ * @param {object[]} props.testimonials - A list of localized customer feedback objects.
+ * @param {number} props.testimonials[].id - Unique identifier for the testimonial.
+ * @param {string} props.testimonials[].name - Localized name of the customer.
+ * @param {string} props.testimonials[].position - Localized job title or location of the customer.
+ * @param {string} props.testimonials[].comment - The localized feedback or quote.
+ * @param {string} props.testimonials[].url - Image URL of the customer's avatar.
+ * @param {object[]} props.testimonials[].stars - Configuration for the visual star rating.
+ * @returns Returns a testimonials section with localized reviews, ratings, image, and CTA.
  */
 export const OurCustomerTestimonials = () => {
   const t = useTranslations('home.our-customer-testimonials')
@@ -110,23 +118,37 @@ export const OurCustomerTestimonials = () => {
   ]
   return (
     <section
-      id={'testimonials'}
-      aria-labelledby={'home-testimonials-title'}
+      id={sectionId}
+      aria-labelledby={headingId}
       role={'region'}
       className={clsx(
-        'vertical bg-off-white w-full px-5.5 pt-12 pb-11 shadow-2xs',
-        'm3x:pb-12.5 m3x:px-5.75',
+        'vertical',
+        'w-full',
+        'bg-off-white',
+        'shadow-2xs',
+        'px-5.5',
+        'pt-12',
+        'pb-11',
+        'm3x:px-5.75',
+        'm3x:pb-12.5',
         'm4x:px-6',
-        'md:px-13 md:pt-20 md:pb-18',
+        'md:px-13',
+        'md:pt-20',
+        'md:pb-18',
         'lg:py-22',
-        '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
-        '2xl:px-32 2xl:pt-36 2xl:pb-36'
+        '1xl:px-29.5',
+        '1xl:pt-34',
+        '1xl:pb-34',
+        '2xl:px-32',
+        '2xl:pt-36',
+        '2xl:pb-36'
       )}
     >
       <CustomerTestimonials
         title={title}
         description={description}
         eyebrow={eyebrow}
+        titleId={headingId}
         primaryCta={primaryCta}
         image={image}
         testimonials={testimonials}

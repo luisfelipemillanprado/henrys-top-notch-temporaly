@@ -1,14 +1,13 @@
 /* ------------------------------------------------- INTERFACES-ITEMS ---------------------------------------------------------- */
 
 /**
- * @description Represents a navigation link item with optional close handler for menu options.
- * @export
+ * @description Defines a single navigation entry used in desktop and mobile menus.
  * @interface NavigationBarLinkItem
- * @property {string} text - The display text for the navigation link.
- * @property {string} href - The URL the navigation link points to.
- * @property {string} icon - The icon associated with the navigation link.
- * @property {number} id - The unique identifier for the navigation link item.
- * @property {() => void} [handleCloseOptions] - Optional function to handle closing of menu options when the link is clicked.
+ * @property {string} text - Visible label for the navigation item.
+ * @property {string} href - Destination URL or anchor.
+ * @property {string} icon - Icon key used by icon mapping utilities.
+ * @property {number} id - Stable key used for rendering lists.
+ * @property {() => void} [handleCloseOptions] - Optional callback to close the mobile menu on click.
  */
 export interface NavigationBarLinkItem {
   text: string
@@ -19,15 +18,14 @@ export interface NavigationBarLinkItem {
 }
 
 /**
- * @description Represents the properties for the main navigation bar component.
- * @export
+ * @description Represents the complete navigation bar configuration payload.
  * @interface NavigationBarItem
- * @property {object} logo - The properties for the company logo displayed in the navigation bar.
- * @property {string} logo.url - The URL for the company logo.
- * @property {object} getStartedButton - The properties for the "Get Started" button, including text and href.
- * @property {string} getStartedButton.text - The display text for the "Get Started" button.
- * @property {string} getStartedButton.href - The URL the "Get Started" button points to.
- * @property {NavigationBarLinkItem[]} links - An array of navigation link items to be displayed in the navigation bar.
+ * @property {object} logo - Logo configuration object.
+ * @property {string} logo.url - Asset URL for the company logo.
+ * @property {object} getStartedButton - Primary call-to-action displayed in the navbar.
+ * @property {string} getStartedButton.text - Button label.
+ * @property {string} getStartedButton.href - Button destination.
+ * @property {NavigationBarLinkItem[]} links - Collection of navigation entries.
  */
 export interface NavigationBarItem {
   logo: { url: string }
@@ -38,20 +36,20 @@ export interface NavigationBarItem {
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the menu options component.
- * @export
+ * @description Properties required by the mobile menu container.
  * @interface MenuOptionsProps
- * @property {NavigationBarLinkItem[]} links - An array of navigation link items with optional close handlers.
+ * @property {NavigationBarLinkItem[]} links - Navigation entries rendered in the mobile dialog.
+ * @property {string} menuOptionsId - Deterministic DOM id for `aria-controls` and dialog targeting.
  */
 export interface MenuOptionsProps {
   links: NavigationBarLinkItem[]
+  menuOptionsId: string
 }
 
 /**
- * @description Represents the properties for the navigation links component.
- * @export
+ * @description Properties for the desktop navigation link list.
  * @interface NavigationBarLinksProps
- * @property {NavigationBarLinkItem[]} links - An array of navigation link items without the close handler.
+ * @property {NavigationBarLinkItem[]} links - Navigation entries rendered inline for desktop layouts.
  */
 export interface NavigationBarLinksProps {
   links: NavigationBarLinkItem[]
@@ -60,10 +58,9 @@ export interface NavigationBarLinksProps {
 /* ------------------------------------------------- INTERFACE-ROOT ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the main navigation bar component.
- * @export
+ * @description Root prop contract for composed navigation bar modules.
  * @interface NavigationbarProps
- * @property {NavigationBarItem} navigationBar - The configuration for the navigation.
+ * @property {NavigationBarItem} navigationBar - Complete navigation configuration object.
  */
 export interface NavigationbarProps {
   navigationBar: NavigationBarItem

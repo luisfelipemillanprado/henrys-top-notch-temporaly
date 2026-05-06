@@ -3,13 +3,13 @@ import clsx from 'clsx'
 
 /**
  * @description Creates a pulsing avatar effect with optional floating and color change animations.
- * @export
- * @param {object} props - Component properties.
- * @param {AvatarPulseAnimationProps['children']} children - The content to display in the center of the pulse.
- * @param {AvatarPulseAnimationProps['float']} [float] - If true, applies a vertical floating animation to the container.
- * @param {AvatarPulseAnimationProps['colorChange']} [colorChange] - If true, uses neutral 'bg-irongray' pulse colors.
- * @param {AvatarPulseAnimationProps['hidden']} [hidden] - If true, hides the entire component.
- * @param {AvatarPulseAnimationProps['noAnimation']} [noAnimation] - If true, disables the pulse animation by hiding.
+ * @component
+ * @param {AvatarPulseAnimationProps} props - Component properties.
+ * @param {ReactNode} props.children - The children value.
+ * @param {boolean} [props.float] - If true, applies a vertical floating animation to the container.
+ * @param {boolean} [props.colorChange] - If true, uses neutral 'bg-irongray' pulse colors.
+ * @param {boolean} [props.hidden] - If true, hides the entire component.
+ * @param {boolean} [props.noAnimation] - If true, disables the pulse animation by hiding.
  * @returns A container with animated pulse layers and centered children content.
  */
 export const AvatarPulse = ({
@@ -23,7 +23,10 @@ export const AvatarPulse = ({
   return (
     <div
       className={clsx(
-        'relative inline-flex items-center justify-center',
+        'relative',
+        'inline-flex',
+        'items-center',
+        'justify-center',
         { 'animate-float-y': float },
         hidden ? 'hidden' : 'horizontal'
       )}
@@ -33,8 +36,14 @@ export const AvatarPulse = ({
           key={index}
           className={clsx(
             noAnimation && 'hidden',
-            'animate-slow-pulse absolute inset-0 z-10 m-auto scale-[0.6] rounded-full',
-            colorChange ? 'bg-irongray' : 'bg-mintgreen'
+            'absolute',
+            'inset-0',
+            'z-10',
+            'm-auto',
+            'scale-[0.6]',
+            'rounded-full',
+            'animate-slow-pulse',
+            colorChange ? 'bg-irongray' : 'bg-light-green'
           )}
           style={{ animationDelay: `${delay}s` }}
         />

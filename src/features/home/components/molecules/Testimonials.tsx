@@ -7,18 +7,18 @@ import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 /**
- * @description Renders a component that presents customer testimonials.
- * @public
+ * @description Renders testimonial cards inside an autoplay carousel with responsive slide behavior.
+ * @component
  * @param {object} props - Component properties.
- * @param {object[]} props.testimonials - An array of testimonial objects.
- * @param {string} props.testimonials[].name - The full name of the person providing the testimonial.
- * @param {string} props.testimonials[].position - The role or position of the person (displayed below the name).
- * @param {string} props.testimonials[].comment - The testimonial text content.
- * @param {string} props.testimonials[].url - The URL of the avatar image.
- * @param {object[]} props.testimonials[].stars - An array of star objects representing the rating.
- * @param {number} props.testimonials[].stars[].id - The unique identifier of each star.
- * @param {number} props.testimonials[].id - The unique identifier of each testimonial.
- * @returns The rendered Testimonials component.
+ * @param {array} props.testimonials - Array of testimonial entries.
+ * @param {string} props.testimonials[].name - Customer name label.
+ * @param {string} props.testimonials[].position - Customer position label.
+ * @param {string} props.testimonials[].comment - Customer feedback text.
+ * @param {string} props.testimonials[].url - Customer avatar image source.
+ * @param {array} props.testimonials[].stars - Star rating identifier array.
+ * @param {number} props.testimonials[].stars[].id - Individual star unique ID.
+ * @param {number} props.testimonials[].id - Testimonial unique identifier.
+ * @returns A looping testimonial carousel with automatic playback and accessible roles.
  */
 export const Testimonials = ({
   testimonials,
@@ -43,10 +43,10 @@ export const Testimonials = ({
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className={clsx('h-auto w-full')}
+      className={clsx('w-full', 'h-auto')}
     >
       {testimonials.map((item) => (
-        <SwiperSlide key={item.id} className={clsx('mr-2 pb-2', 'md:mr-6 md:w-auto! md:pl-px')}>
+        <SwiperSlide key={item.id} className={clsx('mr-6', 'pb-2', 'md:w-auto!', 'md:pl-px')}>
           <Testimonial
             name={item.name}
             position={item.position}

@@ -3,23 +3,24 @@ import { NavigationBarLinksProps } from '@/common/navigation-bar/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a list of navigation links for the navigation bar.
- * @public
- * @interface NavigationBarLinksProps
- * @param {object} props - Component properties.
- * @param {NavigationBarLinksProps['links'][number]['text']} props.text - The display text for the navigation link.
- * @param {NavigationBarLinksProps['links'][number]['href']} props.href - The URL the navigation link points to.
- * @param {NavigationBarLinksProps['links'][number]['icon']} props.icon - The icon associated with the navigation link.
- * @param {NavigationBarLinksProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinksProps['links']} props.links - An array of navigation link items without the close handler..
- * @returns The rendered list of navigation links.
+ * @description Renders a navigation links list item component.
+ * @component
+ * @param {NavigationBarLinksProps} props - Component properties with links array and id optional.
+ * @param {object[]} props.links - The links value with text, href, icon and id for each link.
+ * @param {string} props.links[].text - The text value for each link.
+ * @param {string} props.links[].href - The href value for each link.
+ * @param {string} props.links[].icon - The icon identifier for each link enum.
+ * @param {number} [props.links[].id] - Optional id value for each link.
+ * @returns A rendered navigation links list component.
  */
 export const NavigationLinks = ({ links }: NavigationBarLinksProps) => {
   return (
     <ul
       className={clsx(
-        'horizontal w-full',
-        'lg:gap-x-8 lg:overflow-x-hidden',
+        'horizontal',
+        'w-full',
+        'lg:gap-x-8',
+        'lg:overflow-x-hidden',
         'xl:gap-x-9',
         '1xl:gap-x-8',
         '2xl:gap-x-7.5'

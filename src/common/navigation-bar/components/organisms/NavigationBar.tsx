@@ -6,21 +6,12 @@ import { layoutAssets } from '@/utils/data/static/global/layout'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const { logo, getStartedButtonHref, links } = layoutAssets.navigationBar
+const { logo, getStartedButtonHref, links, menuOptionsId } = layoutAssets.navigationBar
 
 /**
  * @description Renders the main navigation bar component.
- * @public
- * @param {string} props.logo - The properties for the company logo displayed in the navigation bar.
- * @param {object} props.getStartedButton - The properties for the "Get Started" button.
- * @param {string} props.getStartedButton.text - The text displayed on the "Get Started" button.
- * @param {string} props.getStartedButton.href - The URL that the "Get Started" button links to.
- * @param {Array} props.links - An array of navigation link items to be displayed.
- * @param {string} props.links.text - The display text for the navigation link.
- * @param {string} props.links.href - The URL the navigation link points to.
- * @param {string} props.links.icon - The icon associated with the navigation link.
- * @param {string} props.links.id - The unique identifier for the navigation link item.
- * @returns The rendered navigation bar component.
+ * @component
+ * @returns A rendered navigation bar component.
  */
 export const NavigationBar = () => {
   const t = useTranslations('navigation-bar')
@@ -41,8 +32,20 @@ export const NavigationBar = () => {
   return (
     <nav
       className={clsx(
-        'horizontal bg-secondary sticky inset-x-0 top-0 z-50! h-21 w-full justify-between px-6 py-4',
-        'md:h-23 md:px-13 md:py-6.25',
+        'sticky',
+        'inset-x-0',
+        'top-0',
+        'z-50!',
+        'horizontal',
+        'h-21',
+        'w-full',
+        'justify-between',
+        'bg-secondary',
+        'px-6',
+        'py-4',
+        'md:h-23',
+        'md:px-13',
+        'md:py-6.25',
         '1xl:px-20',
         '2xl:h-25',
         '3xl:h-26.5',
@@ -52,11 +55,11 @@ export const NavigationBar = () => {
       <div className={clsx('horizontal')}>
         <LogoCompany url={logo.url} />
       </div>
-      <div className={clsx('hidden', 'lg:horizontal lg:w-12/25', 'xl:w-55/100', '1xl:w-auto')}>
+      <div className={clsx('hidden', 'lg:horizontal', 'lg:w-12/25', 'xl:w-55/100', '1xl:w-auto')}>
         <NavigationLinks links={navigationLinks} />
       </div>
       <div className={clsx('horizontal')}>
-        <MenuOptions links={navigationLinks} />
+        <MenuOptions links={navigationLinks} menuOptionsId={menuOptionsId} />
         <GetStartedButton text={getStartedButton.text} href={getStartedButton.href} />
       </div>
     </nav>

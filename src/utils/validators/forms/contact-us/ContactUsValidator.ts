@@ -1,4 +1,21 @@
+import { ContactEmailProps } from '@/app/actions/types'
 import { ValidateReturns } from '@/utils/validators/types'
+
+/**
+ * @description Maximum allowed length per contact form field, enforced before any regex check.
+ * @public
+ * @constant CONTACT_FIELD_MAX_LENGTHS
+ * @property {number} name - Maximum allowed characters for the sender's name.
+ * @property {number} email - Maximum allowed characters for the email address (RFC 5321).
+ * @property {number} phone - Maximum allowed characters for the raw phone number input.
+ * @property {number} description - Maximum allowed characters for the message body.
+ */
+export const CONTACT_FIELD_MAX_LENGTHS = {
+  name: 100,
+  email: 254,
+  phone: 30,
+  description: 400,
+} as const
 
 /**
  * @description Validates a name string to ensure it meets minimum length requirements.
@@ -61,6 +78,43 @@ export const validateMessage =
     }
     return null
   }
+
+/**
+ * @description Validates the full contact form payload on the server, combining length caps with the per-field validators.
+ * @public
+ * @param {ContactEmailProps} payload - Payload to validate, typically received by a Server Action.
+ * @returns {{ valid: true } | { valid: false; reason: string }} - Validation outcome with a generic reason on failure.
+ */
+export const validateContactPayload = (
+  payload: ContactEmailProps
+): { valid: true } | { valid: false; reason: string } => {
+  if (
+    typeof payload?.name !== 'string' ||
+    typeof payload?.email !== 'string' ||
+    typeof payload?.phone !== 'string' ||
+    typeof payload?.description !== 'string'
+  ) {
+    return { valid: false, reason: 'INVALID_SHAPE' }
+  }
+  if (
+    payload.name.length > CONTACT_FIELD_MAX_LENGTHS.name ||
+    payload.email.length > CONTACT_FIELD_MAX_LENGTHS.email ||
+    payload.phone.length > CONTACT_FIELD_MAX_LENGTHS.phone ||
+    payload.description.length > CONTACT_FIELD_MAX_LENGTHS.description
+  ) {
+    return { valid: false, reason: 'PAYLOAD_TOO_LARGE' }
+  }
+  const errors = [
+    validateName(payload.name),
+    validateEmail(payload.email),
+    validatePhone(payload.phone),
+    validateMessage(CONTACT_FIELD_MAX_LENGTHS.description)(payload.description),
+  ].filter((error): error is string => error !== null)
+  if (errors.length > 0) {
+    return { valid: false, reason: 'INVALID_FIELD' }
+  }
+  return { valid: true }
+}
 
 /**
  * @description Escapes special HTML characters in a string to their corresponding HTML entities.

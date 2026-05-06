@@ -9,18 +9,17 @@ const ANIMATION_MS = 500
 
 /**
  * @description Renders the menu options for the navigation bar, including handling open/close state and animations.
- * @public
- * @interface MenuOptionsProps
- * @param {object} props - Component properties.
- * @param {MenuOptionsProps['links'][number]['text']} props.text - The display text for the navigation link.
- * @param {MenuOptionsProps['links'][number]['href']} props.href - The URL the navigation link points to.
- * @param {MenuOptionsProps['links'][number]['icon']} props.icon - The icon associated with the navigation link.
- * @param {MenuOptionsProps['links'][number]['id']} props.id - The unique identifier for the navigation link item.
- * @param {MenuOptionsProps['links'][number]['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
- * @param {MenuOptionsProps['links']} props.links - An array of navigation link items with optional close handlers.
- * @returns The rendered menu options component with responsive behavior and animations.
+ * @component
+ * @param {MenuOptionsProps} props - Component properties.
+ * @param {string} props.links[].text - The text value.
+ * @param {string} props.links[].href - The href value.
+ * @param {string} props.links[].icon - The icon value.
+ * @param {number} props.links[].id - The id value.
+ * @param {() => void} [props.links[].handleCloseOptions] - Optional function to handle closing.
+ * @param {NavigationBarLinkItem[]} props.links - The links value.
+ * @returns A rendered menu options component with responsive behavior and animations.
  */
-export const MenuOptions = ({ links }: MenuOptionsProps) => {
+export const MenuOptions = ({ links, menuOptionsId }: MenuOptionsProps) => {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -57,11 +56,16 @@ export const MenuOptions = ({ links }: MenuOptionsProps) => {
       <button
         type={'button'}
         aria-expanded={isOpen}
-        aria-controls={'options-menu'}
-        aria-label={'options-menu'}
+        aria-controls={menuOptionsId}
+        aria-label={menuOptionsId}
         onClick={isOpen ? handleCloseOptions : handleOpenOptions}
         className={clsx(
-          'bg-irongray horizontal size-10 justify-center rounded-full shadow-lg',
+          'horizontal',
+          'size-10',
+          'justify-center',
+          'rounded-full',
+          'shadow-lg',
+          'bg-irongray',
           'm2x:size-10.25',
           'm3x:size-10.5',
           'md:size-11',
@@ -73,13 +77,13 @@ export const MenuOptions = ({ links }: MenuOptionsProps) => {
             <XMarkIcon
               aria-hidden={'true'}
               role={'img'}
-              className={clsx('fill-primary size-6.75', 'm1x:size-7', 'md:size-8')}
+              className={clsx('size-6.75', 'fill-primary', 'm1x:size-7', 'md:size-8')}
             />
           ) : (
             <Bars3Icon
               aria-hidden={'true'}
               role={'img'}
-              className={clsx('fill-primary size-6.75', 'm1x:size-7', 'md:size-8')}
+              className={clsx('size-6.75', 'fill-primary', 'm1x:size-7', 'md:size-8')}
             />
           )}
         </span>
@@ -88,31 +92,62 @@ export const MenuOptions = ({ links }: MenuOptionsProps) => {
         <div
           onClick={handleCloseOptions}
           className={clsx(
-            'fixed inset-x-0 top-21 z-50 h-dvh w-full transition-colors duration-150',
+            'fixed',
+            'inset-x-0',
+            'top-21',
+            'z-50',
+            'h-dvh',
+            'w-full',
+            'transition-colors',
+            'duration-150',
             isOpen ? 'bg-midnightgreen/60 backdrop-blur-sm' : 'bg-transparent backdrop-blur-none'
           )}
         >
           <div
             role={'dialog'}
-            id={'options-menu'}
+            id={menuOptionsId}
             onClick={handlePropagateOptions}
             className={clsx(
-              'bg-secondary w-full transform transition-all duration-500 ease-in-out',
-              'will-change-transform contain-paint',
+              'w-full',
+              'transform',
+              'transition-all',
+              'duration-500',
+              'ease-in-out',
+              'contain-paint',
+              'will-change-transform',
+              'bg-secondary',
               isOpen ? 'translate-y-0 opacity-100' : '-translate-y-3 opacity-0'
             )}
           >
             <div
               className={clsx(
-                'grid w-full grid-cols-3 gap-3.5 px-5.25 pt-7 pb-10',
-                'm1x:gap-4 m1x:px-5.75',
+                'grid',
+                'grid-cols-3',
+                'w-full',
+                'gap-3.5',
+                'px-5.25',
+                'pt-7',
+                'pb-13',
+                'm1x:gap-4',
+                'm1x:px-6',
                 'm3x:gap-4.5',
-                'md:gap-6 md:px-28 md:pt-9 md:pb-16',
-                'lg:gap-7'
+                'md:grid-cols-4',
+                'md:grid-rows-2',
+                'md:gap-6',
+                'md:px-13',
+                'md:pt-12',
+                'md:pb-16'
               )}
             >
               {links.map((item) => (
-                <NavigationLink {...item} key={item.id} handleCloseOptions={handleCloseOptions} />
+                <NavigationLink
+                  key={item.id}
+                  text={item.text}
+                  href={item.href}
+                  icon={item.icon}
+                  id={item.id}
+                  handleCloseOptions={handleCloseOptions}
+                />
               ))}
             </div>
           </div>

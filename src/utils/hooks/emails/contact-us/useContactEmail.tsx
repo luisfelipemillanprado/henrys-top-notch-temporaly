@@ -28,19 +28,12 @@ export function useContactEmail(onSuccess?: () => void) {
       email: payload.email,
       phone: payload.phone,
       description: payload.description,
+      honeypot: payload.honeypot,
     }).then((result) => {
       if (result.success) {
         toast.success(payload.notifications.success.description, {
           indicator: (
-            <CheckCircleIcon aria-hidden={'true'} role={'img'} className={clsx('fill-secondary size-6.5')} />
-          ),
-          timeout: 0,
-        })
-        onSuccess?.()
-      } else {
-        toast.danger(payload.notifications.error.description, {
-          indicator: (
-            <ExclamationTriangleIcon
+            <CheckCircleIcon
               aria-hidden={'true'}
               role={'img'}
               className={clsx('fill-secondary size-6.5')}
@@ -48,7 +41,23 @@ export function useContactEmail(onSuccess?: () => void) {
           ),
           timeout: 0,
         })
+        onSuccess?.()
+        return
       }
+      const description =
+        result.error === 'RATE_LIMITED'
+          ? payload.notifications.rateLimit.description
+          : payload.notifications.error.description
+      toast.danger(description, {
+        indicator: (
+          <ExclamationTriangleIcon
+            aria-hidden={'true'}
+            role={'img'}
+            className={clsx('fill-secondary size-6.5')}
+          />
+        ),
+        timeout: 0,
+      })
     })
   }
   return send

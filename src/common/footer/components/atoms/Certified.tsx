@@ -4,38 +4,45 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 /**
- * @description Renders a license certification image for the company certified experts section in the footer.
- * @public
- * @interface CertifiedProps
- * @param {object} props - Component properties.
- * @param {CertifiedProps['imagesUrl'][number]['url']} props.imagesUrl.url - The URL for the certificate.
- * @param {CertifiedProps['imagesUrl'][number]['id']} props.imagesUrl.id - The unique identifier for the certificate.
- * @param {CertifiedProps['imagesUrl']} props.imagesUrl - An array of objects containing the URL and ID for the images.
- * @returns The rendered license certification image.
+ * @description Renders a certified image list item wrapper component.
+ * @component
+ * @param {CertifiedProps} props - Component properties with imagesUrl array.
+ * @param {string} props.imagesUrl[].url - The url value for each image.
+ * @param {number} props.imagesUrl[].id - The id value for each image.
+ * @param {object[]} props.imagesUrl - The images url value with url and id for each image.
+ * @returns A rendered certified image list item wrapper component.
  */
 export const Certified = ({ imagesUrl }: CertifiedProps) => {
   return (
     <div
       className={clsx(
-        'horizontal mt-3 w-full justify-center gap-x-7',
+        'horizontal',
+        'w-full',
+        'justify-center',
+        'gap-x-7',
+        'mt-3',
         'm4x:gap-x-8',
-        'md:mt-1 md:justify-start md:gap-x-9'
+        'md:mt-1',
+        'md:justify-start',
+        'md:gap-x-9'
       )}
     >
       {imagesUrl.map((item) => (
         <div
           key={item.id}
           className={clsx(
-            'horizontal relative items-center',
+            'horizontal',
+            'relative',
+            'items-center',
             'size-[clamp(5.25rem,23vw,5.625rem)]',
             'md:size-[clamp(5.25rem,11vw,5.5rem)]',
             'lg:size-22'
           )}
         >
           <Image
-            className={clsx('size-full object-contain')}
+            className={clsx('size-full', 'object-contain')}
             fill
-            sizes={''}
+            sizes={'96px'}
             src={item.url}
             placeholder={'blur'}
             blurDataURL={blurDataUrlCertified}

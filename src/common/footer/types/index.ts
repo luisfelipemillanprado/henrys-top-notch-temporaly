@@ -1,12 +1,11 @@
 /* ------------------------------------------------- INTERFACES-ITEMS ---------------------------------------------------------- */
 
 /**
- * @description Represents a main link item in the footer.
- * @export
+ * @description Defines a single link item rendered in footer link groups.
  * @interface MainLinkItem
- * @property {string} text - The display text for the footer link.
- * @property {string} href - The URL the footer link points to.
- * @property {number} id - The unique identifier for the footer link item.
+ * @property {string} text - Visible label of the footer link.
+ * @property {string} href - Destination URL or anchor.
+ * @property {number} id - Stable render key for list rendering.
  */
 export interface MainLinkItem {
   text: string
@@ -15,14 +14,13 @@ export interface MainLinkItem {
 }
 
 /**
- * @description Represents a legal statement item in the footer.
- * @export
+ * @description Defines one contact-information item in the footer.
  * @interface ContactInformationItem
- * @property {string} text - The display text for the contact information item.
- * @property {string} href - The URL the contact information item points to.
- * @property {string} type - The type of contact information (e.g., 'email', 'phone').
- * @property {string} icon - The icon associated with the contact information item.
- * @property {number} id - The unique identifier for the contact information item.
+ * @property {string} text - Visible label for the contact row.
+ * @property {string} href - Destination URL (`mailto`, `tel`, maps, etc.).
+ * @property {string} type - Semantic type label (Address, Phone, Email, etc.).
+ * @property {string} icon - Icon key associated with this entry.
+ * @property {number} id - Stable render key.
  */
 export interface ContactInformationItem {
   text: string
@@ -33,13 +31,12 @@ export interface ContactInformationItem {
 }
 
 /**
- * @description Represents a social network item in the footer section.
- * @export
+ * @description Defines one social network link in the footer.
  * @interface SocialNetworkItem
- * @property {string} href - The URL the social network item points to.
- * @property {string} icon - The icon associated with the social network item.
- * @property {string} name - The name of the social network.
- * @property {number} id - The unique identifier for the social network item.
+ * @property {string} href - Profile or channel URL.
+ * @property {string} icon - Icon key for the social platform.
+ * @property {string} name - Human-readable social network name.
+ * @property {number} id - Stable render key.
  */
 export interface SocialNetworkItem {
   href: string
@@ -51,52 +48,48 @@ export interface SocialNetworkItem {
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the copyright information to be displayed in the footer.
- * @export
+ * @description Defines copyright text displayed in legal footer row.
  * @interface CopyrightProps
- * @property {string} copyright - Text representing the copyright information.
+ * @property {string} copyright - Localized copyright statement.
  */
 export interface CopyrightProps {
   copyright: string
 }
 
 /**
- * @description Represents the information for certified experts in the footer.
- * @export
+ * @description Defines image badges used in the certified-experts block.
  * @interface CertifiedProps
- * @property {{ url: string; id: number }[]} imagesUrl - An array of objects containing the URL and ID for the images.
- * @property {string} imagesUrl.url - The URL for each image to be displayed in the certified experts section.
- * @property {number} imagesUrl.id - The unique identifier for each image in the certified experts section.
+ * @property {{ url: string; id: number }[]} imagesUrl - Collection of certification image entries.
+ * @property {string} imagesUrl.url - URL for each certification image.
+ * @property {number} imagesUrl.id - Stable render key for each image.
  */
 export interface CertifiedProps {
   imagesUrl: { url: string; id: number }[]
 }
 
 /**
- * @description Represents the license information to be displayed in the footer.
- * @export
+ * @description Defines license rows shown in the certified-experts block.
  * @interface LicenseProps
- * @property {{ text: string; id: number }[]} license - An array of objects containing the text and ID for the license.
- * @property {string} license.text - The text for each license.
- * @property {number} license.id - The unique identifier for each license.
+ * @property {{ text: string; id: number }[]} license - Collection of license labels and values.
+ * @property {string} license.text - Label or value text for each row.
+ * @property {number} license.id - Stable render key for each row.
  */
 export interface LicenseProps {
   license: { text: string; id: number }[]
 }
 
 /**
- * @description Represents the certified experts section in the footer.
- * @export
- * @interface CertifiedExpertsProps
- * @property {string} title - The title for the certified experts section.
- * @property {string} description - A brief description of the certified experts.
- * @property {{ text: string; id: number }[]} license - An array of objects containing the text and ID for the licenses.
- * @property {string} license.text - The text for each license.
- * @property {number} license.id - The unique identifier for each license.
- * @property {{ url: string; id: number }[]} imagesUrl - An array of objects containing the URL and ID for the images.
- * @property {string} imagesUrl.url - The URL for each image to be displayed in the certified experts section.
- * @property {number} imagesUrl.id - The unique identifier for each image in the certified experts section.
- * @property {string} mapsUrl - The URL for the embedded Google Maps location to be displayed in the footer.
+ * @description Defines the complete certified-experts area rendered in the footer.
+ * @interface CompanyCertifiedExpertsProps
+ * @property {string} title - Section title.
+ * @property {string} description - Short description under the title.
+ * @property {{ text: string; id: number }[]} license - License rows rendered as label/value items.
+ * @property {string} license.text - Label or value text.
+ * @property {number} license.id - Stable render key for each license row.
+ * @property {{ url: string; id: number }[]} imagesUrl - Certification badges.
+ * @property {string} imagesUrl.url - URL for each badge image.
+ * @property {number} imagesUrl.id - Stable render key for each badge.
+ * @property {string} mapsUrl - Google Maps embed URL.
  */
 export interface CompanyCertifiedExpertsProps {
   title: string
@@ -107,16 +100,10 @@ export interface CompanyCertifiedExpertsProps {
 }
 
 /**
- * @description Represents the company contact information to be displayed in the footer.
- * @export
+ * @description Defines the company-info card rendered at the top of the footer.
  * @interface CompanyContactInformationProps
- * @property {string} url - The URL for the company logo image.
- * @property {ContactInformationItem[]} contactInformation - An array of contact information items to be displayed in the footer.
- * @property {ContactInformationItem[]} contactInformation.text - The display text for the contact information item.
- * @property {ContactInformationItem[]} contactInformation.href - The URL the contact information item points to.
- * @property {ContactInformationItem[]} contactInformation.type - The type of contact information (e.g., 'email', 'phone').
- * @property {ContactInformationItem[]} contactInformation.icon - The icon associated with the contact information item.
- * @property {ContactInformationItem[]} contactInformation.id - The unique identifier for the contact information item.
+ * @property {string} url - Company logo URL.
+ * @property {ContactInformationItem[]} contactInformation - Contact rows displayed in the card.
  */
 export interface CompanyContactInformationProps {
   url: string
@@ -124,13 +111,12 @@ export interface CompanyContactInformationProps {
 }
 
 /**
- * @description Represents a compound link item in the footer.
- * @export
+ * @description Defines props for a single footer link element.
  * @interface MainLinkProps
- * @property {string} text - The display text for the footer link.
- * @property {string} href - The URL the footer link points to.
- * @property {number} id - The unique identifier for the footer link item.
- * @property {string[]} highlight - An array of strings representing links that should be highlighted.
+ * @property {string} text - Link label.
+ * @property {string} href - Destination URL or anchor.
+ * @property {number} id - Stable render key.
+ * @property {string[]} highlight - Labels that should receive highlight styling.
  */
 export interface MainLinkProps {
   text: string
@@ -140,14 +126,10 @@ export interface MainLinkProps {
 }
 
 /**
- * @description Represents the main links section in the footer.
- * @export
+ * @description Defines props for grouped footer links.
  * @interface MainLinksProps
- * @property {MainLinkItem[]} links - An array of footer link items to be displayed in the footer.
- * @property {MainLinkItem[]} links.text - The display text for the footer link.
- * @property {MainLinkItem[]} links.href - The URL the footer link points to.
- * @property {MainLinkItem[]} links.id - The unique identifier for the footer link item.
- * @property {string[]} highlight - An array of strings representing links that should be highlighted.
+ * @property {MainLinkItem[]} links - Link entries rendered in footer columns.
+ * @property {string[]} highlight - Labels that should receive highlight styling.
  */
 export interface MainLinksProps {
   links: MainLinkItem[]
@@ -155,45 +137,23 @@ export interface MainLinksProps {
 }
 
 /**
- * @description Represents the social network items to be displayed in the footer.
- * @export
+ * @description Defines props for footer social links.
  * @interface SocialNetworksProps
- * @property {SocialNetworkItem[]} socialNetworks - An array of social network items to be displayed in the footer.
- * @property {SocialNetworkItem[]} socialNetworks.href - The URL the social network item points to.
- * @property {SocialNetworkItem[]} socialNetworks.icon - The icon associated with the social network item.
- * @property {SocialNetworkItem[]} socialNetworks.name - The name of the social network.
- * @property {SocialNetworkItem[]} socialNetworks.id - The unique identifier for the social network item.
+ * @property {SocialNetworkItem[]} socialNetworks - Social network entries rendered in the legal row.
  */
 export interface SocialNetworksProps {
   socialNetworks: SocialNetworkItem[]
 }
 
 /**
- * @description Represents the company about information.
- * @export
+ * @description Defines the full payload for the company-information footer organism.
  * @interface OurCompanyContactInformationProps
- * @property {object} logo - The properties for the company logo displayed in the footer.
- * @property {string} logo.url - The URL for the company logo image.
- * @property {ContactInformationItem[]} contactInformation - An array of contact information items to be displayed in the footer.
- * @property {ContactInformationItem[]} contactInformation.text - The display text for the company contact information.
- * @property {ContactInformationItem[]} contactInformation.type - The type of contact information (e.g., 'email', 'phone').
- * @property {ContactInformationItem[]} contactInformation.icon - The icon associated with the company contact information item.
- * @property {ContactInformationItem[]} contactInformation.id - The unique identifier for the company contact information item.
- * @property {MainLinkItem[]} links - An array of footer link items to be displayed in the footer.
- * @property {MainLinkItem[]} links.text - The display text for the footer link.
- * @property {MainLinkItem[]} links.href - The URL the footer link points to.
- * @property {MainLinkItem[]} links.id - The unique identifier for the footer link item.
- * @property {string[]} highlight - An array of strings representing links that should be highlighted.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts - The properties for the certified experts section in the footer.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.title - The title for the certified experts section.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.description - A brief description of the certified experts.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.license - An array of objects containing the text and ID for the licenses.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.license.text - The text representing the license information.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.license.id - The unique identifier for the license information.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.imagesUrl - An array of objects containing the URL and ID for the images.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.imagesUrl.url - The URL for the image to be displayed in the certified.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.imagesUrl.id - The unique identifier for the image in the certified.
- * @property {CompanyCertifiedExpertsProps} certifiedExperts.mapsUrl - The URL for the embedded Google Maps location to be displayed.
+ * @property {object} logo - Logo configuration.
+ * @property {string} logo.url - Company logo URL.
+ * @property {ContactInformationItem[]} contactInformation - Contact rows.
+ * @property {MainLinkItem[]} links - Footer link entries.
+ * @property {string[]} highlight - Link labels to highlight.
+ * @property {CompanyCertifiedExpertsProps} certifiedExperts - Certified-experts configuration block.
  */
 export interface OurCompanyContactInformationProps {
   logo: { url: string }
@@ -204,15 +164,10 @@ export interface OurCompanyContactInformationProps {
 }
 
 /**
- * @description: Represents the legal information section in the footer.
- * @export
+ * @description Defines props for the legal-information footer row.
  * @interface LegalInformationProps
- * @property {string} copyright - The copyright information to be displayed in the footer.
- * @property {SocialNetworkItem[]} socialNetworks - An array of social network items to be displayed in the footer.
- * @property {SocialNetworkItem[]} socialNetworks.href - The URL the social network item points to.
- * @property {SocialNetworkItem[]} socialNetworks.icon - The icon associated with the social network item.
- * @property {SocialNetworkItem[]} socialNetworks.name - The name of the social network.
- * @property {SocialNetworkItem[]} socialNetworks.id - The unique identifier for the social network item.
+ * @property {string} copyright - Copyright statement.
+ * @property {SocialNetworkItem[]} socialNetworks - Social links rendered with legal information.
  */
 export interface LegalInformationProps {
   copyright: string
@@ -222,38 +177,17 @@ export interface LegalInformationProps {
 /* ------------------------------------------------- INTERFACE-ROOT ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the footer component.
- * @export
+ * @description Root contract for passing footer data as a single object.
  * @interface FooterItemProps
- * @property {object} footer - An object containing all the necessary information to render the footer component.
- * @property {object} footer.logo - The properties for the company logo displayed in the footer.
- * @property {string} footer.logo.url - The URL for the company logo image.
- * @property {string} footer.copyright - The copyright information to be displayed in the footer.
- * @property {ContactInformationItem[]} footer.contactInformation - An array of contact information items to be displayed in the footer.
- * @property {ContactInformationItem[]} footer.contactInformation.text - The display text for the company contact information.
- * @property {ContactInformationItem[]} footer.contactInformation.type - The type of contact information (e.g., 'email', 'phone').
- * @property {ContactInformationItem[]} footer.contactInformation.icon - The icon associated with the company contact information item.
- * @property {ContactInformationItem[]} footer.contactInformation.id - The unique identifier for the company contact information item.
- * @property {MainLinkItem[]} footer.links - An array of footer link items to be displayed in the footer.
- * @property {MainLinkItem[]} footer.links.text - The display text for the footer link.
- * @property {MainLinkItem[]} footer.links.href - The URL the footer link points to.
- * @property {MainLinkItem[]} footer.links.id - The unique identifier for the footer link item.
- * @property {string[]} footer.highlight - An array of strings representing highlighted text or keywords to be emphasized in the footer.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts - The properties for the certified experts section in the footer.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.title - The title for the certified experts section.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.description - A brief description of the certified experts.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.license - An array of objects containing the text and ID for the licenses.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.license.text - The text representing the license information.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.license.id - The unique identifier for the license information.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.imagesUrl - An array of objects containing the URL and ID for the images.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.imagesUrl.url - The URL for the image to be displayed in the certified.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.imagesUrl.id - The unique identifier for the image in the certified.
- * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts.mapsUrl - The URL for the embedded Google Maps location to be displayed.
- * @property {SocialNetworkItem[]} footer.socialNetworks - An array of social network items to be displayed in the footer.
- * @property {SocialNetworkItem[]} footer.socialNetworks.href - The URL the social network item points to.
- * @property {SocialNetworkItem[]} footer.socialNetworks.icon - The icon associated with the social network item.
- * @property {SocialNetworkItem[]} footer.socialNetworks.name - The name of the social network.
- * @property {SocialNetworkItem[]} footer.socialNetworks.id - The unique identifier for the social network item.
+ * @property {object} footer - Footer data payload.
+ * @property {object} footer.logo - Logo configuration.
+ * @property {string} footer.logo.url - Company logo URL.
+ * @property {string} footer.copyright - Copyright statement.
+ * @property {ContactInformationItem[]} footer.contactInformation - Contact rows.
+ * @property {MainLinkItem[]} footer.links - Footer links.
+ * @property {string[]} footer.highlight - Link labels to highlight.
+ * @property {CompanyCertifiedExpertsProps} footer.certifiedExperts - Certified-experts configuration.
+ * @property {SocialNetworkItem[]} footer.socialNetworks - Social network links.
  */
 export interface FooterProps {
   footer: {

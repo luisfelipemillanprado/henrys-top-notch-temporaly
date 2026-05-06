@@ -1,9 +1,12 @@
 'use server'
 import { AwsSdkErrorProps, ContactEmailProps } from '@/app/actions/types'
+import { checkContactUsRateLimit } from '@/utils/security/emails/contact-us/ContactUsRateLimit'
 import { contactUsTemplate } from '@/utils/templates/emails/contact-us/ContactUsTemplate'
+import { validateContactPayload } from '@/utils/validators/forms/contact-us/ContactUsValidator'
 import { SESv2Client, SendEmailCommand } from '@aws-sdk/client-sesv2'
 import { NodeHttpHandler } from '@smithy/node-http-handler'
 import https from 'https'
+import { headers } from 'next/headers'
 import 'server-only'
 
 /**
@@ -31,7 +34,19 @@ const sesClient = new SESv2Client({
 })
 
 /**
- * @description Sends a contact email using AWS SES with the provided contact payload.
+ * @description Resolves the best-effort client IP from platform-provided request headers.
+ * @private
+ * @returns {Promise<string>} - The detected client IP, or `'unknown'` when no header is present.
+ */
+const resolveClientIp = async (): Promise<string> => {
+  const headerList = await headers()
+  const forwarded = headerList.get('x-forwarded-for')
+  if (forwarded) return forwarded.split(',')[0]!.trim()
+  return headerList.get('x-real-ip')?.trim() || 'unknown'
+}
+
+/**
+ * @description Sends a contact email through AWS SES after enforcing honeypot, rate limit and payload validation.
  * @public
  * @interface ContactEmailProps
  * @param {ContactEmailProps} payload - The contact email payload containing sender details and message.
@@ -39,12 +54,25 @@ const sesClient = new SESv2Client({
  * @param {ContactEmailProps['email']} payload.email - The sender's email address (from the contact form).
  * @param {ContactEmailProps['phone']} payload.phone - The sender's phone number (from the contact form).
  * @param {ContactEmailProps['description']} payload.description - The message or description provided by the sender.
- * @returns {Promise<{ success: true } | { success: false; error: string }>} A promise that resolves to an object.
+ * @param {ContactEmailProps['honeypot']} [payload.honeypot] - Hidden anti-bot field; non-empty values silently drop the request.
+ * @returns {Promise<{ success: true } | { success: false; error: string }>} - Resolves with the operation outcome.
  */
 export async function sendContactEmail(
   payload: ContactEmailProps
 ): Promise<{ success: true } | { success: false; error: string }> {
   try {
+    if (typeof payload?.honeypot === 'string' && payload.honeypot.trim().length > 0) {
+      return { success: true }
+    }
+    const ip = await resolveClientIp()
+    const rate = checkContactUsRateLimit(ip)
+    if (!rate.allowed) {
+      return { success: false, error: 'RATE_LIMITED' }
+    }
+    const validation = validateContactPayload(payload)
+    if (!validation.valid) {
+      return { success: false, error: 'INVALID_PAYLOAD' }
+    }
     const FROM = process.env.SES_FROM_EMAIL
     const TO = process.env.SES_TO_EMAIL
     if (!FROM || !TO) {

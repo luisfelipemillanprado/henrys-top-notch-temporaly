@@ -5,11 +5,11 @@ import clsx from 'clsx'
 
 /**
  * @description Renders a pulsing submit button for the contact form.
- * @public
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.text - Text displayed inside the button.
- * @param {boolean} props.isLoading - Whether the form is currently submitting.
- * @returns {JSX.Element} A pulsing submit button with icon/spinner and text.
+ * @param {string} props.text - The submit button label text.
+ * @param {boolean} props.isLoading - Indicates whether the form is currently submitting.
+ * @returns A pulsing submit button with icon/spinner and text.
  */
 export const ContactFormButton = ({
   text,
@@ -28,13 +28,23 @@ export const ContactFormButton = ({
     <ButtonPulse type={'soft'} rounded float={float} firstColor={firstColor} noAnimation={noAnimation}>
       <button
         className={clsx(
-          'horizontal bg-electric-blue z-40 h-9.25 gap-x-2.5 rounded-full px-4 font-normal shadow-lg',
+          'horizontal',
+          'z-40',
+          'h-9.25',
+          'rounded-full',
+          'gap-x-2.5',
+          'px-4',
+          'font-normal',
+          'shadow-lg',
+          'bg-electric-blue',
           'm1x:h-9.75',
           'm3x:h-10',
           'md:h-10.5',
-          '1xl:px-4.5 1xl:h-11',
+          '1xl:h-11',
+          '1xl:px-4.5',
           '2xl:px-5',
-          '3xl:h-12 3xl:px-6',
+          '3xl:h-12',
+          '3xl:px-6',
           '5xl:h-12.5'
         )}
         type={'submit'}
@@ -43,7 +53,8 @@ export const ContactFormButton = ({
       >
         <span
           className={clsx(
-            'text-secondary text-base',
+            'text-base',
+            'text-secondary',
             'm1x:text-[1.0625rem]',
             '1xl:text-lg',
             '3xl:text-[1.1875rem]',
@@ -60,7 +71,13 @@ export const ContactFormButton = ({
               <PaperAirplaneIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx('fill-secondary size-6.25', 'm1x:size-6.5', 'm3x:size-6.75', 'md:size-7.5')}
+                className={clsx(
+                  'size-6.25',
+                  'fill-secondary',
+                  'm1x:size-6.5',
+                  'm3x:size-6.75',
+                  'md:size-7.5'
+                )}
               />
             </span>
           )}

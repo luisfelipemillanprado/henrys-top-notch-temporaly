@@ -5,28 +5,32 @@ import { Testimonials } from '@/features/home/components/molecules/Testimonials'
 import clsx from 'clsx'
 
 /**
- * @description Renders a component that presents customer testimonials.
- * @public
+ * @description Renders the testimonials section content with lead visual, header CTA, and carousel.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.title - The title of the section.
- * @param {string} props.description - The description of the section.
- * @param {string} props.eyebrow - The eyebrow text of the section.
- * @param {object} props.primaryCta - The primary call-to-action button properties.
- * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
- * @param {string} props.image - The URL of the image representing the customer testimonials section.
- * @param {object[]} props.testimonials - An array of testimonial objects.
- * @param {string} props.testimonials[].name - The full name of the person providing the testimonial.
- * @param {string} props.testimonials[].position - The role or position of the person (displayed below the name).
- * @param {string} props.testimonials[].comment - The testimonial text content.
- * @param {string} props.testimonials[].url - The URL of the avatar image.
- * @param {object[]} props.testimonials[].stars - An array of star objects representing the rating.
- * @param {number} props.testimonials[].stars[].id - The unique identifier of each star.
+ * @param {string} props.title - Section heading text.
+ * @param {string} props.description - Section description text.
+ * @param {string} props.eyebrow - Eyebrow/overline label text.
+ * @param {string} props.titleId - Deterministic heading id used by accessibility attributes.
+ * @param {object} props.primaryCta - Primary action configuration.
+ * @param {string} props.primaryCta.text - Button label text.
+ * @param {string} props.primaryCta.href - Button destination URL.
+ * @param {string} props.image - Lead visual image URL.
+ * @param {array} props.testimonials - Testimonials rendered in the carousel.
+ * @param {string} props.testimonials[].name - Customer name.
+ * @param {string} props.testimonials[].position - Customer position.
+ * @param {string} props.testimonials[].comment - Customer feedback.
+ * @param {string} props.testimonials[].url - Avatar URL.
+ * @param {array} props.testimonials[].stars - Star rating array.
+ * @param {number} props.testimonials[].stars[].id - Star unique ID.
+ * @param {number} props.testimonials[].id - Testimonial unique ID.
+ * @returns A responsive testimonials layout with CTA and carousel content.
  */
 export const CustomerTestimonials = ({
   title,
   description,
   eyebrow,
+  titleId,
   primaryCta,
   image,
   testimonials,
@@ -34,6 +38,7 @@ export const CustomerTestimonials = ({
   title: string
   description: string
   eyebrow: string
+  titleId: string
   primaryCta: { text: string; href: string }
   image: string
   testimonials: {
@@ -48,8 +53,11 @@ export const CustomerTestimonials = ({
   return (
     <div
       className={clsx(
-        'vertical w-full items-start gap-y-8',
-        'm3x:gap-y-8.75',
+        'vertical',
+        'w-full',
+        'items-start',
+        'gap-y-8',
+        'm3x:gap-y-9',
         'md:gap-y-11',
         'lg:gap-y-12'
       )}
@@ -57,7 +65,10 @@ export const CustomerTestimonials = ({
       <LeadVisual image={image} changeBackground={true} />
       <div
         className={clsx(
-          'vertical w-full items-center gap-y-8.5',
+          'vertical',
+          'w-full',
+          'items-center',
+          'gap-y-8.5',
           'm1x:gap-y-9',
           'md:gap-y-11',
           'lg:gap-y-12'
@@ -65,19 +76,22 @@ export const CustomerTestimonials = ({
       >
         <div
           className={clsx(
-            'vertical w-full items-center gap-y-8',
-            'm1x:gap-y-8.75',
-            'm3x:gap-y-9.5',
-            'md:bg-primary md:border-electric-blue/30 md:items-start md:rounded-3xl md:border md:p-8 md:shadow-md',
+            'vertical',
+            'w-full',
+            'items-center',
+            'gap-y-7',
+            'm1x:gap-y-8',
+            'md:items-start',
+            'md:bg-primary',
+            'md:border',
+            'md:border-electric-blue/30',
+            'md:rounded-3xl',
+            'md:shadow-md',
+            'md:p-8',
             'lg:p-10'
           )}
         >
-          <SectionHeader
-            title={title}
-            description={description}
-            eyebrow={eyebrow}
-            titleId={'home-testimonials-title'}
-          />
+          <SectionHeader title={title} description={description} eyebrow={eyebrow} titleId={titleId} />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} newTab={true} />
         </div>
         <Testimonials testimonials={testimonials} />

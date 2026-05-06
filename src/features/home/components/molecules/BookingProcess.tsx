@@ -6,34 +6,36 @@ import { BookingSteps } from '@/features/home/components/molecules/BookingSteps'
 import clsx from 'clsx'
 
 /**
- * @description Renders a component that presents the simple booking process.
- * @public
+ * @description Renders the booking-process molecule with section header, feature cards, and ordered steps.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.title - The title of the simple booking process section.
- * @param {string} props.description - A brief description of the simple booking process.
- * @param {string} props.eyebrow - An eyebrow text to provide additional context or emphasis.
- * @param {string} props.image - The URL of the image to be displayed in the section.
- * @param {Array} props.features - An array of feature objects, each containing an icon, title, description, and id.
- * @param {Array} props.features.icon - The URL of the feature icon.
- * @param {Array} props.features.title - The title of the feature.
- * @param {Array} props.features.description - A brief description of the feature.
- * @param {Array} props.features.href - The URL that the feature links to for more details.
- * @param {Array} props.features.text - The text displayed for the feature's call-to-action.
- * @param {Array} props.features.id - A unique identifier for the feature.
- * @param {Array} props.steps - An array of step objects, each containing a url, title, description, and id.
- * @param {Array} props.steps.url - The URL of the step icon.
- * @param {Array} props.steps.title - The title of the step.
- * @param {Array} props.steps.description - A brief description of the step.
- * @param {Array} props.steps.id - A unique identifier for the step.
- * @param {object} props.primaryCta - An object containing the text and href for the primary call-to-action button.
- * @param {string} props.primaryCta.text - The text to display on the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL to navigate to when the primary call-to-action button is clicked.
- * @returns A semantic element rendering the simple booking process content.
+ * @param {string} props.title - Section heading text.
+ * @param {string} props.description - Section description text.
+ * @param {string} props.eyebrow - Eyebrow/overline label text.
+ * @param {string} props.titleId - Deterministic heading id used by accessibility attributes.
+ * @param {string} props.image - Lead visual image URL.
+ * @param {array} props.features - Array of objects representing feature cards.
+ * @param {string} props.features[].icon - Identifier for the feature icon.
+ * @param {string} props.features[].title - Title of the feature card.
+ * @param {string} props.features[].description - Description of the feature card.
+ * @param {string} props.features[].href - Destination URL for the feature link.
+ * @param {string} props.features[].text - Visible text for the feature link.
+ * @param {number} props.features[].id - Unique identifier for the feature.
+ * @param {array} props.steps - Array of objects representing the booking steps.
+ * @param {string} props.steps[].url - Image URL for the specific step.
+ * @param {string} props.steps[].title - Title of the step.
+ * @param {string} props.steps[].description - Description of the step.
+ * @param {number} props.steps[].id - Unique identifier for the step.
+ * @param {object} props.primaryCta - Configuration for the primary call-to-action button.
+ * @param {string} props.primaryCta.text - The text displayed on the primary call-to-action button.
+ * @param {string} props.primaryCta.href - The URL that the primary call-to-action button links to.
+ * @returns A responsive booking-process layout with feature grid and step grid.
  */
 export const BookingProcess = ({
   title,
   description,
   eyebrow,
+  titleId,
   image,
   features,
   steps,
@@ -42,6 +44,7 @@ export const BookingProcess = ({
   title: string
   description: string
   eyebrow: string
+  titleId: string
   image: string
   features: {
     icon: string
@@ -65,7 +68,10 @@ export const BookingProcess = ({
   return (
     <div
       className={clsx(
-        'vertical w-full items-center gap-y-8.5',
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-8.5',
         'm1x:gap-y-9',
         'md:gap-y-11',
         'lg:gap-y-12'
@@ -73,39 +79,50 @@ export const BookingProcess = ({
     >
       <div
         className={clsx(
-          'vertical w-full gap-y-8.5',
+          'vertical',
+          'w-full',
+          'gap-y-8.5',
           'm1x:gap-y-9',
           'md:gap-y-11',
           'lg:gap-y-12',
-          'xl:horizontal xl:items-start xl:gap-x-8 xl:gap-y-0'
+          'xl:horizontal',
+          'xl:items-start',
+          'xl:gap-x-8',
+          'xl:gap-y-0'
         )}
       >
         <div
           className={clsx(
-            'vertical w-full items-start gap-y-8',
-            'm3x:gap-y-8.75',
+            'vertical',
+            'w-full',
+            'items-start',
+            'gap-y-8',
+            'm3x:gap-y-9',
             'md:gap-y-11',
             'lg:gap-y-12',
             'xl:flex-col-reverse'
           )}
         >
-          <LeadVisual image={image} changeBackground={true} />
+          <LeadVisual image={image} changeBackground={true} changeWidth={true} />
           <div
             className={clsx(
-              'vertical w-full items-center gap-y-8',
-              'm1x:gap-y-8.75',
-              'm3x:gap-y-9.5',
-              'md:bg-off-white md:border-electric-blue/30 md:items-start md:rounded-3xl md:border md:p-8 md:shadow-md',
+              'vertical',
+              'w-full',
+              'items-center',
+              'gap-y-7',
+              'm1x:gap-y-8',
+              'md:items-start',
+              'md:bg-off-white',
+              'md:border',
+              'md:border-electric-blue/30',
+              'md:rounded-3xl',
+              'md:shadow-md',
+              'md:p-8',
               'lg:p-10',
               'xl:p-9'
             )}
           >
-            <SectionHeader
-              title={title}
-              description={description}
-              eyebrow={eyebrow}
-              titleId={'home-process-title'}
-            />
+            <SectionHeader title={title} description={description} eyebrow={eyebrow} titleId={titleId} />
             <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
           </div>
         </div>

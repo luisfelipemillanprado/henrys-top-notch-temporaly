@@ -6,17 +6,16 @@ import Link from 'next/link'
 
 /**
  * @description Renders a Reusable call-to-action component as a styled Next.js Link.
- * @public
- * @interface ReusableButtonProps
- * @param {object} props - Component properties.
- * @param {ReusableButtonProps['text']} props.text - Button label text, also used to generate the aria-label.
- * @param {ReusableButtonProps['href']} props.href - Destination URL or route.
- * @param {ReusableButtonProps['startIcon']} props.startIcon - Optional icon identifier rendered before the text.
- * @param {ReusableButtonProps['endIcon']} props.endIcon - Optional icon identifier rendered after the text.
- * @param {ReusableButtonProps['float']} props.float - Enables floating behavior via the ButtonPulse wrapper.
- * @param {ReusableButtonProps['secondColor']} props.secondColor - Optional flag to change the button color on interaction.
- * @param {ReusableButtonProps['noAnimation']} props.noAnimation - Disables the pulse animation when set to true.
- * @param {ReusableButtonProps['newTab']} props.newTab - Optional flag to open the link in a new tab when true.
+ * @component
+ * @param {ReusableButtonProps} props - Component properties.
+ * @param {string} props.text - The text value.
+ * @param {string} props.href - The href value.
+ * @param {boolean | undefined} props.startIcon - The start icon value.
+ * @param {boolean | undefined} props.endIcon - The end icon value.
+ * @param {boolean | undefined} props.float - The float value.
+ * @param {boolean | undefined} props.secondColor - The second color value.
+ * @param {boolean | undefined} props.noAnimation - The no animation value.
+ * @param {boolean | undefined} props.newTab - The new tab value.
  * @returns A rendering a styled, accessible call-to-action link.
  */
 export const ReusableButton = ({
@@ -33,28 +32,35 @@ export const ReusableButton = ({
     <ButtonPulse type={'soft'} rounded float={float} secondColor={secondColor} noAnimation={noAnimation}>
       <Link
         className={clsx(
-          'horizontal z-30 h-9.5 rounded-full shadow-lg',
+          'horizontal',
+          'z-30',
+          'h-9.5',
+          'rounded-full',
+          'shadow-lg',
           startIcon ? 'pr-4 pl-3' : 'px-4',
           secondColor ? 'bg-strong-blue' : 'bg-irongray',
           'm1x:h-10',
           'm3x:h-10.5',
           'md:h-11',
-          '1xl:px-4.5 1xl:h-11.5',
-          '3xl:h-12.5 3xl:px-5',
+          '1xl:h-11.5',
+          '1xl:px-4.5',
+          '3xl:h-12.5',
+          '3xl:px-5',
           '5xl:h-13'
         )}
         href={href}
         {...(newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         aria-label={`${text} button`}
       >
-        <div className={clsx('horizontal gap-x-2')}>
+        <div className={clsx('horizontal', 'gap-x-2')}>
           {startIcon && (
             <span className={clsx('horizontal')}>
               <PlayCircleIcon
                 aria-hidden={'true'}
                 role={'img'}
                 className={clsx(
-                  'fill-electric-blue size-6',
+                  'size-6',
+                  'fill-electric-blue',
                   'm1x:size-6.25',
                   'm3x:size-6.5',
                   'lg:size-6.75'
@@ -64,7 +70,8 @@ export const ReusableButton = ({
           )}
           <span
             className={clsx(
-              'text-primary text-base',
+              'text-base',
+              'text-primary',
               'm1x:text-[1.0625rem]',
               '1xl:text-lg',
               '3xl:text-[1.1875rem]',
@@ -78,7 +85,13 @@ export const ReusableButton = ({
               <ArrowRightCircleIcon
                 aria-hidden={'true'}
                 role={'img'}
-                className={clsx('fill-primary size-6.25', 'm1x:size-6.5', 'm3x:size-6.75', 'md:size-7.5')}
+                className={clsx(
+                  'size-6.25',
+                  'fill-primary',
+                  'm1x:size-6.5',
+                  'm3x:size-6.75',
+                  'md:size-7.5'
+                )}
               />
             </span>
           )}

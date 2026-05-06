@@ -22,6 +22,9 @@
     },
     "error": {
       "description": "The request could not be submitted. Please try again later."
+    },
+    "rateLimit": {
+      "description": "You have reached the submission limit. Please try again in a few minutes."
     }
   }
 }

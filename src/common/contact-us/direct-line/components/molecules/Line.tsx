@@ -27,17 +27,17 @@ const iconStyles = clsx(
 )
 
 /**
- * @description A utility function that maps a given icon identifier to its corresponding React component.
+ * @description Maps a given icon identifier to its corresponding React component.
  * @private
- * @param {string} icon - A string identifier, icon enum.
- * @returns The resolved icon component or a fallback placeholder.
+ * @param {string} props.icon - A string identifier, icon enum.
+ * @returns A resolved icon component or a fallback placeholder.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case LineIcon.PHONE:
-      return <PhoneIcon aria-hidden={'true'} role={'img'} className={clsx('fill-secondary', iconStyles)} />
+      return <PhoneIcon aria-hidden={'true'} role={'img'} className={clsx(iconStyles, 'fill-secondary')} />
     case LineIcon.WHATSAPP:
-      return <SiWhatsapp aria-hidden={'true'} role={'img'} className={clsx('fill-primary', iconStyles)} />
+      return <SiWhatsapp aria-hidden={'true'} role={'img'} className={clsx(iconStyles, 'fill-primary')} />
     default:
       return <span aria-label={'icon-none'}>?</span>
   }
@@ -45,13 +45,14 @@ const iconSwitch = (icon: string) => {
 
 /**
  * @description Renders an individual Line contact section with a pulsating button effect.
- * @public
- * @interface DirectLineProps
- * @param {object} props - Component properties.
- * @param {DirectLineProps['directLine']} props.directLine - An array of objects, each containing a URL and an icon.
- * @param {DirectLineProps['directLine'][number]['href']} directLine[].href - The URL that the Direct Line contact.
- * @param {DirectLineProps['directLine'][number]['icon']} directLine[].icon - The icon identifier for the Direct Line.
- * @returns {JSX.Element} A rendering a floating Direct Line button.
+ * @component
+ * @param {LineProps} props - Component properties with href, icon, firstColor, forthColor and changeBackground optional.
+ * @param {string} props.href - The destination URL for the contact action.
+ * @param {string} props.icon - The icon identifier used for the contact button.
+ * @param {boolean} [props.firstColor] - Optional flag to enable the first pulse color variant.
+ * @param {boolean} [props.forthColor] - Optional flag to enable the fourth pulse color variant.
+ * @param {boolean} [props.changeBackground] - Optional flag to toggle the background color variant.
+ * @returns A floating direct-line button with pulse animation and icon.
  */
 export const Line = ({
   href,
@@ -71,14 +72,18 @@ export const Line = ({
     >
       <Link
         className={clsx(
-          'horizontal z-50 justify-center rounded-2xl pl-px',
+          'horizontal',
+          'z-50',
+          'justify-center',
+          'rounded-2xl',
+          'pl-px',
           changeBackground ? 'bg-electric-blue' : 'bg-light-green',
           'size-[clamp(3.3125rem,calc(3.3125rem+(100vw-23.4375rem)*0.0615),3.5625rem)]',
           'md:size-[clamp(3.625rem,calc(3.625rem+(100vw-48rem)*0.0117),3.8125rem)]',
           '1xl:size-15.5',
+          '2xl:size-16',
           '3xl:size-17',
-          '5xl:size-17.25',
-          '2xl:size-16'
+          '5xl:size-17.25'
         )}
         target={'_blank'}
         rel={'noopener noreferrer'}

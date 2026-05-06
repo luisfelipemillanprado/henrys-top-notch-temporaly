@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 /**
  * @description Enum representing supported social network icons.
- * @public
+ * @component
  * @property {string} FACEBOOK   - Represents the Facebook social network.
  * @property {string} YOUTUBE    - Represents the YouTube social network.
  * @property {string} INSTAGRAM  - Represents the Instagram social network.
@@ -18,13 +18,13 @@ enum SocialIcon {
   TWITTER = 'twitter',
 }
 
-const iconStyles = clsx('fill-bright-orange size-6', 'm1x:size-6.25', 'm3x:size-6.5', 'md:size-6.75')
+const iconStyles = clsx('size-6.25', 'fill-bright-orange', 'm1x:size-6.5', 'm3x:size-6.75', 'md:size-7.5')
 
 /**
- * @description A utility function that maps a given icon identifier to its corresponding React component.
+ * @description Maps a given icon identifier to its corresponding React component.
  * @private
- * @param {SocialNetworkItem['icon']} icon - A string identifier, icon enum.
- * @returns The resolved icon component or a fallback placeholder.
+ * @param {string} icon - The icon identifier, icon enum.
+ * @returns A rendered icon component or a fallback span.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -43,19 +43,18 @@ const iconSwitch = (icon: string) => {
 
 /**
  * @description Renders a social network icon button that is a clickable link to an external URL.
- * @public
- * @interface SocialNetworkItem
- * @param {object} props - Component properties.
- * @param {SocialNetworkItem['href']} props.href - The URL to navigate to when the icon is clicked.
- * @param {SocialNetworkItem['icon']} props.icon - The social network name, must match a value from the `SocialIcon` enum.
- * @param {SocialNetworkItem['name']} props.name - The name of the social network, used for accessibility.
- * @param {SocialNetworkItem['id']} props.id - A unique identifier for the social network item.
- * @returns A styled link wrapping the social network icon.
+ * @component
+ * @param {SocialNetworkItem} props - Component properties with href, icon, name and id.
+ * @param {string} props.href - The href value for the social network.
+ * @param {string} props.icon - The icon identifier for the social network enum.
+ * @param {string} props.name - The name value for the social network.
+ * @param {number} [props.id] - Optional id value for the social network.
+ * @returns A rendered social network component.
  */
 export const SocialNetwork = ({ href, icon }: SocialNetworkItem) => {
   return (
     <Link
-      className={clsx('horizontal justify-center p-1')}
+      className={clsx('horizontal', 'justify-center', 'p-1')}
       target={'_blank'}
       rel={'noopener noreferrer'}
       aria-label={`social-network-${icon}`}

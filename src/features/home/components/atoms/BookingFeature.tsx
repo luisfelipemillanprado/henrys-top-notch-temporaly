@@ -1,5 +1,5 @@
+import { CardDescription } from '@/common/card-description/components/CardDescription'
 import { TertiaryTitle } from '@/common/titles/components/TertiaryTitle'
-import { CardDescription } from '@/features/home/components/atoms/CardDescription'
 import { BoltIcon, BuildingOffice2Icon, CheckBadgeIcon, ShieldCheckIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 import { MoreInformation } from './MoreInformation'
@@ -19,24 +19,34 @@ enum BookingFeaturesIcon {
   CUSTOMER = 'customer',
 }
 
-const iconStyles = `size-7.25 m1x:size-7.5 m3x:size-7.75 md:size-8.25 lg:size-8.75 1xl:size-9.25 2xl:size-9.5`
+const iconStyles = clsx(
+  'size-7.25',
+  'm1x:size-7.5',
+  'm3x:size-7.75',
+  'md:size-8.25',
+  'lg:size-8.75',
+  '1xl:size-9.25',
+  '2xl:size-9.5'
+)
 
 /**
- * @description Maps a given icon identifier to its corresponding icon component for each booking feature.
+ * @description Maps a feature identifier to its corresponding Heroicon component.
  * @private
- * @param {string} icon - The BookingFeaturesIcon string identifier, icon enum.
- * @returns A rendering the icon, or a fallback span if unknown.
+ * @param {string} icon - The string identifier from BookingFeaturesIcon.
+ * @returns A rendered icon component or a fallback symbol.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case BookingFeaturesIcon.EMERGENCY:
-      return <BoltIcon aria-hidden={'true'} role={'img'} className={clsx('fill-primary', iconStyles)} />
+      return (
+        <BoltIcon aria-hidden={'true'} role={'img'} className={clsx(iconStyles, 'fill-bright-orange')} />
+      )
     case BookingFeaturesIcon.EXPERTS:
       return (
         <CheckBadgeIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-bright-orange', iconStyles)}
+          className={clsx(iconStyles, 'fill-bright-orange')}
         />
       )
     case BookingFeaturesIcon.COMFORT:
@@ -44,7 +54,7 @@ const iconSwitch = (icon: string) => {
         <BuildingOffice2Icon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-bright-orange', iconStyles)}
+          className={clsx(iconStyles, 'fill-bright-orange')}
         />
       )
     case BookingFeaturesIcon.CUSTOMER:
@@ -52,7 +62,7 @@ const iconSwitch = (icon: string) => {
         <ShieldCheckIcon
           aria-hidden={'true'}
           role={'img'}
-          className={clsx('fill-bright-orange', iconStyles)}
+          className={clsx(iconStyles, 'fill-bright-orange')}
         />
       )
     default:
@@ -61,16 +71,16 @@ const iconSwitch = (icon: string) => {
 }
 
 /**
- * @description Renders a component that displays a single booking feature.
- * @public
+ * @description Renders a service feature card with an icon, title, description, and action link.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.icon - The URL of the feature icon.
- * @param {string} props.title - The title of the feature.
- * @param {string} props.description - A brief description of the feature.
- * @param {string} props.href - The URL that the feature links to for more details.
- * @param {string} props.text - The text displayed for the feature's call-to-action.
- * @param {boolean} props.isActive - A boolean that indicates whether to change the background color of the feature.
- * @returns A JSX element representing the booking feature.
+ * @param {string} props.icon - The icon identifier.
+ * @param {string} props.title - The feature's title.
+ * @param {string} props.description - The feature's description.
+ * @param {string} props.href - The link destination.
+ * @param {string} props.text - The link text label.
+ * @param {boolean} [props.isActive=false] - Indicates if the card should render with the active/highlighted theme.
+ * @returns Returns a styled booking feature card with icon, text content, and action link.
  */
 export const BookingFeature = ({
   icon,
@@ -90,16 +100,30 @@ export const BookingFeature = ({
   return (
     <div
       className={clsx(
-        'border-electric-blue/30 vertical w-full gap-y-3.5 rounded-3xl border p-5 shadow-md',
-        isActive ? 'bg-secondary -rotate-2' : 'bg-off-white',
-        'm1x:p-5.25',
+        'vertical',
+        'w-full',
+        'border',
+        'border-electric-blue/30',
+        'rounded-3xl',
+        'shadow-md',
+        isActive ? 'bg-secondary' : 'bg-off-white',
+        isActive && '-rotate-2',
+        'gap-y-3',
+        'p-5',
+        'm1x:gap-y-3.5',
+        'm3x:gap-y-4',
         'm4x:p-5.5',
-        'md:pr-6.25',
-        'lg:gap-y-4 lg:py-7 lg:pr-13 lg:pl-7',
-        'xl:gap-y-4.5 xl:py-8 xl:pl-8'
+        'md:pr-6',
+        'md:rotate-0',
+        'lg:gap-y-4',
+        'lg:py-7',
+        'lg:pl-7',
+        'lg:pr-13',
+        'xl:gap-y-4.5',
+        'xl:px-8'
       )}
     >
-      <div className={clsx('vertical w-full items-start gap-y-4.5', 'lg:gap-y-5', 'xl:gap-y-5.5')}>
+      <div className={clsx('vertical', 'w-full', 'items-start', 'gap-y-4.5', 'lg:gap-y-5', 'xl:gap-y-5.5')}>
         <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
         <TertiaryTitle title={title} isActive={isActive} />
       </div>

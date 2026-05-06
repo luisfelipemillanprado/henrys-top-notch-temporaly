@@ -9,21 +9,20 @@ import clsx from 'clsx'
 
 /**
  * @description Render a professional service component.
- * @public
- * @interface ProfessionalServiceProps
- * @param {object} props - Component properties.
- * @param {ProfessionalServiceProps['url']} props.url - The URL of the image representing a specific service.
- * @param {ProfessionalServiceProps['title']} props.title - The title describing a specific service.
- * @param {ProfessionalServiceProps['stars']} props.stars - An array of objects representing the star rating.
- * @param {ProfessionalServiceProps['stars'][number]['id']} props.stars.id - A unique identifier for each star.
- * @param {ProfessionalServiceProps['description']} props.description - A brief description of a specific service.
- * @param {ProfessionalServiceProps['benefits']} props.benefits - An array of benefit objects, each containing text.
- * @param {ProfessionalServiceProps['benefits'][number]['text']} props.services.benefits.text - The text description.
- * @param {ProfessionalServiceProps['benefits'][number]['id']} props.services.benefits.id - A unique identifier benefit.
- * @param {ProfessionalServiceProps['secondaryCta']} props.secondaryCta - An object containing the text and href.
- * @param {ProfessionalServiceProps['secondaryCta']['text']} props.secondaryCta.text - The text of the secondary.
- * @param {ProfessionalServiceProps['secondaryCta']['href']} props.secondaryCta.href - The URL of the secondary call-to-action.
- * @returns A React component that renders the professional service.
+ * @component
+ * @param {ProfessionalServiceProps} props - Component properties with url, title, stars, description, benefits and secondaryCta.
+ * @param {string} props.url - The url value for the professional service image.
+ * @param {string} props.title - The title value for the professional service.
+ * @param {object[]} props.stars - The stars value with id for each star.
+ * @param {string} props.stars[].id - The id value for each star.
+ * @param {string} props.description - The description value for the professional service.
+ * @param {object[]} props.benefits - The benefits value with text and id for each benefit.
+ * @param {string} props.benefits[].text - The text value for each benefit.
+ * @param {string} props.benefits[].id - The id value for each benefit.
+ * @param {object} props.secondaryCta - The secondary cta value with text and href.
+ * @param {string} props.secondaryCta.text - The text value for the secondary cta.
+ * @param {string} props.secondaryCta.href - The href value for the secondary cta.
+ * @returns Render a professional service component.
  */
 export const ProfessionalService = ({
   url,
@@ -36,35 +35,65 @@ export const ProfessionalService = ({
   return (
     <div
       className={clsx(
-        'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-5 rounded-3xl border px-2 pt-2 pb-6 shadow-md',
-        'm1x:gap-y-5.5 m1x:pb-6.5',
-        'm3x:pb-6.5 m3x:px-2.25 m3x:pt-2.25',
-        'lg:horizontal lg:gap-x-8 lg:py-3.5 lg:pr-0 lg:pl-3.5'
+        'vertical',
+        'w-full',
+        'items-center',
+        'rounded-3xl',
+        'border',
+        'border-electric-blue/30',
+        'shadow-md',
+        'bg-primary',
+        'gap-y-5',
+        'px-2',
+        'pt-2',
+        'pb-6',
+        'm1x:gap-y-5.5',
+        'm1x:pb-6.5',
+        'm3x:px-2.25',
+        'm3x:pt-2.25',
+        'm3x:pb-6.5',
+        'md:horizontal',
+        'md:gap-x-6',
+        'md:p-3',
+        'lg:py-3.5',
+        'lg:pl-3.5',
+        'lg:pr-0',
+        'xl:gap-x-6',
+        'xl:py-2.5',
+        'xl:pl-2.5'
       )}
     >
       <ServiceImage url={url} />
       <div
         className={clsx(
-          'vertical w-full items-center gap-y-4.25',
+          'vertical',
+          'w-full',
+          'items-center',
+          'gap-y-4',
           'm1x:gap-y-4.5',
-          'lg:items-start lg:gap-y-5.25 lg:pr-6'
+          'md:items-start',
+          'lg:gap-y-5.5',
+          'lg:pr-6',
+          'xl:pr-4'
         )}
       >
         <RatingStars stars={stars} />
         <div
           className={clsx(
-            'vertical items-center gap-y-3.25',
-            'm1x:gap-y-3.5',
-            'm3x:gap-y-3.75',
-            'lg:items-start lg:gap-y-4'
+            'vertical',
+            'items-center',
+            'gap-y-3.5',
+            'm3x:gap-y-4',
+            'md:items-start',
+            'lg:gap-y-4.5'
           )}
         >
-          <TertiaryTitle title={title} changePosition={true} />
+          <TertiaryTitle title={title} changePosition={true} truncate={true} changeWidth={true} />
           <CardDescription
             description={description}
             changePosition={true}
             changeMargin={true}
-            changeWidth={true}
+            changeWidth={'narrow'}
           />
           <ServiceBenefits benefits={benefits} />
           <CardActionButton text={secondaryCta.text} href={secondaryCta.href} float={false} />

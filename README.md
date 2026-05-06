@@ -20,25 +20,25 @@ Our focus: **Ultra-fast performance, elite UI/UX via HeroUI, and high-conversion
 
 ## Software Features
 
-- **Bleeding-Edge Stack:** Powered by **Next.js 16** and **React 19** (Concurrent Mode) for unparalleled speed.
-- **HeroUI & Design System:** Utilizing premium, accessible UI components for a polished, professional look.
-- **Advanced i18n System:** Custom-built translation builder (`i118builder`) for seamless multilingual management and SEO across regions.
-- **Enterprise Lead Generation:** Integrated **AWS SESv2** support for reliable, scalable transactional emails.
-- **Visual Excellence:** Optimized image processing via **Sharp** and interactive, touch-ready sliders via **Swiper 12**.
-- **Performance First:** Optimized for Core Web Vitals with advanced caching and streaming strategies.
+- **Bleeding-Edge Stack:** Powered by **Next.js 16** and **React 19** for App Router workflows, refined hooks, and fast hydration—without sacrificing stability.
+- **HeroUI & Design System:** Premium, accessible UI components for a polished, professional look.
+- **Advanced i18n:** The `i118builder` tool compiles split JSON namespaces into consolidated locale bundles for **next-intl** and tooling (e.g. `i18n-check`).
+- **Enterprise Lead Generation:** **AWS SESv2** integration for transactional email.
+- **Visual Excellence:** **Sharp** for image pipelines and **Swiper 12** for touch-ready sliders.
+- **Performance First:** Tuned for Core Web Vitals with caching and streaming-oriented patterns where applicable.
 
 ---
 
 ## Technical Specifications
 
-| Technology       | Version    | Purpose                                                         |
-| :--------------- | :--------- | :-------------------------------------------------------------- |
-| **Next.js**      | 16.1.x     | App Router, Server Actions, and advanced hybrid rendering.      |
-| **React**        | 19.2.x     | Latest features including improved Hooks and hydration.         |
-| **Tailwind CSS** | 4.1.x      | Next-gen utility-first styling engine with PostCSS integration. |
-| **HeroUI**       | 3.0 (Beta) | Modern, high-performance accessible component library.          |
-| **TypeScript**   | 5.7.x      | Strict type-safety for enterprise-level maintainability.        |
-| **AWS SDK**      | 3.9x       | High-deliverability email infrastructure.                       |
+| Technology       | Version    | Purpose                                                       |
+| :--------------- | :--------- | :------------------------------------------------------------ |
+| **Next.js**      | 16.1.x     | App Router, Server Actions, and hybrid rendering.             |
+| **React**        | 19.2.x     | Server Components ecosystem, concurrent rendering, hydration. |
+| **Tailwind CSS** | 4.1.x      | Utility-first styling with PostCSS integration.               |
+| **HeroUI**       | 3.0 (Beta) | Accessible component library.                                 |
+| **TypeScript**   | 5.7.x      | Strict typing for maintainability.                            |
+| **AWS SDK**      | 3.9x       | Email infrastructure (SESv2).                                 |
 
 ---
 
@@ -46,23 +46,24 @@ Our focus: **Ultra-fast performance, elite UI/UX via HeroUI, and high-conversion
 
 The project is organized for scalability and clear separation of concerns:
 
-- `src/app/`: Application entry point, routing, and locale-based layouts.
-- `src/common/`: Shared UI components and global modules.
-- `src/features/`: Business-specific modules (Services, Testimonials, Hero sections).
-- `src/i18n/`: Internationalization utilities and routing helpers.
-- `i118builder/`: Specialized TypeScript tool for compiling localized messages.
-- `messages/`: Centralized JSON translation files for global reach.
+- `src/app/`: Routing, layouts, and server/client boundaries.
+- `src/common/`: Shared UI and cross-feature building blocks.
+- `src/features/`: Page- and domain-specific compositions (hero, testimonials, etc.).
+- `src/i18n/`: Locale resolution and message loading for **next-intl**.
+- `i118builder/messages/`: **Source** JSON translation files (grouped namespaces); edited by translators and watched in dev/build.
+- `messages/`: **Generated** consolidated `en.json` / `es.json` (etc.) consumed at runtime (`i118builder/index.ts` writes here on build and `--watch`).
+- `i118builder/`: Translation builder CLI and watch pipeline.
 
 ---
 
 ## Development & Workflow
 
-This project enforces high code quality through an automated pipeline:
+Quality is enforced through automation:
 
-- **Parallel Execution:** `npm run dev` uses `concurrently` to watch translation changes and run the Next.js server.
-- **Strict Linting:** Enforced via **ESLint 10** and **Prettier 3**.
-- **Git Safety:** **Husky** and **Lint-staged** ensure only valid, formatted code is committed.
-- **Type Integrity:** Continuous background type-checking via `tsc`.
+- **Dev:** `npm run dev` runs the i18n watcher and **Next.js** together via **concurrently**.
+- **Linting:** **ESLint 10** and **Prettier 3** (via **Lint-staged** on commit).
+- **Git hooks:** **Husky** for pre-commit workflows.
+- **Types:** Use `npm run type-check` for `tsc --noEmit`.
 
 ### Key Commands
 
@@ -76,3 +77,9 @@ npm run dev
 # Build for production
 npm run build
 ```
+
+---
+
+## License
+
+Use, redistribution, and commercial terms are defined in **[LICENSE](./LICENSE)** (commercial / proprietary—not open source). For distribution, SaaS, or customization rights, use the contact in that file.

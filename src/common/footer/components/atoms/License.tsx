@@ -2,21 +2,27 @@ import type { LicenseProps } from '@/common/footer/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders the license information in the footer.
- * @public
- * @interface LicenseProps
- * @param {object} props - Component properties.
- * @param {LicenseProps['license'][number]['text']} props.license.text - The text for the license information to be displayed.
- * @param {LicenseProps['license'][number]['id']} props.license.id - The unique identifier for the license information item.
- * @param {LicenseProps['license']} props.license - An array of objects containing the text and ID for the licenses.
- * @returns The rendered license information section in the footer.
+ * @description Renders a license item component.
+ * @component
+ * @param {LicenseProps} props - Component properties with license array and id optional.
+ * @param {object[]} props.license - The license value with text and id for each license.
+ * @param {string} props.license[].text - The text value for each license.
+ * @param {number} [props.license[].id] - Optional id value for each license.
+ * @returns A rendered license item component.
  */
 export const License = ({ license }: LicenseProps) => {
   return (
     <div
       className={clsx(
-        'vertical mt-3 w-full items-center gap-y-2',
-        'md:horizontal md:justify-start md:gap-x-2 md:gap-y-0',
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-2',
+        'mt-3',
+        'md:horizontal',
+        'md:justify-start',
+        'md:gap-x-2',
+        'md:gap-y-0',
         'lg:mt-2'
       )}
     >
@@ -24,7 +30,9 @@ export const License = ({ license }: LicenseProps) => {
         <span
           key={item.id}
           className={clsx(
-            'text-primary text-[1.0625rem] font-medium',
+            'font-medium',
+            'text-primary',
+            'text-[1.0625rem]',
             'm1x:text-lg',
             'md:text-[1.1875rem]',
             '3xl:text-xl',

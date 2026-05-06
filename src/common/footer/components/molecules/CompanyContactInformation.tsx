@@ -4,35 +4,49 @@ import { LogoCompany } from '@/common/logo-company/components/LogoCompany'
 import clsx from 'clsx'
 
 /**
- * @description Renders the company contact information section in the footer.
- * @public
- * @interface CompanyContactInformationProps
- * @param {object} props - Component properties.
- * @param {CompanyContactInformationProps['url']} props.url - The URL for the company logo image.
- * @param {CompanyContactInformationProps['contactInformation'][number]['text']} props.text - The display text for the contact.
- * @param {CompanyContactInformationProps['contactInformation'][number]['href']} props.href - The URL the contact information item.
- * @param {CompanyContactInformationProps['contactInformation'][number]['type']} props.type - The type of contact.
- * @param {CompanyContactInformationProps['contactInformation'][number]['icon']} props.icon - The icon associated with the contact.
- * @param {CompanyContactInformationProps['contactInformation'][number]['id']} props.id - The unique identifier for the contact.
- * @param {CompanyContactInformationProps['contactInformation']} props.contactInformation - An array of contact information items.
- * @returns The rendered company contact information section.
+ * @description Renders a company contact information section component.
+ * @component
+ * @param {CompanyContactInformationProps} props - Component properties with url and contactInformation array.
+ * @param {string} props.url - The url value for the company logo.
+ * @param {object[]} props.contactInformation - The contact information value with text, href, type, icon and id.
+ * @param {string} props.contactInformation[].text - The text value for each contact information.
+ * @param {string} props.contactInformation[].href - The href value for each contact information.
+ * @param {string} props.contactInformation[].type - The type value for each contact information.
+ * @param {string} props.contactInformation[].icon - The icon identifier for each contact information enum.
+ * @param {number} [props.contactInformation[].id] - Optional id value for each contact information.
+ * @returns A rendered company contact information component.
  */
 export const CompanyContactInformation = ({ url, contactInformation }: CompanyContactInformationProps) => {
   return (
     <div
       className={clsx(
-        'vertical bg-midnightgreen w-full items-center gap-y-10 rounded-4xl p-7',
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-10',
+        'rounded-4xl',
+        'bg-midnightgreen',
+        'p-7',
         'm3x:gap-y-11',
-        'md:gap-y-12 md:p-9',
-        'lg:gap-y-13 lg:p-10'
+        'md:gap-y-12',
+        'md:p-9',
+        'lg:gap-y-13',
+        'lg:p-10'
       )}
     >
       <LogoCompany url={url} footer />
       <div
         className={clsx(
-          'grid w-full grid-cols-1 items-start gap-y-7',
-          'md:grid-cols-2 md:grid-rows-2 md:gap-y-10',
-          'lg:grid-cols-3 lg:gap-13'
+          'grid',
+          'grid-cols-1',
+          'w-full',
+          'items-start',
+          'gap-y-7',
+          'md:grid-cols-2',
+          'md:grid-rows-2',
+          'md:gap-y-10',
+          'lg:grid-cols-3',
+          'lg:gap-13'
         )}
       >
         {contactInformation.map((item) => (

@@ -17,8 +17,10 @@ export interface ContactEmailPayloadProps {
   email: string
   phone: string
   description: string
+  honeypot?: string
   notifications: {
     success: { description: string }
     error: { description: string }
+    rateLimit: { description: string }
   }
 }

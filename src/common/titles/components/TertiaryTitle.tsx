@@ -2,22 +2,22 @@ import type { TertiaryTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a tertiary heading (h3) with support for truncation, conditional positioning, and active states.
+ * @description Render tertiary title list item component with a title.
  * @component
- * @param {TertiaryTitleProps} props - The properties for the TertiaryTitle component.
- * @param {string} props.title - The text content to be displayed in the heading.
- * @param {string} [props.headingId] - Optional unique identifier. Defaults to the title if not provided.
- * @param {boolean} [props.changePosition=false] - If true, centers the title on mobile/tablet views.
- * @param {boolean} [props.truncate=true] - If true, applies overflow truncation to the text.
- * @param {boolean} [props.isActive=false] - If true, changes the text color to primary; otherwise uses secondary.
- * @returns A container div wrapping a styled h3 element.
+ * @param {TertiaryTitleProps} props - Component properties with title, changePosition, truncate and isActive optional.
+ * @param {string} props.title - The title value for the tertiary title.
+ * @param {boolean} [props.changePosition=false] - Optional flag to change text position.
+ * @param {boolean} [props.truncate=true] - Optional flag to truncate text.
+ * @param {boolean} [props.isActive=false] - Optional flag to change text color to primary.
+ * @param {boolean} [props.changeWidth=false] - Optional flag to change text width.
+ * @returns Render tertiary title list item component with a title.
  */
 export const TertiaryTitle = ({
   title,
-  headingId,
   changePosition = false,
   truncate = true,
   isActive = false,
+  changeWidth = false,
 }: TertiaryTitleProps) => {
   return (
     <div
@@ -25,21 +25,25 @@ export const TertiaryTitle = ({
         'horizontal',
         'w-full',
         changePosition ? 'justify-center' : 'justify-start',
-        'lg:justify-start'
+        changeWidth && ['xl:max-w-64'],
+        'md:justify-start'
       )}
     >
       <h3
-        id={headingId ?? title}
         className={clsx(
           'font-semibold',
-          isActive ? 'text-primary' : 'text-secondary',
-          truncate && 'truncate',
           'text-[1.0625rem]',
+          'leading-6.5',
+          truncate && 'truncate',
+          isActive ? 'text-primary' : 'text-secondary',
           'm1x:text-lg',
+          'm1x:leading-7',
           'md:text-[1.1875rem]',
+          'md:leading-7.5',
           'lg:text-xl',
-          '3xl:text-[1.3125rem]',
-          '5xl:text-2xl'
+          'lg:leading-8',
+          'xl:text-[1.1875rem]',
+          'xl:leading-7.5'
         )}
       >
         {title}

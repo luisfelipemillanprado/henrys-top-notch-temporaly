@@ -4,17 +4,17 @@ import { ReusableButton } from '@/common/call-to-action/components/ReusableButto
 import clsx from 'clsx'
 
 /**
- * @description Renders the main action buttons and highlight for the hero section of the home page.
- * @public
+ * @description Renders the primary action cluster in the hero section, combining CTA buttons and a text highlight.
+ * @component
  * @param {object} props - Component properties.
- * @param {object} props.primaryCta - Configuration for the primary call-to-action button with text and href.
- * @param {string} props.primaryCta.text - Text for the primary call-to-action button.
- * @param {string} props.primaryCta.href - URL for the primary call-to-action button.
- * @param {object} props.secondaryCta - Configuration for the secondary call-to-action button with text and href.
- * @param {string} props.secondaryCta.text - Text for the secondary call-to-action button.
- * @param {string} props.secondaryCta.href - URL for the secondary call-to-action button.
- * @param {string[]} props.highlight - Array of strings for the highlighted action text.
- * @returns Rendering the call-to-action buttons and highlight.
+ * @param {object} props.primaryCta - Configuration for the primary CTA button.
+ * @param {string} props.primaryCta.text - The text displayed on the primary call-to-action button.
+ * @param {string} props.primaryCta.href - The URL that the primary call-to-action button links to.
+ * @param {object} props.secondaryCta - Configuration for the secondary CTA button.
+ * @param {string} props.secondaryCta.text - The text displayed on the secondary call-to-action button.
+ * @param {string} props.secondaryCta.href - The URL that the secondary call-to-action button links to.
+ * @param {string[]} props.highlight - An array of localized strings used for the action highlight.
+ * @returns A responsive action row with both buttons and the highlight label.
  */
 export const MainActions = ({
   primaryCta,
@@ -34,7 +34,12 @@ export const MainActions = ({
   return (
     <div
       className={clsx(
-        'horizontal relative mt-5 justify-center gap-x-4 pb-4.5',
+        'horizontal',
+        'relative',
+        'justify-center',
+        'mt-4.5',
+        'pb-5',
+        'gap-x-4',
         'm1x:gap-x-5',
         'm3x:gap-x-6',
         'md:justify-start',

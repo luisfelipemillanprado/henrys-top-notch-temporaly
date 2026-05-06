@@ -1,11 +1,10 @@
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for a key benefit item.
- * @export
+ * @description Defines props for individual benefit chips/items.
  * @interface BenefitProps
- * @property {string} text - The text description of the key benefit item.
- * @property {number} [id] - The optional unique identifier of the key benefit item.
+ * @property {string} text - Benefit description text.
+ * @property {number} [id] - Optional stable render key.
  */
 export interface BenefitProps {
   text: string

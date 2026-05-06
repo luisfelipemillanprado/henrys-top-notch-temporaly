@@ -1,26 +1,24 @@
 /* ------------------------------------------------ INTERFACES-PROPS -------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the Direct Line contact section.
- * @export
+ * @description Defines the floating direct contact links payload.
  * @interface DirectLineProps
- * @property {{ href: string; icon: string }[]} directLine - An array of objects, each containing a URL and an icon.
- * @property {string} directLine[].href - The URL that the Direct Line contact section points to.
- * @property {string} directLine[].icon - The icon identifier for the Direct Line contact section.
+ * @property {{ href: string; icon: string }[]} directLine - Ordered list of direct contact actions.
+ * @property {string} directLine[].href - Destination URL for each action (tel, whatsapp, etc.).
+ * @property {string} directLine[].icon - Icon key used by the direct-line icon switch.
  */
 export interface DirectLineProps {
   directLine: { href: string; icon: string }[]
 }
 
 /**
- * @description Represents the properties for an individual Line contact section.
- * @export
+ * @description Defines props for a single floating contact action.
  * @interface LineProps
- * @property {string} href - The URL that the Line contact section points to.
- * @property {string} icon - The icon identifier for the Line contact section.
- * @property {boolean} [firstColor] - An optional flag to apply the first color scheme.
- * @property {boolean} [forthColor] - An optional flag to apply the fourth color scheme.
- * @property {boolean} [changeBackground] - An optional flag to toggle background color change.
+ * @property {string} href - Destination URL for the action.
+ * @property {string} icon - Icon key rendered in the action button.
+ * @property {boolean} [firstColor] - Enables the first color variant.
+ * @property {boolean} [forthColor] - Enables the fourth color variant.
+ * @property {boolean} [changeBackground] - Enables alternate background styles.
  */
 export interface LineProps {
   href: string

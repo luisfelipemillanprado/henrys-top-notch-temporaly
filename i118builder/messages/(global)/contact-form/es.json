@@ -22,6 +22,9 @@
     },
     "error": {
       "description": "No se pudo enviar la solicitud. Por favor intente de nuevo más tarde."
+    },
+    "rateLimit": {
+      "description": "Ha alcanzado el límite de envíos. Por favor intente de nuevo en unos minutos."
     }
   }
 }

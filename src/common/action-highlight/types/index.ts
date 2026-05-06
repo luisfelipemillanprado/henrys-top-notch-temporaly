@@ -1,12 +1,11 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Defines the properties for the ActionHighlight component.
- * @export
+ * @description Defines props for two-line action highlight labels.
  * @interface ActionHighlightProps
- * @property {string} firstText - The primary (first) text line to display in the ActionHighlight component.
- * @property {string} secondText - The secondary (second) text line to display in the ActionHighlight component.
- * @property {boolean} [firstChangePosition] - Applies styles for the first positioning variant.
+ * @property {string} firstText - Primary text line.
+ * @property {string} secondText - Secondary text line.
+ * @property {boolean} [firstChangePosition] - Enables alternate positioning styles.
  */
 export interface ActionHighlightProps {
   firstText: string

@@ -1,11 +1,10 @@
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the LogoCompany component.
- * @export
+ * @description Defines props for company logo renderers.
  * @interface LogoCompanyProps
- * @property {string} url - The URL of the company logo image.
- * @property {boolean} [footer] - Optional flag to indicate if the logo is used in the footer.
+ * @property {string} url - Company logo image URL.
+ * @property {boolean} [footer] - Enables footer-specific visual styles.
  */
 export interface LogoCompanyProps {
   url: string

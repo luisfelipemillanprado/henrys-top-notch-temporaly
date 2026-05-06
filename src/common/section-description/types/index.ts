@@ -1,9 +1,10 @@
+/* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
+
 /**
- * @description Represents the properties for the section description components.
- * @export
+ * @description Defines props for section-level description text components.
  * @interface SectionDescriptionProps
- * @property {string} description - The text content to be displayed in the section description.
- * @property {boolean} [changeWidth] - Optional flag to indicate if the width of the description should be changed.
+ * @property {string} description - Description text content.
+ * @property {boolean} [changeWidth] - Enables alternate width constraints.
  */
 export interface SectionDescriptionProps {
   description: string

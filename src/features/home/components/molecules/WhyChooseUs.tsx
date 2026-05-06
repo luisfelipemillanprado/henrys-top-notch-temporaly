@@ -5,26 +5,28 @@ import { Reasons } from '@/features/home/components/atoms/Reasons'
 import clsx from 'clsx'
 
 /**
- * @description Renders the "Why Choose Us" component.
- * @public
+ * @description Renders the "Why Choose Us" section content with lead visual, header, reasons list, and CTA.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.title - The title of the section.
- * @param {string} props.description - The description of the section.
- * @param {string} props.eyebrow - The eyebrow text of the section.
- * @param {string} props.image - The image URL of the section.
- * @param {object} props.primaryCta - The primary call-to-action button properties.
- * @param {string} props.primaryCta.text - The text of the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL of the primary call-to-action button.
- * @param {Array} props.reasons - The reasons for choosing us.
- * @param {string} props.reasons.affirmation - The affirmation text of the reason.
- * @param {string} props.reasons.resume - The resume text of the reason.
- * @param {number} props.reasons.id - The unique identifier of the reason.
- * @returns The rendered "Why Choose Us" component.
+ * @param {string} props.title - Section heading text.
+ * @param {string} props.description - Section description text.
+ * @param {string} props.eyebrow - Eyebrow/overline label text.
+ * @param {string} props.titleId - Deterministic heading id.
+ * @param {string} props.image - Lead visual image URL.
+ * @param {object} props.primaryCta - Primary action configuration.
+ * @param {string} props.primaryCta.text - Primary button label text.
+ * @param {string} props.primaryCta.href - Primary button destination URL.
+ * @param {array} props.reasons - Reason entries rendered in the reasons list.
+ * @param {string} props.reasons[].affirmation - Benefit highlight text.
+ * @param {string} props.reasons[].resume - Benefit descriptive text.
+ * @param {number} props.reasons[].id - Reason unique identifier.
+ * @returns A responsive layout with section header, reasons grid, and CTA.
  */
 export const WhyChooseUs = ({
   title,
   description,
   eyebrow,
+  titleId,
   image,
   primaryCta,
   reasons,
@@ -32,6 +34,7 @@ export const WhyChooseUs = ({
   title: string
   description: string
   eyebrow: string
+  titleId: string
   image: string
   primaryCta: {
     text: string
@@ -46,29 +49,35 @@ export const WhyChooseUs = ({
   return (
     <div
       className={clsx(
-        'vertical w-full items-center gap-y-8',
-        'm3x:gap-y-8.75',
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-8',
+        'm3x:gap-y-9',
         'md:gap-y-11',
         'lg:gap-y-12'
       )}
     >
       <LeadVisual image={image} changeBackground={true} />
-      <div className={clsx('vertical w-full gap-y-8.5', 'm1x:gap-y-9', 'md:gap-y-11', 'lg:gap-y-12')}>
+      <div className={clsx('vertical', 'w-full', 'gap-y-8.5', 'm1x:gap-y-9', 'md:gap-y-11', 'lg:gap-y-12')}>
         <div
           className={clsx(
-            'vertical w-full items-center gap-y-8',
-            'm1x:gap-y-8.75',
-            'm3x:gap-y-9.5',
-            'md:bg-off-white md:border-electric-blue/30 md:items-start md:rounded-3xl md:border md:p-8 md:shadow-md',
+            'vertical',
+            'w-full',
+            'items-center',
+            'gap-y-7',
+            'm1x:gap-y-8',
+            'md:items-start',
+            'md:bg-off-white',
+            'md:border',
+            'md:border-electric-blue/30',
+            'md:rounded-3xl',
+            'md:shadow-md',
+            'md:p-8',
             'lg:p-10'
           )}
         >
-          <SectionHeader
-            title={title}
-            description={description}
-            eyebrow={eyebrow}
-            titleId={'home-why-choose-us-title'}
-          />
+          <SectionHeader title={title} description={description} eyebrow={eyebrow} titleId={titleId} />
           <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />
         </div>
         <Reasons reasons={reasons} />

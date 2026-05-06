@@ -6,12 +6,14 @@
  * @property {string} email - The sender's email address (from the contact form).
  * @property {string} phone - The sender's phone number (from the contact form).
  * @property {string} description - The message or description provided by the sender.
+ * @property {string} [honeypot] - Hidden anti-bot field; legitimate clients always leave it empty.
  */
 export interface ContactEmailProps {
   name: string
   email: string
   phone: string
   description: string
+  honeypot?: string
 }
 
 /**

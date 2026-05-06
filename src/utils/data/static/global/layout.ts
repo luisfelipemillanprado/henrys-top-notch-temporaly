@@ -10,20 +10,17 @@
  */
 export const layoutAssets = {
   navigationBar: {
+    menuOptionsId: 'options-menu',
     logo: { url: '/images/logo-company/logo-company.webp' },
     getStartedButtonHref: { href: '#contact-us' },
     links: [
       { key: 'home', href: '/', icon: 'home', id: 15 },
-      // Map "about-us" to the existing section that represents the company summary.
       { key: 'aboutUs', href: '#about-us', icon: 'about-us', id: 16 },
       { key: 'services', href: '#services', icon: 'services', id: 17 },
-      // No dedicated "areas" section exists yet; the contact form is the closest UX fit.
       { key: 'areas', href: '#contact-us', icon: 'areas', id: 18 },
       { key: 'process', href: '#process', icon: 'process', id: 19 },
       { key: 'reviews', href: '#testimonials', icon: 'reviews', id: 20 },
-      // No dedicated "offers" section exists yet; reuse the services section for now.
       { key: 'offers', href: '#services', icon: 'offers', id: 21 },
-      // No dedicated "blogs" section exists yet; reuse testimonials content as a stand-in.
       { key: 'blogs', href: '#testimonials', icon: 'blogs', id: 22 },
     ],
   },
@@ -36,6 +33,7 @@ export const layoutAssets = {
     problemDescription: { key: 'problemDescription', charactersLimit: 400 },
   },
   footer: {
+    sectionId: 'footer',
     logo: { url: '/images/logo-company/logo-company.webp' },
     copyright: { key: 'copyright', year: new Date().getFullYear() },
     contactInformation: [

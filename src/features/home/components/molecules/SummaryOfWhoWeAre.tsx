@@ -5,25 +5,27 @@ import { BookingBenefits } from '@/features/home/components/molecules/BookingBen
 import clsx from 'clsx'
 
 /**
- * @description Renders a component that presents a summary of who we are.
- * @public
+ * @description Renders the "who we are" summary block with header, benefits, and CTA.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.title - The title of the section.
- * @param {string} props.description - The description of the section.
- * @param {string} props.eyebrow - A brief text displayed above the title, often used to categorize the section.
- * @param {object} props.primaryCta - An object containing the text and href for the primary call-to-action button.
- * @param {string} props.primaryCta.text - The text to display on the primary call-to-action button.
- * @param {string} props.primaryCta.href - The URL to navigate to when the primary call-to-action button is clicked.
- * @param {string} props.image - The URL of the image representing who we are.
- * @param {object[]} props.benefits - An array of key benefits associated with who we are.
- * @param {string} props.benefits[].text - Text describing an individual key benefit.
- * @param {number} props.benefits[].id - Unique identifier for the key benefit item.
- * @returns The rendered summary of who we are component.
+ * @param {string} props.title - Section heading text.
+ * @param {string} props.description - Section description text.
+ * @param {string} props.eyebrow - Eyebrow/overline label text.
+ * @param {string} props.titleId - Deterministic heading id used by accessibility attributes.
+ * @param {object} props.primaryCta - Primary action configuration.
+ * @param {string} props.primaryCta.text - Primary button text label.
+ * @param {string} props.primaryCta.href - Primary button destination URL.
+ * @param {string} props.image - Lead visual image URL.
+ * @param {array} props.benefits - Benefit entries rendered below the header.
+ * @param {string} props.benefits[].text - Benefit description label.
+ * @param {number} props.benefits[].id - Benefit unique identifier.
+ * @returns A responsive summary layout combining visual, benefits, and CTA content.
  */
 export const SummaryOfWhoWeAre = ({
   title,
   description,
   eyebrow,
+  titleId,
   primaryCta,
   image,
   benefits,
@@ -31,6 +33,7 @@ export const SummaryOfWhoWeAre = ({
   title: string
   description: string
   eyebrow: string
+  titleId: string
   primaryCta: {
     text: string
     href: string
@@ -41,22 +44,38 @@ export const SummaryOfWhoWeAre = ({
   return (
     <div
       className={clsx(
-        'vertical w-full items-start gap-y-8',
-        'm3x:gap-y-8.75',
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-8.5',
+        'm1x:gap-y-9',
         'md:gap-y-11',
         'lg:gap-y-12',
-        'xl:horizontal xl:gap-x-8 xl:gap-y-0'
+        'xl:horizontal',
+        'xl:gap-y-0',
+        'xl:items-start',
+        'xl:gap-x-8'
       )}
     >
       <LeadVisual image={image} changeBackground={true} />
       <div
         className={clsx(
-          'vertical bg-primary border-electric-blue/30 w-full items-center gap-y-6.25 rounded-3xl border px-5 py-6 shadow-md',
-          'm1x:gap-y-6.75',
-          'm3x:gap-y-7.5',
-          'md:items-start md:gap-y-7.75 md:p-8',
+          'vertical',
+          'w-full',
+          'items-center',
+          'gap-y-6.5',
+          'px-5',
+          'py-6',
+          'bg-primary',
+          'border',
+          'border-electric-blue/30',
+          'rounded-3xl',
+          'shadow-md',
+          'm1x:gap-y-7.5',
+          'md:items-start',
+          'md:p-8',
           'lg:p-10',
-          'xl:p-9'
+          'xl:gap-y-8'
         )}
       >
         <SectionHeader
@@ -64,7 +83,7 @@ export const SummaryOfWhoWeAre = ({
           description={description}
           eyebrow={eyebrow}
           changeWidth={true}
-          titleId={'home-about-us-title'}
+          titleId={titleId}
         />
         <BookingBenefits benefits={benefits} />
         <ReusableButton text={primaryCta.text} href={primaryCta.href} endIcon={true} />

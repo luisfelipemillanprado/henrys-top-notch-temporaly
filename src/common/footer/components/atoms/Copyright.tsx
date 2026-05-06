@@ -3,18 +3,20 @@ import clsx from 'clsx'
 
 /**
  * @description Renders the copyright information in the footer.
- * @public
- * @interface CopyrightProps
- * @param {object} props - Component properties.
- * @param {CopyrightProps['copyright']} props.copyright - Text representing the copyright information.
+ * @component
+ * @param {CopyrightProps} props - Component properties.
+ * @param {string} props.copyright - The copyright value.
  * @returns A container with responsive and aligned copyright text.
  */
 export const Copyright = ({ copyright }: CopyrightProps) => {
   return (
-    <div className={clsx('horizontal w-full', 'md:max-w-68 md:justify-start', 'lg:max-w-94')}>
+    <div className={clsx('horizontal', 'w-full', 'md:max-w-68', 'md:justify-start', 'lg:max-w-94')}>
       <p
         className={clsx(
-          'text-primary text-center text-[1.0625rem] leading-7.5',
+          'text-center',
+          'text-primary',
+          'text-[1.0625rem]',
+          'leading-7.5',
           'm1x:text-lg leading-8',
           'md:text-start',
           '1xl:text-[1.0625rem]',

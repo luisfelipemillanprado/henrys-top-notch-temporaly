@@ -19,7 +19,8 @@ enum ContactInformationIcon {
 }
 
 const iconStyles = clsx(
-  'fill-bright-orange size-6.25',
+  'size-6.25',
+  'fill-bright-orange',
   'm1x:size-6.5',
   'm3x:size-6.75',
   'md:size-7.5',
@@ -30,10 +31,10 @@ const iconStyles = clsx(
 )
 
 /**
- * @description A utility function that maps a given icon identifier to its corresponding React component.
+ * @description Maps a given icon identifier to its corresponding React component.
  * @private
- * @param {ContactInformationItem['icon']} icon - A string identifier, icon enum.
- * @returns The resolved icon component or a fallback placeholder.
+ * @param {string} icon - The icon identifier, icon enum.
+ * @returns A rendered icon component or a fallback span.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -52,24 +53,25 @@ const iconSwitch = (icon: string) => {
 
 /**
  * @description Renders a contact information item with an associated icon, text, and link.
- * @public
- * @interface ContactInformationItem
- * @param {object} props - Component properties.
- * @param {ContactInformationItem['text']} props.text - The text to display for the contact information.
- * @param {ContactInformationItem['href']} props.href - The URL to link to when the contact information is clicked.
- * @param {ContactInformationItem['type']} props.type - The type of contact information (e.g., "email", "phone").
- * @param {ContactInformationItem['icon']} props.icon - The icon identifier for the contact information.
- * @param {ContactInformationItem['id']} props.id - The unique identifier for the contact information item.
- * @returns A link element containing the contact information.
+ * @component
+ * @param {ContactInformationItem} props - Component properties with text, href, type, icon and id optional.
+ * @param {string} props.text - The text value for the contact information.
+ * @param {string} props.href - The href value for the contact information.
+ * @param {string} props.type - The type value for the contact information.
+ * @param {string} props.icon - The icon identifier for the contact information enum.
+ * @param {number} [props.id] - Optional id value for the contact information.
+ * @returns A rendered contact information component.
  */
 export const ContactInformation = ({ text, href, type, icon }: ContactInformationItem) => {
   const content = (
     <>
       <span className={clsx('horizontal')}>{iconSwitch(icon)}</span>
-      <div className={clsx('vertical gap-y-1', 'md:gap-y-2')}>
+      <div className={clsx('vertical', 'gap-y-1', 'md:gap-y-2')}>
         <span
           className={clsx(
-            'text-primary text-[1.0625rem] font-medium',
+            'font-medium',
+            'text-primary',
+            'text-[1.0625rem]',
             'm1x:text-lg',
             '3xl:text-xl',
             '5xl:text-[1.375rem]'
@@ -79,9 +81,13 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
         </span>
         <span
           className={clsx(
-            'text-warmgray truncate text-[0.9375rem]',
+            'truncate',
+            'text-warmgray',
+            'text-[0.9375rem]',
             'md:text-base',
-            '2xl:overflow-visible 2xl:text-clip 2xl:whitespace-nowrap',
+            '2xl:overflow-visible',
+            '2xl:text-clip',
+            '2xl:whitespace-nowrap',
             '3xl:text-lg',
             '5xl:text-[1.3125rem]'
           )}
@@ -96,12 +102,12 @@ export const ContactInformation = ({ text, href, type, icon }: ContactInformatio
       href={href}
       target={'_blank'}
       rel={'noopener noreferrer'}
-      className={clsx('horizontal w-full justify-start gap-x-3')}
+      className={clsx('horizontal', 'w-full', 'justify-start', 'gap-x-3')}
       aria-label={`contact-information-${text}`}
     >
       {content}
     </Link>
   ) : (
-    <div className={clsx('horizontal w-full justify-start gap-x-3')}>{content}</div>
+    <div className={clsx('horizontal', 'w-full', 'justify-start', 'gap-x-3')}>{content}</div>
   )
 }

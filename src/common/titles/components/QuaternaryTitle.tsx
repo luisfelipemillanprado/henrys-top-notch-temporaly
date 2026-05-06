@@ -2,32 +2,36 @@ import type { QuaternaryTitleProps } from '@/common/titles/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a quaternary heading (h4) with options for text truncation and alignment.
+ * @description Render quaternary title list item component with a title.
  * @component
- * @param {QuaternaryTitleProps} props - The properties for the QuaternaryTitle component.
- * @param {string} props.title - The text content to be displayed in the heading.
- * @param {string} [props.headingId] - Optional unique identifier. Defaults to the title if not provided.
- * @param {boolean} [props.changePosition=false] - If true, centers the title within its container.
- * @param {boolean} [props.truncate=true] - If true, applies ellipsis to overflowing text.
- * @returns A container div wrapping a styled h4 element.
+ * @param {QuaternaryTitleProps} props - Component properties with title, changePosition and truncate optional.
+ * @param {string} props.title - The title value for the quaternary title.
+ * @param {boolean} [props.changePosition=false] - Optional flag to change text position.
+ * @param {boolean} [props.truncate=true] - Optional flag to truncate text.
+ * @returns Render quaternary title list item component with a title.
  */
 export const QuaternaryTitle = ({
   title,
-  headingId,
   changePosition = false,
   truncate = true,
 }: QuaternaryTitleProps) => {
   return (
     <div className={clsx('horizontal', 'w-full', changePosition ? 'justify-center' : 'justify-start')}>
       <h4
-        id={headingId ?? title}
         className={clsx(
-          'text-secondary',
+          'text-[1.0625rem]',
+          'leading-6.5',
           'font-semibold',
+          'm1x:text-lg',
+          'm1x:leading-7',
+          'text-secondary',
           truncate && 'truncate',
-          'text-lg',
-          'md:text-[1.3125rem]',
-          'lg:text-[1.375rem]'
+          'md:text-[1.1875rem]',
+          'md:leading-7.5',
+          'lg:text-xl',
+          'lg:leading-8',
+          'xl:text-[1.1875rem]',
+          'xl:leading-7.5'
         )}
       >
         {title}

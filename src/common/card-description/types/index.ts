@@ -1,21 +1,22 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the CardDescription component.
- * @export
+ * @description Defines props for text blocks rendered inside service/info/booking cards.
  * @interface CardDescriptionProps
- * @property {string} description - A brief description of a specific service in the professional services section.
- * @property {boolean} [changePosition] - An optional boolean that, when true, changes the text alignment to center.
- * @property {boolean} [changeWidth] - An optional boolean that, when true, adjusts the width of the description.
- * @property {boolean} [changeMargin] - An optional boolean that, when true, adds a bottom margin to the description.
- * @property {boolean} [changeColor] - An optional boolean that, when true, changes the text color of the description.
- * @property {boolean} [addPadding] - An optional boolean that, when true, adds padding to the description.
+ * @property {string} description - Main text content.
+ * @property {boolean} [changePosition] - Centers text alignment when true.
+ * @property {'narrow' | 'wide'} [changeWidth] - Applies a width preset (`narrow` for service/info cards, `wide` for booking cards).
+ * @property {boolean} [changeMargin] - Adds vertical margin adjustments for specific layouts.
+ * @property {boolean} [changeColor] - Switches the paragraph color to `text-secondary`.
+ * @property {boolean} [isActive] - Switches the paragraph color to `text-warmgray` (overrides `changeColor`).
+ * @property {boolean} [addPadding] - Adds extra right-side padding on selected breakpoints.
  */
 export interface CardDescriptionProps {
   description: string
   changePosition?: boolean
-  changeWidth?: boolean
+  changeWidth?: 'narrow' | 'wide'
   changeMargin?: boolean
   changeColor?: boolean
+  isActive?: boolean
   addPadding?: boolean
 }

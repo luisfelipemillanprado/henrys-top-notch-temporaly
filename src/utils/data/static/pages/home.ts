@@ -14,6 +14,8 @@
  */
 export const homeAssets = {
   hero: {
+    sectionId: 'hero',
+    headingId: 'home-hero-title',
     primaryCtaHref: '#contact-us',
     secondaryCtaHref: '/services',
     gallery: [
@@ -26,48 +28,18 @@ export const homeAssets = {
     ],
   },
   trustedAndCertified: [
-    {
-      url: '/images/trusted-certified/trusted-certified7.webp',
-      href: 'https://bcert.me/syfzztge',
-      id: 7,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified6.webp',
-      href: '/',
-      id: 8,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified8.webp',
-      href: 'https://bcert.me/sujfjotr',
-      id: 9,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified4.webp',
-      href: 'https://www.bbb.org/us/tx/houston/profile/residential-air-conditioning-contractors/ace-comfort-air-conditioning-heating-0915-90044634',
-      id: 10,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified1.webp',
-      href: 'https://www.facebook.com/HenrysTopNotch?mibextid=ZbWKwL',
-      id: 11,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified5.webp',
-      href: '/',
-      id: 12,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified3.webp',
-      href: 'https://maps.app.goo.gl/7U3YQJ93nK9Ms2999',
-      id: 13,
-    },
-    {
-      url: '/images/trusted-certified/trusted-certified2.webp',
-      href: 'https://www.yelp.com/biz/henrys-top-notch-air-conditioning-and-heating-houston-2',
-      id: 14,
-    },
+    { url: '/images/trusted-certified/trusted-certified7.webp', id: 7 },
+    { url: '/images/trusted-certified/trusted-certified6.webp', id: 8 },
+    { url: '/images/trusted-certified/trusted-certified8.webp', id: 9 },
+    { url: '/images/trusted-certified/trusted-certified4.webp', id: 10 },
+    { url: '/images/trusted-certified/trusted-certified1.webp', id: 11 },
+    { url: '/images/trusted-certified/trusted-certified5.webp', id: 12 },
+    { url: '/images/trusted-certified/trusted-certified3.webp', id: 13 },
+    { url: '/images/trusted-certified/trusted-certified2.webp', id: 14 },
   ],
   whoWeAre: {
+    sectionId: 'about-us',
+    headingId: 'home-about-us-title',
     image: '/images/about-company/about-company.webp',
     primaryCtaHref: '/about-us',
     benefits: [
@@ -80,6 +52,8 @@ export const homeAssets = {
     ],
   },
   bookingProcess: {
+    sectionId: 'process',
+    headingId: 'home-process-title',
     image: '/images/booking-process/booking-process1.webp',
     primaryCtaHref: '/about-us',
     features: [
@@ -96,6 +70,8 @@ export const homeAssets = {
     ],
   },
   professionalServices: {
+    sectionId: 'services',
+    headingId: 'home-services-title',
     primaryCtaHref: '/services',
     services: [
       {
@@ -157,6 +133,8 @@ export const homeAssets = {
     ],
   },
   whyChooseUs: {
+    sectionId: 'why-choose-us',
+    headingId: 'home-why-choose-us-title',
     image: '/images/why-choose-us/why-choose-us.webp',
     primaryCtaHref: '/about-us',
     reasons: [
@@ -167,6 +145,8 @@ export const homeAssets = {
     ],
   },
   customerTestimonials: {
+    sectionId: 'testimonials',
+    headingId: 'home-testimonials-title',
     primaryCtaHref: 'https://maps.app.goo.gl/PJM12ME267TwtviD7',
     image: '/images/customer-testimonials/customer-testimonials.webp',
     testimonials: [
@@ -227,6 +207,8 @@ export const homeAssets = {
     ],
   },
   contactUs: {
+    sectionId: 'contact-us',
+    headingId: 'home-contact-us-title',
     image: '/images/contact-us/contact-us.webp',
     primaryCtaHref: '#contact-us',
   },

@@ -4,24 +4,29 @@ import type { LegalInformationProps } from '@/common/footer/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders the legal information section in the footer.
- * @public
- * @interface LegalInformationProps
- * @param {object} props - Component properties.
- * @param {LegalInformationProps['copyright']} props.copyright - The copyright information to be displayed in the footer.
- * @param {LegalInformationProps['socialNetworks']} props.socialNetworks - An array of social network items to be displayed.
- * @param {LegalInformationProps['socialNetworks'][number]['href']} props.socialNetworks.href - The URL the social network item.
- * @param {LegalInformationProps['socialNetworks'][number]['icon']} props.socialNetworks.icon - The icon associated with the.
- * @param {LegalInformationProps['socialNetworks'][number]['name']} props.socialNetworks.name - The name of the social network.
- * @param {LegalInformationProps['socialNetworks'][number]['id']} props.socialNetworks.id - The unique identifier for the social.
- * @returns The rendered legal information section.
+ * @description Renders a legal information component.
+ * @component
+ * @param {LegalInformationProps} props - Component properties with copyright and socialNetworks array.
+ * @param {string} props.copyright - The copyright value.
+ * @param {object[]} props.socialNetworks - The social networks value with href, icon, name and id for each social network.
+ * @param {string} props.socialNetworks[].href - The href value for each social network.
+ * @param {string} props.socialNetworks[].icon - The icon identifier for each social network enum.
+ * @param {string} props.socialNetworks[].name - The name value for each social network.
+ * @param {number} props.socialNetworks[].id - The id value for each social network.
+ * @returns A rendered legal information component.
  */
 export const OurLegalInformation = ({ copyright, socialNetworks }: LegalInformationProps) => {
   return (
     <div
       className={clsx(
-        'border-pale-yellow/20 vertical w-full gap-y-7 border-t py-8',
-        'md:horizontal md:justify-between'
+        'vertical',
+        'w-full',
+        'gap-y-7',
+        'border-t',
+        'border-pale-yellow/20',
+        'py-8',
+        'md:horizontal',
+        'md:justify-between'
       )}
     >
       <Copyright copyright={copyright} />

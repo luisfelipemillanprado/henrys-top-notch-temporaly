@@ -1,11 +1,10 @@
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for a lead avatar item.
- * @export
+ * @description Defines props for a lead/avatar image element.
  * @interface LeadAvatarProps
- * @property {string} url - The URL of the lead avatar image to be displayed.
- * @property {boolean} [background=false] - Optional flag to determine if a background color should be applied to the avatar.
+ * @property {string} url - Image source URL.
+ * @property {boolean} [background=false] - Enables background styling for the avatar container.
  */
 export interface LeadAvatarProps {
   url: string

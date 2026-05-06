@@ -2,17 +2,17 @@ import { BookingFeature } from '@/features/home/components/atoms/BookingFeature'
 import clsx from 'clsx'
 
 /**
- * @description Renders a component that displays a list of booking features.
- * @public
+ * @description Renders a responsive grid of booking feature cards with adaptive layouts across breakpoints.
+ * @component
  * @param {object} props - Component properties.
- * @param {Array} props.features - An array of feature objects, each containing an icon, title, description, and id.
- * @param {Array} props.features[].icon - The URL of the feature icon.
- * @param {Array} props.features[].title - The title of the feature.
- * @param {Array} props.features[].description - A brief description of the feature.
- * @param {Array} props.features[].href - The URL that the feature links to for more details.
- * @param {Array} props.features[].text - The text displayed for the feature's call-to-action.
- * @param {Array} props.features[].id - A unique identifier for the feature.
- * @returns A JSX element representing the booking features.
+ * @param {object[]} props.features - Array of feature entry objects.
+ * @param {string} props.features[].icon - Icon identifier.
+ * @param {string} props.features[].title - Feature title.
+ * @param {string} props.features[].description - Feature description.
+ * @param {string} props.features[].href - Feature link destination.
+ * @param {string} props.features[].text - Feature link text label.
+ * @param {number} props.features[].id - Unique numeric key.
+ * @returns A responsive grid container with mapped BookingFeature components.
  */
 export const BookingFeatures = ({
   features,
@@ -22,11 +22,22 @@ export const BookingFeatures = ({
   return (
     <div
       className={clsx(
-        'grid w-full grid-cols-1 grid-rows-3 gap-y-8',
-        'm3x:gap-y-7.75',
-        'md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-11',
-        'lg:gap-x-9 lg:gap-y-12',
-        'xl:grid-cols-1 xl:grid-rows-3 xl:gap-x-0'
+        'grid',
+        'grid-cols-1',
+        'grid-rows-3',
+        'w-full',
+        'gap-y-8.5',
+        'm1x:gap-y-9',
+        'md:grid-cols-2',
+        'md:grid-rows-2',
+        'md:gap-x-8',
+        'md:gap-y-11',
+        'lg:gap-x-9',
+        'lg:gap-y-12',
+        'xl:grid-cols-1',
+        'xl:grid-rows-3',
+        'xl:gap-x-0',
+        'xl:gap-y-8'
       )}
     >
       {features.map((item, index) => (

@@ -35,13 +35,13 @@ enum NavigationLinkIcon {
   BLOGS = 'blogs',
 }
 
-const iconStyles = clsx('fill-bright-orange size-7.25', 'm1x:size-7.5', 'm3x:size-7.75', 'md:size-8.25')
+const iconStyles = clsx('size-7.25', 'fill-bright-orange', 'm1x:size-7.5', 'm3x:size-7.75', 'md:size-8.25')
 
 /**
  * @description A utility function that maps a given icon identifier to its corresponding React component.
  * @private
- * @param {NavigationBarLinkItem['icon']} icon - A string identifier, icon enum.
- * @returns The resolved icon component or a fallback placeholder.
+ * @param {string} props.icon - A string identifier, icon enum.
+ * @returns A resolved icon component or a fallback placeholder.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -68,39 +68,59 @@ const iconSwitch = (icon: string) => {
 
 /**
  * @description Renders a single navigation link item within the navigation bar.
- * @public
- * @interface NavigationBarLinkItem
- * @param {object} props Component properties.
- * @param {NavigationBarLinkItem['text']} props.text - The display text for the navigation link.
- * @param {NavigationBarLinkItem['href']} props.href - The URL the navigation link points to.
- * @param {NavigationBarLinkItem['icon']} props.icon - The icon associated with the navigation link.
- * @param {NavigationBarLinkItem['id']} props.id - The unique identifier for the navigation link item.
- * @param {NavigationBarLinkItem['handleCloseOptions']} [props.handleCloseOptions] - Optional function to handle closing.
- * @returns The rendered navigation link component.
+ * @component
+ * @param {NavigationBarLinkItem} props - Component properties.
+ * @param {string} props.text - The navigation item label.
+ * @param {string} props.href - The navigation item destination URL.
+ * @param {string} props.icon - The icon identifier used for the navigation item.
+ * @param {number} props.id - The navigation item identifier.
+ * @param {() => void} [props.handleCloseOptions] - Optional function to handle closing.
+ * @returns A rendered navigation link component.
  */
 export const NavigationLink = ({ text, href, icon, handleCloseOptions }: NavigationBarLinkItem) => {
   return (
-    <li className={clsx('horizontal w-full', 'lg:w-auto')}>
+    <li className={clsx('horizontal', 'w-full', 'lg:w-auto')}>
       <Link
-        className={clsx('horizontal w-full justify-center')}
+        className={clsx('horizontal', 'w-full', 'justify-center')}
         href={href}
         title={text}
         onClick={handleCloseOptions}
       >
         <div
           className={clsx(
-            'bg-irongray vertical w-full items-center gap-y-2 rounded-2xl p-3.5',
-            'm3x:gap-y-2.75',
-            'md:gap-y-2.5 md:px-4 md:py-4.5',
-            'lg:horizontal lg:bg-transparent lg:p-0'
+            'vertical',
+            'w-full',
+            'items-center',
+            'rounded-2xl',
+            'bg-irongray',
+            'gap-y-1',
+            'pt-4',
+            'pb-2',
+            'px-3',
+            'm3x:gap-y-1.5',
+            'md:gap-y-2.25',
+            'md:px-6',
+            'md:pt-6',
+            'md:pb-4',
+            'lg:horizontal',
+            'lg:bg-transparent',
+            'lg:p-0'
           )}
         >
           <span className={clsx('horizontal', 'lg:hidden')}>{iconSwitch(icon)}</span>
           <span
             className={clsx(
-              'text-primary w-full truncate overflow-hidden text-center text-[0.9375rem]',
+              'w-full',
+              'truncate',
+              'overflow-hidden',
+              'text-center',
+              'text-primary',
+              'text-[0.9375rem]',
+              'leading-7',
               'm1x:text-base',
-              'md:text-lg',
+              'm1x:leading-7.5',
+              'md:text-[1.0625rem]',
+              'md:leading-8',
               'lg:text-[1.0625rem]',
               '1xl:text-lg',
               '3xl:text-[1.1875rem]',

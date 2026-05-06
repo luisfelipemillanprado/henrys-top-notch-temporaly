@@ -21,7 +21,9 @@ enum TextInputFieldIcon {
 }
 
 const iconStyles = clsx(
-  'fill-bright-orange animate-tada size-6',
+  'size-6',
+  'animate-tada',
+  'fill-bright-orange',
   'm1x:size-6.25',
   'm3x:size-6.5',
   'md:size-6.75',
@@ -35,8 +37,8 @@ const iconStyles = clsx(
 /**
  * @description Maps a given icon identifier to its corresponding icon component for each text input field.
  * @private
- * @param {string} icon - The TextInputFieldIcon string identifier, icon enum.
- * @returns {JSX.Element} A rendering the icon, or a fallback span if unknown.
+ * @param {string} props.icon - The TextInputFieldIcon string identifier, icon enum.
+ * @returns A rendering of the icon, or a fallback span if unknown.
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
@@ -54,7 +56,7 @@ const iconSwitch = (icon: string) => {
 /**
  * @description Selects the appropriate validation function based on the type of input field.
  * @private
- * @param {string} type - The TextInputFieldIcon string identifier, icon enum.
+ * @param {string} props.type - The TextInputFieldIcon string identifier, icon enum.
  * @return {function} The validation function corresponding to the input type, or undefined if unknown.
  */
 const validatorSwitch = (type: string) => {
@@ -70,16 +72,16 @@ const validatorSwitch = (type: string) => {
 
 /**
  * @description Renders a reusable validated text input field with label, suffix icon, and error handling for forms.
- * @public
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.name - Field name passed to the form controller.
- * @param {string} props.label - Visible label text displayed above the input.
- * @param {string} props.placeholder - Placeholder text shown inside the input.
- * @param {string} props.type - Input type (`text`, `email`, etc.), controls validation logic.
- * @param {string} props.icon - Icon identifier string, determines which icon to render in the input suffix.
- * @param {string} props.value - Current value of the input field, controlled by parent component.
- * @param {function} props.onChange - Callback function invoked with new value when input changes.
- * @returns {JSX.Element} A labeled, validated text input with a suffix icon.
+ * @param {string} props.name - The field name attribute.
+ * @param {string} props.label - The visible field label.
+ * @param {string} props.placeholder - The input placeholder text.
+ * @param {string} props.type - The input type identifier.
+ * @param {string} props.icon - The icon identifier rendered in the suffix.
+ * @param {string} props.value - The current input value.
+ * @param {(value: string) => void} props.onChange - Handles value updates from the input field.
+ * @returns A labeled, validated text input with a suffix icon.
  */
 export const TextInputField = ({
   name,

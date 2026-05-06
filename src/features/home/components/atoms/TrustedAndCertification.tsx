@@ -1,40 +1,35 @@
 import { blurDataUrlCertified } from '@/utils/blurs/BlurDataUrl'
 import clsx from 'clsx'
 import Image from 'next/image'
-import Link from 'next/link'
 
 /**
- * @description Renders a trusted certification icon that links to a specified URL.
- * @public
+ * @description Renders an optimized certification badge or partner logo with a blur placeholder.
+ * @component
  * @param {object} props - Component properties.
- * @param {string} props.url - A string identifier that determines which icon is rendered.
- * @param {string} props.href - The URL that the trusted and certified item points to when clicked.
- * @returns A centered icon element wrapped in semantic containers.
+ * @param {string} props.url - Source URL for the certification image.
+ * @returns Returns a responsive badge container wrapping an optimized certification image.
  */
-export const TrustedAndCertification = (props: { url: string; href: string }) => {
-  const { url, href } = props
+export const TrustedAndCertification = ({ url }: { url: string }) => {
   return (
-    <Link
-      href={href}
+    <div
       className={clsx(
-        'horizontal relative items-center',
-        'size-[clamp(4.125rem,calc(4.125rem+(100vw-23.4375rem)*0.154),4.75rem)]',
-        'md:size-18',
-        'lg:size-18.5'
+        'horizontal',
+        'relative',
+        'size-[clamp(4.125rem,13.33vw+1rem,4.75rem)]',
+        'items-center',
+        'md:size-[clamp(4.5rem,7.5vw,4.75rem)]',
+        'lg:size-19.5'
       )}
-      target={'_blank'}
-      rel={'noopener noreferrer'}
-      aria-label={'Link to trusted or certified item'}
     >
       <Image
-        className={clsx('size-full object-contain')}
+        className={clsx('size-full', 'object-contain')}
         fill
-        sizes={''}
+        sizes={'80px'}
         src={url}
         placeholder={'blur'}
         blurDataURL={blurDataUrlCertified}
         alt={'Trusted certification'}
       />
-    </Link>
+    </div>
   )
 }

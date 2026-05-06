@@ -1,13 +1,14 @@
 /* ------------------------------------------------- INTERFACES-PROPS ---------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the LeadVisual component.
- * @export
+ * @description Defines props for lead visual image blocks.
  * @interface LeadVisualProps
- * @property {string} image - The URL of the lead avatar image to be displayed.
- * @property {boolean} [changeBackground] - An optional boolean that indicates whether to change the background color.
+ * @property {string} image - Lead image source URL.
+ * @property {boolean} [changeBackground] - Enables alternate background styling.
+ * @property {boolean} [changeWidth] - Enables alternate width styling.
  */
 export interface LeadVisualProps {
   image: string
   changeBackground?: boolean
+  changeWidth?: boolean
 }

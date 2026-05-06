@@ -1,42 +1,39 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the ServiceImage component.
- * @export
+ * @description Defines props for service preview images.
  * @interface ServiceImageProps
- * @property {string} url - The URL of the image representing a specific service.
+ * @property {string} url - Service image URL.
  */
 export interface ServiceImageProps {
   url: string
 }
 
 /**
- * @description Represents the properties for the ServiceBenefits component.
- * @export
+ * @description Defines props for service benefit lists.
  * @interface ServiceBenefitsProps
- * @property {Array} benefits - An array of benefit objects, each containing text and id, representing the key benefits.
- * @property {string} benefits.text - The text description of a key benefit item for a specific service.
- * @property {number} benefits.id - A unique identifier for each key benefit item for a specific service.
+ * @property {{ text: string; id: number }[]} benefits - Benefit entries rendered for the service.
+ * @property {string} benefits.text - Benefit description text.
+ * @property {number} benefits.id - Stable key for each benefit item.
  */
 export interface ServiceBenefitsProps {
   benefits: { text: string; id: number }[]
 }
 
 /**
- * @description Represents the properties for the ProfessionalService component.
- * @export
+ * @description Defines the full payload for a professional-service card.
  * @interface ProfessionalServiceProps
- * @property {string} url - The URL of the image representing a specific service in the professional services section.
- * @property {string} title - The title describing a specific service in the professional services section.
- * @property {{ id: number }[]} stars - An array of objects representing the star rating for a specific service.
- * @property {number} stars.id - A unique identifier for each star in the star rating of a specific service.
- * @property {string} description - A brief description of a specific service in the professional services section.
- * @property {Array} benefits - An array of benefit objects, each containing text and id, representing the key benefits.
- * @property {string} benefits.text - The text description of a key benefit item for a specific service.
- * @property {number} benefits.id - A unique identifier for each key benefit item for a specific service.
- * @property {object} secondaryCta - An object containing the text and href for the secondary call-to-action button.
- * @property {string} secondaryCta.text - The text of the secondary call-to-action button related to a specific service.
- * @property {string} secondaryCta.href - The URL of the secondary call-to-action button related to a specific service.
+ * @property {string} url - Service image URL.
+ * @property {string} title - Service title.
+ * @property {{ id: number }[]} stars - Rating star entries.
+ * @property {number} stars.id - Stable key for each star.
+ * @property {string} description - Service description.
+ * @property {{ text: string; id: number }[]} benefits - Benefit list.
+ * @property {string} benefits.text - Benefit description text.
+ * @property {number} benefits.id - Stable key for each benefit.
+ * @property {{ text: string; href: string }} secondaryCta - Secondary action configuration.
+ * @property {string} secondaryCta.text - Secondary button label.
+ * @property {string} secondaryCta.href - Secondary button destination.
  */
 export interface ProfessionalServiceProps {
   url: string

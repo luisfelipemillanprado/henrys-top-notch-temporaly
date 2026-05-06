@@ -2,49 +2,62 @@ import type { CardDescriptionProps } from '@/common/card-description/types'
 import clsx from 'clsx'
 
 /**
- * @description Renders a component used to render short descriptive content within cards.
- * @public
- * @interface CardDescriptionProps
- * @param {object} props - Component properties.
- * @param {CardDescriptionProps['description']} props.description - Text content rendered inside the description.
- * @param {CardDescriptionProps['changePosition']} [props.changePosition] - An optional boolean that, when true, changes.
- * @param {CardDescriptionProps['changeWidth']} [props.changeWidth] - An optional boolean that, when true, adjusts the width.
- * @param {CardDescriptionProps['changeMargin']} [props.changeMargin] - An optional boolean that, when true, adds a bottom.
- * @param {CardDescriptionProps['changeColor']} [props.changeColor] - An optional boolean that, when true, changes the text.
- * @param {CardDescriptionProps['addPadding']} [props.addPadding] - An optional boolean that, when true, adds padding.
- * @returns A rendering a responsive description paragraph.
+ * @description Renders a responsive description paragraph used inside service, info and booking cards.
+ * @component
+ * @param {CardDescriptionProps} props - Component properties.
+ * @param {string} props.description - The description text content.
+ * @param {boolean} [props.changePosition=false] - Centers the paragraph when true.
+ * @param {'narrow' | 'wide'} [props.changeWidth] - Selects a width preset when defined.
+ * @param {boolean} [props.changeMargin=false] - Adds vertical margin adjustments.
+ * @param {boolean} [props.changeColor=false] - Switches color to `text-secondary`.
+ * @param {boolean} [props.isActive=false] - Switches color to `text-warmgray` (overrides `changeColor`).
+ * @param {boolean} [props.addPadding=false] - Adds extra right-side padding on selected breakpoints.
+ * @returns A rendered responsive description paragraph.
  */
 export const CardDescription = ({
   description,
   changePosition = false,
-  changeWidth = false,
+  changeWidth,
   changeMargin = false,
   changeColor = false,
+  isActive = false,
   addPadding = false,
 }: CardDescriptionProps) => {
   return (
     <div
       className={clsx(
-        'horizontal w-full',
+        'horizontal',
+        'w-full',
         changePosition ? 'justify-center' : 'justify-start',
         changeMargin && ['mb-0.5', 'm1x:mb-1'],
-        'lg:justify-start'
+        'md:justify-start'
       )}
     >
       <p
         className={clsx(
-          'text-[0.9375rem] leading-6.75',
-          changeColor ? 'text-secondary' : 'text-dimgray',
+          'text-[0.9375rem]',
+          'leading-7',
+          isActive ? 'text-warmgray' : changeColor ? 'text-secondary' : 'text-dimgray',
           changePosition && 'text-center',
-          changeWidth && ['w-67', 'm1x:w-71', 'lg:w-93'],
+          changeWidth === 'narrow' && [
+            'max-w-67',
+            'm1x:max-w-71',
+            'md:max-w-76',
+            'lg:max-w-93',
+            'xl:w-auto',
+          ],
+          changeWidth === 'wide' && ['max-w-74', 'm1x:max-w-79', 'lg:w-auto'],
           addPadding && ['m3x:pr-3', 'm4x:pr-5'],
-          'm1x:text-base m1x:leading-7',
-          'md:leading-7.5',
-          'lg:text-start',
-          '1xl:text-[1.0625rem] 1xl:leading-7.5',
+          'm1x:text-base',
+          'm1x:leading-7.5',
+          'md:text-start',
+          '1xl:text-[1.0625rem]',
+          '1xl:leading-7.5',
           '2xl:leading-8',
-          '3xl:text-lg 3xl:leading-8.5',
-          '5xl:text-[1.3125rem] 5xl:leading-9.5'
+          '3xl:text-lg',
+          '3xl:leading-8.5',
+          '5xl:text-[1.3125rem]',
+          '5xl:leading-9.5'
         )}
       >
         {description}

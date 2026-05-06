@@ -45,23 +45,28 @@ const CONFIG = {
 }
 
 /**
- * @description Renders circular decorative rings positioned absolutely at the top of the screen.
- * @public
- * @param {object} props - Component properties.
- * @param {CircularDecorationProps['rings']} [props.rings=2] - Number of rings to display (default is 2).
- * @param {CircularDecorationProps['changeColor']} [props.changeColor=false] - Whether to change the color of the rings.
- * @returns Containing the absolute-positioned rings.
+ * @description Render circular decorative rings positioned absolutely at the top of the screen.
+ * @component
+ * @param {CircularDecorationProps} props - Component properties with rings and changeColor optional.
+ * @param {2 | 4} [props.rings] - Optional number of rings to display (default is 2).
+ * @param {boolean} [props.changeColor] - Optional flag to change the color of the rings.
+ * @returns Renders a circular decoration component containing the absolute-positioned rings.
  */
 export const CircularDecoration = ({ rings = 2, changeColor = false }: CircularDecorationProps) => {
   const config = CONFIG[rings]
   return (
-    <div className={clsx('absolute z-0 h-full w-full overflow-clip')}>
-      <div className={clsx('relative h-full w-full')}>
+    <div className={clsx('absolute', 'z-0', 'h-full', 'w-full', 'overflow-clip')}>
+      <div className={clsx('relative', 'h-full', 'w-full')}>
         {config.rings.map((ring, i) => (
           <div
             key={`${rings}-${i}`}
             className={clsx(
-              'absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border',
+              'absolute',
+              'left-1/2',
+              '-translate-x-1/2',
+              '-translate-y-1/2',
+              'rounded-full',
+              'border',
               changeColor ? 'border-warmgray' : 'border-pale-yellow',
               config.position,
               ring.size,

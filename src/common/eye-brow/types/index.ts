@@ -1,11 +1,10 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Represents the properties for the eye brow components.
- * @export
+ * @description Defines props for eyebrow/overline text labels.
  * @interface EyeBrowProps
- * @property {string} text - The text content to be displayed in the eye brow.
- * @property {boolean} [hidden] - An optional boolean that, when true, hides the eye brow component.
+ * @property {string} text - Eyebrow text content.
+ * @property {boolean} [hidden] - Hides the eyebrow label when true.
  */
 export interface EyeBrowProps {
   text: string

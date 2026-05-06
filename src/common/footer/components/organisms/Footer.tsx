@@ -8,7 +8,7 @@ const footer = layoutAssets.footer
 
 /**
  * @description Renders the footer component, which includes company information, legal statements, and social network links.
- * @public
+ * @component
  * @property {object} footer - An object containing all the necessary information to render the footer component.
  * @property {object} footer.logo - The properties for the company logo displayed in the footer.
  * @property {string} footer.logo.url - The URL for the company logo image.
@@ -38,7 +38,7 @@ const footer = layoutAssets.footer
  * @property {string} footer.socialNetworks.icon - The icon associated with the social network.
  * @property {string} footer.socialNetworks.name - The name of the social network.
  * @property {number} footer.socialNetworks.id - The unique identifier for the social network item.
- * @returns {JSX.Element} A footer element with company about info and legal info sections.
+ * @returns A footer element with company about info and legal info sections.
  */
 export const Footer = () => {
   const t = useTranslations('footer')
@@ -93,12 +93,17 @@ export const Footer = () => {
   ]
   return (
     <footer
-      id={'footer'}
+      id={footer.sectionId}
       role={'region'}
       className={clsx(
-        'bg-secondary vertical w-full px-6 pt-12',
+        'vertical',
+        'w-full',
+        'bg-secondary',
+        'px-6',
+        'pt-12',
         'm3x:px-7',
-        'md:px-13 md:pt-16',
+        'md:px-13',
+        'md:pt-16',
         'lg:pt-20',
         '1xl:px-27.5',
         '2xl:px-28',

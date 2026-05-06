@@ -3,31 +3,40 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const { features: featureAssets, image, primaryCtaHref, steps: stepAssets } = homeAssets.bookingProcess
+const {
+  sectionId,
+  headingId,
+  features: featureAssets,
+  image,
+  primaryCtaHref,
+  steps: stepAssets,
+} = homeAssets.bookingProcess
 
 /**
- * @description Renders the "Booking Process" section of the homepage.
- * @public
- * @property {string} title - The title of the section.
- * @property {string} description - The description of the section.
- * @property {string} eyebrow - The eyebrow text of the section.
- * @property {string} image - The URL of the image representing the section.
- * @property {object} primaryCta - Configuration for the primary call-to-action button.
- * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
- * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
- * @property {array} features - An array of objects representing features of the booking process.
- * @property {number} features[].id - The unique identifier for the feature.
- * @property {string} features[].icon - The URL of the feature icon.
- * @property {string} features[].title - The title of the feature.
- * @property {string} features[].description - The description of the feature.
- * @property {string} features[].href - The URL that the feature links to for more details.
- * @property {string} features[].text - The text displayed for the feature's call-to-action.
- * @property {array} steps - An array of objects representing steps in the booking process.
- * @property {number} steps[].id - The unique identifier for the step.
- * @property {string} steps[].url - The URL of the step image.
- * @property {string} steps[].title - The title of the step.
- * @property {string} steps[].description - The description of the step.
- * @returns {JSX.Element} The rendered "OurBookingProcess" component.
+ * @description Renders the "Booking Process" section, managing the integration of localized content,
+ * feature highlights, and step-by-step instructions.
+ * @component
+ * @param {object} props - Component properties derived from internal translations and static assets.
+ * @param {string} props.title - The main localized title for the section.
+ * @param {string} props.description - A localized summary of the booking process.
+ * @param {string} props.eyebrow - A short localized label or "eyebrow" text above the main title.
+ * @param {string} props.image - The static image URL representing the booking section.
+ * @param {object} props.primaryCta - Configuration for the main call-to-action button.
+ * @param {string} props.primaryCta.text - Localized text for the CTA button.
+ * @param {string} props.primaryCta.href - Target URL for the CTA.
+ * @param {object[]} props.features - Localized list of key service features.
+ * @param {number} props.features[].id - Unique identifier for the feature.
+ * @param {string} props.features[].icon - Icon identifier or path for the feature.
+ * @param {string} props.features[].title - Localized title of the feature.
+ * @param {string} props.features[].description - Localized description of the feature.
+ * @param {string} props.features[].href - Detail link for the feature.
+ * @param {string} props.features[].text - Label for the feature's link.
+ * @param {object[]} props.steps - Localized list of steps in the booking workflow.
+ * @param {number} props.steps[].id - Unique identifier for the step.
+ * @param {string} props.steps[].url - Image URL for the specific step.
+ * @param {string} props.steps[].title - Localized title of the step.
+ * @param {string} props.steps[].description - Localized description of the step.
+ * @returns Returns a booking-process section with localized overview, features, steps, and CTA.
  */
 export const OurBookingProcess = () => {
   const t = useTranslations('home.our-booking-process')
@@ -100,24 +109,36 @@ export const OurBookingProcess = () => {
   ]
   return (
     <section
-      id={'process'}
-      aria-labelledby={'home-process-title'}
+      id={sectionId}
+      aria-labelledby={headingId}
       role={'region'}
       className={clsx(
-        'vertical bg-primary w-full px-5.5 pt-12 pb-11 shadow-2xs',
-        'm3x:pb-12.5 m3x:px-5.75',
+        'vertical',
+        'w-full',
+        'bg-primary',
+        'shadow-2xs',
+        'px-5.5',
+        'pt-12',
+        'pb-11',
+        'm3x:px-5.75',
+        'm3x:pb-12.5',
         'm4x:px-6',
-        'md:px-13 md:py-20',
+        'md:px-13',
+        'md:py-20',
         'lg:py-24',
-        'xl:px-13',
-        '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
-        '2xl:px-32 2xl:pt-36 2xl:pb-36'
+        '1xl:px-29.5',
+        '1xl:pt-34',
+        '1xl:pb-34',
+        '2xl:px-32',
+        '2xl:pt-36',
+        '2xl:pb-36'
       )}
     >
       <BookingProcess
         title={title}
         description={description}
         eyebrow={eyebrow}
+        titleId={headingId}
         image={image}
         features={features}
         steps={steps}

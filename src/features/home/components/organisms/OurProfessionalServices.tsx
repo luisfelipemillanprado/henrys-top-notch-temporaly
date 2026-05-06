@@ -3,31 +3,33 @@ import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
 
-const { primaryCtaHref, services: serviceAssets } = homeAssets.professionalServices
+const { sectionId, headingId, primaryCtaHref, services: serviceAssets } = homeAssets.professionalServices
 const stars = serviceAssets[0].stars.map((star) => ({ ...star }))
 
 /**
- * @description Renders the "Our Professional Services" section of the homepage.
- * @public
- * @property {string} title - The title of the section.
- * @property {string} description - The description of the section.
- * @property {string} eyebrow - The eyebrow text of the section.
- * @property {string} image - The URL of the image representing the section.
- * @property {object} primaryCta - Configuration for the primary call-to-action button.
- * @property {string} primaryCta.text - The text displayed on the primary call-to-action button.
- * @property {string} primaryCta.href - The URL that the primary call-to-action button links to.
- * @property {array} services - An array of objects representing professional services offered.
- * @property {number} services[].id - The unique identifier for the service.
- * @property {string} services[].url - The URL of the service image.
- * @property {string} services[].title - The title of the service.
- * @property {string} services[].description - The description of the service.
- * @property {array} services[].benefits - An array of benefit objects for the service, each containing text and an ID.
- * @property {string} services[].benefits[].text - The text describing the benefit.
- * @property {number} services[].benefits[].id - The unique identifier for the benefit.
- * @property {object} services[].secondaryCta - Configuration for the secondary call-to-action button for the service.
- * @property {string} services[].secondaryCta.text - The text displayed on the secondary call-to-action button.
- * @property {string} services[].secondaryCta.href - The URL that the secondary call-to-action button links to.
- * @returns {JSX.Element} The rendered "OurProfessionalServices" component.
+ * @description Renders the "Our Professional Services" section, managing localized service catalogs,
+ * benefit lists, and multi-level call-to-action configurations.
+ * @component
+ * @param {object} props - Component properties derived from internal translations and static assets.
+ * @param {string} props.title - The localized main title for the services section.
+ * @param {string} props.description - A localized summary of the professional services offered.
+ * @param {string} props.eyebrow - A short localized accent label displayed above the title.
+ * @param {object} props.primaryCta - Configuration for the main section call-to-action.
+ * @param {string} props.primaryCta.text - Localized text for the primary button.
+ * @param {string} props.primaryCta.href - Target URL for the primary button.
+ * @param {object[]} props.services - A list of localized service objects.
+ * @param {number} props.services[].id - Unique identifier for the service.
+ * @param {string} props.services[].url - Image URL representing the service.
+ * @param {string} props.services[].title - Localized title of the service.
+ * @param {string} props.services[].description - Localized description of the service.
+ * @param {object[]} props.services[].stars - Visual rating configuration for the service.
+ * @param {object[]} props.services[].benefits - List of specific benefits for the service.
+ * @param {string} props.services[].benefits[].text - Localized benefit description.
+ * @param {number} props.services[].benefits[].id - Unique identifier for the benefit.
+ * @param {object} props.services[].secondaryCta - Specific action for the individual service.
+ * @param {string} props.services[].secondaryCta.text - Localized label for the service button.
+ * @param {string} props.services[].secondaryCta.href - Destination URL for the service button.
+ * @returns Returns a professional-services section with localized cards, benefits, ratings, and CTA.
  */
 export const OurProfessionalServices = () => {
   const t = useTranslations('home.our-professional-services')
@@ -114,23 +116,36 @@ export const OurProfessionalServices = () => {
   ]
   return (
     <section
-      id={'services'}
-      aria-labelledby={'home-services-title'}
+      id={sectionId}
+      aria-labelledby={headingId}
       role={'region'}
       className={clsx(
-        'vertical bg-off-white w-full px-5.5 pt-12 pb-11 shadow-2xs',
-        'm3x:pb-12.5 m3x:px-5.75',
+        'vertical',
+        'w-full',
+        'bg-off-white',
+        'shadow-2xs',
+        'px-5.5',
+        'pt-12',
+        'pb-11',
+        'm3x:px-5.75',
+        'm3x:pb-12.5',
         'm4x:px-6',
-        'md:px-13 md:py-20',
+        'md:px-13',
+        'md:py-20',
         'lg:py-24',
-        '1xl:px-29.5 1xl:pt-34 1xl:pb-34',
-        '2xl:px-32 2xl:pt-36 2xl:pb-36'
+        '1xl:px-29.5',
+        '1xl:pt-34',
+        '1xl:pb-34',
+        '2xl:px-32',
+        '2xl:pt-36',
+        '2xl:pb-36'
       )}
     >
       <ProfessionalServices
         title={title}
         description={description}
         eyebrow={eyebrow}
+        titleId={headingId}
         primaryCta={primaryCta}
         services={services}
       />

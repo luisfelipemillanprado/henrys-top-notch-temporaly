@@ -1,13 +1,12 @@
 /* ------------------------------------------------- INTERFACES-PROPS --------------------------------------------------------- */
 
 /**
- * @description Represents the properties for a "Get Started" button component.
- * @export
+ * @description Defines props for the primary "Get Started" call-to-action button.
  * @interface GetStartedButtonProps
- * @property {string} text - The display text for the button.
- * @property {string} href - The URL the button points to.
- * @property {boolean} [hidden] - Optional flag to hide the button when true.
- * @property {boolean} [float] - Optional flag to render the button as a floating element.
+ * @property {string} text - Visible label of the button.
+ * @property {string} href - Destination URL or anchor.
+ * @property {boolean} [hidden] - Hides the button when true.
+ * @property {boolean} [float] - Enables floating style variants.
  */
 export interface GetStartedButtonProps {
   text: string
@@ -17,17 +16,16 @@ export interface GetStartedButtonProps {
 }
 
 /**
- * @description Represents the properties for a reusable call-to-action button component.
- * @export
+ * @description Defines props for the reusable CTA button used across sections.
  * @interface ReusableButtonProps
- * @property {string} text - The display text for the button.
- * @property {string} href - The URL the button points to.
- * @property {boolean} [startIcon] - Optional icon identifier rendered before the text.
- * @property {boolean} [endIcon] - Optional icon identifier rendered after the text.
- * @property {boolean} [float] - Optional flag to render the button as a floating element.
- * @property {boolean} [secondColor] - Optional flag to change the button color on interaction.
- * @property {boolean} [noAnimation] - Optional flag to disable button animation.
- * @property {boolean} [newTab] - Optional flag to open the link in a new tab when true.
+ * @property {string} text - Visible label of the button.
+ * @property {string} href - Destination URL or anchor.
+ * @property {boolean} [startIcon] - Renders an icon before the label when true.
+ * @property {boolean} [endIcon] - Renders an icon after the label when true.
+ * @property {boolean} [float] - Enables floating style variants.
+ * @property {boolean} [secondColor] - Enables alternate color theme.
+ * @property {boolean} [noAnimation] - Disables transition and animation effects.
+ * @property {boolean} [newTab] - Opens destination in a new browser tab.
  */
 export interface ReusableButtonProps {
   text: string
@@ -41,14 +39,13 @@ export interface ReusableButtonProps {
 }
 
 /**
- * @description Represents the properties for a card action button component.
- * @export
+ * @description Defines props for CTA buttons rendered inside cards.
  * @interface CardActionButtonProps
- * @property {string} text - The display text for the button.
- * @property {string} href - The URL the button points to.
- * @property {boolean} [float] - Optional flag to render the button as a floating element.
- * @property {boolean} [thirdColor] - Optional flag to change the button color on interaction.
- * @property {boolean} [noAnimation] - Optional flag to disable button animation.
+ * @property {string} text - Visible label of the button.
+ * @property {string} href - Destination URL or anchor.
+ * @property {boolean} [float] - Enables floating style variants.
+ * @property {boolean} [thirdColor] - Enables tertiary color theme.
+ * @property {boolean} [noAnimation] - Disables transition and animation effects.
  */
 export interface CardActionButtonProps {
   text: string
