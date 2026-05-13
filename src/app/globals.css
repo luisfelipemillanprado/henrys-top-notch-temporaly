@@ -185,10 +185,10 @@
     @apply flex w-full flex-col gap-3 md:gap-3.5;
   }
   .accordion__item {
-    @apply bg-off-white rounded-2xl;
+    @apply bg-off-white rounded-2xl shadow-md;
   }
   .accordion__trigger {
-    @apply horizontal border-warmgray/10 m1x:pr-5 m1x:gap-x-1.5 m3x:gap-x-2.5 m1x:py-3.5 m3x:py-4 gap-x-2 rounded-2xl border py-3 pl-2 md:gap-x-3 lg:py-6;
+    @apply horizontal border-electric-blue/30 m1x:pr-5 m1x:gap-x-1.5 m3x:gap-x-2.5 m1x:py-4 gap-x-2 rounded-2xl border py-3.5 pl-2 md:gap-x-3 md:py-5 lg:py-5.5 xl:py-4;
   }
   .accordion__indicator {
     @apply m4x:ml-2.5 ml-2;

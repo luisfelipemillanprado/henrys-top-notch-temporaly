@@ -18,12 +18,11 @@ export const License = ({ license }: LicenseProps) => {
         'w-full',
         'items-center',
         'gap-y-2',
-        'mt-3',
+        'mt-2.5',
         'md:horizontal',
         'md:justify-start',
         'md:gap-x-2',
-        'md:gap-y-0',
-        'lg:mt-2'
+        'md:gap-y-0'
       )}
     >
       {license.map((item) => (
@@ -33,10 +32,11 @@ export const License = ({ license }: LicenseProps) => {
             'font-medium',
             'text-primary',
             'text-[1.0625rem]',
+            'leading-8',
             'm1x:text-lg',
+            'm1x:leading-8.5',
             'md:text-[1.1875rem]',
-            '3xl:text-xl',
-            '5xl:text-[1.375rem]'
+            'md:leading-9'
           )}
         >
           {item.text}

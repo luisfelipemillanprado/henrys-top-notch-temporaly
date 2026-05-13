@@ -10,18 +10,18 @@ import clsx from 'clsx'
  */
 export const Copyright = ({ copyright }: CopyrightProps) => {
   return (
-    <div className={clsx('horizontal', 'w-full', 'md:max-w-68', 'md:justify-start', 'lg:max-w-94')}>
+    <div className={clsx('horizontal', 'w-full', 'md:justify-start')}>
       <p
         className={clsx(
           'text-center',
           'text-primary',
           'text-[1.0625rem]',
-          'leading-7.5',
-          'm1x:text-lg leading-8',
-          'md:text-start',
-          '1xl:text-[1.0625rem]',
-          '3xl:text-lg',
-          '5xl:text-[1.3125rem]'
+          'leading-8',
+          'm1x:text-lg',
+          'm1x:leading-8.5',
+          'md:text-[1.1875rem]',
+          'md:leading-9',
+          'md:text-start'
         )}
       >
         {copyright}

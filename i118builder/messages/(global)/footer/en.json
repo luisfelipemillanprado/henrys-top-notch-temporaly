@@ -1,6 +1,6 @@
 {
   "copyright": "Copyright & design by \u00A9 {year} Remiux LLC. All rights reserved.",
-  "contactInformation": {
+  "contacts": {
     "address": "Houston, Texas, USA",
     "phone": "+1 (281) 442-7230",
     "schedule": "Mon - Sat (24 hours)",
@@ -28,7 +28,7 @@
     "quickLinks": "Quick Links",
     "ourServices": "Our Services"
   },
-  "certifiedExperts": {
+  "certifieds": {
     "title": "Licensed & Certified HVAC Experts.",
     "description": "At Henry's Top Notch A/C & Heating Company, we take pride in having a team of highly trained HVAC professionals.",
     "license": {

@@ -1,7 +1,7 @@
 import { Providers } from '@/app/[locale]/providers'
-import { DirectLine } from '@/common/contact-us/direct-line/components/organisms/DirectLine'
+import { DirectLine } from '@/common/contact/direct-line/components/organisms/DirectLine'
 import { Footer } from '@/common/footer/components/organisms/Footer'
-import { NavigationBar } from '@/common/navigation-bar/components/organisms/NavigationBar'
+import { Navbar } from '@/common/navbar/components/organisms/Navbar'
 import { routing } from '@/i18n/routing'
 import { layoutAssets } from '@/utils/data/static/global/layout'
 import { Toast } from '@heroui/react'
@@ -96,7 +96,7 @@ export default async function RootLayout({
             themes: ['dark', 'light'],
           }}
         >
-          <NavigationBar />
+          <Navbar />
           {children}
           <Footer />
           <DirectLine directLine={directLine} />

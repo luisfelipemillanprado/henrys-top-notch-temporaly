@@ -1,5 +1,5 @@
-import { OurCompanyContactInformation } from '@/common/footer/components/organisms/OurCompanyContactInformation'
-import { OurLegalInformation } from '@/common/footer/components/organisms/OurLegalInformation'
+import { OurBottom } from '@/common/footer/components/organisms/OurBottom'
+import { OurTop } from '@/common/footer/components/organisms/OurTop'
 import { layoutAssets } from '@/utils/data/static/global/layout'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
@@ -7,70 +7,76 @@ import { useTranslations } from 'next-intl'
 const footer = layoutAssets.footer
 
 /**
- * @description Renders the footer component, which includes company information, legal statements, and social network links.
+ * @description Renders the footer region with localized copy, static assets from layout, and child sections OurTop and OurBottom.
  * @component
- * @property {object} footer - An object containing all the necessary information to render the footer component.
- * @property {object} footer.logo - The properties for the company logo displayed in the footer.
- * @property {string} footer.logo.url - The URL for the company logo image.
- * @property {object} footer.copyright - The copyright information to be displayed in the footer.
- * @property {Array<object>} footer.contactInformation - An array of contact information items to be displayed.
- * @property {string} footer.contactInformation.text - The display text for the company.
- * @property {string} footer.contactInformation.type - The type of contact information.
- * @property {string} footer.contactInformation.icon - The icon associated with the company.
- * @property {number} footer.contactInformation.id - The unique identifier for the company.
- * @property {Array<object>} footer.links - An array of footer link items to be displayed in the footer.
- * @property {string} footer.links.text - The display text for the footer link.
- * @property {string} footer.links.href - The URL the footer link points to.
- * @property {number} footer.links.id - The unique identifier for the footer link item.
- * @property {Array<string>} footer.highlight - An array of strings representing highlighted text or keywords.
- * @property {object} footer.certifiedExperts - The properties for the certified experts section in the footer.
- * @property {string} footer.certifiedExperts.title - The title for the certified experts section.
- * @property {string} footer.certifiedExperts.description - A brief description of the certified.
- * @property {Array<object>} footer.certifiedExperts.license - An array of objects containing the text and ID.
- * @property {string} footer.certifiedExperts.license.text - The text representing the license.
- * @property {number} footer.certifiedExperts.license.id - The unique identifier for the license.
- * @property {Array<object>} footer.certifiedExperts.imagesUrl - An array of objects containing the URL and ID.
- * @property {string} footer.certifiedExperts.imagesUrl.url - The URL for the image to be displayed.
- * @property {number} footer.certifiedExperts.imagesUrl.id - The unique identifier for the image.
- * @property {string} footer.certifiedExperts.mapsUrl - The URL for the Google Maps location.
- * @property {Array<object>} footer.socialNetworks - An array of social network items to be displayed in the footer.
- * @property {string} footer.socialNetworks.href - The URL the social network item points to.
- * @property {string} footer.socialNetworks.icon - The icon associated with the social network.
- * @property {string} footer.socialNetworks.name - The name of the social network.
- * @property {number} footer.socialNetworks.id - The unique identifier for the social network item.
- * @returns A footer element with company about info and legal info sections.
+ * @param {object} props - Component properties with footer data.
+ * @param {string} props.sectionId - The id value for the root footer element.
+ * @param {object} props.logo - The logo value for the contact card.
+ * @param {string} props.logo.url - The url value for the footer logo image.
+ * @param {object} props.copyright - The copyright value with key and year from layout.
+ * @param {string} props.copyright.key - The key value for the copyright string.
+ * @param {number} props.copyright.year - The year value in layout.
+ * @param {object[]} props.contacts - The contacts value with rows merged with the key value for display text.
+ * @param {string} props.contacts[].key - The key value for each contact row (address, phone, schedule, email).
+ * @param {string} props.contacts[].href - The href value for each contact row.
+ * @param {string} props.contacts[].type - The type value for each contact row.
+ * @param {string} props.contacts[].icon - The icon identifier for each contact row.
+ * @param {number} props.contacts[].id - The id value for each contact row.
+ * @param {object[]} props.links - The links value with key, href and id for each footer link.
+ * @param {string} props.links[].key - The key value for each link label.
+ * @param {string} props.links[].href - The href value for each link.
+ * @param {number} props.links[].id - The id value for each link.
+ * @param {string[]} props.highlight - The highlight value with link keys from layout.
+ * @param {object} props.certifieds - The certifieds value with title, description, license, imagesUrl and mapsUrl.
+ * @param {object} props.certifieds.title - The title value.
+ * @param {string} props.certifieds.title.key - The key value for the title.
+ * @param {object} props.certifieds.description - The description value.
+ * @param {string} props.certifieds.description.key - The key value for the description.
+ * @param {object[]} props.certifieds.license - The license value with key and id for each row.
+ * @param {string} props.certifieds.license[].key - The key value for each license row.
+ * @param {number} props.certifieds.license[].id - The id value for each license row.
+ * @param {object[]} props.certifieds.imagesUrl - The imagesUrl value with url and id for each badge image.
+ * @param {string} props.certifieds.imagesUrl[].url - The url value for each image.
+ * @param {number} props.certifieds.imagesUrl[].id - The id value for each image.
+ * @param {string} props.certifieds.mapsUrl - The mapsUrl value for the Google Maps embed iframe.
+ * @param {object[]} props.networks - The networks value with href, icon, name and id for each social network.
+ * @param {string} props.networks[].href - The href value for each social network.
+ * @param {string} props.networks[].icon - The icon identifier for each social network.
+ * @param {string} props.networks[].name - The name value for each social network.
+ * @param {number} props.networks[].id - The id value for each social network.
+ * @returns A rendered footer component.
  */
 export const Footer = () => {
   const t = useTranslations('footer')
   const highlight = [t('highlight.quickLinks'), t('highlight.ourServices')]
   const copyright = t('copyright', { year: new Date().getFullYear().toString() })
   const certifiedExperts = {
-    title: t('certifiedExperts.title'),
-    description: t('certifiedExperts.description'),
+    title: t('certifieds.title'),
+    description: t('certifieds.description'),
     license: [
-      { id: footer.certifiedExperts.license[0].id, text: t('certifiedExperts.license.label') },
-      { id: footer.certifiedExperts.license[1].id, text: t('certifiedExperts.license.number') },
+      { id: footer.certifieds.license[0].id, text: t('certifieds.license.label') },
+      { id: footer.certifieds.license[1].id, text: t('certifieds.license.number') },
     ],
-    imagesUrl: [...footer.certifiedExperts.imagesUrl],
-    mapsUrl: footer.certifiedExperts.mapsUrl,
+    imagesUrl: [...footer.certifieds.imagesUrl],
+    mapsUrl: footer.certifieds.mapsUrl,
   }
-  const socialNetworks = [...footer.socialNetworks]
+  const networks = [...footer.networks]
   const contactInformation = [
     {
-      text: t('contactInformation.address'),
-      ...footer.contactInformation[0],
+      text: t('contacts.address'),
+      ...footer.contacts[0],
     },
     {
-      text: t('contactInformation.phone'),
-      ...footer.contactInformation[1],
+      text: t('contacts.phone'),
+      ...footer.contacts[1],
     },
     {
-      text: t('contactInformation.schedule'),
-      ...footer.contactInformation[2],
+      text: t('contacts.schedule'),
+      ...footer.contacts[2],
     },
     {
-      text: t('contactInformation.email'),
-      ...footer.contactInformation[3],
+      text: t('contacts.email'),
+      ...footer.contacts[3],
     },
   ]
   const links = [
@@ -102,22 +108,23 @@ export const Footer = () => {
         'px-6',
         'pt-12',
         'm3x:px-7',
-        'md:px-13',
+        'md:px-11',
         'md:pt-16',
+        'lg:px-13',
         'lg:pt-20',
         '1xl:px-27.5',
         '2xl:px-28',
         '3xl:px-32'
       )}
     >
-      <OurCompanyContactInformation
+      <OurTop
         logo={footer.logo}
         contactInformation={contactInformation}
         links={links}
         highlight={highlight}
         certifiedExperts={certifiedExperts}
       />
-      <OurLegalInformation copyright={copyright} socialNetworks={socialNetworks} />
+      <OurBottom copyright={copyright} networks={networks} />
     </footer>
   )
 }

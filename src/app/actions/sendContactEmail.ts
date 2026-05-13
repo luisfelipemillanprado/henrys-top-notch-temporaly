@@ -2,7 +2,7 @@
 import { AwsSdkErrorProps, ContactEmailProps } from '@/app/actions/types'
 import { checkContactUsRateLimit } from '@/utils/security/emails/contact-us/ContactUsRateLimit'
 import { contactUsTemplate } from '@/utils/templates/emails/contact-us/ContactUsTemplate'
-import { validateContactPayload } from '@/utils/validators/forms/contact-us/ContactUsValidator'
+import { validateContactPayload } from '@/utils/validators/forms/contact/ContactUsValidator'
 import { SESv2Client, SendEmailCommand } from '@aws-sdk/client-sesv2'
 import { NodeHttpHandler } from '@smithy/node-http-handler'
 import https from 'https'

@@ -43,21 +43,14 @@ export const CardDescription = ({
             'max-w-67',
             'm1x:max-w-71',
             'md:max-w-76',
-            'lg:max-w-93',
-            'xl:w-auto',
+            'lg:max-w-81',
+            'xl:max-w-full',
           ],
-          changeWidth === 'wide' && ['max-w-74', 'm1x:max-w-79', 'lg:w-auto'],
+          changeWidth === 'wide' && ['max-w-74', 'm1x:max-w-79', 'lg:max-w-full'],
           addPadding && ['m3x:pr-3', 'm4x:pr-5'],
           'm1x:text-base',
           'm1x:leading-7.5',
-          'md:text-start',
-          '1xl:text-[1.0625rem]',
-          '1xl:leading-7.5',
-          '2xl:leading-8',
-          '3xl:text-lg',
-          '3xl:leading-8.5',
-          '5xl:text-[1.3125rem]',
-          '5xl:leading-9.5'
+          'md:text-start'
         )}
       >
         {description}

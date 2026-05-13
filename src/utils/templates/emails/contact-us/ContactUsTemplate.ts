@@ -1,5 +1,5 @@
 import { ContactEmailProps } from '@/app/actions/types'
-import { safeHtml } from '@/utils/validators/forms/contact-us/ContactUsValidator'
+import { safeHtml } from '@/utils/validators/forms/contact/ContactUsValidator'
 
 /**
  * @description Generates the HTML and plain text content for a contact email template.

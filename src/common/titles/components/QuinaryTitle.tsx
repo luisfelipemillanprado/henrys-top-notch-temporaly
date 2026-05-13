@@ -10,7 +10,7 @@ import clsx from 'clsx'
  */
 export const QuinaryTitle = ({ title }: QuinaryTitleProps) => {
   return (
-    <div className={clsx('horizontal', 'w-full', 'justify-center', 'md:justify-start', 'md:-mt-2')}>
+    <div className={clsx('horizontal', 'w-full', 'justify-center', 'md:justify-start')}>
       <h5
         className={clsx(
           'text-center',

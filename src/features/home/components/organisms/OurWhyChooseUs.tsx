@@ -1,4 +1,4 @@
-import { WhyChooseUs } from '@/features/home/components/molecules/WhyChooseUs'
+import { WyChooseUs } from '@/features/home/components/molecules/WyChooseUs'
 import { homeAssets } from '@/utils/data/static/pages/home'
 import clsx from 'clsx'
 import { useTranslations } from 'next-intl'
@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 const { sectionId, headingId, image, primaryCtaHref, reasons: reasonAssets } = homeAssets.whyChooseUs
 
 /**
- * @description Renders the "Why Choose Us" section, highlighting competitive advantages
+ * @description Renders the why choose us section, highlighting competitive advantages
  * through localized affirmations and descriptive reason summaries.
  * @component
  * @param {object} props - Component properties derived from internal translations and static assets.
@@ -24,7 +24,7 @@ const { sectionId, headingId, image, primaryCtaHref, reasons: reasonAssets } = h
  * @returns Returns a why-choose-us section with localized copy, image, accordion reasons, and CTA.
  */
 export const OurWhyChooseUs = () => {
-  const t = useTranslations('home.why-choose-us')
+  const t = useTranslations('home.our-why-choose-us')
   const title = t('title')
   const description = t('description')
   const eyebrow = t('eyebrow')
@@ -70,8 +70,9 @@ export const OurWhyChooseUs = () => {
         'm3x:px-5.75',
         'm3x:pb-12.5',
         'm4x:px-6',
-        'md:px-13',
+        'md:px-11',
         'md:py-20',
+        'lg:px-13',
         'lg:py-24',
         '1xl:px-29.5',
         '1xl:pt-34',
@@ -81,7 +82,7 @@ export const OurWhyChooseUs = () => {
         '2xl:pb-36'
       )}
     >
-      <WhyChooseUs
+      <WyChooseUs
         title={title}
         description={description}
         eyebrow={eyebrow}

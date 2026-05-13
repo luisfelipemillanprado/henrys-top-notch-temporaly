@@ -26,7 +26,15 @@ export const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <div
-      className={clsx('vertical', 'w-full', 'items-center', 'gap-y-3.5', 'm1x:gap-y-4', 'md:items-start')}
+      className={clsx(
+        'vertical',
+        'w-full',
+        'items-center',
+        'gap-y-3',
+        'm1x:gap-y-3.5',
+        'md:gap-y-4',
+        'md:items-start'
+      )}
     >
       <EyeBrow text={eyebrow} hidden={hidden} />
       <div

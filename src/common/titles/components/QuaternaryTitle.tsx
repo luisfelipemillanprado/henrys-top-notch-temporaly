@@ -29,9 +29,7 @@ export const QuaternaryTitle = ({
           'md:text-[1.1875rem]',
           'md:leading-7.5',
           'lg:text-xl',
-          'lg:leading-8',
-          'xl:text-[1.1875rem]',
-          'xl:leading-7.5'
+          'lg:leading-8'
         )}
       >
         {title}

@@ -1,41 +1,41 @@
-import { Hero } from '@/features/home/components/organisms/Hero'
-import { OurBookingProcess } from '@/features/home/components/organisms/OurBookingProcess'
-import { OurContactUs } from '@/features/home/components/organisms/OurContactUs'
-import { OurCustomerTestimonials } from '@/features/home/components/organisms/OurCustomerTestimonials'
-import { OurProfessionalServices } from '@/features/home/components/organisms/OurProfessionalServices'
-import { OurSummaryOfWhoWeAre } from '@/features/home/components/organisms/OurSummaryOfWhoWeAre'
-import { OurTrustedAndCertified } from '@/features/home/components/organisms/OurTrustedAndCertified'
+import { OurCertifieds } from '@/features/home/components/organisms/OurCertifieds'
+import { OurContact } from '@/features/home/components/organisms/OurContact'
+import { OurHero } from '@/features/home/components/organisms/OurHero'
+import { OurProcess } from '@/features/home/components/organisms/OurProcess'
+import { OurReviews } from '@/features/home/components/organisms/OurReviews'
+import { OurServices } from '@/features/home/components/organisms/OurServices'
+import { OurWhoWeAre } from '@/features/home/components/organisms/OurWhoWeAre'
 import { OurWhyChooseUs } from '@/features/home/components/organisms/OurWhyChooseUs'
 import clsx from 'clsx'
 
 /**
- * @description Renders the home page, including various sections.
+ * @description Renders the home page, including various sections components.
  * @public
  * @property {JSX.Element} header - The header section of the home page, containing the hero component.
  * @property {JSX.Element} hero - The hero component, which serves as the main visual element of the header.
  * @property {JSX.Element} main - The main content of the home page, containing multiple sections.
- * @property {JSX.Element} ourTrustedAndCertified - A section showcasing the company's trusted and certified status.
- * @property {JSX.Element} ourSummaryOfWhoWeAre - A section providing a summary of the company's identity and values.
- * @property {JSX.Element} ourBookingProcess - A section outlining the company's booking process.
- * @property {JSX.Element} ourProfessionalServices - A section highlighting the professional services offered by the company.
+ * @property {JSX.Element} ourCertifieds - A section showcasing the company's trusted and certified status.
+ * @property {JSX.Element} ourWhoWeAre - A section providing a summary of the company's identity and values.
+ * @property {JSX.Element} ourProcess - A section outlining the company's booking process.
+ * @property {JSX.Element} ourServices - A section highlighting the some services offered by the company.
  * @property {JSX.Element} ourWhyChooseUs - A section explaining why customers should choose the company.
- * @property {JSX.Element} ourCustomerTestimonials - A section featuring testimonials from satisfied customers.
+ * @property {JSX.Element} ourReviews - A section featuring testimonials from satisfied customers.
  * @returns {JSX.Element} The rendered home page component.
  */
 export default function Home() {
   return (
     <>
       <header className={clsx('bg-secondary horizontal relative w-full', '9xl:justify-center')}>
-        <Hero />
+        <OurHero />
       </header>
       <main className={clsx('vertical w-full')}>
-        <OurTrustedAndCertified />
-        <OurSummaryOfWhoWeAre />
-        <OurBookingProcess />
-        <OurProfessionalServices />
+        <OurCertifieds />
+        <OurWhoWeAre />
+        <OurProcess />
+        <OurServices />
         <OurWhyChooseUs />
-        <OurCustomerTestimonials />
-        <OurContactUs />
+        <OurReviews />
+        <OurContact />
       </main>
     </>
   )

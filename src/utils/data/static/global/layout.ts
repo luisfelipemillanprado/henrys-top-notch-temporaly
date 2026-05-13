@@ -10,8 +10,8 @@
  */
 export const layoutAssets = {
   navigationBar: {
-    menuOptionsId: 'options-menu',
-    logo: { url: '/images/logo-company/logo-company.webp' },
+    menuId: 'options-menu',
+    logo: { url: '/images/logo/logo1.webp' },
     getStartedButtonHref: { href: '#contact-us' },
     links: [
       { key: 'home', href: '/', icon: 'home', id: 15 },
@@ -34,9 +34,9 @@ export const layoutAssets = {
   },
   footer: {
     sectionId: 'footer',
-    logo: { url: '/images/logo-company/logo-company.webp' },
+    logo: { url: '/images/logo/logo2.webp' },
     copyright: { key: 'copyright', year: new Date().getFullYear() },
-    contactInformation: [
+    contacts: [
       {
         key: 'address',
         href: 'https://maps.google.com/?q=Houston,TX,USA',
@@ -67,22 +67,22 @@ export const layoutAssets = {
       { key: 'coolComfortDeal', href: '/', id: 38 },
     ],
     highlight: ['quickLinks', 'ourServices'],
-    certifiedExperts: {
-      title: { key: 'certifiedExperts.title' },
-      description: { key: 'certifiedExperts.description' },
+    certifieds: {
+      title: { key: 'certifieds.title' },
+      description: { key: 'certifieds.description' },
       license: [
-        { key: 'certifiedExperts.license.label', id: 68 },
-        { key: 'certifiedExperts.license.number', id: 69 },
+        { key: 'certifieds.license.label', id: 68 },
+        { key: 'certifieds.license.number', id: 69 },
       ],
       imagesUrl: [
-        { url: '/images/trusted-certified/trusted-certified4.webp', id: 66 },
-        { url: '/images/trusted-certified/trusted-certified8.webp', id: 68 },
-        { url: '/images/trusted-certified/trusted-certified6.webp', id: 67 },
+        { url: '/images/certifieds/certified4.webp', id: 66 },
+        { url: '/images/certifieds/certified8.webp', id: 68 },
+        { url: '/images/certifieds/certified6.webp', id: 67 },
       ],
       mapsUrl:
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6068672945!2d-95.350747!3d29.875609599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b778421d4375%3A0xeb2ba56539e71463!2s2228%20William%20Tell%20St%2C%20Houston%2C%20TX%2077093%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1773350497868!5m2!1ses!2smx',
     },
-    socialNetworks: [
+    networks: [
       {
         href: 'https://facebook.com/profile.php?id=61586744246927',
         icon: 'facebook',
